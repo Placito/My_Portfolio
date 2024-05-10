@@ -90,13 +90,16 @@ html, body {
 }
 .home h2 {
     font-size: 6rem;
+    color: #fff;
 }
 .home span {
     margin-right: 8rem;
     font-size: 1.5rem;
+    color: #fff;
 }
 .text-shadow {
-    text-shadow: 4px 4px 10px #000000;
+    text-shadow: 4px 4px 10px #0C1E1F;
+    color: #0C1E1F;
 }
 .drag {
     width: 9rem;
@@ -104,4 +107,44 @@ html, body {
 .drag a {
     text-decoration: none;
     color: #fff;
+}
+.menu-mobile {
+    position: fixed;
+    color: #0C1E1F;
+    background-color: #559DBC;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.menu-nav-active {
+    overflow: hidden;
+}
+.menu-nav-active .header {
+    left: 0;
+}
+@media (max-width: 1024px) {
+    .header {
+        left: -300px;
+    }
+    .menu-mobile {
+        display: flex;
+    }
+    .home h2 {
+        font-size: 3.5rem;
+    }
+    .home span {
+        margin-right: 0;
+        font-size: 1rem;
+    }
+    .main {
+        margin-left: 0;
+    }
 }
