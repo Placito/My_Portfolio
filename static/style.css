@@ -160,3 +160,6 @@ html, body {
 *::-webkit-scrollbar-thumb {
     background-color: #559DBC;
 }
+.section-bg {
+    background-color: #eff5ff;
+}
