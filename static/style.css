@@ -16,7 +16,7 @@ html, body {
     width: 300px;
     transition: all ease-in-out 0.5s;
     padding: 0 15px;
-    z-index: auto;
+    z-index: 10;
 }
 .header .profile img {
     margin: 15px auto;
@@ -70,6 +70,7 @@ html, body {
 .nav-menu li:hover > a {
     text-decoration: none;
     color: #fff;
+    bottom: 0;
 }
 .nav-menu a:hover i,
 .nav-menu .active i,
@@ -104,6 +105,8 @@ html, body {
 }
 .drag {
     width: 9rem;
+    right: 0;
+    bottom: 0;
 }
 .drag a {
     text-decoration: none;
@@ -206,7 +209,9 @@ html, body {
 .carousel-indicators {
     margin-bottom: -35px;
 }
-
+.carousel-control-prev, .carousel-control-next {
+    margin-bottom: 125px;
+}
 /* Animation */
 [data-anime] {
     opacity: 0;
@@ -228,4 +233,10 @@ html, body {
 [data-anime].animate {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 1860px) {
+    [data-anime="right"] {
+        transform: translate3d(-100%, 0, 0);
+    }
 }
