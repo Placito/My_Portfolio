@@ -203,3 +203,6 @@ html, body {
     border: 2px solid #559DBC;
     background-color: #fff;
 }
+.carousel-indicators {
+    margin-bottom: -35px;
+}
