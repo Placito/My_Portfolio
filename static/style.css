@@ -48,7 +48,7 @@ html, body {
 }
 .nav-menu {
     padding: 1.5rem;
-    position: ;
+    z-index: 10;
 }
 .nav-menu a,
 .nav-menu a:focus {
