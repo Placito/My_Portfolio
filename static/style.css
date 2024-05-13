@@ -252,3 +252,10 @@ footer {
     background-color: #021124;
     transition: 0.3s;
 }
+@media (max-width: 1012px) {
+    footer {
+        position: static;
+        width: auto;
+        padding: 20px 15px;
+    }
+}
