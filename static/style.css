@@ -103,11 +103,6 @@ html, body {
     text-shadow: 4px 4px 10px #0C1E1F;
     color: #0C1E1F;
 }
-.drag {
-    width: 9rem;
-    right: 0;
-    bottom: 0;
-}
 .drag a {
     text-decoration: none;
     color: #fff;
