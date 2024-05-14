@@ -4,7 +4,7 @@ This portfolio application is built with Flask and includes a contact form that 
 
 ## Demo link:
 
-* <a href="https://my-portfolio-85ty.onrender.com" target="_blank">Link</a>
+* https://my-portfolio-85ty.onrender.com
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
