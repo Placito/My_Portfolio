@@ -212,6 +212,13 @@ html, body {
 .carousel-control-prev, .carousel-control-next {
     margin-bottom: 125px;
 }
+.card-square {
+    background-repeat: no-repeat;
+    background-size: cover; /* Covers the entire area, may clip if aspect ratio is different */
+    background-position: center; /* Centers the background image */
+    width: 100%;
+    height: 60vh;
+}
 /* Animation */
 [data-anime] {
     opacity: 0;
