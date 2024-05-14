@@ -1,10 +1,13 @@
 from flask import Flask, render_template, redirect, request, flash
 from flask_mail import Mail, Message
 from config import email, senha
+from waitress import serve
 
+# Initialize the Flask application first
 app = Flask(__name__)
 app.secret_key = 'marip'
 
+# Set up mail settings
 mail_settings = {
     "MAIL_SERVER": 'smtp.gmail.com',
     "MAIL_PORT": 465,
@@ -13,16 +16,17 @@ mail_settings = {
     "MAIL_USERNAME": email,
     "MAIL_PASSWORD": senha
 }
-
 app.config.update(mail_settings)
 mail = Mail(app)
 
+# Define the Contact class
 class Contact:
     def __init__(self, name, email, message):
         self.name = name
         self.email = email
         self.message = message
 
+# Define routes
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -37,10 +41,10 @@ def send():
         )
 
         msg = Message(
-            subject = f'Portfolio Contact from {formContact.name}',
-            sender = app.config.get("MAIL_USERNAME"),
-            recipients = ['mariana.placito@gmail.com'],
-            body = f'''
+            subject=f'Portfolio Contact from {formContact.name}',
+            sender=app.config.get("MAIL_USERNAME"),
+            recipients=['mariana.placito@gmail.com'],
+            body=f'''
                 Portfolio Contact from {formContact.name}
 
                 message:
@@ -51,5 +55,6 @@ def send():
         flash('Message sent successfully!')
     return redirect('/')
 
+# Serve the application with Waitress
 if __name__ == '__main__':
-    app.run(debug=True)
+    serve(app, host='0.0.0.0', port=8080)
