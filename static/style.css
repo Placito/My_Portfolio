@@ -209,14 +209,19 @@ html, body {
 .carousel-indicators {
     margin-bottom: -35px;
 }
-.carousel-control-prev, .carousel-control-next {
-    margin-bottom: 125px;
+.carousel-control-prev {
+    margin-left: -4rem;
+    z-index: 8;
+}
+.carousel-control-next {
+    margin-right: -4rem;
 }
 .card-square {
     background-repeat: no-repeat;
     background-size: cover; /* Covers the entire area, may clip if aspect ratio is different */
     background-position: center; /* Centers the background image */
-    width: 100%;
+    width: 90%;
+    margin: auto;
     height: 60vh;
 }
 /* Animation */
