@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, request, flash
 from flask_mail import Mail, Message
 from waitress import serve
+from flask_babel import Babel, _
 
 # Initialize the Flask application first
 app = Flask(__name__)
@@ -17,6 +18,11 @@ mail_settings = {
 }
 app.config.update(mail_settings)
 mail = Mail(app)
+babel = Babel(app)
+
+# Configure the default locale and the default time zone
+app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.config['BABEL_DEFAULT_TIMEZONE'] = 'UTC'
 
 # Define the Contact class
 class Contact:
@@ -44,15 +50,24 @@ def send():
             sender=app.config.get("MAIL_USERNAME"),
             recipients=['mariana.placito@gmail.com'],
             body=f'''
-                Portfolio Contact from {formContact.name}
+                _(Portfolio Contact from) {formContact.name}
 
-                message:
+                _(message:)
                 {formContact.message}
             '''    
         )
         mail.send(msg)
-        flash('Message sent successfully!')
+        flash('_(Message sent successfully!)')
     return redirect('/')
+
+# Define Locale Selection
+@babel.localeselector
+def get_locale():
+    # You can use a request argument or user preferences to switch locale
+    return request.args.get('lang') or 'en'
+
+# Define a function to translate
+def translate(lang):
 
 # Serve the application with Waitress
 if __name__ == '__main__':
