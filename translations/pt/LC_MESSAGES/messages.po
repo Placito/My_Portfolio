@@ -18,305 +18,282 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: index.html:35
-msgid "Home"
-msgstr "Início"
-
-#: index.html:38
-msgid "About"
-msgstr "Sobre"
-
-#: index.html:41
-msgid "Skills"
-msgstr "Habilidades"
-
-#: index.html:44
-msgid "Curriculum"
-msgstr "Currículo"
-
-#: index.html:47
-msgid "Portfolio"
-msgstr "Portfólio"
-
-#: index.html:50
-msgid "Contact"
-msgstr "Contacto"
-
-#: index.html:59
-msgid "Full Stack Developer"
-msgstr "Desenvolvedor Full Stack"
-
-#: index.html:65
-msgid "About"
-msgstr "Sobre"
-
-#: index.html:50
-msgid "Proactive Full Stack Developer. I started my journey with a degree in Human Biology, which later led me to discover my new abilities with a Design course,
-                        which sparked a passion for me in the programming field. 
-                        I have a natural aptitude for the front-end but a passion for discovering how things work behind the scenes, which led me to combine these two areas."
-msgstr "Desenvolvedora Full Stack Proativa. Iniciei o meu percurso com a licenciatura em Biologia Humana, o que mais tarde me levou a descobrir novas capacidades com um curso de Design,
-                         o que despertou em mim uma paixão pela área de programação.
-                         Tenho uma aptidão natural para o front-end mas uma paixão por descobrir como as coisas funcionam nos bastidores, o que me levou a combinar estas duas áreas."
-
-#: index.html:77
-msgid "Full Stack Developer"
-msgstr "Desenvolvedor Full Stack"
-
-#: index.html:78
-msgid "Is an entry-level position in the field of software development, responsible for working on both the front-end and back-end portions of web applications."
-msgstr "É uma posição para um nível inicial na área de desenvolvimento de software, responsável por trabalhar nas partes front-end e back-end de aplicações web."
-
-#: index.html:82
-msgid "Date of birth:"
-msgstr "Data de nascimento:"
-
-#: index.html:82
-msgid "December 24, 1989"
-msgstr "24 de Dezembro de 1989"
-
-#: index.html:83
-msgid "Age:"
-msgstr "Idade"
-
-#: index.html:84
-msgid "City:"
-msgstr "Cidade:"
-
-#: index.html:85
-msgid "Country"
-msgstr "País:"
-
-#: index.html:85
-msgid "Portugal"
-msgstr "Portugal"
-
-#: index.html:90
-msgid "Hobby:"
-msgstr "Passatempo:"
-
-#: index.html:90
-msgid "Hiking"
-msgstr "Caminhada."
-
-#: index.html:91
-msgid "Work:"
-msgstr "Trabalho:"
-
-#: index.html:92
-msgid "Experience:"
-msgstr "Experiência:"
-
-#: index.html:92
-msgid "Beginner"
-msgstr "Principiante"
-
-#: index.html:103
-msgid "Skills"
-msgstr "Habildades"
-
-#: index.html:104
-msgid "Throughout my time as a professional I have acquired some technical and soft skills, most of them are here, according to the percentage of knowledge I believe I have in each of them."
-msgstr "Ao longo do meu tempo como profissional adquiri algumas competências técnicas e não técnicas (interpessoais), das quais a maioria delas se encontra aqui mencionada, de acordo com a percentagem de conhecimento que acredito ter em cada uma delas."
-
-#: index.html:165
-msgid "Comunication"
-msgstr "Comunicação"
-
-#: index.html:175
-msgid "Curriculum"
-msgstr "Currículo"
-
-#: index.html:178
-msgid "Education"
-msgstr "Educação"
-
-#: index.html:180
-msgid "Full-Stack Software Developer"
-msgstr "Desenvolvedor Full Stack"
-
-#: index.html:182
-msgid "Online, Spain"
-msgstr "Online, Espanha"
-
-#: index.html:183
-msgid "Hands-on program to become a Full-Stack Software Developer, focusing on mastering both frontend and backend technologies."
-msgstr "Programa prático para se tornar um desenvolvedor de software Full-Stack, com foco no domínio das tecnologias front-end e back-end."
-
-#: index.html:186
-msgid "Development of multimedia products"
-msgstr "Desenvolvimento de produtos multimédia"
-
-#: index.html:189
-msgid "Specialized in multimedia product development, gaining practical skills in the latest digital design and media production technologies."
-msgstr "Especializado no desenvolvimento de produtos multimédia, adquirindo habilidades práticas nas mais recentes tecnologias de design digital e produção de mídia."
-
-#: index.html:192
-msgid "Degree in Human Biology"
-msgstr "Licenciatura em Biologia Humana"
-
-#: index.html:194
-msgid "Évora University"
-msgstr "Universidade de Évora"
-
-#: index.html:195
-msgid "Completed a comprehensive study in Human Biology, acquiring a strong foundation in biological sciences and their application to human health and disease."
-msgstr "Concluiu um estudo abrangente em Biologia Humana, adquirindo uma base sólida em ciências biológicas e sua aplicação à saúde e às doenças humanas."
-
-#: index.html:199
-msgid "Professional"
-msgstr "Profissional"
-
-#: index.html:201
-msgid "Full Stack Developer"
-msgstr "Desenvolvedor Full Stack"
-
-#: index.html:202
-msgid "The moment"
-msgstr "actual"
-
-#: index.html:204
-msgid "Develop user-friendly web interfaces using HTML, CSS, and JavaScript.
-                                Participate in code reviews and provide constructive feedback.
-                                Troubleshoot, debug, and resolve issues in both frontend and backend components"
-msgstr "Desenvolver interfaces web fáceis de usar utilizando HTML, CSS e JavaScript.
-                                 Participar em revisões de código e forneçer feedback construtivo.
-                                 Solucionar, depurar e resolver problemas em componentes de front-end e back-end"
-
-#: index.html:192
-msgid "Graphic designer"
-msgstr "Designer gráfica"
-
-#: app/templates/_post.html:25
-msgid "Assisting in the management of the company's website
-                                development, like, taking photographs and designing
-                                them, updating its content in the website's admin
-                                dashboard, and reporting problems that would appear."
-msgstr "Traduzir"
-
-#: app/templates/base.html:9
-msgid "Welcome to Microblog"
-msgstr "Bem vindo ao Microblog"
-
-#: app/templates/base.html:43
-msgid "Login"
-msgstr "Login"
-
-#: app/templates/base.html:47 app/templates/messages.html:4
-msgid "Messages"
-msgstr "Mensagens"
-
-#: app/templates/base.html:56
-msgid "Profile"
-msgstr "Perfil"
-
-#: app/templates/base.html:59
-msgid "Logout"
-msgstr "Logout"
-
-#: app/templates/index.html:5
-#, python-format
-msgid "Hi, %(username)s!"
-msgstr "Olá, %(username)s!"
-
-#: app/templates/index.html:16 app/templates/search.html:12
-#: app/templates/user.html:47
-msgid "Newer posts"
-msgstr "Posts recentes"
-
-#: app/templates/index.html:21 app/templates/search.html:17
-#: app/templates/user.html:52
-msgid "Older posts"
-msgstr "Posts antigos"
-
-#: app/templates/messages.html:12
-msgid "Newer messages"
-msgstr "Mensagens seguintes"
-
-#: app/templates/messages.html:17
-msgid "Older messages"
-msgstr "Mensagens anteriores"
-
-#: app/templates/search.html:4
-msgid "Search Results"
-msgstr "Resultados de procura"
-
-#: app/templates/send_message.html:5
-#, python-format
-msgid "Send Message to %(recipient)s"
-msgstr ""
-
-#: app/templates/user.html:8
-msgid "User"
-msgstr "Utilizador"
-
-#: app/templates/user.html:11 app/templates/user_popup.html:7
-msgid "Last seen on"
-msgstr "Visto pela última vez em"
-
-#: app/templates/user.html:13 app/templates/user_popup.html:9
-#, python-format
-msgid "%(count)d followers"
-msgstr "%(count)d seguidores"
-
-#: app/templates/user.html:13 app/templates/user_popup.html:9
-#, python-format
-msgid "%(count)d following"
-msgstr "A seguir %(count)d"
-
-#: app/templates/user.html:15
-msgid "Edit your profile"
-msgstr "Editar o seu perfil"
-
-#: app/templates/user.html:17
-#, fuzzy
-msgid "Export your posts"
-msgstr "Esqueçeu a palavra pass?"
-
-#: app/templates/user.html:23 app/templates/user_popup.html:15
-msgid "Follow"
-msgstr "Seguir"
-
-#: app/templates/user.html:30 app/templates/user_popup.html:22
-msgid "Unfollow"
-msgstr "Deixar de seguir"
-
-#: app/templates/user.html:35
-#, fuzzy
-msgid "Send private message"
-msgstr "Enviar Mensagem"
-
-#: app/templates/auth/login.html:7
-msgid "New User?"
-msgstr "Novo utilizador?"
-
-#: app/templates/auth/login.html:7
-msgid "Click to Register!"
-msgstr "Clicar para se registar!"
-
-#: app/templates/auth/login.html:9
-msgid "Forgot Your Password?"
-msgstr "Esqueçeu a palavra pass?"
-
-#: app/templates/auth/login.html:10
-msgid "Click to Reset It"
-msgstr "Clique aqui p+ara pedir para redefenir a palavra pass"
-
-#: app/templates/auth/reset_password.html:5
-msgid "Reset Your Password"
-msgstr "Redefenir a palavra pass"
-
-#: app/templates/errors/404.html:4
-msgid "Not Found"
-msgstr "Não Encontrada"
-
-#: app/templates/errors/404.html:5 app/templates/errors/500.html:6
-msgid "Back"
-msgstr "Para trás"
-
-#: app/templates/errors/500.html:4
-msgid "An unexpected error has occurred"
-msgstr "Ocorreu um erro inesperado"
-
-#: app/templates/errors/500.html:5
-msgid "The administrator has been notified. Sorry for the inconvenience!"
-msgstr "O administrador foi notificado. Pedimos desculpa pelo inconveniente!"
+#~ msgid "Home"
+#~ msgstr "Início"
+
+#~ msgid "About"
+#~ msgstr "Sobre"
+
+#~ msgid "Skills"
+#~ msgstr "Habilidades"
+
+#~ msgid "Curriculum"
+#~ msgstr "Currículo"
+
+#~ msgid "Portfolio"
+#~ msgstr "Portfólio"
+
+#~ msgid "Contact"
+#~ msgstr "Contacto"
+
+#~ msgid "Full Stack Developer"
+#~ msgstr "Desenvolvedor Full Stack"
+
+#~ msgid ""
+#~ "Proactive Full Stack Developer. I "
+#~ "started my journey with a degree "
+#~ "in Human Biology, which later led "
+#~ "me to discover my new abilities "
+#~ "with a Design course,which sparked a "
+#~ "passion for me in the programming "
+#~ "field.I have a natural aptitude for "
+#~ "the front-end but a passion for"
+#~ " discovering how things work behind "
+#~ "the scenes, which led me to "
+#~ "combine these two areas."
+#~ msgstr ""
+#~ "Desenvolvedora Full Stack Proativa. Iniciei"
+#~ " o meu percurso com a licenciatura"
+#~ " em Biologia Humana, o que mais "
+#~ "tarde me levou a descobrir novas "
+#~ "capacidades com um curso de\" "
+#~ "\"Design,2o que despertou em mim uma "
+#~ "paixão pela área de programação.Tenho "
+#~ "uma aptidão natural para o front-"
+#~ "end mas uma paixão por descobrir "
+#~ "como as coisas funcionam nos bastidores,"
+#~ " o que me levou a combinar "
+#~ "estas duas áreas."
+
+#~ msgid ""
+#~ "Is an entry-level position in the"
+#~ " field of software development, responsible"
+#~ " for working on both the front-"
+#~ "end and back-end portions of web"
+#~ " applications."
+#~ msgstr ""
+#~ "É uma posição para um nível "
+#~ "inicial na área de desenvolvimento de"
+#~ " software, responsável por trabalhar nas"
+#~ " partes front-end e back-end de"
+#~ " aplicações web."
+
+#~ msgid "Date of birth:"
+#~ msgstr "Data de nascimento:"
+
+#~ msgid "December 24, 1989"
+#~ msgstr "24 de Dezembro de 1989"
+
+#~ msgid "Age:"
+#~ msgstr "Idade"
+
+#~ msgid "City:"
+#~ msgstr "Cidade:"
+
+#~ msgid "Country"
+#~ msgstr "País:"
+
+#~ msgid "Portugal"
+#~ msgstr "Portugal"
+
+#~ msgid "Hobby:"
+#~ msgstr "Passatempo:"
+
+#~ msgid "Hiking"
+#~ msgstr "Caminhada."
+
+#~ msgid "Work:"
+#~ msgstr "Trabalho:"
+
+#~ msgid "Experience:"
+#~ msgstr "Experiência:"
+
+#~ msgid "Beginner"
+#~ msgstr "Principiante"
+
+#~ msgid ""
+#~ "Throughout my time as a professional "
+#~ "I have acquired some technical and "
+#~ "soft skills, most of them are "
+#~ "here, according to the percentage of "
+#~ "knowledge I believe I have in each"
+#~ " \" \"of them."
+#~ msgstr ""
+#~ "Ao longo do meu tempo como "
+#~ "profissional adquiri algumas competências "
+#~ "técnicas e não técnicas (interpessoais), "
+#~ "das quais a maioria delas se "
+#~ "encontra aqui mencionada, de acordo com"
+#~ " a percentagem de conhecimento que "
+#~ "acredito ter em cada uma delas."
+
+#~ msgid "Comunication"
+#~ msgstr "Comunicação"
+
+#~ msgid "Education"
+#~ msgstr "Educação"
+
+#~ msgid "Full-Stack Software Developer"
+#~ msgstr "Desenvolvedor Full Stack"
+
+#~ msgid "Online, Spain"
+#~ msgstr "Online, Espanha"
+
+#~ msgid ""
+#~ "Hands-on program to become a "
+#~ "Full-Stack Software Developer, focusing on"
+#~ " mastering both frontend and backend "
+#~ "technologies."
+#~ msgstr ""
+#~ "Programa prático para se tornar um "
+#~ "desenvolvedor de software Full-Stack, "
+#~ "com foco no domínio das tecnologias "
+#~ "front-end e back-end."
+
+#~ msgid "Development of multimedia products"
+#~ msgstr "Desenvolvimento de produtos multimédia"
+
+#~ msgid ""
+#~ "Specialized in multimedia product development,"
+#~ " gaining practical skills in the "
+#~ "latest digital design and media "
+#~ "production technologies."
+#~ msgstr ""
+#~ "Especializado no desenvolvimento de produtos"
+#~ " multimédia, adquirindo habilidades práticas "
+#~ "nas mais recentes tecnologias de design"
+#~ " digital e produção de mídia."
+
+#~ msgid "Degree in Human Biology"
+#~ msgstr "Licenciatura em Biologia Humana"
+
+#~ msgid "Évora University"
+#~ msgstr "Universidade de Évora"
+
+#~ msgid ""
+#~ "Completed a comprehensive study in Human"
+#~ " Biology, acquiring a strong foundation "
+#~ "in biological sciences and their "
+#~ "application to human health and disease."
+#~ msgstr ""
+#~ "Concluiu um estudo abrangente em "
+#~ "Biologia Humana, adquirindo uma base "
+#~ "sólida em ciências biológicas e sua "
+#~ "aplicação à saúde e às doenças "
+#~ "humanas."
+
+#~ msgid "Professional"
+#~ msgstr "Profissional"
+
+#~ msgid "The moment"
+#~ msgstr "actual"
+
+#~ msgid ""
+#~ "Develop user-friendly web interfaces "
+#~ "using HTML, CSS, and JavaScript.Participate"
+#~ " in code reviews and provide "
+#~ "constructive feedback.Troubleshoot, debug, and "
+#~ "resolve issues in both frontend and "
+#~ "backend components"
+#~ msgstr ""
+#~ "Desenvolver interfaces web fáceis de "
+#~ "usar utilizando HTML, CSS e "
+#~ "JavaScript.Participar em revisões de código"
+#~ " e forneçer feedback construtivo.Solucionar, "
+#~ "depurar e resolver problemas em "
+#~ "componentes de front-end e back-"
+#~ "end"
+
+#~ msgid "Graphic designer"
+#~ msgstr "Designer gráfica"
+
+#~ msgid ""
+#~ "Assisting in the management of the "
+#~ "company's websitedevelopment, like, taking "
+#~ "photographs and designingthem, updating its"
+#~ " content in the website's admindashboard,"
+#~ " and reporting problems that would "
+#~ "appear."
+#~ msgstr ""
+#~ "Auxílio na gestão do site da "
+#~ "empresa, como tirar fotos, desenhando, "
+#~ "pensado e escrevendo, atualizando o seu"
+#~ " conteúdo na administração do site e"
+#~ " relatar problemas que\" \"apareceriam."
+
+#~ msgid "Digital animation intern"
+#~ msgstr "Estagiária em animação digital"
+
+#~ msgid "Role as creator of content, animations, web design and learning"
+#~ msgstr ""
+#~ "Papel como criadora de conteúdo, "
+#~ "animações, web design e de aprendizagem"
+
+#~ msgid ""
+#~ "Develop during a programming bootcamp, "
+#~ "an e-commerce platform where users can"
+#~ " browse, review, purchase."
+#~ msgstr ""
+#~ "Durante um bootcamp de programação, "
+#~ "desonvolvi uma plataforma de e-commerce "
+#~ "onde os utilizadores podem navegar, "
+#~ "avaliar e comprar."
+
+#~ msgid "Is an application to assist in task management, for internal roles."
+#~ msgstr ""
+#~ "É uma aplicação para auxiliar na "
+#~ "gestão de tarefas, para funções "
+#~ "internas."
+
+#~ msgid "My design portfolio"
+#~ msgstr "Meu portfólio de design"
+
+#~ msgid ""
+#~ "Work developed in my CET, using "
+#~ "techniques with Adobe Illustrator, Adobe "
+#~ "Photoshop, Adobe Afert effects, Adobe "
+#~ "premier, Photography and 3ds Max.The "
+#~ "language I selected to present my "
+#~ "work was Portuguese."
+#~ msgstr ""
+#~ "Trabalho desenvolvido no meu CET, "
+#~ "utilizando técnicas como o Adobe "
+#~ "Illustrator, Adobe Photoshop, Adobe Afert "
+#~ "Effects, Adobe Premier, fotografia e 3ds"
+#~ " Max.O idioma que selecionei para "
+#~ "apresentar meu trabalho foi o português."
+
+#~ msgid "Previous"
+#~ msgstr "Anterior"
+
+#~ msgid "Next"
+#~ msgstr "Próximo"
+
+#~ msgid "Location:"
+#~ msgstr "Localização"
+
+#~ msgid "Email:"
+#~ msgstr "E-mail:"
+
+#~ msgid "Name:"
+#~ msgstr "Nome:"
+
+#~ msgid "Message:"
+#~ msgstr "Mensagem:"
+
+#~ msgid "Send"
+#~ msgstr "Enviar"
+
+# app.py:49
+# app.py:53
+#~ msgid "Portfolio Contact from"
+#~ msgstr "Contato do portfólio de"
+
+# app.py:55
+#~ msgid "message:"
+#~ msgstr "mensagem:"
+
+# app.py:60
+#~ msgid "Message sent successfully!"
+#~ msgstr "A sua mensagem foi enviada com sucesso"
+

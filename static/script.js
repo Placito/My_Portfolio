@@ -42,3 +42,8 @@ animeScroll();
 window.addEventListener("scroll", () => {
     animeScroll();
 })
+
+// function to set the correct language that is selected with the translations
+function setLanguage(lang) {
+    window.location.href = `/set_language/${lang}`;
+}

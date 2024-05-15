@@ -1,4 +1,6 @@
-from flask import Flask, render_template, redirect, request, flash
+import click
+from flask.cli import with_appcontext
+from flask import Flask, render_template, redirect, request, flash, session, url_for
 from flask_mail import Mail, Message
 from waitress import serve
 from flask_babel import Babel, _
@@ -46,7 +48,7 @@ def send():
         )
 
         msg = Message(
-            subject=f'Portfolio Contact from {formContact.name}',
+            subject=f'{_("Portfolio Contact from")} {formContact.name}',
             sender=app.config.get("MAIL_USERNAME"),
             recipients=['mariana.placito@gmail.com'],
             body=f'''
@@ -57,17 +59,13 @@ def send():
             '''    
         )
         mail.send(msg)
-        flash('_(Message sent successfully!)')
+        flash(_('Message sent successfully!'))
     return redirect('/')
 
-# Define Locale Selection
-@babel.localeselector
-def get_locale():
-    # You can use a request argument or user preferences to switch locale
-    return request.args.get('lang') or 'en'
-
-# Define a function to translate
-def translate(lang):
+@app.route('/set_language/<language>')
+def set_language(language):
+    session['language'] = language
+    return redirect(request.referrer or url_for('index'))
 
 # Serve the application with Waitress
 if __name__ == '__main__':
