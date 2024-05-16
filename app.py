@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, flash, session, url_for, jsonify, send_file, g
+from flask import Flask, current_app, render_template, redirect, request, flash, session, url_for, jsonify, send_file
 from flask_mail import Mail, Message
 from waitress import serve
 from flask_babel import Babel, gettext as _
@@ -32,18 +32,13 @@ class Contact:
         self.message = message
 
 # Manually set the locale before each request
-@app.before_request
-def set_locale():
-    lang = session.get('lang', 'en')
-    if lang not in app.config['BABEL_SUPPORTED_LOCALES']:
-        lang = app.config['BABEL_DEFAULT_LOCALE']
-    # Set the locale for Flask-Babel
-    g.locale = lang
+def get_locale():
+    return request.accept_languages.best_match(current_app.config['BABEL_SUPPORTED_LOCALES'])
 
 # Define routes
 @app.route('/')
 def home():
-    return render_template('index.html', lang=g.locale)
+    return render_template('index.html', lang=get_locale())
 
 @app.route('/send', methods=['GET', 'POST'])
 def send():

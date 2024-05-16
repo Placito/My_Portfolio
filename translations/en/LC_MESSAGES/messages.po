@@ -1,4 +1,4 @@
-# Portuguese translations for PROJECT.
+# English translations for PROJECT.
 # Copyright (C) 2024 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
@@ -10,59 +10,57 @@ msgstr ""
 "POT-Creation-Date: 2024-05-16 13:02+0000\n"
 "PO-Revision-Date: 2024-05-15 14:49+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: pt\n"
-"Language-Team: pt <LL@li.org>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-
 #: app.py:59
 msgid "Message sent successfully!"
-msgstr "Mensagem enviada com sucesso!"
+msgstr "Message sent successfully!"
 
 #: templates/index.html:35
-#: templates/index.html:33
 msgid "Home"
-msgstr "Início"
+msgstr "Home"
 
 #: templates/index.html:38 templates/index.html:70
 msgid "About"
-msgstr "Sobre"
+msgstr "About"
 
 #: templates/index.html:41 templates/index.html:109
 msgid "Skills"
-msgstr "Habilidades"
+msgstr "Skills"
 
 #: templates/index.html:44 templates/index.html:181
 msgid "Curriculum"
-msgstr "Currículo"
+msgstr "Curriculum"
 
 #: templates/index.html:47 templates/index.html:237
 msgid "Portfolio"
-msgstr "Portfólio"
+msgstr "Portfolio"
 
 #: templates/index.html:50 templates/index.html:306
 msgid "Contact"
-msgstr "Contacto"
+msgstr "Contact"
 
 #: templates/index.html:55
 msgid "Select one language"
-msgstr "Selecciona uma linguagem"
+msgstr "Select one language"
 
 #: templates/index.html:56
 msgid "English"
-msgstr "Inglês"
+msgstr "English"
 
 #: templates/index.html:57
 msgid "Portuguese"
-msgstr "Português"
+msgstr "Portuguese"
 
 #: templates/index.html:64 templates/index.html:82
 msgid "Full Stack Developer"
-msgstr "Desenvolvedora Full Stack"
+msgstr "Full Stack Developer"
 
 #: templates/index.html:72
 msgid ""
@@ -75,13 +73,12 @@ msgid ""
 " passion for discovering how things work behind the scenes, which led me "
 "to combine these two areas."
 msgstr ""
-""Desenvolvedora Full Stack Proativa. Comecei a minha jornada com uma licenciatura em "
-"Biologia Humana, que mais tarde me levou a descobrir novas habilidades com um "
-"Curso de design,\n"
-"o que despertou em mim uma paixão pela programação. \n"
-"Tenho uma aptidão natural para o front-end, mas"
-"um paixão por descobrir como as coisas funcionam nos bastidores, o que me levou"
-"a combinar essas duas áreas."
+"Proactive Full Stack Developer. I started my journey with a degree in "
+"Human Biology, which later led me to discover my new abilities with a "
+"Design course, which sparked a passion for me in the programming field. I"
+" have a natural aptitude for the front-end but a passion for discovering "
+"how things work behind the scenes, which led me to combine these two "
+"areas."
 
 #: templates/index.html:83
 msgid ""
@@ -89,29 +86,29 @@ msgid ""
 "responsible for working on both the front-end and back-end portions of "
 "web applications."
 msgstr ""
-"É uma posição inicial na área de desenvolvimento de software, "
-"responsável por trabalhar nas partes front-end e back-end de"
-"aplicaçõess web."
+"Is an entry-level position in the field of software development, "
+"responsible for working on both the front-end and back-end portions of "
+"web applications."
 
 #: templates/index.html:87
 msgid "Date of birth"
-msgstr "Data de nascimento"
+msgstr "Date of birth"
 
 #: templates/index.html:87
 msgid "December 24, 1989"
-msgstr "24 de Dezembro de 1989"
+msgstr "December 24, 1989"
 
 #: templates/index.html:88
 msgid "Age"
-msgstr "Idade"
+msgstr "Age"
 
 #: templates/index.html:89
 msgid "City"
-msgstr "Cidade"
+msgstr "City"
 
 #: templates/index.html:90
 msgid "Country"
-msgstr "País"
+msgstr "Country"
 
 #: templates/index.html:90
 msgid "Portugal"
@@ -119,23 +116,23 @@ msgstr "Portugal"
 
 #: templates/index.html:95
 msgid "Hobby"
-msgstr "Passatempo"
+msgstr "Hobby"
 
 #: templates/index.html:95
 msgid "Hiking"
-msgstr "Caminhada"
+msgstr "Hiking"
 
 #: templates/index.html:97
 msgid "Work"
-msgstr "Trabalho"
+msgstr "Work"
 
 #: templates/index.html:98
 msgid "Experience"
-msgstr "Experiência"
+msgstr "Experience"
 
 #: templates/index.html:98
 msgid "Beginner"
-msgstr "Principiante"
+msgstr "Beginner"
 
 #: templates/index.html:110
 msgid ""
@@ -143,53 +140,53 @@ msgid ""
 "soft skills, most of them are here, according to the percentage of "
 "knowledge I believe I have in each of them."
 msgstr ""
-"Ao longo do meu tempo como profissional adquiri alguns conhecimentos técnicos e "
-"habilidades interpessoais, a maioria delas está aqui, de acordo com a percentagem de"
-"conhecimento que acredito ter em cada uma delas."
+"Throughout my time as a professional I have acquired some technical and "
+"soft skills, most of them are here, according to the percentage of "
+"knowledge I believe I have in each of them."
 
 #: templates/index.html:171
 msgid "Comunication"
-msgstr "Communicação"
+msgstr "Communication"
 
 #: templates/index.html:184
 msgid "Education"
-msgstr "Educação"
+msgstr "Education"
 
 #: templates/index.html:186
 msgid "Full-Stack Software Developer"
-msgstr "Desenvolvedor de software Full-Stack"
+msgstr "Full-Stack Software Developer"
 
 #: templates/index.html:188
 msgid "Online, Spain"
-msgstr "Online, Espanha"
+msgstr "Online, Spain"
 
 #: templates/index.html:189
 msgid ""
 "Hands-on program to become a Full-Stack Software Developer, focusing on "
 "mastering both frontend and backend technologies."
 msgstr ""
-"Programa prático para se tornar um desenvolvedor de software Full-Stack, com foco em "
-"dominar as tecnologias de frontend e backend."
+"Hands-on program to become a Full-Stack Software Developer, focusing on "
+"mastering both frontend and backend technologies."
 
 #: templates/index.html:192
 msgid "Development of multimedia products"
-msgstr "Desenvolvimento de produtos multimídia"
+msgstr "Development of multimedia products"
 
 #: templates/index.html:195
 msgid ""
 "Specialized in multimedia product development, gaining practical skills "
 "in the latest digital design and media production technologies."
 msgstr ""
-"Especializado em desenvolvimento de produtos multimídia, adquirindo habilidades práticas"
-"nas mais recentes tecnologias de design digital e produção de mídia."
+"Specialized in multimedia product development, gaining practical skills "
+"in the latest digital design and media production technologies."
 
 #: templates/index.html:198
 msgid "Degree in Human Biology"
-msgstr "Licenciatura em Biologia Humana"
+msgstr "Degree in Human Biology"
 
 #: templates/index.html:200
 msgid "Évora University"
-msgstr "Universidade de Évora"
+msgstr "Évora University"
 
 #: templates/index.html:201
 msgid ""
@@ -197,9 +194,9 @@ msgid ""
 "foundation in biological sciences and their application to human health "
 "and disease."
 msgstr ""
-"Compreende um estudo abrangente em Biologia Humana, adquirindo "
-"fundamentos nas ciências biológicas, bem como a sua aplicação à saúde humana"
-"e doenças."
+"Completed a comprehensive study in Human Biology, acquiring a strong "
+"foundation in biological sciences and their application to human health "
+"and disease."
 
 #: templates/index.html:205
 msgid "Professional"
@@ -207,11 +204,11 @@ msgstr "Professional"
 
 #: templates/index.html:207
 msgid "Full-Stack Developer"
-msgstr "Desenvolvedora Full-Stackr"
+msgstr "Full-Stack Developer"
 
 #: templates/index.html:208
 msgid "The moment"
-msgstr "Actual"
+msgstr "The moment"
 
 #: templates/index.html:210
 msgid ""
@@ -221,15 +218,15 @@ msgid ""
 "                                Troubleshoot, debug, and resolve issues "
 "in both frontend and backend components."
 msgstr ""
-"Desenvolver interfaces Web, fáceis de utilizar, usando HTML, CSS e JavaScript.\n"
-" Participar em revisões de código e forneçer "
-"feedback construtivo.\n"
-" Solucionar problemas, depurar e resolver problemas "
-"nos componentes frontend e backend."
+"Develop user-friendly web interfaces using HTML, CSS, and JavaScript.\n"
+"                                Participate in code reviews and provide "
+"constructive feedback.\n"
+"                                Troubleshoot, debug, and resolve issues "
+"in both frontend and backend components."
 
 #: templates/index.html:216
 msgid "Graphic designer"
-msgstr "Designer gráfico"
+msgstr "Graphic designer"
 
 #: templates/index.html:219
 msgid ""
@@ -241,37 +238,37 @@ msgid ""
 "                                dashboard, and reporting problems that "
 "would appear."
 msgstr ""
-"Auxiliar na gestão do site da empresa\n"
-"tipo, tirar fotos e"
-"desenhando projectos, \n"
-"atualizando o conteúdo no "
-"painel de administrador do site\n"
-" e relatar problemas que"
-"apareceriam."
+"Assisting in the management of the company's website\n"
+"                                development, like, taking photographs and"
+" designing\n"
+"                                them, updating its content in the "
+"website's admin\n"
+"                                dashboard, and reporting problems that "
+"would appear."
 
 #: templates/index.html:226
 msgid "Digital animation intern"
-msgstr "Estagiário de animação digital"
+msgstr "Digital animation intern"
 
 #: templates/index.html:229
 msgid "Role as creator of content, animations, web design and learning"
-msgstr "Papel como criadora de conteúdo, animações, web design e aprendizagem"
+msgstr "Role as creator of content, animations, web design and learning"
 
 #: templates/index.html:252
 msgid ""
 "Develop during a programming bootcamp, an e-commerce platform where users"
 " can browse, review, purchase."
 msgstr ""
-"Desenvolvido durante um bootcamp de programação, é uma plataforma de e-commerce onde os utilizadores"
-"podem navegar, revisar, comprar."
+"Develop during a programming bootcamp, an e-commerce platform where users"
+" can browse, review, purchase."
 
 #: templates/index.html:269
 msgid "Is an application to assist in task management, for internal roles."
-msgstr "É uma aplicação para auxiliar na gestão de tarefas, para funções internas."
+msgstr "Is an application to assist in task management, for internal roles."
 
 #: templates/index.html:283
 msgid "My design portfolio"
-msgstr "Meu portfólio de design"
+msgstr "My design portfolio"
 
 #: templates/index.html:284
 msgid ""
@@ -280,50 +277,50 @@ msgid ""
 "                                    The language I selected to present my"
 " work was Portuguese."
 msgstr ""
-"Trabalho desenvolvido durante o meu CET, utilizando técnicas como, Adobe Illustrator, Adobe "
-"Photoshop, Adobe Afert effect, Adobe Premier, Fotografia e 3ds Max.\n"
-"O idioma que selecionei para apresentar meu"
-“O trabalho é o português."
+"Work developed in my CET, using techniques with Adobe Illustrator, Adobe "
+"Photoshop, Adobe Afert effects, Adobe premier, Photography and 3ds Max.\n"
+"                                    The language I selected to present my"
+" work was Portuguese."
 
 #: templates/index.html:295
 msgid "Previous"
-msgstr "Anterior"
+msgstr "Previous"
 
 #: templates/index.html:299
 msgid "Next"
-msgstr "Própximo"
+msgstr "Next"
 
 #: templates/index.html:311
 msgid "Location"
-msgstr "Localização"
+msgstr "Location"
 
 #: templates/index.html:315 templates/index.html:329
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 #: templates/index.html:325
 msgid "Name"
-msgstr "Nome"
+msgstr "Name"
 
 #: templates/index.html:326
 msgid "Write your name"
-msgstr "Escreva o seu nome"
+msgstr "Write your name"
 
 #: templates/index.html:330
 msgid "Write your email"
-msgstr "Escreva o seu e-mail"
+msgstr "Write your email"
 
 #: templates/index.html:333
 msgid "Message"
-msgstr "Menssagem"
+msgstr "Message"
 
 #: templates/index.html:334
 msgid "Write your message"
-msgstr "Escreva a sua menssagem"
+msgstr "Write your message"
 
 #: templates/index.html:337
 msgid "Send"
-msgstr "Enviar"
+msgstr "Send"
 
 #: venv/lib/python3.10/site-packages/click/_termui_impl.py:518
 #: venv/lib/site-packages/click/_termui_impl.py:518

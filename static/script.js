@@ -53,37 +53,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.error('Menu or body element not found');
     }
 
-    // Function to set the correct language that is selected with the translations
-    async function setLanguage(event) {
-        event.preventDefault();  // Prevent the form from submitting
-        console.log('Language change triggered'); // Log language change trigger
-        const lang = event.target.value;
-        console.log('Selected language:', lang); // Log selected language
-        if (lang) {
-            try {
-                const response = await fetch(`/set_language/${lang}`, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
-                if (response.ok) {
-                    console.log('Language set successfully');
-                    const translations = await fetchTranslations(lang);
-                    updatePageContent(translations);
-                } else {
-                    console.error('Failed to set language');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-            }
-        }
-    }
-
-    // Ensure the function is globally accessible
-    window.setLanguage = setLanguage;
-
-    // Function to fetch translations
+        // Function to fetch translations
     async function fetchTranslations(lang) {
         const response = await fetch(`/translations/${lang}/LC_MESSAGES/messages.po`);
         if (!response.ok) {
@@ -99,14 +69,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const lines = content.split('\n');
         let msgid = '';
         let msgstr = '';
+        let inMsgid = false;
+        let inMsgstr = false;
+
         for (let line of lines) {
+            line = line.trim();
             if (line.startsWith('msgid')) {
-                msgid = line.replace(/msgid\s+"(.*)"/, '$1');
+                inMsgid = true;
+                inMsgstr = false;
+                msgid = line.replace(/msgid\s*"(.*)"/, '$1');
             } else if (line.startsWith('msgstr')) {
-                msgstr = line.replace(/msgstr\s+"(.*)"/, '$1');
+                inMsgstr = true;
+                inMsgid = false;
+                msgstr = line.replace(/msgstr\s*"(.*)"/, '$1');
                 translations[msgid] = msgstr;
                 msgid = '';
                 msgstr = '';
+            } else if (inMsgid && line.startsWith('"')) {
+                msgid += line.replace(/"(.*)"/, '$1');
+            } else if (inMsgstr && line.startsWith('"')) {
+                msgstr += line.replace(/"(.*)"/, '$1');
             }
         }
         return translations;
@@ -114,48 +96,38 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Function to update the page content based on the fetched translations
     function updatePageContent(translations) {
-        // Helper function to update text content
-        const updateElement = (id, translationKey) => {
-            const element = document.getElementById(id);
-            if (element && translations[translationKey]) {
-                element.textContent = translations[translationKey];
+        const elementsToUpdate = document.querySelectorAll('[data-i18n]');
+        elementsToUpdate.forEach((element) => {
+            const key = element.getAttribute('data-i18n');
+            if (translations[key]) {
+                element.textContent = translations[key];
             }
-        };
+        });
+    }
 
-        // Update title and description
-        updateElement('title', 'title');
-        updateElement('subtitle', 'subtitle');
+    // Function to set the language and reload the page
+    async function setLanguage(event) {
+        const lang = event.target.value;
+        if (lang) {
+            try {
+                const translations = await fetchTranslations(lang);
+                console.log(translations)
+                updatePageContent(translations);
+                localStorage.setItem('selectedLang', lang);
+                location.reload();
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    }
 
-        // Update navigation links
-        updateElement('nav-home', 'Home');
-        updateElement('nav-about', 'About');
-        updateElement('nav-skills', 'Skills');
-        updateElement('nav-curriculum', 'Curriculum');
-        updateElement('nav-portfolio', 'Portfolio');
-        updateElement('nav-contact', 'Contact');
+    window.setLanguage = setLanguage;
 
-        // Update form labels and placeholders
-        updateElement('label-name', 'Name');
-        updateElement('label-email', 'Email');
-        updateElement('label-message', 'Message');
-        updateElement('placeholder-name', 'Write your name');
-        updateElement('placeholder-email', 'Write your email');
-        updateElement('placeholder-message', 'Write your message');
-
-        // Update section headers and other texts
-        updateElement('about-title', 'About');
-        updateElement('about-description', 'Proactive Full Stack Developer. I started my journey with a degree in Human Biology, which later led me to discover my new abilities with a Design course, which sparked a passion for me in the programming field. I have a natural aptitude for the front-end but a passion for discovering how things work behind the scenes, which led me to combine these two areas.');
-        updateElement('skills-title', 'Skills');
-        updateElement('skills-description', 'Throughout my time as a professional I have acquired some technical and soft skills, most of them are here, according to the percentage of knowledge I believe I have in each of them.');
-        updateElement('curriculum-title', 'Curriculum');
-        updateElement('portfolio-title', 'Portfolio');
-        updateElement('portfolio-description', 'Develop during a programming bootcamp, an e-commerce platform where users can browse, review, purchase.');
-        updateElement('contact-title', 'Contact');
-        updateElement('location', 'Location');
-        updateElement('email-title', 'Email');
-        updateElement('btn-send', 'Send');
-
-        // Optionally, reload the page if necessary
-        location.reload();
+    const savedLang = localStorage.getItem('selectedLang');
+    if (savedLang) {
+        document.querySelector('select.form-select').value = savedLang;
+        fetchTranslations(savedLang).then(translations => {
+            updatePageContent(translations);
+        });
     }
 });

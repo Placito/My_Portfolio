@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="title">Mariana Plácito</title>
+    <title id="title" data-i18n="title">Mariana Plácito</title>
     <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../static/style.css">
@@ -30,47 +30,45 @@
         <nav id="nvbar" class="nav-menu">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a id="nav-home" class="nav-link active" aria-current="page" href="#home"><i class="bi bi-house"></i>{{ _('Home') }}</a>
+                  <a id="nav-home" class="nav-link active" aria-current="page" href="#home"><i class="bi bi-house"></i><span [data-i18n]="nav-home">{{ _('Home') }}</span></a>
                 </li>
                 <li class="nav-item">
-                  <a id="nav-about" class="nav-link" href="#about"><i class="bi bi-person"></i>{{ _('About') }}</a>
+                  <a id="nav-about" class="nav-link" href="#about"><i class="bi bi-person"></i><span data-i18n="nav-about">{{ _('About') }}</span></a>
                 </li>
                 <li class="nav-item">
-                  <a id="nav-skills" class="nav-link" href="#skills"><i class="bi bi-list-check"></i>{{ _('Skills') }}</a>
+                  <a id="nav-skills" class="nav-link" href="#skills"><i class="bi bi-list-check"></i><span data-i18n="nav-skills">{{ _('Skills') }}</span></a>
                 </li>
                 <li class="nav-item">
-                    <a id="nav-curriculum" class="nav-link" href="#curriculum"><i class="bi bi-file-earmark"></i>{{ _('Curriculum') }}</a>
+                    <a id="nav-curriculum" class="nav-link" href="#curriculum"><i class="bi bi-file-earmark"></i><span data-i18n="nav-curriculum">{{ _('Curriculum') }}</span></a>
                 </li>
                 <li class="nav-item">
-                    <a id="nav-portfolio" class="nav-link" href="#portfolio"><i class="bi bi-collection"></i>{{ _('Portfolio') }}</a>
+                    <a id="nav-portfolio" class="nav-link" href="#portfolio"><i class="bi bi-collection"></i><span data-i18n="nav-portfolio">{{ _('Portfolio') }}</span></a>
                 </li>
                 <li class="nav-item">
-                    <a id="nav-contact" class="nav-link" href="#contact"><i class="bi bi-envelope"></i>{{ _('Contact') }}</a>
+                    <a id="nav-contact" class="nav-link" href="#contact"><i class="bi bi-envelope"></i><span data-i18n="nav-contact">{{ _('Contact') }}</span></a>
                 </li>
             </ul>
             <br/>
             <select class="form-select" aria-label="form-select-sm" onchange="setLanguage(event)">
-                <option value="" selected>{{ _('Select one language') }}</option>
-                <option value="en" {% if lang == 'en' %}selected{% endif %}>{{ _('English') }}</option>
-                <option value="pt" {% if lang == 'pt' %}selected{% endif %}>{{ _('Portuguese') }}</option>
-            </select>            
+                <option value="" selected data-i18n="select-language">{{ _('Select one language') }}</option>
+                <option value="en" data-i18n="english">{{ _('English') }}</option>
+                <option value="pt" data-i18n="portuguese">{{ _('Portuguese') }}</option>
+            </select>        
         </nav>
     </aside>
     <main class="main">
         <section id="home" class="row home m-0 p-0">
-            <div class="col-md-5 d-flex justify-content-center align-itens-center flex-column">
+            <div class="col-md-5 d-flex justify-content-center align-items-center flex-column">
                 <h2 class="text-shadow">Mariana Plácito</h2>
-                <span id="subtitle" class="text-shadow">{{ _('Full Stack Developer') }}</span>
+                <span id="subtitle" class="text-shadow" data-i18n="subtitle">{{ _('Full Stack Developer') }}</span>
             </div>
         </section>
         <section id="about" class="container mt-5 about">
             <div class="row w-100">
                 <div class="col-md-12" data-anime="down">
-                    <h2 id="about-title" class="pt-3">{{ _('About') }}</h2>
-                    <p id="about-description">
-                       {{ _('Proactive Full Stack Developer. I started my journey with a degree in Human Biology, which later led me to discover my new abilities with a Design course,
-                        which sparked a passion for me in the programming field. 
-                        I have a natural aptitude for the front-end but a passion for discovering how things work behind the scenes, which led me to combine these two areas.') }}
+                    <h2 id="about-title" class="pt-3" data-i18n="about-title">{{ _('About') }}</h2>
+                    <p id="about-description" data-i18n="about-description">
+                        {{ _('Proactive Full Stack Developer. I started my journey with a degree in Human Biology, which later led me to discover my new abilities with a Design course, which sparked a passion for me in the programming field. I have a natural aptitude for the front-end but a passion for discovering how things work behind the scenes, which led me to combine these two areas.') }}
                     </p>
                 </div>
                 <div class="row mt-4">
@@ -78,34 +76,33 @@
                         <img class="img-fluid shadow" data-anime="left" src="../static/img/perfil.jpg" alt="foto da Mariana">
                     </div>
                     <div class="col-md-8" data-anime="right">
-                        <h3>{{ _('Full Stack Developer') }}</h3>
-                        <p>{{ _('Is an entry-level position in the field of software development, responsible for working on both the front-end and back-end portions of web applications.') }}</p>
+                        <h3 data-i18n="full-stack-title">{{ _('Full Stack Developer') }}</h3>
+                        <p data-i18n="full-stack-description">{{ _('Is an entry-level position in the field of software development, responsible for working on both the front-end and back-end portions of web applications.') }}</p>
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><strong>{{ _('Date of birth') }}:</strong>{{ _('December 24, 1989') }}</li>
-                                    <li class="list-group-item"><strong>{{ _('Age') }}:</strong> 34</li>
-                                    <li class="list-group-item"><strong>{{ _('City') }}:</strong> Leiria</li>
-                                    <li class="list-group-item"><strong>{{ _('Country') }}:</strong>{{ _('Portugal') }}</li>
+                                    <li class="list-group-item"><strong data-i18n="dob">{{ _('Date of birth') }}:</strong>{{ _('December 24, 1989') }}</li>
+                                    <li class="list-group-item"><strong data-i18n="age">{{ _('Age') }}:</strong> 34</li>
+                                    <li class="list-group-item"><strong data-i18n="city">{{ _('City') }}:</strong> Leiria</li>
+                                    <li class="list-group-item"><strong data-i18n="country">{{ _('Country') }}:</strong>{{ _('Portugal') }}</li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
                                 <ul class="list-group list-group-flush ">
-                                    <li class="list-group-item"><strong>{{ _('Hobby') }}:</strong>{{ _('Hiking') }}</li>
-                                    <li class="list-group-item"><strong>{{ _('Work') }}:</strong><a href="https://launch-it.eu/en/" target="_blank" class="fw-lighter text-decoration-none link-dark"> Launch-IT</a></li>
-                                    <li class="list-group-item"><strong>{{ _('Experience') }}:</strong>{{ _('Beginner') }}</li>
+                                    <li class="list-group-item"><strong data-i18n="hobby">{{ _('Hobby') }}:</strong>{{ _('Hiking') }}</li>
+                                    <li class="list-group-item"><strong data-i18n="work">{{ _('Work') }}:</strong><a href="https://launch-it.eu/en/" target="_blank" class="fw-lighter text-decoration-none link-dark"> Launch-IT</a></li>
+                                    <li class="list-group-item"><strong data-i18n="experience">{{ _('Experience') }}:</strong>{{ _('Beginner') }}</li>
                                 </ul>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </section>
         <section class="mt-5 section-bg" id="skills">
             <div class="container pb-5">
-                <h2 id="skills-title" class="pt-5">{{ _('Skills') }}</h2>
-                <p id="skills-description">{{ _('Throughout my time as a professional I have acquired some technical and soft skills, most of them are here, according to the percentage of knowledge I believe I have in each of them.') }}</p>
+                <h2 id="skills-title" class="pt-5" data-i18n="skills-title">{{ _('Skills') }}</h2>
+                <p id="skills-description" data-i18n="skills-description">{{ _('Throughout my time as a professional I have acquired some technical and soft skills, most of them are here, according to the percentage of knowledge I believe I have in each of them.') }}</p>
                 <div class="row">
                     <div class="col-md-6">
                         <p class="mt-3 mb-0">HTML</p>
@@ -130,7 +127,7 @@
                         </div>
                         <p class="mt-3 mb-0">React</p>
                         <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" data-anime="left" style="width: 60%">60%</div>
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" data-anime="left" style="width: 60%">60%</div>
                         </div>
                         <p class="mt-3 mb-0">Python</p>
                         <div class="progress">
@@ -166,7 +163,7 @@
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" data-anime="right" style="width: 70%">70%</div>
                         </div>
-                        <p id="communication-title" class="mt-3 mb-0">{{ _('Comunication') }}</p>
+                        <p id="communication-title" class="mt-3 mb-0" data-i18n="communication-title">{{ _('Communication') }}</p>
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" data-anime="right" style="width: 90%">90%</div>
                         </div>
@@ -176,55 +173,48 @@
         </section>
         <section class="mt-5 cv" id="curriculum">
             <div class="container pb-5">
-                <h2 id="curriculum-title" class="pt-3 pb-4">{{ _('Curriculum') }}</h2>
+                <h2 id="curriculum-title" class="pt-3 pb-4" data-i18n="curriculum-title">{{ _('Curriculum') }}</h2>
                 <div class="row">
                     <div class="col-md-6">
-                        <h3 class="cv-title">{{ _('Education') }}</h3>
+                        <h3 class="cv-title" data-i18n="education-title">{{ _('Education') }}</h3>
                         <div class="cv-item" data-anime="up">
-                            <h4>{{ _('Full-Stack Software Developer') }}</h4>
-                            <h5>05/2023 - 11/2023</h5>
-                            <p><em>{{ _('Online, Spain') }}</em></p>
-                            <p>{{ _('Hands-on program to become a Full-Stack Software Developer, focusing on mastering both frontend and backend technologies.') }}</p>
+                            <h4 data-i18n="education-fullstack">{{ _('Full-Stack Software Developer') }}</h4>
+                            <h5 data-i18n="education-fullstack-date">05/2023 - 11/2023</h5>
+                            <p><em data-i18n="education-fullstack-location">{{ _('Online, Spain') }}</em></p>
+                            <p data-i18n="education-fullstack-description">{{ _('Hands-on program to become a Full-Stack Software Developer, focusing on mastering both frontend and backend technologies.') }}</p>
                         </div>
                         <div class="cv-item" data-anime="up">
-                            <h4>CET -{{ _('Development of multimedia products') }}</h4>
-                            <h5>2021 - 2022</h5>
+                            <h4 data-i18n="education-multimedia">{{ _('Development of multimedia products') }}</h4>
+                            <h5 data-i18n="education-multimedia-date">2021 - 2022</h5>
                             <p><em>Novotecna</em> - Leiria, Portugal</p>
-                            <p>{{ _('Specialized in multimedia product development, gaining practical skills in the latest digital design and media production technologies.') }}</p>
+                            <p data-i18n="education-multimedia-description">{{ _('Specialized in multimedia product development, gaining practical skills in the latest digital design and media production technologies.') }}</p>
                         </div>
                         <div class="cv-item" data-anime="up">
-                            <h4>{{ _('Degree in Human Biology') }}</h4>
-                            <h5>2009 - 2013</h5>
+                            <h4 data-i18n="education-biology">{{ _('Degree in Human Biology') }}</h4>
+                            <h5 data-i18n="education-biology-date">2009 - 2013</h5>
                             <p><em>{{ _('Évora University') }}</em></p>
-                            <p>{{ _('Completed a comprehensive study in Human Biology, acquiring a strong foundation in biological sciences and their application to human health and disease.') }}</p>
+                            <p data-i18n="education-biology-description">{{ _('Completed a comprehensive study in Human Biology, acquiring a strong foundation in biological sciences and their application to human health and disease.') }}</p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h3 class="cv-title">{{ _('Professional') }}</h3>
+                        <h3 class="cv-title" data-i18n="professional-title">{{ _('Professional') }}</h3>
                         <div class="cv-item" data-anime="up">
-                            <h4>{{ _('Full-Stack Developer') }}</h4>
-                            <h5>{{ _('The moment') }}</h5>
+                            <h4 data-i18n="professional-fullstack">{{ _('Full-Stack Developer') }}</h4>
+                            <h5 data-i18n="professional-fullstack-date">{{ _('The moment') }}</h5>
                             <p><em>Launch-IT</em>, Portugal</p>
-                            <p>{{ _('Develop user-friendly web interfaces using HTML, CSS, and JavaScript.
-                                Participate in code reviews and provide constructive feedback.
-                                Troubleshoot, debug, and resolve issues in both frontend and backend components.') }}
-                            </p>
+                            <p data-i18n="professional-fullstack-description">{{ _('Develop user-friendly web interfaces using HTML, CSS, and JavaScript. Participate in code reviews and provide constructive feedback. Troubleshoot, debug, and resolve issues in both frontend and backend components.') }}</p>
                         </div>
                         <div class="cv-item" data-anime="up">
-                            <h4>{{ _('Graphic designer') }}</h5>
-                            <h5>2022 - 2023</h5>
+                            <h4 data-i18n="professional-graphic">{{ _('Graphic designer') }}</h4>
+                            <h5 data-i18n="professional-graphic-date">2022 - 2023</h5>
                             <p><em>Leiria, Portugal</em></p>
-                            <p>{{ _('Assisting in the management of the company\'s website
-                                development, like, taking photographs and designing
-                                them, updating its content in the website\'s admin
-                                dashboard, and reporting problems that would appear.') }}
-                                </p>
+                            <p data-i18n="professional-graphic-description">{{ _('Assisting in the management of the company\'s website development, like, taking photographs and designing them, updating its content in the website\'s admin dashboard, and reporting problems that would appear.') }}</p>
                         </div>
                         <div class="cv-item" data-anime="up">
-                            <h4>{{ _('Digital animation intern') }}</h4>
-                            <h5>12/2021- 03/2022</h5>
+                            <h4 data-i18n="professional-animation">{{ _('Digital animation intern') }}</h4>
+                            <h5 data-i18n="professional-animation-date">12/2021- 03/2022</h5>
                             <p><em>Online, Coimbra</em> -Portugal</p>
-                            <p>{{ _('Role as creator of content, animations, web design and learning') }}</p>
+                            <p data-i18n="professional-animation-description">{{ _('Role as creator of content, animations, web design and learning') }}</p>
                         </div>
                     </div>
                 </div>
@@ -232,7 +222,7 @@
         </section>
         <section id="portfolio" class="section-bg mt-5">
             <div class="container pb-5 pt-5" data-anime="left">
-                <h2 id="portfolio-title" class="pb-4">{{ _('Portfolio') }}</h2>
+                <h2 id="portfolio-title" class="pb-4" data-i18n="portfolio-title">{{ _('Portfolio') }}</h2>
                 <div id="carouselPortfolio" class="carousel carousel-dark slide">
                     <div class="carousel-indicators">
                       <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -246,8 +236,8 @@
                               <div class="card">
                                 <img src="../static/img/bike.png" class="card-img-top card-square" alt="Bicycle_Shop">
                                 <div class="card-body">
-                                  <h5 class="card-title">Bicycle_Shop</h5>
-                                  <p id="portfolio-description" class="card-text">{{ _('Develop during a programming bootcamp, an e-commerce platform where users can browse, review, purchase.') }}</p>
+                                  <h5 class="card-title" data-i18n="portfolio-item-1-title">Bicycle_Shop</h5>
+                                  <p id="portfolio-description" class="card-text" data-i18n="portfolio-item-1-description">{{ _('Develop during a programming bootcamp, an e-commerce platform where users can browse, review, purchase.') }}</p>
                                   <div class="d-flex justify-content-center">
                                     <a href="https://www.loom.com/share/503bdcc13c794507b1e620c55ffeb0bf?sid=84479cf0-ca42-412c-8014-9b17d7736ee9" target="_blank" class="btn btn-outline-primary"><i class="bi bi-link-45deg"></i></a>
                                     <a href="https://github.com/Placito/Bycicle_shop" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i></a>
@@ -263,8 +253,8 @@
                                 <div class="card">
                                   <img src="../static/img/gest.png" class="card-img-top card-square" alt="GEST_tasks">
                                   <div class="card-body">
-                                    <h5 class="card-title">GEST_tasks</h5>
-                                    <p class="card-text">{{ _('Is an application to assist in task management, for internal roles.') }}</p>
+                                    <h5 class="card-title" data-i18n="portfolio-item-2-title">GEST_tasks</h5>
+                                    <p class="card-text" data-i18n="portfolio-item-2-description">{{ _('Is an application to assist in task management, for internal roles.') }}</p>
                                     <div class="d-flex justify-content-center">
                                         <a href="https://github.com/Placito/GEST_tasks" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i></a>
                                     </div>
@@ -278,9 +268,8 @@
                             <div class="card">
                                 <img src="../static/img/vida.png" class="card-img-top card-square" alt="Vida Sustentável">
                                 <div class="card-body">
-                                <h5 class="card-title">{{ _('My design portfolio') }}</h5>
-                                <p class="card-text">{{ _('Work developed in my CET, using techniques with Adobe Illustrator, Adobe Photoshop, Adobe Afert effects, Adobe premier, Photography and 3ds Max.
-                                    The language I selected to present my work was Portuguese.') }}</p>
+                                <h5 class="card-title" data-i18n="portfolio-item-3-title">{{ _('My design portfolio') }}</h5>
+                                <p class="card-text" data-i18n="portfolio-item-3-description">{{ _('Work developed in my CET, using techniques with Adobe Illustrator, Adobe Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. The language I selected to present my work was Portuguese.') }}</p>
                                 <div class="d-flex justify-content-center">
                                     <a href="https://marianaplacito.wixsite.com/website-1" target="_blank" class="btn btn-outline-primary"><i class="bi bi-link-45deg"></i></a>
                                 </div>
@@ -290,27 +279,27 @@
                       </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselPortfolio" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">{{ _('Previous') }}</span>
+                      <span class="visually-hidden" data-i18n="previous">{{ _('Previous') }}</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselPortfolio" data-bs-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">{{ _('Next') }}</span>
+                      <span class="visually-hidden" data-i18n="next">{{ _('Next') }}</span>
                     </button>
                       </div>
                 </div>
         </section>
         <section id="contact" class="pt-5 pb-5">
             <div class="container mb-5">
-                <h2 id="contact-title" class="pt3 pb-3">{{ _('Contact') }}</h2>
+                <h2 id="contact-title" class="pt3 pb-3" data-i18n="contact-title">{{ _('Contact') }}</h2>
                 <div class="row">
                     <div class="col-md-5">
                         <div class="card p-5 shadow border-0" data-anime="up">
-                            <div class="adress">
-                                <h4><i class="bi bi-geo-alt"></i>{{ _('Location') }}:</h4>
+                            <div class="address">
+                                <h4><i class="bi bi-geo-alt"></i><span data-i18n="location">{{ _('Location') }}</span>:</h4>
                                 <p id="location">Bajouca, Leiria</p>
                             </div>
                             <div class="email">
-                                <h4 id="email-title"><i class="bi bi-envelope"></i>{{ _('Email') }}:</h4>
+                                <h4 id="email-title"><i class="bi bi-envelope"></i><span data-i18n="email-title">{{ _('Email') }}</span>:</h4>
                                 <p>mariana.placito@gmail.com</p>
                             </div>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24489.190832720324!2d-8.800835852293448!3d39.8932994545461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd226c7793b13f8f%3A0x500ebbde490c100!2sBajouca!5e0!3m2!1spt-PT!2spt!4v1715612633728!5m2!1spt-PT!2spt" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="w-100" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -320,19 +309,19 @@
                         <div class="card p-5 h-100 shadow border-0" data-anime="right">
                             <form class="row g-3" action="/send" method="POST">
                                 <div class="col-md-6">
-                                  <label id="label-name" for="name" class="form-label">{{ _('Name') }}:</label>
+                                  <label id="label-name" for="name" class="form-label" data-i18n="label-name">{{ _('Name') }}:</label>
                                   <input type="text" class="form-control" id="name" name="name" placeholder="{{ _('Write your name') }}...">
                                 </div>
                                 <div class="col-md-6">
-                                  <label id="label-email" for="email" class="form-label">{{ _('Email') }}:</label>
+                                  <label id="label-email" for="email" class="form-label" data-i18n="label-email">{{ _('Email') }}:</label>
                                   <input type="email" class="form-control" id="email" name="email" placeholder="{{ _('Write your email') }}...">
                                 </div>
                                 <div class="col-12">
-                                  <label id="label-message" for="message" class="form-label">{{ _('Message') }}:</label>
+                                  <label id="label-message" for="message" class="form-label" data-i18n="label-message">{{ _('Message') }}:</label>
                                   <textarea class="form-control" id="message" name="message" rows="10" placeholder="{{ _('Write your message') }}..."></textarea>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center mt-4">
-                                  <button id="btn-send" type="submit" class="btn btn-outline-primary">{{ _('Send') }}</button>
+                                  <button id="btn-send" type="submit" class="btn btn-outline-primary" data-i18n="btn-send">{{ _('Send') }}</button>
                                 </div>
                             </form>
                         </div>
