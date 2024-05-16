@@ -1,9 +1,8 @@
-import click
-from flask.cli import with_appcontext
-from flask import Flask, render_template, redirect, request, flash, session, url_for
+from flask import Flask, render_template, redirect, request, flash, session, url_for, jsonify, send_file, g
 from flask_mail import Mail, Message
 from waitress import serve
-from flask_babel import Babel, _
+from flask_babel import Babel, gettext as _
+import os
 
 # Initialize the Flask application first
 app = Flask(__name__)
@@ -16,15 +15,14 @@ mail_settings = {
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
     "MAIL_USERNAME": 'teest4geeks12@gmail.com',
-    "MAIL_PASSWORD": 'ahyz rgmy igtb yclg'
+    "MAIL_PASSWORD": 'ahy2 rgmy igtb yclg'
 }
+
 app.config.update(mail_settings)
 mail = Mail(app)
-babel = Babel(app)
-
-# Configure the default locale and the default time zone
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
-app.config['BABEL_DEFAULT_TIMEZONE'] = 'UTC'
+app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'pt']
+babel = Babel(app)
 
 # Define the Contact class
 class Contact:
@@ -33,10 +31,19 @@ class Contact:
         self.email = email
         self.message = message
 
+# Manually set the locale before each request
+@app.before_request
+def set_locale():
+    lang = session.get('lang', 'en')
+    if lang not in app.config['BABEL_SUPPORTED_LOCALES']:
+        lang = app.config['BABEL_DEFAULT_LOCALE']
+    # Set the locale for Flask-Babel
+    g.locale = lang
+
 # Define routes
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', lang=g.locale)
 
 @app.route('/send', methods=['GET', 'POST'])
 def send():
@@ -52,9 +59,9 @@ def send():
             sender=app.config.get("MAIL_USERNAME"),
             recipients=['mariana.placito@gmail.com'],
             body=f'''
-                _(Portfolio Contact from) {formContact.name}
+                {_("Portfolio Contact from")} {formContact.name}
 
-                _(message:)
+                {_("Message")}:
                 {formContact.message}
             '''    
         )
@@ -62,10 +69,23 @@ def send():
         flash(_('Message sent successfully!'))
     return redirect('/')
 
-@app.route('/set_language/<language>')
+@app.route('/set_language/<language>', methods=['GET'])
 def set_language(language):
-    session['language'] = language
-    return redirect(request.referrer or url_for('index'))
+    if language in app.config['BABEL_SUPPORTED_LOCALES']:
+        session['lang'] = language
+    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+        return jsonify({'status': 'success'})
+    return redirect(request.referrer or url_for('home'))
+
+@app.route('/translations/<lang>/LC_MESSAGES/messages.po', methods=['GET'])
+def get_translation(lang):
+    file_path = os.path.join('translations', lang, 'LC_MESSAGES', 'messages.po')
+    print(f"Looking for file at: {file_path}")  # Debug output
+    if os.path.exists(file_path):
+        return send_file(file_path)
+    else:
+        print(f"File not found at: {file_path}")  # Debug output
+        return jsonify({'error': 'File not found'}), 404
 
 # Serve the application with Waitress
 if __name__ == '__main__':
