@@ -40,7 +40,8 @@ def set_locale():
 # Define routes
 @app.route('/')
 def home():
-    return render_template('index.html', lang=babel.locale_selector_func())
+    lang = session.get('lang', 'en')
+    return render_template('index.html', lang=lang)
 
 @app.route('/send', methods=['GET', 'POST'])
 def send():
@@ -87,3 +88,4 @@ def get_translation(lang):
 # Serve the application with Waitress
 if __name__ == '__main__':
     serve(app, host='0.0.0.0', port=8080)
+

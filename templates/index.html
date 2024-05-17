@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="title" data-i18n="title">Mariana Plácito</title>
+    <title id="title">Mariana Plácito</title>
     <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../static/style.css">
@@ -30,22 +30,22 @@
         <nav id="nvbar" class="nav-menu">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a id="nav-home" class="nav-link active" aria-current="page" href="#home"><i class="bi bi-house"></i><span [data-i18n]="nav-home">{{ _('Home') }}</span></a>
+                  <a id="nav-home" class="nav-link active" aria-current="page" href="#home"><i class="bi bi-house"></i><span data-i18n="nav-home"> {{ _('Home') }}</span></a>
                 </li>
                 <li class="nav-item">
-                  <a id="nav-about" class="nav-link" href="#about"><i class="bi bi-person"></i><span data-i18n="nav-about">{{ _('About') }}</span></a>
+                  <a id="nav-about" class="nav-link" href="#about"><i class="bi bi-person"></i><span data-i18n="nav-about"> {{ _('About') }}</span></a>
                 </li>
                 <li class="nav-item">
-                  <a id="nav-skills" class="nav-link" href="#skills"><i class="bi bi-list-check"></i><span data-i18n="nav-skills">{{ _('Skills') }}</span></a>
+                  <a id="nav-skills" class="nav-link" href="#skills"><i class="bi bi-list-check"></i><span data-i18n="nav-skills"> {{ _('Skills') }}</span></a>
                 </li>
                 <li class="nav-item">
-                    <a id="nav-curriculum" class="nav-link" href="#curriculum"><i class="bi bi-file-earmark"></i><span data-i18n="nav-curriculum">{{ _('Curriculum') }}</span></a>
+                    <a id="nav-curriculum" class="nav-link" href="#curriculum"><i class="bi bi-file-earmark"></i><span data-i18n="nav-curriculum"> {{ _('Curriculum') }}</span></a>
                 </li>
                 <li class="nav-item">
-                    <a id="nav-portfolio" class="nav-link" href="#portfolio"><i class="bi bi-collection"></i><span data-i18n="nav-portfolio">{{ _('Portfolio') }}</span></a>
+                    <a id="nav-portfolio" class="nav-link" href="#portfolio"><i class="bi bi-collection"></i><span data-i18n="nav-portfolio">  {{ _('Portfolio') }}</span></a>
                 </li>
                 <li class="nav-item">
-                    <a id="nav-contact" class="nav-link" href="#contact"><i class="bi bi-envelope"></i><span data-i18n="nav-contact">{{ _('Contact') }}</span></a>
+                    <a id="nav-contact" class="nav-link" href="#contact"><i class="bi bi-envelope"></i><span data-i18n="nav-contact">  {{ _('Contact') }}</span></a>
                 </li>
             </ul>
             <br/>
@@ -88,7 +88,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-6">
-                                <ul class="list-group list-group-flush ">
+                                <ul class="list-group list-group-flush">
                                     <li class="list-group-item"><strong data-i18n="hobby">{{ _('Hobby') }}:</strong>{{ _('Hiking') }}</li>
                                     <li class="list-group-item"><strong data-i18n="work">{{ _('Work') }}:</strong><a href="https://launch-it.eu/en/" target="_blank" class="fw-lighter text-decoration-none link-dark"> Launch-IT</a></li>
                                     <li class="list-group-item"><strong data-i18n="experience">{{ _('Experience') }}:</strong>{{ _('Beginner') }}</li>
@@ -159,11 +159,7 @@
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" data-anime="right" style="width: 70%">70%</div>
                         </div>
-                        <p class="mt-3 mb-0">Postgress</p>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" data-anime="right" style="width: 70%">70%</div>
-                        </div>
-                        <p id="communication-title" class="mt-3 mb-0" data-i18n="communication-title">{{ _('Communication') }}</p>
+                        <p class="mt-3 mb-0" data-i18n="communication-title">{{ _('Communication') }}</p>
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" data-anime="right" style="width: 90%">90%</div>
                         </div>
@@ -310,15 +306,15 @@
                             <form class="row g-3" action="/send" method="POST">
                                 <div class="col-md-6">
                                   <label id="label-name" for="name" class="form-label" data-i18n="label-name">{{ _('Name') }}:</label>
-                                  <input type="text" class="form-control" id="name" name="name" placeholder="{{ _('Write your name') }}...">
+                                  <input type="text" class="form-control" id="name" name="name" data-i18n="write-your-name" placeholder="{{ _('Write your name') }}...">
                                 </div>
                                 <div class="col-md-6">
                                   <label id="label-email" for="email" class="form-label" data-i18n="label-email">{{ _('Email') }}:</label>
-                                  <input type="email" class="form-control" id="email" name="email" placeholder="{{ _('Write your email') }}...">
+                                  <input type="email" class="form-control" id="email" name="email" data-i18n="write-your-email" placeholder="{{ _('Write your email') }}...">
                                 </div>
                                 <div class="col-12">
                                   <label id="label-message" for="message" class="form-label" data-i18n="label-message">{{ _('Message') }}:</label>
-                                  <textarea class="form-control" id="message" name="message" rows="10" placeholder="{{ _('Write your message') }}..."></textarea>
+                                  <textarea class="form-control" id="message" name="message" rows="10" data-i18n="write-your-message" placeholder="{{ _('Write your message') }}..."></textarea>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center mt-4">
                                   <button id="btn-send" type="submit" class="btn btn-outline-primary" data-i18n="btn-send">{{ _('Send') }}</button>

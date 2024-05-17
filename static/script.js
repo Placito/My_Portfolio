@@ -53,14 +53,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.error('Menu or body element not found');
     }
 
-        // Function to fetch translations
-    async function fetchTranslations(lang) {
-        const response = await fetch(`/translations/${lang}/LC_MESSAGES/messages.po`);
-        if (!response.ok) {
-            throw new Error('Failed to load translations');
+    // Function to set language
+    window.setLanguage = async function(event) {
+        const lang = event.target.value;
+        if (lang) {
+            try {
+                const response = await fetch(`/set_language/${lang}`);
+                if (response.ok) {
+                    localStorage.setItem('lang', lang);
+                    const translations = await fetchTranslations(lang);
+                    console.log(translations);
+                    updatePageContent(translations);
+                } else {
+                    console.error('Failed to set language on server');
+                }
+            } catch (error) {
+                console.error('Error setting language:', error);
+            }
         }
-        const poContent = await response.text();
-        return parsePO(poContent);
+    };
+
+    // Function to fetch translations
+    async function fetchTranslations(lang) {
+        try {
+            const response = await fetch(`/translations/${lang}/LC_MESSAGES/messages.po`);
+            if (!response.ok) {
+                throw new Error('Failed to load translations');
+            }
+            const poContent = await response.text();
+            return parsePO(poContent);
+        } catch (error) {
+            console.error('Error fetching translations:', error);
+            return {};
+        }
     }
 
     // Function to parse .po file content
@@ -91,7 +116,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 msgstr += line.replace(/"(.*)"/, '$1');
             }
         }
+        console.log(translations)
         return translations;
+        
     }
 
     // Function to update the page content based on the fetched translations
@@ -99,35 +126,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const elementsToUpdate = document.querySelectorAll('[data-i18n]');
         elementsToUpdate.forEach((element) => {
             const key = element.getAttribute('data-i18n');
-            if (translations[key]) {
+            if (key) {
                 element.textContent = translations[key];
+                console.log(translations[key])
             }
         });
     }
 
-    // Function to set the language and reload the page
-    async function setLanguage(event) {
-        const lang = event.target.value;
-        if (lang) {
-            try {
-                const translations = await fetchTranslations(lang);
-                console.log(translations)
-                updatePageContent(translations);
-                localStorage.setItem('selectedLang', lang);
-                location.reload();
-            } catch (error) {
-                console.error('Error:', error);
-            }
+    // On page load, check localStorage for language setting
+    const savedLang = localStorage.getItem('lang');
+    if (savedLang && savedLang !== "{{ lang }}") {
+        const langSelect = document.querySelector('select.form-select');
+        if (langSelect) {
+            langSelect.value = savedLang;
         }
-    }
-
-    window.setLanguage = setLanguage;
-
-    const savedLang = localStorage.getItem('selectedLang');
-    if (savedLang) {
-        document.querySelector('select.form-select').value = savedLang;
         fetchTranslations(savedLang).then(translations => {
             updatePageContent(translations);
         });
     }
+
 });

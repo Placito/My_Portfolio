@@ -18,986 +18,217 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-
-#: app.py:59
-msgid "Message sent successfully!"
-msgstr "Mensagem enviada com sucesso!"
-
-#: templates/index.html:35
-#: templates/index.html:33
-msgid "Home"
+msgid "nav-home"
 msgstr "Início"
 
-#: templates/index.html:38 templates/index.html:70
-msgid "About"
+msgid "nav-about"
 msgstr "Sobre"
 
-#: templates/index.html:41 templates/index.html:109
-msgid "Skills"
+msgid "nav-skills"
 msgstr "Habilidades"
 
-#: templates/index.html:44 templates/index.html:181
-msgid "Curriculum"
+msgid "nav-curriculum"
 msgstr "Currículo"
 
-#: templates/index.html:47 templates/index.html:237
-msgid "Portfolio"
+msgid "nav-portfolio"
 msgstr "Portfólio"
 
-#: templates/index.html:50 templates/index.html:306
-msgid "Contact"
+msgid "nav-contact"
 msgstr "Contacto"
 
-#: templates/index.html:55
-msgid "Select one language"
+msgid "select-language"
 msgstr "Selecciona uma linguagem"
 
-#: templates/index.html:56
-msgid "English"
+msgid "english"
 msgstr "Inglês"
 
-#: templates/index.html:57
-msgid "Portuguese"
+msgid "portuguese"
 msgstr "Português"
 
-#: templates/index.html:64 templates/index.html:82
-msgid "Full Stack Developer"
+msgid "subtitle"
 msgstr "Desenvolvedora Full Stack"
 
-#: templates/index.html:72
-msgid ""
-"Proactive Full Stack Developer. I started my journey with a degree in "
-"Human Biology, which later led me to discover my new abilities with a "
-"Design course,\n"
-"                        which sparked a passion for me in the programming"
-" field. \n"
-"                        I have a natural aptitude for the front-end but a"
-" passion for discovering how things work behind the scenes, which led me "
-"to combine these two areas."
+msgid "about-title"
+msgstr "Sobre"
+
+msgid "about-description"
 msgstr ""
-""Desenvolvedora Full Stack Proativa. Comecei a minha jornada com uma licenciatura em "
+"Desenvolvedora Full Stack Proativa. Comecei a minha jornada com uma licenciatura em "
 "Biologia Humana, que mais tarde me levou a descobrir novas habilidades com um "
-"Curso de design,\n"
-"o que despertou em mim uma paixão pela programação. \n"
-"Tenho uma aptidão natural para o front-end, mas"
-"um paixão por descobrir como as coisas funcionam nos bastidores, o que me levou"
-"a combinar essas duas áreas."
+"curso de design, o que despertou em mim uma paixão pela programação. "
+"Tenho uma aptidão natural para o front-end, mas uma paixão por descobrir como as coisas funcionam nos bastidores, o que me levou a combinar essas duas áreas."
 
-#: templates/index.html:83
-msgid ""
-"Is an entry-level position in the field of software development, "
-"responsible for working on both the front-end and back-end portions of "
-"web applications."
+msgid "full-stack-title"
+msgstr "Desenvolvedora Full Stack"
+
+msgid "full-stack-description"
 msgstr ""
-"É uma posição inicial na área de desenvolvimento de software, "
-"responsável por trabalhar nas partes front-end e back-end de"
-"aplicaçõess web."
+"É uma posição inicial na área de desenvolvimento de software, responsável por trabalhar nas partes front-end e back-end de aplicações web."
 
-#: templates/index.html:87
-msgid "Date of birth"
+msgid "dob"
 msgstr "Data de nascimento"
 
-#: templates/index.html:87
-msgid "December 24, 1989"
-msgstr "24 de Dezembro de 1989"
-
-#: templates/index.html:88
-msgid "Age"
+msgid "age"
 msgstr "Idade"
 
-#: templates/index.html:89
-msgid "City"
+msgid "city"
 msgstr "Cidade"
 
-#: templates/index.html:90
-msgid "Country"
+msgid "country"
 msgstr "País"
 
-#: templates/index.html:90
-msgid "Portugal"
-msgstr "Portugal"
-
-#: templates/index.html:95
-msgid "Hobby"
+msgid "hobby"
 msgstr "Passatempo"
 
-#: templates/index.html:95
-msgid "Hiking"
+msgid "hiking"
 msgstr "Caminhada"
 
-#: templates/index.html:97
-msgid "Work"
+msgid "work"
 msgstr "Trabalho"
 
-#: templates/index.html:98
-msgid "Experience"
+msgid "experience"
 msgstr "Experiência"
 
-#: templates/index.html:98
-msgid "Beginner"
+msgid "beginner"
 msgstr "Principiante"
 
-#: templates/index.html:110
-msgid ""
-"Throughout my time as a professional I have acquired some technical and "
-"soft skills, most of them are here, according to the percentage of "
-"knowledge I believe I have in each of them."
+msgid "skills-title"
+msgstr "Habilidades"
+
+msgid "skills-description"
 msgstr ""
 "Ao longo do meu tempo como profissional adquiri alguns conhecimentos técnicos e "
-"habilidades interpessoais, a maioria delas está aqui, de acordo com a percentagem de"
+"habilidades interpessoais, a maioria delas está aqui, de acordo com a percentagem de "
 "conhecimento que acredito ter em cada uma delas."
 
-#: templates/index.html:171
-msgid "Comunication"
-msgstr "Communicação"
+msgid "communication-title"
+msgstr "Comunicação"
 
-#: templates/index.html:184
-msgid "Education"
+msgid "curriculum-title"
+msgstr "Currículo"
+
+msgid "education-title"
 msgstr "Educação"
 
-#: templates/index.html:186
-msgid "Full-Stack Software Developer"
+msgid "education-fullstack"
 msgstr "Desenvolvedor de software Full-Stack"
 
-#: templates/index.html:188
-msgid "Online, Spain"
+msgid "education-fullstack-date"
+msgstr "05/2023 - 11/2023"
+
+msgid "education-fullstack-location"
 msgstr "Online, Espanha"
 
-#: templates/index.html:189
-msgid ""
-"Hands-on program to become a Full-Stack Software Developer, focusing on "
-"mastering both frontend and backend technologies."
+msgid "education-fullstack-description"
 msgstr ""
-"Programa prático para se tornar um desenvolvedor de software Full-Stack, com foco em "
-"dominar as tecnologias de frontend e backend."
+"Programa prático para se tornar um desenvolvedor de software Full-Stack, com foco em dominar as tecnologias de frontend e backend."
 
-#: templates/index.html:192
-msgid "Development of multimedia products"
+msgid "education-multimedia"
 msgstr "Desenvolvimento de produtos multimídia"
 
-#: templates/index.html:195
-msgid ""
-"Specialized in multimedia product development, gaining practical skills "
-"in the latest digital design and media production technologies."
-msgstr ""
-"Especializado em desenvolvimento de produtos multimídia, adquirindo habilidades práticas"
-"nas mais recentes tecnologias de design digital e produção de mídia."
+msgid "education-multimedia-date"
+msgstr "2021 - 2022"
 
-#: templates/index.html:198
-msgid "Degree in Human Biology"
+msgid "education-multimedia-description"
+msgstr ""
+"Especialização em desenvolvimento de produtos multimídia, adquirindo habilidades práticas nas mais recentes tecnologias de design digital e produção de mídia."
+
+msgid "education-biology"
 msgstr "Licenciatura em Biologia Humana"
 
-#: templates/index.html:200
-msgid "Évora University"
-msgstr "Universidade de Évora"
+msgid "education-biology-date"
+msgstr "2009 - 2013"
 
-#: templates/index.html:201
-msgid ""
-"Completed a comprehensive study in Human Biology, acquiring a strong "
-"foundation in biological sciences and their application to human health "
-"and disease."
+msgid "education-biology-description"
 msgstr ""
-"Compreende um estudo abrangente em Biologia Humana, adquirindo "
-"fundamentos nas ciências biológicas, bem como a sua aplicação à saúde humana"
-"e doenças."
+"Compreende um estudo abrangente em Biologia Humana, adquirindo fundamentos nas ciências biológicas, bem como a sua aplicação à saúde humana e doenças."
 
-#: templates/index.html:205
-msgid "Professional"
-msgstr "Professional"
+msgid "professional-title"
+msgstr "Profissional"
 
-#: templates/index.html:207
-msgid "Full-Stack Developer"
-msgstr "Desenvolvedora Full-Stackr"
+msgid "professional-fullstack"
+msgstr "Desenvolvedora Full-Stack"
 
-#: templates/index.html:208
-msgid "The moment"
+msgid "professional-fullstack-date"
 msgstr "Actual"
 
-#: templates/index.html:210
-msgid ""
-"Develop user-friendly web interfaces using HTML, CSS, and JavaScript.\n"
-"                                Participate in code reviews and provide "
-"constructive feedback.\n"
-"                                Troubleshoot, debug, and resolve issues "
-"in both frontend and backend components."
+msgid "professional-fullstack-description"
 msgstr ""
-"Desenvolver interfaces Web, fáceis de utilizar, usando HTML, CSS e JavaScript.\n"
-" Participar em revisões de código e forneçer "
-"feedback construtivo.\n"
-" Solucionar problemas, depurar e resolver problemas "
-"nos componentes frontend e backend."
+"Desenvolver interfaces Web, fáceis de utilizar, usando HTML, CSS e JavaScript. Participar em revisões de código e fornecer feedback construtivo. Solucionar problemas, depurar e resolver problemas nos componentes frontend e backend."
 
-#: templates/index.html:216
-msgid "Graphic designer"
+msgid "professional-graphic"
 msgstr "Designer gráfico"
 
-#: templates/index.html:219
-msgid ""
-"Assisting in the management of the company's website\n"
-"                                development, like, taking photographs and"
-" designing\n"
-"                                them, updating its content in the "
-"website's admin\n"
-"                                dashboard, and reporting problems that "
-"would appear."
-msgstr ""
-"Auxiliar na gestão do site da empresa\n"
-"tipo, tirar fotos e"
-"desenhando projectos, \n"
-"atualizando o conteúdo no "
-"painel de administrador do site\n"
-" e relatar problemas que"
-"apareceriam."
+msgid "professional-graphic-date"
+msgstr "2022 - 2023"
 
-#: templates/index.html:226
-msgid "Digital animation intern"
+msgid "professional-graphic-description"
+msgstr ""
+"Auxiliar na gestão do site da empresa, tirando fotos e desenhando projetos, atualizando o conteúdo no painel de administrador do site e relatando problemas que apareceriam."
+
+msgid "professional-animation"
 msgstr "Estagiário de animação digital"
 
-#: templates/index.html:229
-msgid "Role as creator of content, animations, web design and learning"
-msgstr "Papel como criadora de conteúdo, animações, web design e aprendizagem"
+msgid "professional-animation-date"
+msgstr "12/2021 - 03/2022"
 
-#: templates/index.html:252
-msgid ""
-"Develop during a programming bootcamp, an e-commerce platform where users"
-" can browse, review, purchase."
-msgstr ""
-"Desenvolvido durante um bootcamp de programação, é uma plataforma de e-commerce onde os utilizadores"
-"podem navegar, revisar, comprar."
+msgid "professional-animation-description"
+msgstr "Papel como criadora de conteúdo, animações, web design e aprendizagem."
 
-#: templates/index.html:269
-msgid "Is an application to assist in task management, for internal roles."
+msgid "portfolio-item-1-title"
+msgstr "Bicycle_Shop"
+
+msgid "portfolio-item-1-description"
+msgstr "Desenvolvido durante um bootcamp de programação, é uma plataforma de e-commerce onde os utilizadores podem navegar, revisar, comprar."
+
+msgid "portfolio-item-2-title"
+msgstr "GEST_tasks"
+
+msgid "portfolio-item-2-description"
 msgstr "É uma aplicação para auxiliar na gestão de tarefas, para funções internas."
 
-#: templates/index.html:283
-msgid "My design portfolio"
+msgid "portfolio-item-3-title"
 msgstr "Meu portfólio de design"
 
-#: templates/index.html:284
-msgid ""
-"Work developed in my CET, using techniques with Adobe Illustrator, Adobe "
-"Photoshop, Adobe Afert effects, Adobe premier, Photography and 3ds Max.\n"
-"                                    The language I selected to present my"
-" work was Portuguese."
+msgid "portfolio-item-3-description"
 msgstr ""
-"Trabalho desenvolvido durante o meu CET, utilizando técnicas como, Adobe Illustrator, Adobe "
-"Photoshop, Adobe Afert effect, Adobe Premier, Fotografia e 3ds Max.\n"
-"O idioma que selecionei para apresentar meu"
-“O trabalho é o português."
+"Trabalho desenvolvido durante o meu CET, utilizando técnicas como Adobe Illustrator, Adobe Photoshop, Adobe After Effects, Adobe Premier, Fotografia e 3ds Max. O idioma que selecionei para apresentar meu trabalho é o português."
 
-#: templates/index.html:295
-msgid "Previous"
+msgid "previous"
 msgstr "Anterior"
 
-#: templates/index.html:299
-msgid "Next"
-msgstr "Própximo"
+msgid "next"
+msgstr "Próximo"
 
-#: templates/index.html:311
-msgid "Location"
+msgid "contact-title"
+msgstr "Contacto"
+
+msgid "location"
 msgstr "Localização"
 
-#: templates/index.html:315 templates/index.html:329
-msgid "Email"
+msgid "email-title"
 msgstr "E-mail"
 
-#: templates/index.html:325
-msgid "Name"
+msgid "label-name"
 msgstr "Nome"
 
-#: templates/index.html:326
-msgid "Write your name"
-msgstr "Escreva o seu nome"
+msgid "label-email"
+msgstr "E-mail"
 
-#: templates/index.html:330
-msgid "Write your email"
-msgstr "Escreva o seu e-mail"
+msgid "label-message"
+msgstr "Mensagem"
 
-#: templates/index.html:333
-msgid "Message"
-msgstr "Menssagem"
-
-#: templates/index.html:334
-msgid "Write your message"
-msgstr "Escreva a sua menssagem"
-
-#: templates/index.html:337
-msgid "Send"
+msgid "btn-send"
 msgstr "Enviar"
 
-#: venv/lib/python3.10/site-packages/click/_termui_impl.py:518
-#: venv/lib/site-packages/click/_termui_impl.py:518
-msgid "{editor}: Editing failed"
-msgstr "{editor}: Editing failed"
+msgid "write-your-name"
+msgstr "Escreva o seu nome"
 
-#: venv/lib/python3.10/site-packages/click/_termui_impl.py:522
-#: venv/lib/site-packages/click/_termui_impl.py:522
-msgid "{editor}: Editing failed: {e}"
-msgstr "{editor}: Editing failed: {e}"
+msgid "write-your-email"
+msgstr "Escreva o seu e-mail"
 
-#: venv/lib/python3.10/site-packages/click/core.py:1120
-#: venv/lib/site-packages/click/core.py:1120
-msgid "Aborted!"
-msgstr "Aborted!"
+msgid "write-your-message"
+msgstr "Escreva a sua mensagem"
 
-#: venv/lib/python3.10/site-packages/click/core.py:1309
-#: venv/lib/python3.10/site-packages/click/decorators.py:559
-#: venv/lib/site-packages/click/core.py:1309
-#: venv/lib/site-packages/click/decorators.py:559
-msgid "Show this message and exit."
-msgstr "Show this message and exit."
-
-#: venv/lib/python3.10/site-packages/click/core.py:1340
-#: venv/lib/python3.10/site-packages/click/core.py:1370
-#: venv/lib/site-packages/click/core.py:1340
-#: venv/lib/site-packages/click/core.py:1370
-msgid "(Deprecated) {text}"
-msgstr "(Deprecated) {text}"
-
-#: venv/lib/python3.10/site-packages/click/core.py:1387
-#: venv/lib/site-packages/click/core.py:1387
-msgid "Options"
-msgstr "Options"
-
-#: venv/lib/python3.10/site-packages/click/core.py:1415
-#: venv/lib/site-packages/click/core.py:1415
-msgid "Got unexpected extra argument ({args})"
-msgid_plural "Got unexpected extra arguments ({args})"
-msgstr[0] "Got unexpected extra argument ({args})"
-msgstr[1] "Got unexpected extra arguments ({args})"
-
-#: venv/lib/python3.10/site-packages/click/core.py:1428
-#: venv/lib/site-packages/click/core.py:1428
-msgid "DeprecationWarning: The command {name!r} is deprecated."
-msgstr "DeprecationWarning: The command {name!r} is deprecated."
-
-#: venv/lib/python3.10/site-packages/click/core.py:1636
-#: venv/lib/site-packages/click/core.py:1636
-msgid "Commands"
-msgstr "Commands"
-
-#: venv/lib/python3.10/site-packages/click/core.py:1668
-#: venv/lib/site-packages/click/core.py:1668
-msgid "Missing command."
-msgstr "Missing command."
-
-#: venv/lib/python3.10/site-packages/click/core.py:1746
-#: venv/lib/site-packages/click/core.py:1746
-msgid "No such command {name!r}."
-msgstr "No such command {name!r}."
-
-#: venv/lib/python3.10/site-packages/click/core.py:2310
-#: venv/lib/site-packages/click/core.py:2310
-msgid "Value must be an iterable."
-msgstr "Value must be an iterable."
-
-#: venv/lib/python3.10/site-packages/click/core.py:2333
-#: venv/lib/site-packages/click/core.py:2333
-msgid "Takes {nargs} values but 1 was given."
-msgid_plural "Takes {nargs} values but {len} were given."
-msgstr[0] "Takes {nargs} values but 1 was given."
-msgstr[1] "Takes {nargs} values but {len} were given."
-
-#: venv/lib/python3.10/site-packages/click/core.py:2778
-#: venv/lib/site-packages/click/core.py:2778
-msgid "env var: {var}"
-msgstr "env var: {var}"
-
-#: venv/lib/python3.10/site-packages/click/core.py:2808
-#: venv/lib/site-packages/click/core.py:2808
-msgid "(dynamic)"
-msgstr "(dynamic)"
-
-#: venv/lib/python3.10/site-packages/click/core.py:2821
-#: venv/lib/site-packages/click/core.py:2821
-msgid "default: {default}"
-msgstr "default: {default}"
-
-#: venv/lib/python3.10/site-packages/click/core.py:2834
-#: venv/lib/site-packages/click/core.py:2834
-msgid "required"
-msgstr "required"
-
-#: venv/lib/python3.10/site-packages/click/decorators.py:465
-#: venv/lib/site-packages/click/decorators.py:465
-#, python-format
-msgid "%(prog)s, version %(version)s"
-msgstr "%(prog)s, version %(version)s"
-
-#: venv/lib/python3.10/site-packages/click/decorators.py:528
-#: venv/lib/site-packages/click/decorators.py:528
-msgid "Show the version and exit."
-msgstr "Show the version and exit."
-
-#: venv/lib/python3.10/site-packages/click/exceptions.py:44
-#: venv/lib/python3.10/site-packages/click/exceptions.py:80
-#: venv/lib/site-packages/click/exceptions.py:44
-#: venv/lib/site-packages/click/exceptions.py:80
-msgid "Error: {message}"
-msgstr "Error: {message}"
-
-#: venv/lib/python3.10/site-packages/click/exceptions.py:72
-#: venv/lib/site-packages/click/exceptions.py:72
-msgid "Try '{command} {option}' for help."
-msgstr "Try '{command} {option}' for help."
-
-#: venv/lib/python3.10/site-packages/click/exceptions.py:121
-#: venv/lib/site-packages/click/exceptions.py:121
-msgid "Invalid value: {message}"
-msgstr "Invalid value: {message}"
-
-#: venv/lib/python3.10/site-packages/click/exceptions.py:123
-#: venv/lib/site-packages/click/exceptions.py:123
-msgid "Invalid value for {param_hint}: {message}"
-msgstr "Invalid value for {param_hint}: {message}"
-
-#: venv/lib/python3.10/site-packages/click/exceptions.py:179
-#: venv/lib/site-packages/click/exceptions.py:179
-msgid "Missing argument"
-msgstr "Missing argument"
-
-#: venv/lib/python3.10/site-packages/click/exceptions.py:181
-#: venv/lib/site-packages/click/exceptions.py:181
-msgid "Missing option"
-msgstr "Missing option"
-
-#: venv/lib/python3.10/site-packages/click/exceptions.py:183
-#: venv/lib/site-packages/click/exceptions.py:183
-msgid "Missing parameter"
-msgstr "Missing parameter"
-
-#: venv/lib/python3.10/site-packages/click/exceptions.py:185
-#: venv/lib/site-packages/click/exceptions.py:185
-msgid "Missing {param_type}"
-msgstr "Missing {param_type}"
-
-#: venv/lib/python3.10/site-packages/click/exceptions.py:192
-#: venv/lib/site-packages/click/exceptions.py:192
-msgid "Missing parameter: {param_name}"
-msgstr "Missing parameter: {param_name}"
-
-#: venv/lib/python3.10/site-packages/click/exceptions.py:212
-#: venv/lib/site-packages/click/exceptions.py:212
-msgid "No such option: {name}"
-msgstr "No such option: {name}"
-
-#: venv/lib/python3.10/site-packages/click/exceptions.py:226
-#: venv/lib/site-packages/click/exceptions.py:226
-msgid "Did you mean {possibility}?"
-msgid_plural "(Possible options: {possibilities})"
-msgstr[0] "Did you mean {possibility}?"
-msgstr[1] "(Possible options: {possibilities})"
-
-#: venv/lib/python3.10/site-packages/click/exceptions.py:262
-#: venv/lib/site-packages/click/exceptions.py:262
-msgid "unknown error"
-msgstr "unknown error"
-
-#: venv/lib/python3.10/site-packages/click/exceptions.py:269
-#: venv/lib/site-packages/click/exceptions.py:269
-msgid "Could not open file {filename!r}: {message}"
-msgstr "Could not open file {filename!r}: {message}"
-
-#: venv/lib/python3.10/site-packages/click/parser.py:231
-#: venv/lib/site-packages/click/parser.py:231
-msgid "Argument {name!r} takes {nargs} values."
-msgstr "Argument {name!r} takes {nargs} values."
-
-#: venv/lib/python3.10/site-packages/click/parser.py:413
-#: venv/lib/site-packages/click/parser.py:413
-msgid "Option {name!r} does not take a value."
-msgstr "Option {name!r} does not take a value."
-
-#: venv/lib/python3.10/site-packages/click/parser.py:473
-#: venv/lib/site-packages/click/parser.py:473
-msgid "Option {name!r} requires an argument."
-msgid_plural "Option {name!r} requires {nargs} arguments."
-msgstr[0] "Option {name!r} requires an argument."
-msgstr[1] "Option {name!r} requires {nargs} arguments."
-
-#: venv/lib/python3.10/site-packages/click/shell_completion.py:318
-#: venv/lib/site-packages/click/shell_completion.py:318
-msgid "Shell completion is not supported for Bash versions older than 4.4."
-msgstr "Shell completion is not supported for Bash versions older than 4.4."
-
-#: venv/lib/python3.10/site-packages/click/shell_completion.py:326
-#: venv/lib/site-packages/click/shell_completion.py:326
-msgid "Couldn't detect Bash version, shell completion is not supported."
-msgstr "Couldn't detect Bash version, shell completion is not supported."
-
-#: venv/lib/python3.10/site-packages/click/termui.py:158
-#: venv/lib/site-packages/click/termui.py:158
-msgid "Repeat for confirmation"
-msgstr "Repeat for confirmation"
-
-#: venv/lib/python3.10/site-packages/click/termui.py:174
-#: venv/lib/site-packages/click/termui.py:174
-msgid "Error: The value you entered was invalid."
-msgstr "Error: The value you entered was invalid."
-
-#: venv/lib/python3.10/site-packages/click/termui.py:176
-#: venv/lib/site-packages/click/termui.py:176
-msgid "Error: {e.message}"
-msgstr "Error: {e.message}"
-
-#: venv/lib/python3.10/site-packages/click/termui.py:187
-#: venv/lib/site-packages/click/termui.py:187
-msgid "Error: The two entered values do not match."
-msgstr "Error: The two entered values do not match."
-
-#: venv/lib/python3.10/site-packages/click/termui.py:243
-#: venv/lib/site-packages/click/termui.py:243
-msgid "Error: invalid input"
-msgstr "Error: invalid input"
-
-#: venv/lib/python3.10/site-packages/click/termui.py:773
-#: venv/lib/site-packages/click/termui.py:773
-msgid "Press any key to continue..."
-msgstr "Press any key to continue..."
-
-#: venv/lib/python3.10/site-packages/click/types.py:266
-#: venv/lib/site-packages/click/types.py:266
-msgid ""
-"Choose from:\n"
-"\t{choices}"
-msgstr ""
-"Choose from:\n"
-"\t{choices}"
-
-#: venv/lib/python3.10/site-packages/click/types.py:300
-#: venv/lib/site-packages/click/types.py:300
-msgid "{value!r} is not {choice}."
-msgid_plural "{value!r} is not one of {choices}."
-msgstr[0] "{value!r} is not {choice}."
-msgstr[1] "{value!r} is not one of {choices}."
-
-#: venv/lib/python3.10/site-packages/click/types.py:394
-#: venv/lib/site-packages/click/types.py:394
-msgid "{value!r} does not match the format {format}."
-msgid_plural "{value!r} does not match the formats {formats}."
-msgstr[0] "{value!r} does not match the format {format}."
-msgstr[1] "{value!r} does not match the formats {formats}."
-
-#: venv/lib/python3.10/site-packages/click/types.py:414
-#: venv/lib/site-packages/click/types.py:414
-msgid "{value!r} is not a valid {number_type}."
-msgstr "{value!r} is not a valid {number_type}."
-
-#: venv/lib/python3.10/site-packages/click/types.py:470
-#: venv/lib/site-packages/click/types.py:470
-msgid "{value} is not in the range {range}."
-msgstr "{value} is not in the range {range}."
-
-#: venv/lib/python3.10/site-packages/click/types.py:611
-#: venv/lib/site-packages/click/types.py:611
-msgid "{value!r} is not a valid boolean."
-msgstr "{value!r} is not a valid boolean."
-
-#: venv/lib/python3.10/site-packages/click/types.py:635
-#: venv/lib/site-packages/click/types.py:635
-msgid "{value!r} is not a valid UUID."
-msgstr "{value!r} is not a valid UUID."
-
-#: venv/lib/python3.10/site-packages/click/types.py:822
-#: venv/lib/site-packages/click/types.py:822
-msgid "file"
-msgstr "file"
-
-#: venv/lib/python3.10/site-packages/click/types.py:824
-#: venv/lib/site-packages/click/types.py:824
-msgid "directory"
-msgstr "directory"
-
-#: venv/lib/python3.10/site-packages/click/types.py:826
-#: venv/lib/site-packages/click/types.py:826
-msgid "path"
-msgstr "path"
-
-#: venv/lib/python3.10/site-packages/click/types.py:877
-#: venv/lib/site-packages/click/types.py:877
-msgid "{name} {filename!r} does not exist."
-msgstr "{name} {filename!r} does not exist."
-
-#: venv/lib/python3.10/site-packages/click/types.py:886
-#: venv/lib/site-packages/click/types.py:886
-msgid "{name} {filename!r} is a file."
-msgstr "{name} {filename!r} is a file."
-
-#: venv/lib/python3.10/site-packages/click/types.py:894
-#: venv/lib/site-packages/click/types.py:894
-msgid "{name} '{filename}' is a directory."
-msgstr "{name} '{filename}' is a directory."
-
-#: venv/lib/python3.10/site-packages/click/types.py:903
-#: venv/lib/site-packages/click/types.py:903
-msgid "{name} {filename!r} is not readable."
-msgstr "{name} {filename!r} is not readable."
-
-#: venv/lib/python3.10/site-packages/click/types.py:912
-#: venv/lib/site-packages/click/types.py:912
-msgid "{name} {filename!r} is not writable."
-msgstr "{name} {filename!r} is not writable."
-
-#: venv/lib/python3.10/site-packages/click/types.py:921
-#: venv/lib/site-packages/click/types.py:921
-msgid "{name} {filename!r} is not executable."
-msgstr "{name} {filename!r} is not executable."
-
-#: venv/lib/python3.10/site-packages/click/types.py:987
-#: venv/lib/site-packages/click/types.py:987
-msgid "{len_type} values are required, but {len_value} was given."
-msgid_plural "{len_type} values are required, but {len_value} were given."
-msgstr[0] "{len_type} values are required, but {len_value} was given."
-msgstr[1] "{len_type} values are required, but {len_value} were given."
-
-# templates/index.html:35
-#~ msgid "Home"
-#~ msgstr "Home"
-
-# templates/index.html:38
-# templates/index.html:70
-#~ msgid "About"
-#~ msgstr "About"
-
-# templates/index.html:41
-# templates/index.html:109
-#~ msgid "Skills"
-#~ msgstr "Skills"
-
-# templates/index.html:44
-# templates/index.html:181
-#~ msgid "Curriculum"
-#~ msgstr "Curriculum"
-
-# templates/index.html:47
-# templates/index.html:237
-#~ msgid "Portfolio"
-#~ msgstr "Portfolio"
-
-# templates/index.html:50
-# templates/index.html:306
-#~ msgid "Contact"
-#~ msgstr "Contact"
-
-# templates/index.html:55
-#~ msgid "Select one language"
-#~ msgstr "Select one language"
-
-# templates/index.html:56
-#~ msgid "English"
-#~ msgstr "English"
-
-# templates/index.html:57
-#~ msgid "Portuguese"
-#~ msgstr "Portuguese"
-
-# templates/index.html:64
-# templates/index.html:82
-# templates/index.html:207
-#~ msgid "Full Stack Developer"
-#~ msgstr "Full Stack Developer"
-
-# templates/index.html:72
-#~ msgid ""
-#~ "Proactive Full Stack Developer. I "
-#~ "started my journey with a degree "
-#~ "in Human Biology, which later led "
-#~ "me to discover my new abilities "
-#~ "with a Design course,which sparked a "
-#~ "passion for me in the programming "
-#~ "field.I have a natural aptitude for "
-#~ "the front-end but a passion for"
-#~ " discovering how things work behind "
-#~ "the scenes, which led me to "
-#~ "combine these two areas."
-#~ msgstr ""
-#~ "Proactive Full Stack Developer. I "
-#~ "started my journey with a degree "
-#~ "in Human Biology, which later led "
-#~ "me to discover my new abilities "
-#~ "with a Design course,which sparked a "
-#~ "passion for me in the programming "
-#~ "field.I have a natural aptitude for "
-#~ "the front-end but a passion for"
-#~ " discovering how things work behind "
-#~ "the scenes, which led me to "
-#~ "combine these two areas."
-
-# templates/index.html:83
-#~ msgid ""
-#~ "Is an entry-level position in the"
-#~ " field of software development, responsible"
-#~ " for working on both the front-"
-#~ "end and back-end portions of web"
-#~ " applications."
-#~ msgstr ""
-#~ "Is an entry-level position in the"
-#~ " field of software development, responsible"
-#~ " for working on both the front-"
-#~ "end and back-end portions of web"
-#~ " applications."
-
-# templates/index.html:87
-#~ msgid "Date of birth:"
-#~ msgstr "Date of birth:"
-
-# templates/index.html:87
-#~ msgid "December 24, 1989"
-#~ msgstr "December 24, 1989"
-
-# templates/index.html:88
-#~ msgid "Age:"
-#~ msgstr "Age:"
-
-# templates/index.html:89
-#~ msgid "City:"
-#~ msgstr "City:"
-
-# templates/index.html:90
-#~ msgid "Country"
-#~ msgstr "Country"
-
-# templates/index.html:90
-#~ msgid "Portugal"
-#~ msgstr "Portugal"
-
-# templates/index.html:95
-#~ msgid "Hobby:"
-#~ msgstr "Hobby:"
-
-# templates/index.html:95
-#~ msgid "Hiking"
-#~ msgstr "Hiking"
-
-# templates/index.html:96
-#~ msgid "Work:"
-#~ msgstr "Work:"
-
-# templates/index.html:98
-#~ msgid "Experience:"
-#~ msgstr "Experience:"
-
-# templates/index.html:98
-#~ msgid "Beginner"
-#~ msgstr "Beginner"
-
-# templates/index.html:110
-#~ msgid ""
-#~ "Throughout my time as a professional "
-#~ "I have acquired some technical and "
-#~ "soft skills, most of them are "
-#~ "here, according to the percentage of "
-#~ "knowledge I believe I have in each"
-#~ " \" \"of them."
-#~ msgstr ""
-#~ "Throughout my time as a professional "
-#~ "I have acquired some technical and "
-#~ "soft skills, most of them are "
-#~ "here, according to the percentage of "
-#~ "knowledge I believe I have in each"
-#~ " \" \"of them."
-
-# templates/index.html:171
-#~ msgid "Comunication"
-#~ msgstr "Communication"
-
-# templates/index.html:184
-#~ msgid "Education"
-#~ msgstr "Education"
-
-# templates/index.html:186
-#~ msgid "Full-Stack Software Developer"
-#~ msgstr "Full-Stack Software Developer"
-
-# templates/index.html:188
-#~ msgid "Online, Spain"
-#~ msgstr "Online, Spain"
-
-# templates/index.html:189
-#~ msgid ""
-#~ "Hands-on program to become a "
-#~ "Full-Stack Software Developer, focusing on"
-#~ " mastering both frontend and backend "
-#~ "technologies."
-#~ msgstr ""
-#~ "Hands-on program to become a "
-#~ "Full-Stack Software Developer, focusing on"
-#~ " mastering both frontend and backend "
-#~ "technologies."
-
-# templates/index.html:192
-#~ msgid "Development of multimedia products"
-#~ msgstr "Development of multimedia products"
-
-# templates/index.html:195
-#~ msgid ""
-#~ "Specialized in multimedia product development,"
-#~ " gaining practical skills in the "
-#~ "latest digital design and media "
-#~ "production technologies."
-#~ msgstr ""
-#~ "Specialized in multimedia product development,"
-#~ " gaining practical skills in the "
-#~ "latest digital design and media "
-#~ "production technologies."
-
-# templates/index.html:198
-#~ msgid "Degree in Human Biology"
-#~ msgstr "Degree in Human Biology"
-
-# templates/index.html:200
-#~ msgid "Évora University"
-#~ msgstr "Évora University"
-
-# templates/index.html:201
-#~ msgid ""
-#~ "Completed a comprehensive study in Human"
-#~ " Biology, acquiring a strong foundation "
-#~ "in biological sciences and their "
-#~ "application to human health and disease."
-#~ msgstr ""
-#~ "Completed a comprehensive study in Human"
-#~ " Biology, acquiring a strong foundation "
-#~ "in biological sciences and their "
-#~ "application to human health and disease."
-
-# templates/index.html:205
-#~ msgid "Professional"
-#~ msgstr "Professional"
-
-# templates/index.html:208
-#~ msgid "The moment"
-#~ msgstr "The moment"
-
-# templates/index.html:210
-#~ msgid ""
-#~ "Develop user-friendly web interfaces "
-#~ "using HTML, CSS, and JavaScript.Participate"
-#~ " in code reviews and provide "
-#~ "constructive feedback.Troubleshoot, debug, and "
-#~ "resolve issues in both frontend and "
-#~ "backend components"
-#~ msgstr ""
-#~ "Develop user-friendly web interfaces "
-#~ "using HTML, CSS, and JavaScript.Participate"
-#~ " in code reviews and provide "
-#~ "constructive feedback.Troubleshoot, debug, and "
-#~ "resolve issues in both frontend and "
-#~ "backend components"
-
-# templates/index.html:216
-#~ msgid "Graphic designer"
-#~ msgstr "Graphic designer"
-
-# templates/index.html:219
-#~ msgid ""
-#~ "Assisting in the management of the "
-#~ "company's websitedevelopment, like, taking "
-#~ "photographs and designingthem, updating its"
-#~ " content in the website's admindashboard,"
-#~ " and reporting problems that would "
-#~ "appear."
-#~ msgstr ""
-#~ "Assisting in the management of the "
-#~ "company's websitedevelopment, like, taking "
-#~ "photographs and designingthem, updating its"
-#~ " content in the website's admindashboard,"
-#~ " and reporting problems that would "
-#~ "appear."
-
-# templates/index.html:226
-#~ msgid "Digital animation intern"
-#~ msgstr "Digital animation intern"
-
-# templates/index.html:229
-#~ msgid "Role as creator of content, animations, web design and learning"
-#~ msgstr "Role as creator of content, animations, web design and learning"
-
-# templates/index.html:252
-#~ msgid ""
-#~ "Develop during a programming bootcamp, "
-#~ "an e-commerce platform where users can"
-#~ " browse, review, purchase."
-#~ msgstr ""
-#~ "Develop during a programming bootcamp, "
-#~ "an e-commerce platform where users can"
-#~ " browse, review, purchase."
-
-# templates/index.html:269
-#~ msgid "Is an application to assist in task management, for internal roles."
-#~ msgstr "Is an application to assist in task management, for internal roles."
-
-# templates/index.html:283
-#~ msgid "My design portfolio"
-#~ msgstr "My design portfolio"
-
-# templates/index.html:284
-#~ msgid ""
-#~ "Work developed in my CET, using "
-#~ "techniques with Adobe Illustrator, Adobe "
-#~ "Photoshop, Adobe Afert effects, Adobe "
-#~ "premier, Photography and 3ds Max.The "
-#~ "language I selected to present my "
-#~ "work was Portuguese."
-#~ msgstr ""
-#~ "Work developed in my CET, using "
-#~ "techniques with Adobe Illustrator, Adobe "
-#~ "Photoshop, Adobe Afert effects, Adobe "
-#~ "premier, Photography and 3ds Max.The "
-#~ "language I selected to present my "
-#~ "work was Portuguese."
-
-# templates/index.html:295
-#~ msgid "Previous"
-#~ msgstr "Previous"
-
-# templates/index.html:299
-#~ msgid "Next"
-#~ msgstr "Next"
-
-# templates/index.html:311
-#~ msgid "Location:"
-#~ msgstr "Location"
-
-# templates/index.html:315
-# templates/index.html:329
-#~ msgid "Email:"
-#~ msgstr "Email:"
-
-# templates/index.html:325
-#~ msgid "Name:"
-#~ msgstr "Name:"
-
-# templates/index.html:326
-#~ msgid "Write your name"
-#~ msgstr "Write your name"
-
-# templates/index.html:330
-#~ msgid "Write your email"
-#~ msgstr "Write your email"
-
-# templates/index.html:333
-#~ msgid "Message:"
-#~ msgstr "Message:"
-
-# templates/index.html:334
-#~ msgid "Write your message"
-#~ msgstr "Write your message"
-
-# templates/index.html:337
-#~ msgid "Send"
-#~ msgstr "Send"
-
-# app.py:49
-# app.py:53
-#~ msgid "Portfolio Contact from"
-#~ msgstr "Portfolio Contact from"
-
-# app.py:55
-#~ msgid "message:"
-#~ msgstr "message:"
-
-# app.py:60
-#~ msgid "Message sent successfully!"
-#~ msgstr "Message sent successfully!"
-
+msgid "message-sent-successfully"
+msgstr "Mensagem enviada com sucesso!"
