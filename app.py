@@ -2,8 +2,11 @@ from flask import Flask, current_app, render_template, redirect, request, flash,
 from flask_mail import Mail, Message
 from waitress import serve
 from flask_babel import Babel, gettext as _
-from config import email, senha
+from dotenv import load_dotenv # type: ignore
 import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Initialize the Flask application first
 app = Flask(__name__)
@@ -15,8 +18,8 @@ mail_settings = {
     "MAIL_PORT": 465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": email,
-    "MAIL_PASSWORD": senha
+    "MAIL_USERNAME": os.getenv("MAIL_USERNAME"),
+    "MAIL_PASSWORD": os.getenv("MAIL_PASSWORD")
 }
 
 app.config.update(mail_settings)
