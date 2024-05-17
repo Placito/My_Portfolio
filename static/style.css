@@ -266,3 +266,18 @@ footer {
         padding: 20px 15px;
     }
 }
+@media (max-width: 1580px) {
+    .card-square {
+        height: 50vh;
+    }
+}
+@media (max-width: 1180px) {
+    .card-square {
+        height: 40vh;
+    }
+}
+@media (max-width: 395px) {
+    .card-square {
+        height: 30vh;
+    }
+}
