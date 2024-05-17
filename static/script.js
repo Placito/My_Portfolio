@@ -123,12 +123,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Function to update the page content based on the fetched translations
     function updatePageContent(translations) {
-        const elementsToUpdate = document.querySelectorAll('[data-i18n]');
+        const elementsToUpdate = document.querySelectorAll('[data-i18n], [data-i18n-placeholder]');
         elementsToUpdate.forEach((element) => {
             const key = element.getAttribute('data-i18n');
             if (key) {
                 element.textContent = translations[key];
                 console.log(translations[key])
+            }
+            const placeholderKey = element.getAttribute('data-i18n-placeholder');
+            if (placeholderKey && translations[placeholderKey]) {
+                element.setAttribute('placeholder', translations[placeholderKey]);
             }
         });
     }

@@ -81,17 +81,17 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><strong data-i18n="dob">{{ _('Date of birth') }}:</strong>{{ _('December 24, 1989') }}</li>
-                                    <li class="list-group-item"><strong data-i18n="age">{{ _('Age') }}:</strong> 34</li>
-                                    <li class="list-group-item"><strong data-i18n="city">{{ _('City') }}:</strong> Leiria</li>
-                                    <li class="list-group-item"><strong data-i18n="country">{{ _('Country') }}:</strong>{{ _('Portugal') }}</li>
+                                    <li class="list-group-item"><strong data-i18n="dob">{{ _('Date of birth:') }}</strong><span data-i18n="date">{{ _(' December 24, 1989') }}</span></li>
+                                    <li class="list-group-item"><strong data-i18n="age">{{ _('Age:') }}</strong> 34</li>
+                                    <li class="list-group-item"><strong data-i18n="city">{{ _('City:') }}</strong> Leiria</li>
+                                    <li class="list-group-item"><strong data-i18n="country">{{ _('Country:') }}</strong><span data-i18n="country2">{{ _(' Portugal') }}</span></li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><strong data-i18n="hobby">{{ _('Hobby') }}:</strong>{{ _('Hiking') }}</li>
-                                    <li class="list-group-item"><strong data-i18n="work">{{ _('Work') }}:</strong><a href="https://launch-it.eu/en/" target="_blank" class="fw-lighter text-decoration-none link-dark"> Launch-IT</a></li>
-                                    <li class="list-group-item"><strong data-i18n="experience">{{ _('Experience') }}:</strong>{{ _('Beginner') }}</li>
+                                    <li class="list-group-item"><strong data-i18n="hobby">{{ _('Hobby:') }}</strong><span data-i18n="hobby2">{{ _(' Hiking') }}</span></li>
+                                    <li class="list-group-item"><strong data-i18n="work">{{ _('Work:') }}</strong><a href="https://launch-it.eu/en/" target="_blank" class="fw-lighter text-decoration-none link-dark"> Launch-IT</a></li>
+                                    <li class="list-group-item"><strong data-i18n="experience">{{ _('Experience:') }}</strong><span data-i18n="experience2">{{ _(' Beginner') }}</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -291,11 +291,11 @@
                     <div class="col-md-5">
                         <div class="card p-5 shadow border-0" data-anime="up">
                             <div class="address">
-                                <h4><i class="bi bi-geo-alt"></i><span data-i18n="location">{{ _('Location') }}</span>:</h4>
+                                <h4><i class="bi bi-geo-alt"></i><span data-i18n="location">{{ _('Location:') }}</span>:</h4>
                                 <p id="location">Bajouca, Leiria</p>
                             </div>
                             <div class="email">
-                                <h4 id="email-title"><i class="bi bi-envelope"></i><span data-i18n="email-title">{{ _('Email') }}</span>:</h4>
+                                <h4 id="email-title"><i class="bi bi-envelope"></i><span data-i18n="email-title">{{ _('Email:') }}</span>:</h4>
                                 <p>mariana.placito@gmail.com</p>
                             </div>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24489.190832720324!2d-8.800835852293448!3d39.8932994545461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd226c7793b13f8f%3A0x500ebbde490c100!2sBajouca!5e0!3m2!1spt-PT!2spt!4v1715612633728!5m2!1spt-PT!2spt" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="w-100" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -305,16 +305,16 @@
                         <div class="card p-5 h-100 shadow border-0" data-anime="right">
                             <form class="row g-3" action="/send" method="POST">
                                 <div class="col-md-6">
-                                  <label id="label-name" for="name" class="form-label" data-i18n="label-name">{{ _('Name') }}:</label>
-                                  <input type="text" class="form-control" id="name" name="name" data-i18n="write-your-name" placeholder="{{ _('Write your name') }}...">
+                                  <label id="label-name" for="name" class="form-label" data-i18n="label-name">{{ _('Name:') }}</label>
+                                  <input type="text" class="form-control" id="name" name="name" data-i18n-placeholder="write-your-name" placeholder="{{ _('Write your name') }}...">
                                 </div>
                                 <div class="col-md-6">
-                                  <label id="label-email" for="email" class="form-label" data-i18n="label-email">{{ _('Email') }}:</label>
-                                  <input type="email" class="form-control" id="email" name="email" data-i18n="write-your-email" placeholder="{{ _('Write your email') }}...">
+                                  <label id="label-email" for="email" class="form-label" data-i18n="label-email">{{ _('Email:') }}</label>
+                                  <input type="email" class="form-control" id="email" name="email" data-i18n-placeholder="write-your-email" placeholder="{{ _('Write your email') }}...">
                                 </div>
                                 <div class="col-12">
-                                  <label id="label-message" for="message" class="form-label" data-i18n="label-message">{{ _('Message') }}:</label>
-                                  <textarea class="form-control" id="message" name="message" rows="10" data-i18n="write-your-message" placeholder="{{ _('Write your message') }}..."></textarea>
+                                    <label id="label-message" for="message" class="form-label" data-i18n="label-message">{{ _('Message:') }}</label>
+                                    <textarea class="form-control" id="message" name="message" rows="10" data-i18n-placeholder="write-your-message" placeholder="{{ _('Write your message') }}..."></textarea>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center mt-4">
                                   <button id="btn-send" type="submit" class="btn btn-outline-primary" data-i18n="btn-send">{{ _('Send') }}</button>

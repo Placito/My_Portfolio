@@ -66,30 +66,36 @@ msgstr ""
 "É uma posição inicial na área de desenvolvimento de software, responsável por trabalhar nas partes front-end e back-end de aplicações web."
 
 msgid "dob"
-msgstr "Data de nascimento"
+msgstr "Data de nascimento: "
+
+msgid "date"
+msgstr "24 de Dezembro de 1989"
 
 msgid "age"
-msgstr "Idade"
+msgstr "Idade: "
 
 msgid "city"
-msgstr "Cidade"
+msgstr "Cidade: "
 
 msgid "country"
-msgstr "País"
+msgstr "País: "
+
+msgid "country2"
+msgstr "Portugal"
 
 msgid "hobby"
-msgstr "Passatempo"
+msgstr "Passatempo: "
 
-msgid "hiking"
+msgid "hobby2"
 msgstr "Caminhada"
 
 msgid "work"
-msgstr "Trabalho"
+msgstr "Trabalho: "
 
 msgid "experience"
-msgstr "Experiência"
+msgstr "Experiência: "
 
-msgid "beginner"
+msgid "experience2"
 msgstr "Principiante"
 
 msgid "skills-title"
@@ -210,25 +216,25 @@ msgid "email-title"
 msgstr "E-mail"
 
 msgid "label-name"
-msgstr "Nome"
+msgstr "Nome:"
 
 msgid "label-email"
-msgstr "E-mail"
+msgstr "E-mail:"
 
 msgid "label-message"
-msgstr "Mensagem"
+msgstr "Mensagem:"
 
 msgid "btn-send"
 msgstr "Enviar"
 
 msgid "write-your-name"
-msgstr "Escreva o seu nome"
+msgstr "Escreva o seu nome..."
 
 msgid "write-your-email"
-msgstr "Escreva o seu e-mail"
+msgstr "Escreva o seu e-mail..."
 
 msgid "write-your-message"
-msgstr "Escreva a sua mensagem"
+msgstr "Escreva a sua mensagem..."
 
 msgid "message-sent-successfully"
 msgstr "Mensagem enviada com sucesso!"

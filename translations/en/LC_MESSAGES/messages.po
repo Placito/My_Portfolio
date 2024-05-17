@@ -56,30 +56,36 @@ msgid "full-stack-description"
 msgstr "Is an entry-level position in the field of software development, responsible for working on both the front-end and back-end portions of web applications."
 
 msgid "dob"
-msgstr "Date of birth"
+msgstr "Date of birth: "
+
+msgid "date"
+msgstr "December 24, 1989"
 
 msgid "age"
-msgstr "Age"
+msgstr "Age: "
 
 msgid "city"
-msgstr "City"
+msgstr "City: "
 
 msgid "country"
-msgstr "Country"
+msgstr "Country: "
+
+msgid "country2"
+msgstr "Portugal"
 
 msgid "hobby"
-msgstr "Hobby"
+msgstr "Hobby: "
 
-msgid "hiking"
+msgid "hobby2"
 msgstr "Hiking"
 
 msgid "work"
-msgstr "Work"
+msgstr "Work: "
 
 msgid "experience"
-msgstr "Experience"
+msgstr "Experience: "
 
-msgid "beginner"
+msgid "experience2"
 msgstr "Beginner"
 
 msgid "skills-title"
@@ -185,31 +191,31 @@ msgid "contact-title"
 msgstr "Contact"
 
 msgid "location"
-msgstr "Location"
+msgstr "Location:"
 
 msgid "email-title"
-msgstr "Email"
+msgstr "Email:"
 
 msgid "label-name"
 msgstr "Name"
 
 msgid "label-email"
-msgstr "Email"
+msgstr "Email:"
 
 msgid "label-message"
-msgstr "Message"
+msgstr "Message:"
 
 msgid "btn-send"
 msgstr "Send"
 
 msgid "write-your-name"
-msgstr "Write your name"
+msgstr "Write your name..."
 
 msgid "write-your-email"
-msgstr "Write your email"
+msgstr "Write your email..."
 
 msgid "write-your-message"
-msgstr "Write your message"
+msgstr "Write your message..."
 
 msgid "message-sent-successfully"
 msgstr "Message sent successfully!"
