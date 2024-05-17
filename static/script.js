@@ -148,5 +148,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
             updatePageContent(translations);
         });
     }
-
 });

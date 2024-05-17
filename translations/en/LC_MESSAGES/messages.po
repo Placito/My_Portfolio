@@ -191,10 +191,10 @@ msgid "contact-title"
 msgstr "Contact"
 
 msgid "location"
-msgstr "Location:"
+msgstr " Location"
 
 msgid "email-title"
-msgstr "Email:"
+msgstr " Email"
 
 msgid "label-name"
 msgstr "Name"

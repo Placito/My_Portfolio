@@ -210,10 +210,10 @@ msgid "contact-title"
 msgstr "Contacto"
 
 msgid "location"
-msgstr "Localização"
+msgstr " Localização"
 
 msgid "email-title"
-msgstr "E-mail"
+msgstr " E-mail"
 
 msgid "label-name"
 msgstr "Nome:"
