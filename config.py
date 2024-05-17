@@ -1,2 +1,2 @@
-email = 'teest4geeks12@gmail.com'
-senha = 'ahyz rgmy igtb yclg'
+email = 'f08122375@gmail.com'
+senha = 'fmop yoid whhd ulmf'
