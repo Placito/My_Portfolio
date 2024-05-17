@@ -1,0 +1,223 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-05-16 13:02+0000\n"
+"PO-Revision-Date: 2024-05-15 14:49+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+msgid "nav-home"
+msgstr "Home"
+
+msgid "nav-about"
+msgstr "About"
+
+msgid "nav-skills"
+msgstr "Skills"
+
+msgid "nav-curriculum"
+msgstr "Curriculum"
+
+msgid "nav-portfolio"
+msgstr "Portfolio"
+
+msgid "nav-contact"
+msgstr "Contact"
+
+msgid "select-language"
+msgstr "Select one language"
+
+msgid "english"
+msgstr "English"
+
+msgid "portuguese"
+msgstr "Portuguese"
+
+msgid "subtitle"
+msgstr "Full Stack Developer"
+
+msgid "about-title"
+msgstr "About"
+
+msgid "about-description"
+msgstr "Proactive Full Stack Developer. I started my journey with a degree in Human Biology, which later led me to discover my new abilities with a Design course, which sparked a passion for me in the programming field. I have a natural aptitude for the front-end but a passion for discovering how things work behind the scenes, which led me to combine these two areas."
+
+msgid "full-stack-title"
+msgstr "Full Stack Developer"
+
+msgid "full-stack-description"
+msgstr "Is an entry-level position in the field of software development, responsible for working on both the front-end and back-end portions of web applications."
+
+msgid "dob"
+msgstr "Date of birth: "
+
+msgid "date"
+msgstr "December 24, 1989"
+
+msgid "age"
+msgstr "Age: "
+
+msgid "city"
+msgstr "City: "
+
+msgid "country"
+msgstr "Country: "
+
+msgid "country2"
+msgstr "Portugal"
+
+msgid "hobby"
+msgstr "Hobby: "
+
+msgid "hobby2"
+msgstr "Hiking"
+
+msgid "work"
+msgstr "Work: "
+
+msgid "experience"
+msgstr "Experience: "
+
+msgid "experience2"
+msgstr "Beginner"
+
+msgid "skills-title"
+msgstr "Skills"
+
+msgid "skills-description"
+msgstr "Throughout my time as a professional I have acquired some technical and soft skills, most of them are here, according to the percentage of knowledge I believe I have in each of them."
+
+msgid "communication-title"
+msgstr "Communication"
+
+msgid "curriculum-title"
+msgstr "Curriculum"
+
+msgid "education-title"
+msgstr "Education"
+
+msgid "education-fullstack"
+msgstr "Full-Stack Software Developer"
+
+msgid "education-fullstack-date"
+msgstr "05/2023 - 11/2023"
+
+msgid "education-fullstack-location"
+msgstr "Online, Spain"
+
+msgid "education-fullstack-description"
+msgstr "Hands-on program to become a Full-Stack Software Developer, focusing on mastering both frontend and backend technologies."
+
+msgid "education-multimedia"
+msgstr "Development of multimedia products"
+
+msgid "education-multimedia-date"
+msgstr "2021 - 2022"
+
+msgid "education-multimedia-description"
+msgstr "Specialized in multimedia product development, gaining practical skills in the latest digital design and media production technologies."
+
+msgid "education-biology"
+msgstr "Degree in Human Biology"
+
+msgid "education-biology-date"
+msgstr "2009 - 2013"
+
+msgid "education-biology-description"
+msgstr "Completed a comprehensive study in Human Biology, acquiring a strong foundation in biological sciences and their application to human health and disease."
+
+msgid "professional-title"
+msgstr "Professional"
+
+msgid "professional-fullstack"
+msgstr "Full-Stack Developer"
+
+msgid "professional-fullstack-date"
+msgstr "The moment"
+
+msgid "professional-fullstack-description"
+msgstr "Develop user-friendly web interfaces using HTML, CSS, and JavaScript. Participate in code reviews and provide constructive feedback. Troubleshoot, debug, and resolve issues in both frontend and backend components."
+
+msgid "professional-graphic"
+msgstr "Graphic designer"
+
+msgid "professional-graphic-date"
+msgstr "2022 - 2023"
+
+msgid "professional-graphic-description"
+msgstr "Assisting in the management of the company's website development, like, taking photographs and designing them, updating its content in the website's admin dashboard, and reporting problems that would appear."
+
+msgid "professional-animation"
+msgstr "Digital animation intern"
+
+msgid "professional-animation-date"
+msgstr "12/2021 - 03/2022"
+
+msgid "professional-animation-description"
+msgstr "Role as creator of content, animations, web design and learning"
+
+msgid "portfolio-item-1-title"
+msgstr "Bicycle_Shop"
+
+msgid "portfolio-item-1-description"
+msgstr "Develop during a programming bootcamp, an e-commerce platform where users can browse, review, purchase."
+
+msgid "portfolio-item-2-title"
+msgstr "GEST_tasks"
+
+msgid "portfolio-item-2-description"
+msgstr "Is an application to assist in task management, for internal roles."
+
+msgid "portfolio-item-3-title"
+msgstr "My design portfolio"
+
+msgid "portfolio-item-3-description"
+msgstr ""
+"Work developed in my CET, using techniques with Adobe Illustrator, Adobe Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. The language I selected to " "present my work was Portuguese."
+""
+
+msgid "previous"
+msgstr "Previous"
+
+msgid "next"
+msgstr "Next"
+
+msgid "contact-title"
+msgstr "Contact"
+
+msgid "location"
+msgstr " Location"
+
+msgid "email-title"
+msgstr " Email"
+
+msgid "label-name"
+msgstr "Name"
+
+msgid "label-email"
+msgstr "Email:"
+
+msgid "label-message"
+msgstr "Message:"
+
+msgid "btn-send"
+msgstr "Send"
+
+msgid "write-your-name"
+msgstr "Write your name..."
+
+msgid "write-your-email"
+msgstr "Write your email..."
+
+msgid "write-your-message"
+msgstr "Write your message..."
+
+msgid "message-sent-successfully"
+msgstr "Message sent successfully!"

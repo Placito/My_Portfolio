@@ -1,0 +1,250 @@
+# Portuguese translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-05-16 13:02+0000\n"
+"PO-Revision-Date: 2024-05-15 14:49+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt\n"
+"Language-Team: pt <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+msgid "nav-home"
+msgstr "Início"
+
+msgid "nav-about"
+msgstr "Sobre"
+
+msgid "nav-skills"
+msgstr "Habilidades"
+
+msgid "nav-curriculum"
+msgstr "Currículo"
+
+msgid "nav-portfolio"
+msgstr "Portfólio"
+
+msgid "nav-contact"
+msgstr "Contacto"
+
+msgid "select-language"
+msgstr "Selecciona uma linguagem"
+
+msgid "english"
+msgstr "Inglês"
+
+msgid "portuguese"
+msgstr "Português"
+
+msgid "subtitle"
+msgstr "Desenvolvedora Full Stack"
+
+msgid "about-title"
+msgstr "Sobre"
+
+msgid "about-description"
+msgstr ""
+"Desenvolvedora Full Stack Proativa. Comecei a minha jornada com uma licenciatura "
+"em Biologia Humana, que mais tarde me levou a descobrir novas habilidades com um "
+"curso de design, o que despertou em mim uma paixão pela programação. Tenho uma "
+"aptidão natural para o front-end, mas uma paixão por descobrir como as coisas "
+"funcionam nos bastidores, o que me levou a combinar essas duas áreas."
+
+msgid "full-stack-title"
+msgstr "Desenvolvedora Full Stack"
+
+msgid "full-stack-description"
+msgstr ""
+"É uma posição inicial na área de desenvolvimento de software, responsável por trabalhar nas partes front-end e back-end de aplicações web."
+
+msgid "dob"
+msgstr "Data de nascimento: "
+
+msgid "date"
+msgstr "24 de Dezembro de 1989"
+
+msgid "age"
+msgstr "Idade: "
+
+msgid "city"
+msgstr "Cidade: "
+
+msgid "country"
+msgstr "País: "
+
+msgid "country2"
+msgstr "Portugal"
+
+msgid "hobby"
+msgstr "Passatempo: "
+
+msgid "hobby2"
+msgstr "Caminhada"
+
+msgid "work"
+msgstr "Trabalho: "
+
+msgid "experience"
+msgstr "Experiência: "
+
+msgid "experience2"
+msgstr "Principiante"
+
+msgid "skills-title"
+msgstr "Habilidades"
+
+msgid "skills-description"
+msgstr ""
+"Ao longo do meu tempo como profissional adquiri alguns conhecimentos técnicos e "
+"habilidades interpessoais, a maioria delas está aqui, de acordo com a percentagem "
+"de conhecimento que acredito ter em cada uma delas."
+
+msgid "communication-title"
+msgstr "Comunicação"
+
+msgid "curriculum-title"
+msgstr "Currículo"
+
+msgid "education-title"
+msgstr "Educação"
+
+msgid "education-fullstack"
+msgstr "Desenvolvedor de software Full-Stack"
+
+msgid "education-fullstack-date"
+msgstr "05/2023 - 11/2023"
+
+msgid "education-fullstack-location"
+msgstr "Online, Espanha"
+
+msgid "education-fullstack-description"
+msgstr ""
+"Programa prático para se tornar um desenvolvedor de software Full-Stack, com foco "
+"em dominar as tecnologias de frontend e backend."
+
+msgid "education-multimedia"
+msgstr "Desenvolvimento de produtos multimídia"
+
+msgid "education-multimedia-date"
+msgstr "2021 - 2022"
+
+msgid "education-multimedia-description"
+msgstr ""
+"Especialização em desenvolvimento de produtos multimídia, adquirindo habilidades "
+"práticas nas mais recentes tecnologias de design digital e produção de mídia."
+
+msgid "education-biology"
+msgstr "Licenciatura em Biologia Humana"
+
+msgid "education-biology-date"
+msgstr "2009 - 2013"
+
+msgid "education-biology-description"
+msgstr ""
+"Compreende um estudo abrangente em Biologia Humana, adquirindo fundamentos nas "
+"ciências biológicas, bem como a sua aplicação à saúde humana e doenças."
+
+msgid "professional-title"
+msgstr "Profissional"
+
+msgid "professional-fullstack"
+msgstr "Desenvolvedora Full-Stack"
+
+msgid "professional-fullstack-date"
+msgstr "Actual"
+
+msgid "professional-fullstack-description"
+msgstr ""
+"Desenvolver interfaces Web, fáceis de utilizar, usando HTML, CSS e JavaScript. "
+"Participar em revisões de código e fornecer feedback construtivo. Solucionar "
+"problemas, depurar e resolver problemas nos componentes frontend e backend."
+
+msgid "professional-graphic"
+msgstr "Designer gráfico"
+
+msgid "professional-graphic-date"
+msgstr "2022 - 2023"
+
+msgid "professional-graphic-description"
+msgstr ""
+"Auxiliar na gestão do site da empresa, tirando fotos e desenhando projetos, "
+"atualizando o conteúdo no painel de administrador do site e relatando problemas "
+"que apareceriam."
+
+msgid "professional-animation"
+msgstr "Estagiário de animação digital"
+
+msgid "professional-animation-date"
+msgstr "12/2021 - 03/2022"
+
+msgid "professional-animation-description"
+msgstr "Papel como criadora de conteúdo, animações, web design e aprendizagem."
+
+msgid "portfolio-item-1-title"
+msgstr "Bicycle_Shop"
+
+msgid "portfolio-item-1-description"
+msgstr "Desenvolvido durante um bootcamp de programação, é uma plataforma de e-commerce onde os utilizadores podem navegar, revisar, comprar."
+
+msgid "portfolio-item-2-title"
+msgstr "GEST_tasks"
+
+msgid "portfolio-item-2-description"
+msgstr "É uma aplicação para auxiliar na gestão de tarefas, para funções internas."
+
+msgid "portfolio-item-3-title"
+msgstr "Meu portfólio de design"
+
+msgid "portfolio-item-3-description"
+msgstr ""
+"Trabalho desenvolvido durante o meu CET, utilizando técnicas como Adobe "
+"Illustrator, Adobe Photoshop, Adobe After Effects, Adobe Premier, Fotografia e "
+"3ds Max. O idioma que selecionei para apresentar meu trabalho é o português."
+
+msgid "previous"
+msgstr "Anterior"
+
+msgid "next"
+msgstr "Próximo"
+
+msgid "contact-title"
+msgstr "Contacto"
+
+msgid "location"
+msgstr " Localização"
+
+msgid "email-title"
+msgstr " E-mail"
+
+msgid "label-name"
+msgstr "Nome:"
+
+msgid "label-email"
+msgstr "E-mail:"
+
+msgid "label-message"
+msgstr "Mensagem:"
+
+msgid "btn-send"
+msgstr "Enviar"
+
+msgid "write-your-name"
+msgstr "Escreva o seu nome..."
+
+msgid "write-your-email"
+msgstr "Escreva o seu e-mail..."
+
+msgid "write-your-message"
+msgstr "Escreva a sua mensagem..."
+
+msgid "message-sent-successfully"
+msgstr "Mensagem enviada com sucesso!"

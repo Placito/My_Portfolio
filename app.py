@@ -1,7 +1,8 @@
-from flask import Flask, render_template, redirect, request, flash
+from flask import Flask, current_app, render_template, redirect, request, flash, session, url_for, jsonify, send_file
 from flask_mail import Mail, Message
-from config import email, senha
 from waitress import serve
+from flask_babel import Babel, gettext as _
+import os
 
 # Initialize the Flask application first
 app = Flask(__name__)
@@ -13,11 +14,15 @@ mail_settings = {
     "MAIL_PORT": 465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": email,
-    "MAIL_PASSWORD": senha
+    "MAIL_USERNAME": 'f08122375@gmail.com',
+    "MAIL_PASSWORD": 'fmop yoid whhd ulmf'
 }
+
 app.config.update(mail_settings)
 mail = Mail(app)
+app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'pt']
+babel = Babel(app)
 
 # Define the Contact class
 class Contact:
@@ -26,10 +31,17 @@ class Contact:
         self.email = email
         self.message = message
 
+# Manually set the locale before each request
+@app.before_request
+def set_locale():
+    lang = session.get('lang', request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES']))
+    babel.locale_selector_func = lambda: lang
+
 # Define routes
 @app.route('/')
 def home():
-    return render_template('index.html')
+    lang = session.get('lang', 'en')
+    return render_template('index.html', lang=lang)
 
 @app.route('/send', methods=['GET', 'POST'])
 def send():
@@ -41,20 +53,39 @@ def send():
         )
 
         msg = Message(
-            subject=f'Portfolio Contact from {formContact.name}',
+            subject=f'{_("Portfolio Contact from")} {formContact.name}',
             sender=app.config.get("MAIL_USERNAME"),
             recipients=['mariana.placito@gmail.com'],
             body=f'''
-                Portfolio Contact from {formContact.name}
+                {_("Portfolio Contact from")} {formContact.name}
 
-                message:
+                {_("Message")}:
                 {formContact.message}
             '''    
         )
         mail.send(msg)
-        flash('Message sent successfully!')
+        flash(_('Message sent successfully!'))
     return redirect('/')
+
+@app.route('/set_language/<language>', methods=['GET'])
+def set_language(language):
+    if language in app.config['BABEL_SUPPORTED_LOCALES']:
+        session['lang'] = language
+    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+        return jsonify({'status': 'success'})
+    return redirect(request.referrer or url_for('home'))
+
+@app.route('/translations/<lang>/LC_MESSAGES/messages.po', methods=['GET'])
+def get_translation(lang):
+    file_path = os.path.join('translations', lang, 'LC_MESSAGES', 'messages.po')
+    print(f"Looking for file at: {file_path}")  # Debug output
+    if os.path.exists(file_path):
+        return send_file(file_path)
+    else:
+        print(f"File not found at: {file_path}")  # Debug output
+        return jsonify({'error': 'File not found'}), 404
 
 # Serve the application with Waitress
 if __name__ == '__main__':
     serve(app, host='0.0.0.0', port=8080)
+
