@@ -2,6 +2,7 @@ from flask import Flask, current_app, render_template, redirect, request, flash,
 from flask_mail import Mail, Message
 from waitress import serve
 from flask_babel import Babel, gettext as _
+from config import email, senha
 import os
 
 # Initialize the Flask application first
@@ -14,8 +15,8 @@ mail_settings = {
     "MAIL_PORT": 465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": 'f08122375@gmail.com',
-    "MAIL_PASSWORD": 'fmop yoid whhd ulmf'
+    "MAIL_USERNAME": email,
+    "MAIL_PASSWORD": senha
 }
 
 app.config.update(mail_settings)
