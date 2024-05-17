@@ -217,7 +217,7 @@ html, body {
     background-position: center; /* Centers the background image */
     width: 90%;
     margin: auto;
-    height: 60vh;
+    height: 60%;
 }
 /* Animation */
 [data-anime] {
