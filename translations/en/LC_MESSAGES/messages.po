@@ -179,7 +179,9 @@ msgid "portfolio-item-3-title"
 msgstr "My design portfolio"
 
 msgid "portfolio-item-3-description"
-msgstr "Work developed in my CET, using techniques with Adobe Illustrator, Adobe Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. The language I selected to present my work was Portuguese."
+msgstr ""
+"Work developed in my CET, using techniques with Adobe Illustrator, Adobe Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. The language I selected to " "present my work was Portuguese."
+""
 
 msgid "previous"
 msgstr "Previous"

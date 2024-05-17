@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let msgstr = '';
         let inMsgid = false;
         let inMsgstr = false;
-
+    
         for (let line of lines) {
             line = line.trim();
             if (line.startsWith('msgid')) {
@@ -116,10 +116,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 msgstr += line.replace(/"(.*)"/, '$1');
             }
         }
-        console.log(translations)
         return translations;
-        
-    }
+    }    
 
     // Function to update the page content based on the fetched translations
     function updatePageContent(translations) {
