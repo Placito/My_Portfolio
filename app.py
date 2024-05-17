@@ -32,13 +32,15 @@ class Contact:
         self.message = message
 
 # Manually set the locale before each request
-def get_locale():
-    return request.accept_languages.best_match(current_app.config['BABEL_SUPPORTED_LOCALES'])
+@app.before_request
+def set_locale():
+    lang = session.get('lang', request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES']))
+    babel.locale_selector_func = lambda: lang
 
 # Define routes
 @app.route('/')
 def home():
-    return render_template('index.html', lang=get_locale())
+    return render_template('index.html', lang=babel.locale_selector_func())
 
 @app.route('/send', methods=['GET', 'POST'])
 def send():
