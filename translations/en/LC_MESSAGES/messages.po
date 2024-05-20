@@ -221,5 +221,8 @@ msgstr "Write your email..."
 msgid "write-your-message"
 msgstr "Write your message..."
 
+msgid "download"
+msgstr "Download my CV:"
+
 msgid "message-sent-successfully"
 msgstr "Message sent successfully!"
