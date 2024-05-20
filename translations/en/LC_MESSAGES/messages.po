@@ -86,7 +86,7 @@ msgid "experience"
 msgstr "Experience: "
 
 msgid "experience2"
-msgstr "Beginner"
+msgstr "Junior"
 
 msgid "skills-title"
 msgstr "Skills"

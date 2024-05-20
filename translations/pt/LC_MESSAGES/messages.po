@@ -91,7 +91,7 @@ msgid "experience"
 msgstr "Experiência: "
 
 msgid "experience2"
-msgstr "Principiante"
+msgstr "Junior"
 
 msgid "skills-title"
 msgstr "Habilidades"
