@@ -36,6 +36,9 @@ msgstr "Portfólio"
 msgid "nav-contact"
 msgstr "Contacto"
 
+msgid "nav-download"
+msgstr "Download do meu CV"
+
 msgid "select-language"
 msgstr "Selecciona uma linguagem"
 

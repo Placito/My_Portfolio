@@ -1,4 +1,4 @@
-from flask import Flask, current_app, render_template, redirect, request, flash, session, url_for, jsonify, send_file
+from flask import Flask, current_app, render_template, redirect, request, flash, send_from_directory, session, url_for, jsonify, send_file
 from flask_mail import Mail, Message
 from waitress import serve
 from flask_babel import Babel, gettext as _
@@ -88,6 +88,10 @@ def get_translation(lang):
     else:
         print(f"File not found at: {file_path}")  # Debug output
         return jsonify({'error': 'File not found'}), 404
+
+@app.route('/cv_file')
+def cv_file():
+    return send_from_directory('static/img', 'resume.pdf', as_attachment=True)
 
 # Serve the application with Waitress
 if __name__ == '__main__':

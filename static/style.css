@@ -78,6 +78,10 @@ html, body {
 .nav-menu li:hover > a i {
     color: #149ddd;
 }
+.nav-link {
+    display: flex;
+    gap: 5px;
+}
 .main {
     margin-left: 300px;
 }
@@ -218,6 +222,11 @@ html, body {
     width: 90%;
     margin: auto;
     height: 60%;
+}
+.file {
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: large;
 }
 /* Animation */
 [data-anime] {
