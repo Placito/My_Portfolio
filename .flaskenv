@@ -4,4 +4,4 @@
 FLASK_APP=app.py
 
 # This environment variable enables or disables the debug mode of the Flask application. Setting FLASK_DEBUG=1 activates the debug mode.
-FLASK_DEBUG=1
+FLASK_DEBUG=0
