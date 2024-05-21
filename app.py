@@ -139,8 +139,8 @@ def download_file(filename):
         print(f"File {filename} not found at path: {file_path}")  # Debug output
         abort(404, description="File not found")
 
+
 # Serve the application with Waitress
 if __name__ == '__main__':
-    print("Starting the Flask app...")  # Debug output
-    app.run(debug=True)
+    app.run()
     serve(app, host='0.0.0.0', port=8080)
