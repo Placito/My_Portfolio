@@ -2,4 +2,4 @@
 
 #track downloads
 logfile.txt
-downloads/
+static/downloads/
