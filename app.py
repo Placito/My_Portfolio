@@ -11,7 +11,7 @@ load_dotenv()
 
 # Initialize the Flask application first
 app = Flask(__name__)
-app.secret_key = 'marip'
+app.secret_key = os.getenv("SECRET_KEY")
 
 # Directory where files are stored
 FILE_DIRECTORY = 'static/downloads'
