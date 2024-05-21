@@ -4,6 +4,7 @@ from waitress import serve
 from flask_babel import Babel, gettext as _
 from dotenv import load_dotenv
 import os
+import logging
 from datetime import datetime
 
 # Load environment variables from .env file
@@ -14,10 +15,13 @@ app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY")
 
 # Directory where files are stored
-FILE_DIRECTORY = 'static/downloads'
+FILE_DIRECTORY = os.path.join('static', 'img')
 
 # File to log downloads
-LOG_FILE = 'static/downloads/logfile.txt'
+LOG_FILE = os.path.join('static', 'downloads', 'logfile.txt')
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 # Ensure the log directory and file exist
 os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
@@ -103,44 +107,49 @@ def get_translation(lang):
         print(f"File not found at: {file_path}")  # Debug output
         return jsonify({'error': 'File not found'}), 404
 
-@app.route('/cv_file')
-def cv_file():
-    file_name = 'resume.pdf'
-    file_path = os.path.join('static', 'img', file_name)
-    user_ip = request.remote_addr
-
-    # Log the download
-    log_download(file_name, user_ip)
-
-    return send_file(file_path, as_attachment=True)
-
-# Function to log download details
 def log_download(file_name, user_ip):
     log_entry = f"{datetime.now()} - {user_ip} downloaded {file_name}\n"
-    print(f"Logging download: {log_entry}")  # Debug output
+    logger.debug(f"Logging download: {log_entry}")
+    
     try:
         with open(LOG_FILE, 'a') as log_file:
             log_file.write(log_entry)
-        print(f"Log entry written successfully.")  # Debug output
+        logger.debug("Log entry written successfully.")
     except Exception as e:
-        print(f"Error writing log entry: {e}")  # Debug output
+        logger.error(f"Error writing log entry: {e}")
+
+@app.route('/cv_file')
+def cv_file():
+    try:
+        file_name = 'resume.pdf'
+        file_path = os.path.join(FILE_DIRECTORY, file_name)
+        user_ip = request.remote_addr
+        log_download(file_name, user_ip)
+        logger.debug(f"Sending file: {file_path} to user: {user_ip}")
+        return send_file(file_path, as_attachment=True)
+    except Exception as e:
+        logger.error(f"Error in /cv_file route: {e}")
+        return jsonify({'error': 'File not found'}), 404
 
 @app.route('/download/<filename>', methods=['GET'])
 def download_file(filename):
-    print(f"Download request received for file: {filename}")  # Debug output
-    file_path = os.path.join(FILE_DIRECTORY, filename)
-    
-    if os.path.exists(file_path):
-        user_ip = request.remote_addr
-        log_download(filename, user_ip)
-        print(f"File {filename} exists and is being sent to the user.")  # Debug output
-        return send_file(file_path, as_attachment=True)
-    else:
-        print(f"File {filename} not found at path: {file_path}")  # Debug output
-        abort(404, description="File not found")
+    try:
+        logger.debug(f"Download request received for file: {filename}")
+        file_path = os.path.join(FILE_DIRECTORY, filename)
+        if os.path.exists(file_path):
+            user_ip = request.remote_addr
+            log_download(filename, user_ip)
+            logger.debug(f"File {filename} exists and is being sent to the user.")
+            return send_file(file_path, as_attachment=True)
+        else:
+            logger.error(f"File {filename} not found at path: {file_path}")
+            return jsonify({'error': 'File not found'}), 404
+    except Exception as e:
+        logger.error(f"Error in /download/<filename> route: {e}")
+        return jsonify({'error': 'An error occurred'}), 500
 
 
 # Serve the application with Waitress
 if __name__ == '__main__':
     app.run()
-    serve(app, host='0.0.0.0', port=8080)
+    #serve(app, host='0.0.0.0', port=8080)
