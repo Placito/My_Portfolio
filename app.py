@@ -143,4 +143,4 @@ def download_file(filename):
 if __name__ == '__main__':
     print("Starting the Flask app...")  # Debug output
     app.run(debug=True)
-    # serve(app, host='0.0.0.0', port=8080)
+    serve(app, host='0.0.0.0', port=8080)
