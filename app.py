@@ -57,6 +57,7 @@ def set_locale():
 # Define routes
 @app.route('/')
 def home():
+    print("Home route accessed")  # Debug output
     lang = session.get('lang', 'en')
     return render_template('index.html', lang=lang)
 
@@ -78,7 +79,7 @@ def send():
 
                 {_("Message")}:
                 {formContact.message}
-            '''    
+            '''
         )
         mail.send(msg)
         flash(_('Message sent successfully!'))
@@ -104,14 +105,25 @@ def get_translation(lang):
 
 @app.route('/cv_file')
 def cv_file():
-    return send_from_directory('static/img', 'resume.pdf', as_attachment=True)
+    file_name = 'resume.pdf'
+    file_path = os.path.join('static', 'img', file_name)
+    user_ip = request.remote_addr
+
+    # Log the download
+    log_download(file_name, user_ip)
+
+    return send_file(file_path, as_attachment=True)
 
 # Function to log download details
 def log_download(file_name, user_ip):
     log_entry = f"{datetime.now()} - {user_ip} downloaded {file_name}\n"
     print(f"Logging download: {log_entry}")  # Debug output
-    with open(LOG_FILE, 'a') as log_file:
-        log_file.write(log_entry)
+    try:
+        with open(LOG_FILE, 'a') as log_file:
+            log_file.write(log_entry)
+        print(f"Log entry written successfully.")  # Debug output
+    except Exception as e:
+        print(f"Error writing log entry: {e}")  # Debug output
 
 @app.route('/download/<filename>', methods=['GET'])
 def download_file(filename):
@@ -130,4 +142,5 @@ def download_file(filename):
 # Serve the application with Waitress
 if __name__ == '__main__':
     print("Starting the Flask app...")  # Debug output
-    serve(app, host='0.0.0.0', port=8080)
+    app.run(debug=True)
+    # serve(app, host='0.0.0.0', port=8080)
