@@ -47,9 +47,6 @@
                 <li class="nav-item">
                     <a id="nav-contact" class="nav-link" href="#contact"><i class="bi bi-envelope"></i> <span data-i18n="nav-contact">  {{ _('Contact') }}</span></a>
                 </li>
-                <li class="nav-item">
-                    <a id="nav-contact" class="nav-link" href="#download"><i class="bi bi-download"></i> <span data-i18n="nav-download">  {{ _('Download my CV') }}</span></a>
-                </li>
             </ul>
             <br/>
             <select class="form-select" aria-label="form-select-sm" onchange="setLanguage(event)">
@@ -97,6 +94,10 @@
                                     <li class="list-group-item"><strong data-i18n="experience">{{ _('Experience:') }}</strong><span data-i18n="experience2">{{ _(' Junior') }}</span></li>
                                 </ul>
                             </div>
+                        </div>
+                        <div id="download" class="d-flex mt-4">
+                            <p data-i18n="download">{{ _('Download my CV') }}</p>
+                            <a class="file" href="{{ url_for('cv_file') }}"><i class="bi bi-file-earmark-pdf"></i></a>
                         </div>
                     </div>
                 </div>
@@ -224,69 +225,81 @@
                 <h2 id="portfolio-title" class="pb-4" data-i18n="portfolio-title">{{ _('Portfolio') }}</h2>
                 <div id="carouselPortfolio" class="carousel carousel-dark slide">
                     <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="10000">
-                        <div class="row row-cols-1 row-cols-md-1 g-4">
-                            <div class="col">
-                              <div class="card">
-                                <img src="../static/img/bike.png" class="card-img-top card-square" alt="Bicycle_Shop">
-                                <div class="card-body">
-                                  <h5 class="card-title" data-i18n="portfolio-item-1-title">Bicycle_Shop</h5>
-                                  <p id="portfolio-description" class="card-text" data-i18n="portfolio-item-1-description">{{ _('Develop during a programming bootcamp, an e-commerce platform where users can browse, review, purchase.') }}</p>
-                                  <div class="d-flex justify-content-center">
-                                    <a href="https://www.loom.com/share/503bdcc13c794507b1e620c55ffeb0bf?sid=84479cf0-ca42-412c-8014-9b17d7736ee9" target="_blank" class="btn btn-outline-primary"><i class="bi bi-link-45deg"></i></a>
-                                    <a href="https://github.com/Placito/Bycicle_shop" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="carousel-item" data-bs-interval="2000">
-                        <div class="row row-cols-1 row-cols-md-1 g-4">
-                            <div class="col">
-                                <div class="card">
-                                  <img src="../static/img/gest.png" class="card-img-top card-square" alt="GEST_tasks">
-                                  <div class="card-body">
-                                    <h5 class="card-title" data-i18n="portfolio-item-2-title">GEST_tasks</h5>
-                                    <p class="card-text" data-i18n="portfolio-item-2-description">{{ _('Is an application to assist in task management, for internal roles.') }}</p>
-                                    <div class="d-flex justify-content-center">
-                                        <a href="https://github.com/Placito/GEST_tasks" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i></a>
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <div class="row row-cols-1 row-cols-md-1 g-4">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-square">
+                                            <img src="../static/img/bike.png" class="card-img-top" alt="Bicycle_Shop">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title" data-i18n="portfolio-item-1-title">Bicycle_Shop</h5>
+                                            <p id="portfolio-description" class="card-text" data-i18n="portfolio-item-1-description">{{ _('Develop during a programming bootcamp, an e-commerce platform where users can browse, review, purchase.') }}</p>
+                                            <br />
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://www.loom.com/share/503bdcc13c794507b1e620c55ffeb0bf?sid=84479cf0-ca42-412c-8014-9b17d7736ee9" target="_blank" class="btn btn-outline-primary"><i class="bi bi-link-45deg"></i></a>
+                                                <a href="https://github.com/Placito/Bycicle_shop" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                              </div>
-                            </div>    
+                            </div>
                         </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="row row-cols-1 row-cols-md-1 g-4">
-                            <div class="card">
-                                <img src="../static/img/vida.png" class="card-img-top card-square" alt="Vida Sustentável">
-                                <div class="card-body">
-                                <h5 class="card-title" data-i18n="portfolio-item-3-title">{{ _('My design portfolio') }}</h5>
-                                <p class="card-text" data-i18n="portfolio-item-3-description">{{ _('Work developed in my CET, using techniques with Adobe Illustrator, Adobe Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. The language I selected to present my work was Portuguese.') }}</p>
-                                <div class="d-flex justify-content-center">
-                                    <a href="https://marianaplacito.wixsite.com/website-1" target="_blank" class="btn btn-outline-primary"><i class="bi bi-link-45deg"></i></a>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <div class="row row-cols-1 row-cols-md-1 g-4">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-square">
+                                            <img src="../static/img/gest.png" class="card-img-top" alt="GEST_tasks">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title" data-i18n="portfolio-item-2-title">GEST_tasks</h5>
+                                            <p class="card-text" data-i18n="portfolio-item-2-description">{{ _('Is an application to assist in task management, for internal roles.') }}</p>
+                                            <br />
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://github.com/Placito/GEST_tasks" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                      </div>
-                      </div>
+                        <div class="carousel-item">
+                            <div class="row row-cols-1 row-cols-md-1 g-4">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-square">
+                                            <img src="../static/img/vida.png" class="card-img-top" alt="Vida Sustentável">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title" data-i18n="portfolio-item-3-title">{{ _('My design portfolio') }}</h5>
+                                            <p class="card-text" data-i18n="portfolio-item-3-description">{{ _('Work developed in my CET, using techniques like, Adobe Illustrator, Adobe Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. The language I selected to present my work was Portuguese.') }}</p>
+                                            <div class="d-flex justify-content-center">
+                                                <a href="https://marianaplacito.wixsite.com/website-1" target="_blank" class="btn btn-outline-primary"><i class="bi bi-link-45deg"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselPortfolio" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden" data-i18n="previous">{{ _('Previous') }}</span>
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden" data-i18n="previous">{{ _('Previous') }}</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselPortfolio" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden" data-i18n="next">{{ _('Next') }}</span>
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden" data-i18n="next">{{ _('Next') }}</span>
                     </button>
-                      </div>
                 </div>
+            </div>
         </section>
+        
         <section id="contact" class="pt-5 pb-5">
             <div class="container mb-5">
                 <h2 id="contact-title" class="pt3 pb-3" data-i18n="contact-title">{{ _('Contact') }}</h2>
@@ -306,7 +319,7 @@
                     </div>
                     <div class="col-md-7">
                         <div class="card p-5 h-100 shadow border-0" data-anime="right">
-                            <form class="row g-3" action="/send" method="POST">
+                            <form class="row g-3 mt-2" action="/send" method="POST">
                                 <div class="col-md-6">
                                   <label id="label-name" for="name" class="form-label" data-i18n="label-name">{{ _('Name:') }}</label>
                                   <input type="text" class="form-control" id="name" name="name" data-i18n-placeholder="write-your-name" placeholder="{{ _('Write your name') }}...">
@@ -317,16 +330,12 @@
                                 </div>
                                 <div class="col-12">
                                     <label id="label-message" for="message" class="form-label" data-i18n="label-message">{{ _('Message:') }}</label>
-                                    <textarea class="form-control" id="message" name="message" rows="9" data-i18n-placeholder="write-your-message" placeholder="{{ _('Write your message') }}..."></textarea>
+                                    <textarea class="form-control" id="message" name="message" rows="10" data-i18n-placeholder="write-your-message" placeholder="{{ _('Write your message') }}..."></textarea>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center mt-4">
                                   <button id="btn-send" type="submit" class="btn btn-outline-primary" data-i18n="btn-send">{{ _('Send') }}</button>
                                 </div>
                             </form>
-                            <div id="download" class="d-flex mt-2">
-                                <h5 data-i18n="download">{{ _('Download my CV') }}</h5>
-                                <a class="file" href="{{ url_for('cv_file') }}"><i class="bi bi-file-earmark-pdf"></i></a>
-                            </div>
                         </div>
                     </div>
                 </div>
