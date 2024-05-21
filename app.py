@@ -1,9 +1,10 @@
-from flask import Flask, current_app, render_template, redirect, request, flash, send_from_directory, session, url_for, jsonify, send_file
+from flask import Flask, render_template, redirect, request, flash, send_from_directory, session, url_for, jsonify, send_file, abort
 from flask_mail import Mail, Message
 from waitress import serve
 from flask_babel import Babel, gettext as _
-from dotenv import load_dotenv # type: ignore
+from dotenv import load_dotenv
 import os
+from datetime import datetime
 
 # Load environment variables from .env file
 load_dotenv()
@@ -11,6 +12,18 @@ load_dotenv()
 # Initialize the Flask application first
 app = Flask(__name__)
 app.secret_key = 'marip'
+
+# Directory where files are stored
+FILE_DIRECTORY = 'static/downloads'
+
+# File to log downloads
+LOG_FILE = 'static/downloads/logfile.txt'
+
+# Ensure the log directory and file exist
+os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+if not os.path.exists(LOG_FILE):
+    with open(LOG_FILE, 'w') as f:
+        f.write('Download Log\n')
 
 # Set up mail settings
 mail_settings = {
@@ -93,7 +106,28 @@ def get_translation(lang):
 def cv_file():
     return send_from_directory('static/img', 'resume.pdf', as_attachment=True)
 
+# Function to log download details
+def log_download(file_name, user_ip):
+    log_entry = f"{datetime.now()} - {user_ip} downloaded {file_name}\n"
+    print(f"Logging download: {log_entry}")  # Debug output
+    with open(LOG_FILE, 'a') as log_file:
+        log_file.write(log_entry)
+
+@app.route('/download/<filename>', methods=['GET'])
+def download_file(filename):
+    print(f"Download request received for file: {filename}")  # Debug output
+    file_path = os.path.join(FILE_DIRECTORY, filename)
+    
+    if os.path.exists(file_path):
+        user_ip = request.remote_addr
+        log_download(filename, user_ip)
+        print(f"File {filename} exists and is being sent to the user.")  # Debug output
+        return send_file(file_path, as_attachment=True)
+    else:
+        print(f"File {filename} not found at path: {file_path}")  # Debug output
+        abort(404, description="File not found")
+
 # Serve the application with Waitress
 if __name__ == '__main__':
+    print("Starting the Flask app...")  # Debug output
     serve(app, host='0.0.0.0', port=8080)
-
