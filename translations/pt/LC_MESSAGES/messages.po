@@ -227,27 +227,3 @@ msgstr "Escreva a sua mensagem..."
 
 msgid "download"
 msgstr "Download do meu CV:"
-
-#: app.py:78
-msgid "All fields are required!"
-msgstr "Todos os campos são obrigatórios!"
-
-#: app.py:84
-msgid "Portfolio Contact from {name}"
-msgstr "Contato do Portfólio de {name}"
-
-#: app.py:88
-msgid "Portfolio Contact from {name}\n\nMessage:\n{message}"
-msgstr "Contato do Portfólio de {name}\n\nMensagem:\n{message}"
-
-#: app.py:90
-msgid "Message"
-msgstr "Menssagem"
-
-#: app.py:95
-msgid "An error occurred while sending the message. Please try again later."
-msgstr "Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde."
-
-#: app.py:100
-msgid "Invalid request method."
-msgstr "Método de solicitação inválido."
