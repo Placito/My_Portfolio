@@ -226,11 +226,6 @@
             <div class="container pb-5 pt-5" data-anime="left">
                 <h2 id="portfolio-title" class="pb-4" data-i18n="portfolio-title">{{ _('Portfolio') }}</h2>
                 <div id="carouselPortfolio" class="carousel carousel-dark slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="10000">
                             <div class="row row-cols-1 row-cols-md-1 g-4">
@@ -299,12 +294,21 @@
                         <span class="visually-hidden" data-i18n="next">{{ _('Next') }}</span>
                     </button>
                 </div>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
             </div>
         </section>
         
         <section id="contact" class="pt-5 pb-5">
             <div class="container mb-5">
-                <h2 id="contact-title" class="pt3 pb-3" data-i18n="contact-title">{{ _('Contact') }}</h2>
+                <div  class="d-flex justify-content-between">
+                    <h2 id="contact-title" class="pt3 pb-3" data-i18n="contact-title">{{ _('Contact') }}</h2>
+                    <!-- Alert container -->
+                    <div id="alert-container"></div>
+                </div>
                 <div class="row">
                     <div class="col-md-5">
                         <div class="card p-5 shadow border-0" data-anime="up">
@@ -321,9 +325,6 @@
                     </div>
                     <div class="col-md-7">
                         <div class="card p-5 h-100 shadow border-0" data-anime="right">
-                                <!-- Alert container -->
-                            <div id="alert-container"></div>
-
                             <form id="contact-form" class="row g-3 mt-2" action="/send" method="POST">
                                 <div class="col-md-6">
                                   <label id="label-name" for="name" class="form-label" data-i18n="label-name">{{ _('Name:') }}</label>
