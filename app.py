@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, flash, send_from_directory, session, url_for, jsonify, send_file, abort
+from flask import Flask, render_template, redirect, request, flash, session, url_for, jsonify, send_file
 from flask_mail import Mail, Message
 from waitress import serve
 from flask_babel import Babel, gettext as _
@@ -65,29 +65,39 @@ def home():
     lang = session.get('lang', 'en')
     return render_template('index.html', lang=lang)
 
-@app.route('/send', methods=['GET', 'POST'])
+@app.route('/send', methods=['POST'])
 def send():
     if request.method == 'POST':
-        formContact = Contact(
-            request.form["name"],
-            request.form["email"],
-            request.form["message"]
-        )
+        try:
+            # Validate form data
+            name = request.form["name"]
+            email = request.form["email"]
+            message = request.form["message"]
 
-        msg = Message(
-            subject=f'{_("Portfolio Contact from")} {formContact.name}',
-            sender=app.config.get("MAIL_USERNAME"),
-            recipients=['mariana.placito@gmail.com'],
-            body=f'''
-                {_("Portfolio Contact from")} {formContact.name}
+            if not name or not email or not message:
+                return jsonify({'status': 'error', 'message': _('All fields are required!')})
 
-                {_("Message")}:
-                {formContact.message}
-            '''
-        )
-        mail.send(msg)
-        flash(_('Message sent successfully!'))
-    return redirect('/')
+            formContact = Contact(name, email, message)
+
+            # Prepare and send the email
+            msg = Message(
+                subject=f'{_("Portfolio Contact from")} {formContact.name}',
+                sender=app.config.get("MAIL_USERNAME"),
+                recipients=['mariana.placito@gmail.com'],
+                body=f'''
+                    {_("Portfolio Contact from")} {formContact.name}
+
+                    {_("Message")}:
+                    {formContact.message}
+                '''
+            )
+            mail.send(msg)
+            return jsonify({'status': 'success', 'message': _('Message sent successfully!')})
+
+        except Exception as e:
+            return jsonify({'status': 'error', 'message': _('An error occurred while sending the message. Please try again later.')})
+    
+    return jsonify({'status': 'error', 'message': _('Invalid request method.')})
 
 @app.route('/set_language/<language>', methods=['GET'])
 def set_language(language):
