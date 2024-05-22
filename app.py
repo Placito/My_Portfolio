@@ -151,5 +151,6 @@ def download_file(filename):
 
 # Serve the application with Waitress
 if __name__ == '__main__':
-    app.run()
-    serve(app, host='0.0.0.0', port=8080)
+    port = int(os.environ.get('PORT', 5000))
+    from waitress import serve
+    serve(app, host='0.0.0.0', port=port)
