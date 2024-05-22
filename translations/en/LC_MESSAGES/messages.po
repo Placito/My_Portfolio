@@ -224,5 +224,26 @@ msgstr "Write your message..."
 msgid "download"
 msgstr "Download my CV:"
 
-msgid "message-sent-successfully"
-msgstr "Message sent successfully!"
+#: app.py:78
+msgid "All fields are required!"
+msgstr "All fields are required!"
+
+#: app.py:84
+msgid "Portfolio Contact from {name}"
+msgstr ""Portfolio Contact from {name}"
+
+#: app.py:88
+msgid "Portfolio Contact from {name}\n\nMessage:\n{message}"
+msgstr "Portfolio Contact from {name}\n\nMessage:\n{message}"
+
+#: app.py:90
+msgid "Message"
+msgstr "Message"
+
+#: app.py:95
+msgid "An error occurred while sending the message. Please try again later."
+msgstr "An error occurred while sending the message. Please try again later."
+
+#: app.py:100
+msgid "Invalid request method."
+msgstr "Invalid request method."

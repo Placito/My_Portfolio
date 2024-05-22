@@ -41,9 +41,9 @@ mail_settings = {
 
 app.config.update(mail_settings)
 mail = Mail(app)
+babel = Babel(app)
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'pt']
-babel = Babel(app)
 
 # Define the Contact class
 class Contact:
