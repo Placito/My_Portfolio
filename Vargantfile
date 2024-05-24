@@ -1,0 +1,26 @@
+Vagrant.configure("2") do |config|
+    # Use the Ubuntu 20.04 box as a placeholder for Ubuntu 24.04
+    config.vm.box = "ubuntu/focal64"
+    
+    # Configure a public network with the specified IP address
+    config.vm.network "public_network", ip: "167.172.187.226"
+    
+    # Set the memory for the virtual machine
+    config.vm.provider "virtualbox" do |vb|
+      vb.memory = "2048"
+    end
+    
+    # Additional configuration based on your requirements
+    config.vm.provision "shell", inline: <<-SHELL
+      # Update the package list
+      apt-get update
+  
+      # Upgrade all installed packages to their latest versions
+      apt-get upgrade -y
+  
+      # Install any additional packages you may need
+      # e.g., install curl
+      apt-get install -y curl
+    SHELL
+  end
+  
