@@ -9,7 +9,7 @@ This portfolio application is built with Flask and includes a contact form that 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-* activate virtual environment ````. venv/bin/activate````
+* activate virtual environment ````source venv/bin/activate````
 * install the requeriments ````pip install -r requirements.txt````
 * start ````flask run````
 
