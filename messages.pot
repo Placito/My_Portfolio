@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-16 13:02+0000\n"
+"POT-Creation-Date: 2024-05-25 13:58+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,31 +17,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: app.py:59
+#: app.py:77
+msgid "All fields are required!"
+msgstr ""
+
+#: app.py:94
 msgid "Message sent successfully!"
+msgstr ""
+
+#: app.py:97
+msgid "An error occurred while sending the message. Please try again later."
+msgstr ""
+
+#: app.py:99
+msgid "Invalid request method."
 msgstr ""
 
 #: templates/index.html:35
 msgid "Home"
 msgstr ""
 
-#: templates/index.html:38 templates/index.html:70
+#: templates/index.html:38 templates/index.html:71
 msgid "About"
 msgstr ""
 
-#: templates/index.html:41 templates/index.html:109
+#: templates/index.html:41 templates/index.html:110
 msgid "Skills"
 msgstr ""
 
-#: templates/index.html:44 templates/index.html:181
+#: templates/index.html:44 templates/index.html:178
 msgid "Curriculum"
 msgstr ""
 
-#: templates/index.html:47 templates/index.html:237
+#: templates/index.html:47 templates/index.html:227
 msgid "Portfolio"
 msgstr ""
 
-#: templates/index.html:50 templates/index.html:306
+#: templates/index.html:50 templates/index.html:308
 msgid "Contact"
 msgstr ""
 
@@ -57,230 +69,226 @@ msgstr ""
 msgid "Portuguese"
 msgstr ""
 
-#: templates/index.html:64 templates/index.html:82
+#: templates/index.html:65 templates/index.html:81
 msgid "Full Stack Developer"
 msgstr ""
 
-#: templates/index.html:72
+#: templates/index.html:73
 msgid ""
 "Proactive Full Stack Developer. I started my journey with a degree in "
 "Human Biology, which later led me to discover my new abilities with a "
-"Design course,\n"
-"                        which sparked a passion for me in the programming"
-" field. \n"
-"                        I have a natural aptitude for the front-end but a"
-" passion for discovering how things work behind the scenes, which led me "
-"to combine these two areas."
+"Design course, which sparked a passion for me in the programming field. I"
+" have a natural aptitude for the front-end but a passion for discovering "
+"how things work behind the scenes, which led me to combine these two "
+"areas."
 msgstr ""
 
-#: templates/index.html:83
+#: templates/index.html:82
 msgid ""
 "Is an entry-level position in the field of software development, "
 "responsible for working on both the front-end and back-end portions of "
 "web applications."
 msgstr ""
 
-#: templates/index.html:87
-msgid "Date of birth"
+#: templates/index.html:86
+msgid "Date of birth:"
+msgstr ""
+
+#: templates/index.html:86
+msgid " December 24, 1989"
 msgstr ""
 
 #: templates/index.html:87
-msgid "December 24, 1989"
+msgid "Age:"
 msgstr ""
 
 #: templates/index.html:88
-msgid "Age"
+msgid "City:"
 msgstr ""
 
 #: templates/index.html:89
-msgid "City"
+msgid "Country:"
 msgstr ""
 
-#: templates/index.html:90
-msgid "Country"
+#: templates/index.html:89
+msgid " Portugal"
 msgstr ""
 
-#: templates/index.html:90
-msgid "Portugal"
+#: templates/index.html:94
+msgid "Hobby:"
+msgstr ""
+
+#: templates/index.html:94
+msgid " Hiking"
 msgstr ""
 
 #: templates/index.html:95
-msgid "Hobby"
+msgid "Work:"
 msgstr ""
 
-#: templates/index.html:95
-msgid "Hiking"
+#: templates/index.html:96
+msgid "Experience:"
 msgstr ""
 
-#: templates/index.html:97
-msgid "Work"
+#: templates/index.html:96
+msgid " Junior"
 msgstr ""
 
-#: templates/index.html:98
-msgid "Experience"
+#: templates/index.html:101
+msgid "Download my CV"
 msgstr ""
 
-#: templates/index.html:98
-msgid "Beginner"
-msgstr ""
-
-#: templates/index.html:110
+#: templates/index.html:111
 msgid ""
 "Throughout my time as a professional I have acquired some technical and "
 "soft skills, most of them are here, according to the percentage of "
 "knowledge I believe I have in each of them."
 msgstr ""
 
-#: templates/index.html:171
-msgid "Comunication"
+#: templates/index.html:168
+msgid "Communication"
 msgstr ""
 
-#: templates/index.html:184
+#: templates/index.html:181
 msgid "Education"
 msgstr ""
 
-#: templates/index.html:186
+#: templates/index.html:183
 msgid "Full-Stack Software Developer"
 msgstr ""
 
-#: templates/index.html:188
+#: templates/index.html:185
 msgid "Online, Spain"
 msgstr ""
 
-#: templates/index.html:189
+#: templates/index.html:186
 msgid ""
 "Hands-on program to become a Full-Stack Software Developer, focusing on "
 "mastering both frontend and backend technologies."
 msgstr ""
 
-#: templates/index.html:192
+#: templates/index.html:189
 msgid "Development of multimedia products"
 msgstr ""
 
-#: templates/index.html:195
+#: templates/index.html:192
 msgid ""
 "Specialized in multimedia product development, gaining practical skills "
 "in the latest digital design and media production technologies."
 msgstr ""
 
-#: templates/index.html:198
+#: templates/index.html:195
 msgid "Degree in Human Biology"
 msgstr ""
 
-#: templates/index.html:200
+#: templates/index.html:197
 msgid "Évora University"
 msgstr ""
 
-#: templates/index.html:201
+#: templates/index.html:198
 msgid ""
 "Completed a comprehensive study in Human Biology, acquiring a strong "
 "foundation in biological sciences and their application to human health "
 "and disease."
 msgstr ""
 
-#: templates/index.html:205
+#: templates/index.html:202
 msgid "Professional"
 msgstr ""
 
-#: templates/index.html:207
+#: templates/index.html:204
 msgid "Full-Stack Developer"
 msgstr ""
 
-#: templates/index.html:208
+#: templates/index.html:205
 msgid "The moment"
 msgstr ""
 
-#: templates/index.html:210
+#: templates/index.html:207
 msgid ""
-"Develop user-friendly web interfaces using HTML, CSS, and JavaScript.\n"
-"                                Participate in code reviews and provide "
-"constructive feedback.\n"
-"                                Troubleshoot, debug, and resolve issues "
-"in both frontend and backend components."
+"Develop user-friendly web interfaces using HTML, CSS, and JavaScript. "
+"Participate in code reviews and provide constructive feedback. "
+"Troubleshoot, debug, and resolve issues in both frontend and backend "
+"components."
 msgstr ""
 
-#: templates/index.html:216
+#: templates/index.html:210
 msgid "Graphic designer"
 msgstr ""
 
-#: templates/index.html:219
+#: templates/index.html:213
 msgid ""
-"Assisting in the management of the company's website\n"
-"                                development, like, taking photographs and"
-" designing\n"
-"                                them, updating its content in the "
-"website's admin\n"
-"                                dashboard, and reporting problems that "
-"would appear."
+"Assisting in the management of the company's website development, like, "
+"taking photographs and designing them, updating its content in the "
+"website's admin dashboard, and reporting problems that would appear."
 msgstr ""
 
-#: templates/index.html:226
+#: templates/index.html:216
 msgid "Digital animation intern"
 msgstr ""
 
-#: templates/index.html:229
+#: templates/index.html:219
 msgid "Role as creator of content, animations, web design and learning"
 msgstr ""
 
-#: templates/index.html:252
+#: templates/index.html:239
 msgid ""
 "Develop during a programming bootcamp, an e-commerce platform where users"
 " can browse, review, purchase."
 msgstr ""
 
-#: templates/index.html:269
+#: templates/index.html:259
 msgid "Is an application to assist in task management, for internal roles."
 msgstr ""
 
-#: templates/index.html:283
+#: templates/index.html:277
 msgid "My design portfolio"
 msgstr ""
 
-#: templates/index.html:284
+#: templates/index.html:278
 msgid ""
-"Work developed in my CET, using techniques with Adobe Illustrator, Adobe "
-"Photoshop, Adobe Afert effects, Adobe premier, Photography and 3ds Max.\n"
-"                                    The language I selected to present my"
-" work was Portuguese."
+"Work developed in my CET, using techniques like, Adobe Illustrator, Adobe"
+" Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. "
+"The language I selected to present my work was Portuguese."
 msgstr ""
 
-#: templates/index.html:295
+#: templates/index.html:290
 msgid "Previous"
 msgstr ""
 
-#: templates/index.html:299
+#: templates/index.html:294
 msgid "Next"
 msgstr ""
 
-#: templates/index.html:311
-msgid "Location"
+#: templates/index.html:316
+msgid "Location:"
 msgstr ""
 
-#: templates/index.html:315 templates/index.html:329
-msgid "Email"
-msgstr ""
-
-#: templates/index.html:325
-msgid "Name"
-msgstr ""
-
-#: templates/index.html:326
-msgid "Write your name"
+#: templates/index.html:320 templates/index.html:334
+msgid "Email:"
 msgstr ""
 
 #: templates/index.html:330
+msgid "Name:"
+msgstr ""
+
+#: templates/index.html:331
+msgid "Write your name"
+msgstr ""
+
+#: templates/index.html:335
 msgid "Write your email"
 msgstr ""
 
-#: templates/index.html:333
-msgid "Message"
+#: templates/index.html:338
+msgid "Message:"
 msgstr ""
 
-#: templates/index.html:334
+#: templates/index.html:339
 msgid "Write your message"
 msgstr ""
 
-#: templates/index.html:337
+#: templates/index.html:342
 msgid "Send"
 msgstr ""
 

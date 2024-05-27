@@ -1,6 +1,5 @@
 from flask import Flask, render_template, redirect, request, flash, session, url_for, jsonify, send_file
 from flask_mail import Mail, Message
-from waitress import serve
 from flask_babel import Babel, gettext as _
 from dotenv import load_dotenv
 import os
@@ -10,7 +9,7 @@ from datetime import datetime
 # Load environment variables from .env file
 load_dotenv()
 
-# Initialize the Flask application first
+# Initialize the Flask application
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY")
 
@@ -158,9 +157,5 @@ def download_file(filename):
         logger.error(f"Error in /download/<filename> route: {e}")
         return jsonify({'error': 'An error occurred'}), 500
 
-
-# Serve the application with Waitress
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    from waitress import serve
-    serve(app, host='0.0.0.0', port=port)
+    app.run()
