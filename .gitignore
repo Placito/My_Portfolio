@@ -3,5 +3,6 @@
 #track downloads
 logfile.txt
 static/downloads/
+
 venv/
 certs/
