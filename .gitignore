@@ -4,5 +4,7 @@
 logfile.txt
 static/downloads/
 
+# Ignore virtual environment
 venv/
+
 certs/
