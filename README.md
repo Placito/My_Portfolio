@@ -4,7 +4,7 @@ This portfolio application is built with Flask and includes a contact form that 
 
 ## Demo link:
 
-* mariana.launch-it.eu
+* https://mariana.launch-it.eu/
  
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
