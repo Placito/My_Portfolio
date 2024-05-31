@@ -4,44 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        h2 {
-            color: #2F4F4F;
-        }
-        p {
-            line-height: 1.6;
-        }
-    </style>
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
 </head>
 <body>
-    <h1>Terms of Service</h1>
-    <h2>Introduction</h2>
-    <p>These terms of service govern your use of our application. By using our application, you agree to these terms.</p>
-    
-    <h2>Use of Data</h2>
-    <p>By using our application, you agree that we can track your IP address and use it for:</p>
-    <ul>
-        <li><strong>Security purposes</strong>: To monitor and prevent security threats.</li>
-        <li><strong>Analytics purposes</strong>: To understand usage patterns and improve our service.</li>
-    </ul>
-    
-    <h2>User Responsibilities</h2>
-    <p>Users are responsible for:</p>
-    <ul>
-        <li>Ensuring that their use of the service complies with all applicable laws and regulations.</li>
-    </ul>
-    
-    <h2>Changes to These Terms</h2>
-    <p>We may update these terms from time to time. We will notify you of any changes by posting the new terms on this page.</p>
-    
-    <h2>Contact Us</h2>
-    <p>If you have any questions about these terms, please contact us at [your contact information].</p>
+    <div class="terms-box">
+        <div class="container pt-5">
+            <h1 data-i18n="terms"></h1>>Terms of Service</h1>
+            <br />
+            <h4 data-i18n="terms-1">Introduction</h4>
+            <p data-i18n="terms-2">These terms of service govern your use of our application. By using our application, you agree to these terms.</p>
+            
+            <h4 data-i18n="terms-3">Use of Data</h4>
+            <p data-i18n="terms-4">By using our application, you agree that we can track your IP address and use it for:</p>
+            <ul>
+                <li data-i18n="terms-4"><strong>Security purposes</strong>: To monitor and prevent security threats.</li>
+                <li data-i18n="terms-5"><strong>Analytics purposes</strong>: To understand usage patterns and improve our service.</li>
+            </ul>
+            
+            <h4 data-i18n="terms-6">User Responsibilities</h4>
+            <p data-i18n="terms-7">Users are responsible for:</p>
+            <ul>
+                <li data-i18n="terms-8">Ensuring that their use of the service complies with all applicable laws and regulations.</li>
+            </ul>
+            
+            <h4 data-i18n="terms-9">Changes to These Terms</h4>
+            <p data-i18n="terms-10">We may update these terms from time to time. We will notify you of any changes by posting the new terms on this page.</p>
+            
+            <h4 data-i18n="terms-contact1">Contact Us</h4>
+            <p ddata-i18n="terms-contact2">If you have any questions about these terms, please contact us at <strong>mariana.placito@gmail.com</strong>.</p>
+            <br />
+            <br />
+            <!-- Button to go back to the home page -->
+            <a href="{{ url_for('home') }}" class="btn btn-primary" data-i18n="terms-contact3">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>

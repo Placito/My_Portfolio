@@ -281,6 +281,12 @@ footer {
     background-color: #021124;
     transition: 0.3s;
 }
+.terms-box {
+ background-color: #021124;
+ color: #fff;
+ height: 100%;
+ width: 100%;
+} 
 @media (max-width: 1012px) {
     footer {
         position: static;

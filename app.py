@@ -156,6 +156,14 @@ def download_file(filename):
     except Exception as e:
         logger.error(f"Error in /download/<filename> route: {e}")
         return jsonify({'error': 'An error occurred'}), 500
+    
+@app.route('/privacy_policy.html')
+def privacy_policy():
+    return render_template('privacy_policy.html')
+
+@app.route('/terms.html')
+def terms():
+    return render_template('terms.html')
 
 if __name__ == '__main__':
     app.run()
