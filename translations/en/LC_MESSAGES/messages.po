@@ -1,9 +1,14 @@
+# English translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-16 13:02+0000\n"
-"PO-Revision-Date: 2024-05-15 14:49+0000\n"
+"POT-Creation-Date: 2024-06-04 18:43+0100\n"
+"PO-Revision-Date: 2024-06-04 18:43+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
@@ -13,213 +18,689 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
+#: app.py:87
+msgid "All fields are required!"
+msgstr "All fields are required!"
+
+#: app.py:104
+msgid "Message sent successfully!"
+msgstr "Message sent successfully!"
+
+#: app.py:107
+msgid "An error occurred while sending the message. Please try again later."
+msgstr "An error occurred while sending the message. Please try again later."
+
+#: app.py:109
+msgid "Invalid request method."
+msgstr "Invalid request method."
+
+#: templates/index.html:35
 msgid "nav-home"
 msgstr "Home"
 
+#: templates/index.html:38 templates/index.html:82
 msgid "nav-about"
 msgstr "About"
 
+#: templates/index.html:41 templates/index.html:121
 msgid "nav-skills"
 msgstr "Skills"
 
+#: templates/index.html:44 templates/index.html:189
 msgid "nav-curriculum"
 msgstr "Curriculum"
 
+#: templates/index.html:47 templates/index.html:238
 msgid "nav-portfolio"
 msgstr "Portfolio"
 
+#: templates/index.html:50 templates/index.html:319
 msgid "nav-contact"
 msgstr "Contact"
 
-msgid "nav-download"
-msgstr "Download my CV"
-
+#: templates/index.html:55
 msgid "select-language"
 msgstr "Select one language"
 
+#: templates/index.html:56
 msgid "english"
 msgstr "English"
 
+#: templates/index.html:57
 msgid "portuguese"
 msgstr "Portuguese"
 
+#: templates/index.html:76 templates/index.html:92 templates/index.html:215
 msgid "subtitle"
 msgstr "Full Stack Developer"
 
-msgid "about-title"
-msgstr "About"
-
+#: templates/index.html:84
 msgid "about-description"
-msgstr "Proactive Full Stack Developer. I started my journey with a degree in Human Biology, which later led me to discover my new abilities with a Design course, which sparked a passion for me in the programming field. I have a natural aptitude for the front-end but a passion for discovering how things work behind the scenes, which led me to combine these two areas."
+msgstr ""
+"Proactive Full Stack Developer. I started my journey with a degree in "
+"Human Biology, which later led me to discover my new abilities with a "
+"Design course, which sparked a passion for me in the programming field. I"
+" have a natural aptitude for the front-end but a passion for discovering "
+"how things work behind the scenes, which led me to combine these two "
+"areas."
 
-msgid "full-stack-title"
-msgstr "Full Stack Developer"
-
+#: templates/index.html:93
 msgid "full-stack-description"
-msgstr "Is an entry-level position in the field of software development, responsible for working on both the front-end and back-end portions of web applications."
+msgstr ""
+"Is an entry-level position in the field of software development, "
+"responsible for working on both the front-end and back-end portions of "
+"web applications."
 
+#: templates/index.html:97
 msgid "dob"
-msgstr "Date of birth: "
+msgstr "Date of birth:"
 
+#: templates/index.html:97
 msgid "date"
 msgstr "December 24, 1989"
 
+#: templates/index.html:98
 msgid "age"
-msgstr "Age: "
+msgstr "Age:"
 
+#: templates/index.html:99
 msgid "city"
-msgstr "City: "
+msgstr "City:"
 
+#: templates/index.html:100
 msgid "country"
-msgstr "Country: "
+msgstr "Country:"
 
+#: templates/index.html:100
 msgid "country2"
-msgstr "Portugal"
+msgstr " Portugal"
 
+#: templates/index.html:105
 msgid "hobby"
-msgstr "Hobby: "
+msgstr "Hobby:"
 
+#: templates/index.html:105
 msgid "hobby2"
-msgstr "Hiking"
+msgstr " Hiking"
 
+#: templates/index.html:106
 msgid "work"
-msgstr "Work: "
+msgstr "Work:"
 
+#: templates/index.html:107
 msgid "experience"
-msgstr "Experience: "
+msgstr "Experience:"
 
+#: templates/index.html:107
 msgid "experience2"
-msgstr "Junior"
+msgstr " Junior"
 
-msgid "skills-title"
-msgstr "Skills"
+#: templates/index.html:112
+msgid "Download my CV"
+msgstr "Download my CV"
 
+#: templates/index.html:122
 msgid "skills-description"
-msgstr "Throughout my time as a professional I have acquired some technical and soft skills, most of them are here, according to the percentage of knowledge I believe I have in each of them."
+msgstr ""
+"Throughout my time as a professional I have acquired some technical and "
+"soft skills, most of them are here, according to the percentage of "
+"knowledge I believe I have in each of them."
 
+#: templates/index.html:179
 msgid "communication-title"
 msgstr "Communication"
 
-msgid "curriculum-title"
-msgstr "Curriculum"
-
+#: templates/index.html:192
 msgid "education-title"
 msgstr "Education"
 
+#: templates/index.html:194
 msgid "education-fullstack"
 msgstr "Full-Stack Software Developer"
 
-msgid "education-fullstack-date"
-msgstr "05/2023 - 11/2023"
-
+#: templates/index.html:196
 msgid "education-fullstack-location"
 msgstr "Online, Spain"
 
+#: templates/index.html:197
 msgid "education-fullstack-description"
-msgstr "Hands-on program to become a Full-Stack Software Developer, focusing on mastering both frontend and backend technologies."
+msgstr ""
+"Hands-on program to become a Full-Stack Software Developer, focusing on "
+"mastering both frontend and backend technologies."
 
+#: templates/index.html:200
 msgid "education-multimedia"
 msgstr "Development of multimedia products"
 
-msgid "education-multimedia-date"
-msgstr "2021 - 2022"
-
+#: templates/index.html:203
 msgid "education-multimedia-description"
-msgstr "Specialized in multimedia product development, gaining practical skills in the latest digital design and media production technologies."
+msgstr ""
+"Specialized in multimedia product development, gaining practical skills "
+"in the latest digital design and media production technologies."
 
+#: templates/index.html:206
 msgid "education-biology"
 msgstr "Degree in Human Biology"
 
-msgid "education-biology-date"
-msgstr "2009 - 2013"
+#: templates/index.html:208
+msgid "university"
+msgstr "Évora University"
 
+#: templates/index.html:209
 msgid "education-biology-description"
-msgstr "Completed a comprehensive study in Human Biology, acquiring a strong foundation in biological sciences and their application to human health and disease."
+msgstr ""
+"Completed a comprehensive study in Human Biology, acquiring a strong "
+"foundation in biological sciences and their application to human health "
+"and disease."
 
+#: templates/index.html:213
 msgid "professional-title"
 msgstr "Professional"
 
-msgid "professional-fullstack"
-msgstr "Full-Stack Developer"
-
+#: templates/index.html:216
 msgid "professional-fullstack-date"
 msgstr "The moment"
 
+#: templates/index.html:218
 msgid "professional-fullstack-description"
-msgstr "Develop user-friendly web interfaces using HTML, CSS, and JavaScript. Participate in code reviews and provide constructive feedback. Troubleshoot, debug, and resolve issues in both frontend and backend components."
+msgstr ""
+"Develop user-friendly web interfaces using HTML, CSS, and JavaScript. "
+"Participate in code reviews and provide constructive feedback. "
+"Troubleshoot, debug, and resolve issues in both frontend and backend "
+"components."
 
+#: templates/index.html:221
 msgid "professional-graphic"
 msgstr "Graphic designer"
 
-msgid "professional-graphic-date"
-msgstr "2022 - 2023"
-
+#: templates/index.html:224
 msgid "professional-graphic-description"
-msgstr "Assisting in the management of the company's website development, like, taking photographs and designing them, updating its content in the website's admin dashboard, and reporting problems that would appear."
+msgstr ""
+"Assisting in the management of the company's website development, like, "
+"taking photographs and designing them, updating its content in the "
+"website's admin dashboard, and reporting problems that would appear."
 
+#: templates/index.html:227
 msgid "professional-animation"
 msgstr "Digital animation intern"
 
-msgid "professional-animation-date"
-msgstr "12/2021 - 03/2022"
-
+#: templates/index.html:230
 msgid "professional-animation-description"
 msgstr "Role as creator of content, animations, web design and learning"
 
-msgid "portfolio-item-1-title"
-msgstr "Bicycle_Shop"
-
+#: templates/index.html:250
 msgid "portfolio-item-1-description"
-msgstr "Develop during a programming bootcamp, an e-commerce platform where users can browse, review, purchase."
+msgstr ""
+"Develop during a programming bootcamp, an e-commerce platform where users"
+" can browse, review, purchase."
 
-msgid "portfolio-item-2-title"
-msgstr "GEST_tasks"
-
+#: templates/index.html:270
 msgid "portfolio-item-2-description"
 msgstr "Is an application to assist in task management, for internal roles."
 
+#: templates/index.html:288
 msgid "portfolio-item-3-title"
 msgstr "My design portfolio"
 
+#: templates/index.html:289
 msgid "portfolio-item-3-description"
-msgstr "Work developed in my CET, using techniques with Adobe Illustrator, Adobe Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. The language I selected to " "present my work was Portuguese."
+msgstr ""
+"Work developed in my CET, using techniques like, Adobe Illustrator, Adobe"
+" Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. "
+"The language I selected to present my work was Portuguese."
 
-
+#: templates/index.html:301
 msgid "previous"
 msgstr "Previous"
 
+#: templates/index.html:305
 msgid "next"
 msgstr "Next"
 
-msgid "contact-title"
-msgstr "Contact"
-
+#: templates/index.html:327
 msgid "location"
-msgstr " Location"
+msgstr "Location:"
 
-msgid "email-title"
-msgstr " Email"
-
-msgid "label-name"
-msgstr "Name"
-
-msgid "label-email"
+#: templates/index.html:331 templates/index.html:345
+msgid "email"
 msgstr "Email:"
 
-msgid "label-message"
+#: templates/index.html:341
+msgid "name"
+msgstr "Name:"
+
+#: templates/index.html:342
+msgid "write-your-name"
+msgstr "Write your name"
+
+#: templates/index.html:346
+msgid "write-your-email"
+msgstr "Write your email"
+
+#: templates/index.html:349
+msgid "message"
 msgstr "Message:"
 
+#: templates/index.html:350
+msgid "write-your-message"
+msgstr "Write your message"
+
+#: templates/index.html:353
 msgid "btn-send"
 msgstr "Send"
 
-msgid "write-your-name"
-msgstr "Write your name..."
+#: templates/privacy_policy.html:6 templates/privacy_policy.html:13
+msgid "privacy-1"
+msgstr "Privacy Policy"
 
-msgid "write-your-email"
-msgstr "Write your email..."
+#: templates/privacy_policy.html:15 templates/terms.html:16
+msgid "privacy-2"
+msgstr "Introduction"
 
-msgid "write-your-message"
-msgstr "Write your message..."
+#: templates/privacy_policy.html:16
+msgid "privacy-3"
+msgstr ""
+"Your privacy is important to us. This privacy policy explains what "
+"information we collect, how we use it, and your rights in relation to it."
 
-msgid "download"
-msgstr "Download my CV:"
+#: templates/privacy_policy.html:18
+msgid "privacy-4"
+msgstr "Information We Collect"
+
+#: templates/privacy_policy.html:19
+msgid "privacy-5"
+msgstr ""
+"We collect information to provide better services to our users. This "
+"includes:"
+
+#: templates/privacy_policy.html:21
+msgid "IP"
+msgstr "IP Addresses:"
+
+#: templates/privacy_policy.html:21
+msgid "privacy-5"
+msgstr ""
+"We track IP addresses to improve the security and performance of our "
+"service."
+
+#: templates/privacy_policy.html:24
+msgid "privacy-7"
+msgstr "How We Use Information"
+
+#: templates/privacy_policy.html:25
+msgid "collect"
+msgstr "The information we collect is used for:"
+
+#: templates/privacy_policy.html:27
+msgid "Security-policy"
+msgstr "Security"
+
+#: templates/privacy_policy.html:27
+msgid "privacy-7"
+msgstr "Monitoring and preventing security threats."
+
+#: templates/privacy_policy.html:28
+msgid "analytics-policy"
+msgstr "Analytics"
+
+#: templates/privacy_policy.html:28
+msgid "privacy-9"
+msgstr "Understanding usage patterns to improve our service."
+
+#: templates/privacy_policy.html:31
+msgid "privacy-10"
+msgstr "Data Protection"
+
+#: templates/privacy_policy.html:32
+msgid "privacy-11"
+msgstr ""
+"We implement appropriate technical and organizational measures to protect"
+" the information we collect."
+
+#: templates/privacy_policy.html:34
+msgid "privacy-12"
+msgstr "Changes to This Policy"
+
+#: templates/privacy_policy.html:35
+msgid "privacy-13"
+msgstr ""
+"We may update this privacy policy from time to time. We will notify you "
+"of any changes by posting the new privacy policy on this page."
+
+#: templates/privacy_policy.html:37 templates/terms.html:35
+msgid "terms-contact1"
+msgstr "Contact Us"
+
+#: templates/privacy_policy.html:38 templates/terms.html:36
+msgid "terms-contact2"
+msgstr "If you have any questions about these terms, please contact us at"
+
+#: templates/privacy_policy.html:42 templates/terms.html:40
+msgid "terms-contact3"
+msgstr "Back to Home"
+
+#: templates/terms.html:6 templates/terms.html:14
+msgid "terms"
+msgstr "Terms of Service"
+
+#: templates/terms.html:17
+msgid "terms-2"
+msgstr ""
+"These terms of service govern your use of our application. By using our "
+"application, you agree to these terms."
+
+#: templates/terms.html:19
+msgid "terms-3"
+msgstr "Use of Data"
+
+#: templates/terms.html:20
+msgid "terms-4"
+msgstr ""
+"By using our application, you agree that we can track your IP address and"
+" use it for:"
+
+#: templates/terms.html:22
+msgid "security-terms"
+msgstr "Security purposes:"
+
+#: templates/terms.html:22
+msgid "security"
+msgstr "To monitor and prevent security threats."
+
+#: templates/terms.html:23
+msgid "analytics"
+msgstr "Analytics purposes:"
+
+#: templates/terms.html:23
+msgid "terms-5"
+msgstr "To understand usage patterns and improve our service."
+
+#: templates/terms.html:26
+msgid "terms-6"
+msgstr "User Responsibilities"
+
+#: templates/terms.html:27
+msgid "terms-7"
+msgstr "Users are responsible for:"
+
+#: templates/terms.html:29
+msgid "terms-8"
+msgstr ""
+"Ensuring that their use of the service complies with all applicable laws "
+"and regulations."
+
+#: templates/terms.html:32
+msgid "Changes to These Terms"
+msgstr "Changes to These Terms"
+
+#: templates/terms.html:33
+msgid "terms-9"
+msgstr ""
+"We may update these terms from time to time. We will notify you of any "
+"changes by posting the new terms on this page."
+
+#: venv/lib/python3.9/site-packages/click/_termui_impl.py:518
+msgid "{editor}: Editing failed"
+msgstr "{editor}: Editing failed"
+
+#: venv/lib/python3.9/site-packages/click/_termui_impl.py:522
+msgid "{editor}: Editing failed: {e}"
+msgstr "{editor}: Editing failed: {e}"
+
+#: venv/lib/python3.9/site-packages/click/core.py:1120
+msgid "Aborted!"
+msgstr "Aborted!"
+
+#: venv/lib/python3.9/site-packages/click/core.py:1309
+#: venv/lib/python3.9/site-packages/click/decorators.py:559
+msgid "Show this message and exit."
+msgstr "Show this message and exit."
+
+#: venv/lib.python3.9/site-packages/click/core.py:1340
+#: venv/lib.python3.9/site-packages/click/core.py:1370
+msgid "(Deprecated) {text}"
+msgstr "(Deprecated) {text}"
+
+#: venv/lib.python3.9/site-packages/click/core.py:1387
+msgid "Options"
+msgstr "Options"
+
+#: venv/lib.python3.9/site-packages/click/core.py:1415
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] "Got unexpected extra argument ({args})"
+msgstr[1] "Got unexpected extra arguments ({args})"
+
+#: venv/lib.python3.9/site-packages/click/core.py:1428
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr "DeprecationWarning: The command {name!r} is deprecated."
+
+#: venv/lib.python3.9/site-packages/click/core.py:1636
+msgid "Commands"
+msgstr "Commands"
+
+#: venv/lib.python3.9.site-packages/click/core.py:1668
+msgid "Missing command."
+msgstr "Missing command."
+
+#: venv/lib.python3.9/site-packages/click/core.py:1746
+msgid "No such command {name!r}."
+msgstr "No such command {name!r}."
+
+#: venv/lib.python3.9/site-packages/click/core.py:2310
+msgid "Value must be an iterable."
+msgstr "Value must be an iterable."
+
+#: venv/lib.python3.9/site-packages/click/core.py:2333
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] "Takes {nargs} values but 1 was given."
+msgstr[1] "Takes {nargs} values but {len} were given."
+
+#: venv/lib.python3.9/site-packages/click/core.py:2778
+msgid "env var: {var}"
+msgstr "env var: {var}"
+
+#: venv/lib.python3.9/site-packages/click/core.py:2808
+msgid "(dynamic)"
+msgstr "(dynamic)"
+
+#: venv/lib.python3.9/site-packages/click/core.py:2821
+msgid "default: {default}"
+msgstr "default: {default}"
+
+#: venv/lib.python3.9/site-packages/click/core.py:2834
+msgid "required"
+msgstr "required"
+
+#: venv/lib.python3.9/site-packages/click/decorators.py:465
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr "%(prog)s, version %(version)s"
+
+#: venv/lib.python3.9/site-packages/click/decorators.py:528
+msgid "Show the version and exit."
+msgstr "Show the version and exit."
+
+#: venv/lib.python3.9/site-packages/click/exceptions.py:44
+#: venv/lib.python3.9/site-packages/click/exceptions.py:80
+msgid "Error: {message}"
+msgstr "Error: {message}"
+
+#: venv/lib.python3.9/site-packages/click/exceptions.py:72
+msgid "Try '{command} {option}' for help."
+msgstr "Try '{command} {option}' for help."
+
+#: venv/lib.python3.9/site-packages/click/exceptions.py:121
+msgid "Invalid value: {message}"
+msgstr "Invalid value: {message}"
+
+#: venv/lib.python3.9/site-packages/click/exceptions.py:123
+msgid "Invalid value for {param_hint}: {message}"
+msgstr "Invalid value for {param_hint}: {message}"
+
+#: venv/lib.python3.9/site-packages/click/exceptions.py:179
+msgid "Missing argument"
+msgstr "Missing argument"
+
+#: venv/lib.python3.9/site-packages/click/exceptions.py:181
+msgid "Missing option"
+msgstr "Missing option"
+
+#: venv/lib.python3.9/site-packages/click/exceptions.py:183
+msgid "Missing parameter"
+msgstr "Missing parameter"
+
+#: venv/lib.python3.9/site-packages/click/exceptions.py:185
+msgid "Missing {param_type}"
+msgstr "Missing {param_type}"
+
+#: venv/lib.python3.9/site-packages/click/exceptions.py:192
+msgid "Missing parameter: {param_name}"
+msgstr "Missing parameter: {param_name}"
+
+#: venv/lib.python3.9/site-packages/click/exceptions.py:212
+msgid "No such option: {name}"
+msgstr "No such option: {name}"
+
+#: venv/lib.python3.9/site-packages/click/exceptions.py:226
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] "Did you mean {possibility}?"
+msgstr[1] "(Possible options: {possibilities})"
+
+#: venv/lib.python3.9/site-packages/click/exceptions.py:262
+msgid "unknown error"
+msgstr "unknown error"
+
+#: venv/lib.python3.9/site-packages/click/exceptions.py:269
+msgid "Could not open file {filename!r}: {message}"
+msgstr "Could not open file {filename!r}: {message}"
+
+#: venv/lib.python3.9/site-packages/click/parser.py:231
+msgid "Argument {name!r} takes {nargs} values."
+msgstr "Argument {name!r} takes {nargs} values."
+
+#: venv/lib.python3.9/site-packages/click/parser.py:413
+msgid "Option {name!r} does not take a value."
+msgstr "Option {name!r} does not take a value."
+
+#: venv/lib.python3.9/site-packages/click/parser.py:473
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] "Option {name!r} requires an argument."
+msgstr[1] "Option {name!r} requires {nargs} arguments."
+
+#: venv/lib.python3.9/site-packages/click/shell_completion.py:318
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr "Shell completion is not supported for Bash versions older than 4.4."
+
+#: venv/lib.python3.9/site-packages/click/shell_completion.py:326
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr "Couldn't detect Bash version, shell completion is not supported."
+
+#: venv/lib.python3.9/site-packages/click/termui.py:158
+msgid "Repeat for confirmation"
+msgstr "Repeat for confirmation"
+
+#: venv/lib.python3.9/site-packages/click/termui.py:174
+msgid "Error: The value you entered was invalid."
+msgstr "Error: The value you entered was invalid."
+
+#: venv/lib.python3.9/site-packages/click/termui.py:176
+msgid "Error: {e.message}"
+msgstr "Error: {e.message}"
+
+#: venv/lib.python3.9/site-packages/click/termui.py:187
+msgid "Error: The two entered values do not match."
+msgstr "Error: The two entered values do not match."
+
+#: venv/lib.python3.9/site-packages/click/termui.py:243
+msgid "Error: invalid input"
+msgstr "Error: invalid input"
+
+#: venv/lib.python3.9/site-packages/click/termui.py:773
+msgid "Press any key to continue..."
+msgstr "Press any key to continue..."
+
+#: venv/lib.python3.9/site-packages/click/types.py:266
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+"Choose from:\n"
+"\t{choices}"
+
+#: venv/lib.python3.9/site-packages/click/types.py:300
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] "{value!r} is not {choice}."
+msgstr[1] "{value!r} is not one of {choices}."
+
+#: venv/lib.python3.9/site-packages/click/types.py:394
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] "{value!r} does not match the format {format}."
+msgstr[1] "{value!r} does not match the formats {formats}."
+
+#: venv/lib.python3.9/site-packages/click/types.py:414
+msgid "{value!r} is not a valid {number_type}."
+msgstr "{value!r} is not a valid {number_type}."
+
+#: venv/lib.python3.9/site-packages/click/types.py:470
+msgid "{value} is not in the range {range}."
+msgstr "{value} is not in the range {range}."
+
+#: venv/lib.python3.9/site-packages/click/types.py:611
+msgid "{value!r} is not a valid boolean."
+msgstr "{value!r} is not a valid boolean."
+
+#: venv/lib.python3.9/site-packages/click/types.py:635
+msgid "{value!r} is not a valid UUID."
+msgstr "{value!r} is not a valid UUID."
+
+#: venv/lib.python3.9/site-packages/click/types.py:822
+msgid "file"
+msgstr "file"
+
+#: venv/lib.python3.9/site-packages/click/types.py:824
+msgid "directory"
+msgstr "directory"
+
+#: venv/lib.python3.9/site-packages/click/types.py:826
+msgid "path"
+msgstr "path"
+
+#: venv/lib.python3.9/site-packages/click/types.py:877
+msgid "{name} {filename!r} does not exist."
+msgstr "{name} {filename!r} does not exist."
+
+#: venv/lib.python3.9/site-packages/click/types.py:886
+msgid "{name} {filename!r} is a file."
+msgstr "{name} {filename!r} is a file."
+
+#: venv/lib.python3.9/site-packages/click/types.py:894
+msgid "{name} '{filename}' is a directory."
+msgstr "{name} '{filename}' is a directory."
+
+#: venv/lib.python3.9/site-packages/click/types.py:903
+msgid "{name} {filename!r} is not readable."
+msgstr "{name} {filename!r} is not readable."
+
+#: venv/lib.python3.9/site-packages/click/types.py:912
+msgid "{name} {filename!r} is not writable."
+msgstr "{name} {filename!r} is not writable."
+
+#: venv/lib.python3.9/site-packages/click/types.py:921
+msgid "{name} {filename!r} is not executable."
+msgstr "{name} {filename!r} is not executable."
+
+#: venv/lib.python3.9/site-packages/click/types.py:987
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] "{len_type} values are required, but {len_value} was given."
+msgstr[1] "{len_type} values are required, but {len_value} were given."
+
+#: venv/lib.python3.9/site-packages/flask_script/__init__.py:43
+msgid "show this help message and exit"
+msgstr "show this help message and exit"

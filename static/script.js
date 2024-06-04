@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.error('Menu or body element not found');
     }
 
-    // Function to set language
-    window.setLanguage = async function(event) {
+      // Function to set language
+      window.setLanguage = async function(event) {
         const lang = event.target.value;
         if (lang) {
             try {
@@ -89,35 +89,85 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     // Function to parse .po file content
-    function parsePO(content) {
-        const translations = {};
-        const lines = content.split('\n');
-        let msgid = '';
-        let msgstr = '';
-        let inMsgid = false;
-        let inMsgstr = false;
-    
-        for (let line of lines) {
-            line = line.trim();
-            if (line.startsWith('msgid')) {
-                inMsgid = true;
-                inMsgstr = false;
-                msgid = line.replace(/msgid\s*"(.*)"/, '$1');
-            } else if (line.startsWith('msgstr')) {
-                inMsgstr = true;
-                inMsgid = false;
-                msgstr = line.replace(/msgstr\s*"(.*)"/, '$1');
+function parsePO(content) {
+    const translations = {};
+    const lines = content.split('\n');
+    let msgid = '';
+    let msgstr = '';
+    let inMsgid = false;
+    let inMsgstr = false;
+
+    for (let line of lines) {
+        line = line.trim();
+        if (line.startsWith('msgid')) {
+            inMsgid = true;
+            inMsgstr = false;
+            msgid = line.replace(/^msgid\s*"(.*)"/, '$1');
+        } else if (line.startsWith('msgstr')) {
+            inMsgstr = true;
+            inMsgid = false;
+            msgstr = line.replace(/^msgstr\s*"(.*)"/, '$1');
+        } else if (inMsgid && line.startsWith('"')) {
+            msgid += line.replace(/"(.*)"/, '$1');
+        } else if (inMsgstr && line.startsWith('"')) {
+            msgstr += line.replace(/"(.*)"/, '$1');
+        } else if (!line) {
+            // Empty line indicates end of a translation block
+            if (msgid && msgstr) {
                 translations[msgid] = msgstr;
                 msgid = '';
                 msgstr = '';
-            } else if (inMsgid && line.startsWith('"')) {
-                msgid += line.replace(/"(.*)"/, '$1');
-            } else if (inMsgstr && line.startsWith('"')) {
-                msgstr += line.replace(/"(.*)"/, '$1');
             }
+            inMsgid = false;
+            inMsgstr = false;
         }
-        return translations;
-    }    
+    }
+    // Ensure the last translation is added if the file doesn't end with an empty line
+    if (msgid && msgstr) {
+        translations[msgid] = msgstr;
+    }
+    return translations;
+}
+// Function to parse .po file content
+function parsePO(content) {
+    const translations = {};
+    const lines = content.split('\n');
+    let msgid = '';
+    let msgstr = '';
+    let inMsgid = false;
+    let inMsgstr = false;
+
+    for (let line of lines) {
+        line = line.trim();
+        if (line.startsWith('msgid')) {
+            inMsgid = true;
+            inMsgstr = false;
+            msgid = line.replace(/^msgid\s*"(.*)"/, '$1');
+        } else if (line.startsWith('msgstr')) {
+            inMsgstr = true;
+            inMsgid = false;
+            msgstr = line.replace(/^msgstr\s*"(.*)"/, '$1');
+        } else if (inMsgid && line.startsWith('"')) {
+            msgid += line.replace(/"(.*)"/, '$1');
+        } else if (inMsgstr && line.startsWith('"')) {
+            msgstr += line.replace(/"(.*)"/, '$1');
+        } else if (!line) {
+            // Empty line indicates end of a translation block
+            if (msgid && msgstr) {
+                translations[msgid] = msgstr;
+                msgid = '';
+                msgstr = '';
+            }
+            inMsgid = false;
+            inMsgstr = false;
+        }
+    }
+    // Ensure the last translation is added if the file doesn't end with an empty line
+    if (msgid && msgstr) {
+        translations[msgid] = msgstr;
+    }
+    return translations;
+}
 
     // Function to update the page content based on the fetched translations
     function updatePageContent(translations) {
@@ -125,60 +175,66 @@ document.addEventListener('DOMContentLoaded', (event) => {
         elementsToUpdate.forEach((element) => {
             const key = element.getAttribute('data-i18n');
             if (key) {
+                console.log(`Key: ${key}, Value: ${translations[key]}`);
                 element.textContent = translations[key];
-                console.log(translations[key])
             }
             const placeholderKey = element.getAttribute('data-i18n-placeholder');
             if (placeholderKey && translations[placeholderKey]) {
                 element.setAttribute('placeholder', translations[placeholderKey]);
+            } else {
+                console.warn(`Translation missing for key: ${key}`);
             }
         });
     }
 
     // On page load, check localStorage for language setting
-    const savedLang = localStorage.getItem('lang');
-    if (savedLang && savedLang !== "{{ lang }}") {
-        const langSelect = document.querySelector('select.form-select');
-        if (langSelect) {
-            langSelect.value = savedLang;
+    document.addEventListener("DOMContentLoaded", function() {
+        const savedLang = localStorage.getItem('lang');
+        if (savedLang && savedLang !== "{{ lang|e }}") {
+            const langSelect = document.querySelector('select.form-select');
+            if (langSelect) {
+                langSelect.value = savedLang;
+            }
+            fetchTranslations(savedLang).then(translations => {
+                updatePageContent(translations);
+            });
         }
-        fetchTranslations(savedLang).then(translations => {
-            updatePageContent(translations);
-        });
-    }
+    });
+
     $(document).ready(function() {
         $('#contact-form').on('submit', function(event) {
-          event.preventDefault();
-          
-          $.ajax({
-            type: 'POST',
-            url: '/send',
-            data: $(this).serialize(),
-            success: function(response) {
-              let alertContainer = $('#alert-container');
-              let alertMessage = `
-                <div class="alert alert-${response.status === 'success' ? 'success' : 'danger'} alert-dismissible fade show" role="alert">
-                  ${response.message}
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-              `;
-              
-              alertContainer.html(alertMessage);
-              if (response.status === 'success') {
-                $('#contact-form')[0].reset();
-              }
-            },
-            error: function() {
-              let alertContainer = $('#alert-container');
-              let alertMessage = `
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                  An error occurred. Please try again.
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-              `;
-              alertContainer.html(alertMessage);
-            }
-          });
+            event.preventDefault();
+
+            $.ajax({
+                type: 'POST',
+                url: '/send',
+                data: $(this).serialize(),
+                success: function(response) {
+                    let alertContainer = $('#alert-container');
+                    let alertMessage = `
+                    <div class="alert alert-${response.status === 'success' ? 'success' : 'danger'} alert-dismissible fade show" role="alert">
+                        ${response.message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    `;
+
+                    alertContainer.html(alertMessage);
+                    if (response.status === 'success') {
+                        $('#contact-form')[0].reset();
+                    }
+                },
+                error: function() {
+                    let alertContainer = $('#alert-container');
+                    let alertMessage = `
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        An error occurred. Please try again.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    `;
+                    alertContainer.html(alertMessage);
+                }
+            });
         });
-      });
+    });
 });
+

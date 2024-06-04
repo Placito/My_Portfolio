@@ -64,6 +64,16 @@ def home():
     lang = session.get('lang', 'en')
     return render_template('index.html', lang=lang)
 
+@app.route('/privacy_policy.html')
+def privacy_policy():
+    lang = session.get('lang', 'en')
+    return render_template('privacy_policy.html', lang=lang)
+
+@app.route('/terms.html')
+def terms():
+    lang = session.get('lang', 'en')
+    return render_template('terms.html', lang=lang)
+
 @app.route('/send', methods=['POST'])
 def send():
     if request.method == 'POST':
@@ -157,13 +167,5 @@ def download_file(filename):
         logger.error(f"Error in /download/<filename> route: {e}")
         return jsonify({'error': 'An error occurred'}), 500
     
-@app.route('/privacy_policy.html')
-def privacy_policy():
-    return render_template('privacy_policy.html')
-
-@app.route('/terms.html')
-def terms():
-    return render_template('terms.html')
-
 if __name__ == '__main__':
     app.run()
