@@ -13,7 +13,7 @@ html, body {
     background: #021124;
     /* overflow automático para gerar o scroll e não cortar nenhum conteudo */
     overflow-y: auto;
-    width: 300px;
+    width: 330px;
     transition: all ease-in-out 0.5s;
     padding: 0 15px;
     z-index: 10;
@@ -83,7 +83,7 @@ html, body {
     gap: 5px;
 }
 .main {
-    margin-left: 300px;
+    margin-left: 330px;
 }
 .home {
     background-image: url(./img/banner.jpg);
@@ -135,7 +135,7 @@ html, body {
 }
 @media (max-width: 1024px) {
     .header {
-        left: -300px;
+        left: -330px;
     }
     .menu-mobile {
         display: flex;
@@ -270,22 +270,34 @@ html, body {
     }
 }
 footer {
-    padding: 15px;
+    padding: 15px 0 15px 0;
     color: #fff;
     font-size: 14px;
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 300px;
+    width: 330px;
     z-index: 100;
     background-color: #021124;
     transition: 0.3s;
 }
+.terms {
+    display: flex;
+    justify-content:space-evenly;
+   } 
 .terms-box {
- background-color: #021124;
- color: #fff;
- height: 100%;
- width: 100%;
+    background-color: #021124;
+    color: #fff;
+} 
+.btn-back  {
+    margin-top: 15px;
+} 
+
+@media (min-width: 770px) {
+    .terms-box {
+        height: 100%;
+        width: 100%;
+    } 
 } 
 @media (max-width: 1012px) {
     footer {
