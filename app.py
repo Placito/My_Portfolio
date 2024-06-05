@@ -135,16 +135,6 @@ def set_language(language):
         session['lang'] = language
     return jsonify({'status': 'success', 'lang': language})
 
-@app.route('/translations/<lang>/text')
-def get_text_translations(lang):
-    translations = {
-        'All fields are required!': _l('All fields are required!'),
-        'Message sent successfully!': _l('Message sent successfully!'),
-        'An error occurred while sending the message. Please try again later.': _l('An error occurred while sending the message. Please try again later.'),
-        'Invalid request method.': _l('Invalid request method.'),
-    }
-    return jsonify(translations)
-
 @app.route('/translations/<lang>/LC_MESSAGES/messages.po', methods=['GET'])
 def get_translation(lang):
     file_path = os.path.join('translations', lang, 'LC_MESSAGES', 'messages.po')

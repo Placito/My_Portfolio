@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-05 11:20+0100\n"
+"POT-Creation-Date: 2024-06-05 15:30+0100\n"
 "PO-Revision-Date: 2024-06-05 11:20+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -17,6 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
+
+#: app.py:108
+msgid "All fields are required!"
+msgstr "Todos os campos são obrigatórios!"
+
+#: app.py:125
+msgid "Message sent successfully!"
+msgstr "Menbsagem enviada com sucesso!"
+
+#: app.py:130
+msgid "An error occurred while sending the message. Please try again later."
+msgstr "Um erro ocorreu ao enviar esta mensagem. Por favor, tente novamente mais tarde."
+
+#: app.py:125
+msgid "Invalid request method."
+msgstr "Método de solicitação inválido."
 
 #: templates/index.html:35
 msgid "Home"
@@ -76,22 +92,23 @@ msgid ""
 "how things work behind the scenes, which led me to combine these two "
 "areas."
 msgstr ""
-"Proativa desenvolvedora de Full Stack. Comecei a minha jornada com uma licenciatura em "
-"Biologia Humana, que mais tarde me levou a descobrir novas habilidades com um "
-"curso de Design, que despertou em mim uma nova paixão pela área de programação. Eu "
-"tenho uma aptidão natural para o front-end mas uma paixão por descobrir "
-"como as coisas funcionam nos bastidores, o que me levou a combinar estas duas "
-"áreas."
+"Proativa desenvolvedora de Full Stack. Comecei a minha jornada com uma "
+"licenciatura em Biologia Humana, que mais tarde me levou a descobrir "
+"novas habilidades com um curso de Design, que despertou em mim uma nova "
+"paixão pela área de programação. Eu tenho uma aptidão natural para o "
+"front-end mas uma paixão por descobrir como as coisas funcionam nos "
+"bastidores, o que me levou a combinar estas duas áreas."
 
 #: templates/index.html:93
+#, fuzzy
 msgid ""
 "Is an entry-level position in the field of software development, "
 "responsible for working on both the front-end and back-end portions of "
 "web applications."
 msgstr ""
-"É uma posição inicial na área de desenvolvimento de software, "
-"onde estou responsável por trabalhar nas partes front-end e back-end de "
-"aplicações web."
+"É uma posição inicial na área de desenvolvimento de software, onde estou "
+"responsável por trabalhar nas partes front-end e back-end de aplicações "
+"web."
 
 #: templates/index.html:97
 msgid "Date of birth:"
@@ -147,9 +164,10 @@ msgid ""
 "soft skills, most of them are here, according to the percentage of "
 "knowledge I believe I have in each of them."
 msgstr ""
-"Ao longo do meu percurso como profissional adquiri alguns conhecimentos técnicos e "
-"habilidades interpessoais, a maioria delas está aqui, de acordo com a percentagem de "
-"conhecimento que acredito ter em cada uma delas."
+"Ao longo do meu percurso como profissional adquiri alguns conhecimentos "
+"técnicos e habilidades interpessoais, a maioria delas está aqui, de "
+"acordo com a percentagem de conhecimento que acredito ter em cada uma "
+"delas."
 
 #: templates/index.html:179
 msgid "Communication"
@@ -172,8 +190,8 @@ msgid ""
 "Hands-on program to become a Full-Stack Software Developer, focusing on "
 "mastering both frontend and backend technologies."
 msgstr ""
-"Programa prático para se tornar um desenvolvedor Full-Stack de software, com foco em "
-"dominar as tecnologias de front-end e back-end."
+"Programa prático para se tornar um desenvolvedor Full-Stack de software, "
+"com foco em dominar as tecnologias de front-end e back-end."
 
 #: templates/index.html:200
 msgid "Development of multimedia products"
@@ -184,8 +202,9 @@ msgid ""
 "Specialized in multimedia product development, gaining practical skills "
 "in the latest digital design and media production technologies."
 msgstr ""
-"Especialização em desenvolvimento de produtos multimídia, adquirindo habilidades práticas "
-"nas mais recentes tecnologias de design digital e produção de mídia."
+"Especialização em desenvolvimento de produtos multimídia, adquirindo "
+"habilidades práticas nas mais recentes tecnologias de design digital e "
+"produção de mídia."
 
 #: templates/index.html:206
 msgid "Degree in Human Biology"
@@ -196,14 +215,15 @@ msgid "Évora University"
 msgstr "Universidade de Évora"
 
 #: templates/index.html:209
+#, fuzzy
 msgid ""
 "Completed a comprehensive study in Human Biology, acquiring a strong "
 "foundation in biological sciences and their application to human health "
 "and disease."
 msgstr ""
-"Compreende um estudo abrangente em Biologia Humana, adquirindo um "
-"forte conhecimento em fundamentos nas ciências biológicas e na "
-"sua aplicação à saúde humana e doenças."
+"Compreende um estudo abrangente em Biologia Humana, adquirindo um forte "
+"conhecimento em fundamentos nas ciências biológicas e na sua aplicação à "
+"saúde humana e doenças."
 
 #: templates/index.html:213
 msgid "Professional"
@@ -224,24 +244,25 @@ msgid ""
 "Troubleshoot, debug, and resolve issues in both frontend and backend "
 "components."
 msgstr ""
-"Desenvolver interfaces web fáceis de usar usando HTML, CSS e JavaScript."
-"Participar em revisões de código e fornecer feedback construtivo."
-"Solucionar, encontrar e resolver problemas em componentes tanto no "
-"front-end quanto no back-end."
+"Desenvolver interfaces web fáceis de usar usando HTML, CSS e "
+"JavaScript.Participar em revisões de código e fornecer feedback "
+"construtivo.Solucionar, encontrar e resolver problemas em componentes "
+"tanto no front-end quanto no back-end."
 
 #: templates/index.html:221
 msgid "Graphic designer"
 msgstr "Designer gráfica"
 
 #: templates/index.html:224
+#, fuzzy
 msgid ""
 "Assisting in the management of the company's website development, like, "
 "taking photographs and designing them, updating its content in the "
 "website's admin dashboard, and reporting problems that would appear."
 msgstr ""
-"Auxiliar na gestão do desenvolvimento do site da empresa, como, "
-"tirar fotografias e desenhá-las, atualizando seu conteúdo no "
-"painel de administração do site e relatórios de problemas que apareceriam."
+"Auxiliar na gestão do desenvolvimento do site da empresa, como, tirar "
+"fotografias e desenhá-las, atualizando seu conteúdo no painel de "
+"administração do site e relatórios de problemas que apareceriam."
 
 #: templates/index.html:227
 msgid "Digital animation intern"
@@ -256,10 +277,11 @@ msgid ""
 "Develop during a programming bootcamp, an e-commerce platform where users"
 " can browse, review, purchase."
 msgstr ""
-"Desenvolveido durante um bootcamp de programação, é uma plataforma de e-commerce onde os utilizadores "
-"podem ​​navegar, comentar e comprar."
+"Desenvolveido durante um bootcamp de programação, é uma plataforma de "
+"e-commerce onde os utilizadores podem ​​navegar, comentar e comprar."
 
 #: templates/index.html:270
+#, fuzzy
 msgid "Is an application to assist in task management, for internal roles."
 msgstr "É uma aplicação para assitir na gestão de tarefas internas."
 
@@ -273,9 +295,10 @@ msgid ""
 " Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. "
 "The language I selected to present my work was Portuguese."
 msgstr ""
-"Trabalho desenvolvido no meu CET, utilizando técnicas como, Adobe Illustrator, Adobe"
-" Photoshop, Adobe After Effects, Adobe Premier, Fotografia e 3ds Max. "
-"O idioma que selecionei para apresentar o meu trabalho foi o português."
+"Trabalho desenvolvido no meu CET, utilizando técnicas como, Adobe "
+"Illustrator, Adobe Photoshop, Adobe After Effects, Adobe Premier, "
+"Fotografia e 3ds Max. O idioma que selecionei para apresentar o meu "
+"trabalho foi o português."
 
 #: templates/index.html:301
 msgid "Previous"
@@ -326,9 +349,9 @@ msgid ""
 "Your privacy is important to us. This privacy policy explains what "
 "information we collect, how we use it, and your rights in relation to it."
 msgstr ""
-"A Sua privacidade é importante para nós. Esta política de "
-"privacidade explica quais informações que recolhemos e de que forma as "
-"usamos e os seus direitos em relação a elas."
+"A Sua privacidade é importante para nós. Esta política de privacidade "
+"explica quais informações que recolhemos e de que forma as usamos e os "
+"seus direitos em relação a elas."
 
 #: templates/privacy_policy.html:18
 msgid "Information We Collect"
@@ -339,8 +362,8 @@ msgid ""
 "We collect information to provide better services to our users. This "
 "includes:"
 msgstr ""
-"Recolhemos informações para oferecer melhores serviços aos nossos utilizadores."
-" Isso inclui:"
+"Recolhemos informações para oferecer melhores serviços aos nossos "
+"utilizadores. Isso inclui:"
 
 #: templates/privacy_policy.html:21
 msgid "IP Addresses:"
@@ -351,8 +374,8 @@ msgid ""
 "We track IP addresses to improve the security and performance of our "
 "service."
 msgstr ""
-"Rastreamos endereços IP para melhorar a segurança e o desempenho "
-"do nosso serviço."
+"Rastreamos endereços IP para melhorar a segurança e o desempenho do nosso"
+" serviço."
 
 #: templates/privacy_policy.html:24
 msgid "How We Use Information"
@@ -383,12 +406,13 @@ msgid "Data Protection"
 msgstr "Proteção de dados"
 
 #: templates/privacy_policy.html:32
+#, fuzzy
 msgid ""
 "We implement appropriate technical and organizational measures to protect"
 " the information we collect."
 msgstr ""
-"Implementamos medidas técnicas e organizacionais apropriadas "
-"para proteger as informações que recolhemos."
+"Implementamos medidas técnicas e organizacionais apropriadas para "
+"proteger as informações que recolhemos."
 
 #: templates/privacy_policy.html:34
 msgid "Changes to This Policy"
@@ -409,13 +433,16 @@ msgstr "Contacte-nos"
 
 #: templates/privacy_policy.html:38 templates/terms.html:36
 msgid "If you have any questions about these terms, please contact us at "
-msgstr "Se tiver alguma dúvida sobre estes termos, entre em contato comnosco através de "
+msgstr ""
+"Se tiver alguma dúvida sobre estes termos, entre em contato comnosco "
+"através de "
 
-#: templates/privacy_policy.html:42 templates/terms.html:40
+#: templates/privacy_policy.html:40 templates/terms.html:38
 msgid "Back to Home"
 msgstr "Voltar ao Início"
 
 #: templates/terms.html:17
+#, fuzzy
 msgid ""
 "These terms of service govern your use of our application. By using our "
 "application, you agree to these terms."
@@ -428,12 +455,13 @@ msgid "Use of Data"
 msgstr "Uso dos dados"
 
 #: templates/terms.html:20
+#, fuzzy
 msgid ""
 "By using our application, you agree that we can track your IP address and"
 " use it for:"
 msgstr ""
-"Ao usar a nossa aplicação, você concorda que podemos rastrear seu endereço IP e "
-"usá-lo para: "
+"Ao usar a nossa aplicação, você concorda que podemos rastrear seu "
+"endereço IP e usá-lo para: "
 
 #: templates/terms.html:22
 msgid "Security purposes:"
@@ -460,12 +488,13 @@ msgid "Users are responsible for:"
 msgstr "Utilizadores são responsáveis por:"
 
 #: templates/terms.html:29
+#, fuzzy
 msgid ""
 "Ensuring that their use of the service complies with all applicable laws "
 "and regulations."
 msgstr ""
-"Garantir que o uso do serviço esteja em conformidade com todas as leis aplicáveis"
-"e regulamentos."
+"Garantir que o uso do serviço esteja em conformidade com todas as leis "
+"aplicáveise regulamentos."
 
 #: templates/terms.html:32
 msgid "Changes to These Terms"
@@ -476,13 +505,12 @@ msgid ""
 "We may update these terms from time to time. We will notify you of any "
 "changes by posting the new terms on this page."
 msgstr ""
-"Podemos atualizar estes termos de tempos em tempos. "
-"Notificaremos você sobre quaisquer mudanças publicando "
-"os novos termos nesta página."
+"Podemos atualizar estes termos de tempos em tempos. Notificaremos você "
+"sobre quaisquer mudanças publicando os novos termos nesta página."
 
 #: venv/lib/python3.9/site-packages/click/_termui_impl.py:518
 msgid "{editor}: Editing failed"
-msgstr {editor}: Falha na edição"
+msgstr "{editor}: Falha na edição"
 
 #: venv/lib/python3.9/site-packages/click/_termui_impl.py:522
 msgid "{editor}: Editing failed: {e}"
@@ -490,7 +518,7 @@ msgstr "{editor}: Falha na edição {e}"
 
 #: venv/lib/python3.9/site-packages/click/core.py:1120
 msgid "Aborted!"
-msgstr Abortar!"
+msgstr "bortar!"
 
 #: venv/lib/python3.9/site-packages/click/core.py:1309
 #: venv/lib/python3.9/site-packages/click/decorators.py:559
@@ -602,13 +630,13 @@ msgstr "Falta parametro: {param_name}"
 
 #: venv/lib/python3.9/site-packages/click/exceptions.py:212
 msgid "No such option: {name}"
-msgstr "Esta opção n\ao existe: {name}"
+msgstr "Esta opção n\\ao existe: {name}"
 
-#: venv/lib.python3.9/site-packages/click/exceptions.py:226
+#: venv/lib/python3.9/site-packages/click/exceptions.py:226
 msgid "Did you mean {possibility}?"
 msgid_plural "(Possible options: {possibilities})"
 msgstr[0] "Quis dizer {possibility}?"
-msgstr[1] "Esta opção n\ao existe: {name}"
+msgstr[1] "Esta opção n\\ao existe: {name}"
 
 #: venv/lib/python3.9/site-packages/click/exceptions.py:262
 msgid "unknown error"
@@ -634,11 +662,15 @@ msgstr[1] "Opção {name!r} necessita {nargs} argumentos."
 
 #: venv/lib/python3.9/site-packages/click/shell_completion.py:318
 msgid "Shell completion is not supported for Bash versions older than 4.4."
-msgstr "A conclusão do Shell não é suportada para versões do Bash anteriores a 4.4."
+msgstr ""
+"A conclusão do Shell não é suportada para versões do Bash anteriores a "
+"4.4."
 
 #: venv/lib/python3.9/site-packages/click/shell_completion.py:326
 msgid "Couldn't detect Bash version, shell completion is not supported."
-msgstr "Não foi possível detectar a versão do Bash, a conclusão do shell não é suportada."
+msgstr ""
+"Não foi possível detectar a versão do Bash, a conclusão do shell não é "
+"suportada."
 
 #: venv/lib/python3.9/site-packages/click/termui.py:158
 msgid "Repeat for confirmation"
@@ -741,3 +773,9 @@ msgid "{len_type} values are required, but {len_value} was given."
 msgid_plural "{len_type} values are required, but {len_value} were given."
 msgstr[0] "{len_type} values are required, but {len_value} was given."
 msgstr[1] "{len_type} values are required, but {len_value} were given."
+
+#: venv/lib/python3.9/site-packages/flask_script/__init__.py:43
+#, fuzzy
+msgid "show this help message and exit"
+msgstr "Mostra esta mensagem e saí."
+
