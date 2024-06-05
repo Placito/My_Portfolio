@@ -1,6 +1,6 @@
-from flask import Flask, render_template, redirect, request, flash, session, url_for, jsonify, send_file
+from flask import Flask, render_template, redirect, request, session, jsonify, send_file
 from flask_mail import Mail, Message
-from flask_babel import Babel, gettext as _
+from flask_babel import Babel, _, lazy_gettext as _l, gettext
 from dotenv import load_dotenv
 import os
 import logging
@@ -51,28 +51,49 @@ class Contact:
         self.email = email
         self.message = message
 
-# Manually set the locale before each request
-@app.before_request
-def set_locale():
-    lang = session.get('lang', request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES']))
-    babel.locale_selector_func = lambda: lang
+def get_locale():
+    # Check if the language query parameter is set and valid
+    if 'lang' in request.args:
+        lang = request.args.get('lang')
+        if lang in ['en', 'pt']:
+            session['lang'] = lang
+            return session['lang']
+    # If not set via query, check if we have it stored in the session
+    elif 'lang' in session:
+        return session.get('lang')
+    # Otherwise, use the browser's preferred language
+    return request.accept_languages.best_match(['en', 'pt'])
+
+babel = Babel(app, locale_selector=get_locale)
+
+@app.route('/setlang')
+def setlang():
+    lang = request.args.get('lang', 'en')
+    session['lang'] = lang
+    return redirect(request.referrer)
+
+@app.context_processor
+def inject_babel():
+    return dict(_=gettext)
+
+@app.context_processor
+def inject_locale():
+    # This makes the function available directly, allowing you to call it in the template
+    return {'get_locale': get_locale}
 
 # Define routes
 @app.route('/')
 def home():
     print("Home route accessed")  # Debug output
-    lang = session.get('lang', 'en')
-    return render_template('index.html', lang=lang)
+    return render_template('index.html', current_locale=get_locale())
 
 @app.route('/privacy_policy.html')
 def privacy_policy():
-    lang = session.get('lang', 'en')
-    return render_template('privacy_policy.html', lang=lang)
+    return render_template('privacy_policy.html', current_locale=get_locale())
 
 @app.route('/terms.html')
 def terms():
-    lang = session.get('lang', 'en')
-    return render_template('terms.html', lang=lang)
+    return render_template('terms.html', current_locale=get_locale())
 
 @app.route('/send', methods=['POST'])
 def send():
@@ -84,37 +105,45 @@ def send():
             message = request.form["message"]
 
             if not name or not email or not message:
-                return jsonify({'status': 'error', 'message': _('All fields are required!')})
+                return jsonify({'status': 'error', 'message': _l('All fields are required!')})
 
             formContact = Contact(name, email, message)
 
             # Prepare and send the email
             msg = Message(
-                subject=f'{_("Portfolio Contact from")} {formContact.name}',
+                subject=f'{"Portfolio Contact from"} {formContact.name}',
                 sender=app.config.get("MAIL_USERNAME"),
                 recipients=['mariana.placito@gmail.com'],
                 body=f'''
-                    {_("Portfolio Contact from")} {formContact.name}
+                    {"Portfolio Contact from"} {formContact.name}
 
-                    {_("Message")}:
+                    {"Message"}:
                     {formContact.message}
                 '''
             )
             mail.send(msg)
-            return jsonify({'status': 'success', 'message': _('Message sent successfully!')})
+            return jsonify({'status': 'success', 'message': _l('Message sent successfully!')})
 
         except Exception as e:
-            return jsonify({'status': 'error', 'message': _('An error occurred while sending the message. Please try again later.')})
+            return jsonify({'status': 'error', 'message': _l('An error occurred while sending the message. Please try again later.')})
     
-    return jsonify({'status': 'error', 'message': _('Invalid request method.')})
+    return jsonify({'status': 'error', 'message': _l('Invalid request method.')})
 
-@app.route('/set_language/<language>', methods=['GET'])
+@app.route('/set_language/<language>', methods=['POST'])
 def set_language(language):
     if language in app.config['BABEL_SUPPORTED_LOCALES']:
         session['lang'] = language
-    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
-        return jsonify({'status': 'success'})
-    return redirect(request.referrer or url_for('home'))
+    return jsonify({'status': 'success', 'lang': language})
+
+@app.route('/translations/<lang>/text')
+def get_text_translations(lang):
+    translations = {
+        'All fields are required!': _l('All fields are required!'),
+        'Message sent successfully!': _l('Message sent successfully!'),
+        'An error occurred while sending the message. Please try again later.': _l('An error occurred while sending the message. Please try again later.'),
+        'Invalid request method.': _l('Invalid request method.'),
+    }
+    return jsonify(translations)
 
 @app.route('/translations/<lang>/LC_MESSAGES/messages.po', methods=['GET'])
 def get_translation(lang):
@@ -155,7 +184,7 @@ def download_file(filename):
     try:
         logger.debug(f"Download request received for file: {filename}")
         file_path = os.path.join(FILE_DIRECTORY, filename)
-        if os.path.exists(file_path):
+        if (os.path.exists(file_path)):
             user_ip = request.remote_addr
             log_download(filename, user_ip)
             logger.debug(f"File {filename} exists and is being sent to the user.")
@@ -166,6 +195,9 @@ def download_file(filename):
     except Exception as e:
         logger.error(f"Error in /download/<filename> route: {e}")
         return jsonify({'error': 'An error occurred'}), 500
-    
+
 if __name__ == '__main__':
     app.run()
+
+# Import CLI commands
+import cli  # Ensure this line is at the end of your app.py

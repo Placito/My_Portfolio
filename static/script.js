@@ -53,17 +53,64 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.error('Menu or body element not found');
     }
 
-      // Function to set language
-      window.setLanguage = async function(event) {
+    // Function to update the page content based on the fetched translations
+    async function updatePageContent(translations) {
+        const elementsToUpdate = document.querySelectorAll('[data-i18n], [data-i18n-placeholder]');
+        elementsToUpdate.forEach((element) => {
+            const key = element.getAttribute('data-i18n');
+            if (key && translations[key]) {
+                console.log(`Key: ${key}, Value: ${translations[key]}`);
+                element.textContent = translations[key];
+            }
+            const placeholderKey = element.getAttribute('data-i18n-placeholder');
+            if (placeholderKey && translations[placeholderKey]) {
+                element.setAttribute('placeholder', translations[placeholderKey]);
+            } else {
+                console.warn(`Translation missing for key: ${key}`);
+            }
+        });
+
+        // Update the text translations from app.py
+        const textTranslations = await fetchTextTranslations(savedLang);
+        for (const [key, value] of Object.entries(textTranslations)) {
+            const element = document.querySelector(`[data-text-i18n="${key}"]`);
+            if (element) {
+                element.textContent = value;
+            }
+        }
+    }
+
+    // Function to fetch text translations from app.py
+    async function fetchTextTranslations(lang) {
+        try {
+            const response = await fetch(`/translations/${lang}/text`);
+            if (!response.ok) {
+                throw new Error('Failed to load text translations');
+            }
+            return await response.json();
+        } catch (error) {
+            console.error('Error fetching text translations:', error);
+            return {};
+        }
+    }
+
+    // Function to set language
+    window.setLanguage = async function(event) {
         const lang = event.target.value;
         if (lang) {
             try {
-                const response = await fetch(`/set_language/${lang}`);
+                const response = await fetch(`/set_language/${lang}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
                 if (response.ok) {
                     localStorage.setItem('lang', lang);
                     const translations = await fetchTranslations(lang);
-                    console.log(translations);
                     updatePageContent(translations);
+                    // Optionally, reload the page to ensure full translation application
+                    location.reload();
                 } else {
                     console.error('Failed to set language on server');
                 }
@@ -89,117 +136,57 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     // Function to parse .po file content
-function parsePO(content) {
-    const translations = {};
-    const lines = content.split('\n');
-    let msgid = '';
-    let msgstr = '';
-    let inMsgid = false;
-    let inMsgstr = false;
+    function parsePO(content) {
+        const translations = {};
+        const lines = content.split('\n');
+        let msgid = '';
+        let msgstr = '';
+        let inMsgid = false;
+        let inMsgstr = false;
 
-    for (let line of lines) {
-        line = line.trim();
-        if (line.startsWith('msgid')) {
-            inMsgid = true;
-            inMsgstr = false;
-            msgid = line.replace(/^msgid\s*"(.*)"/, '$1');
-        } else if (line.startsWith('msgstr')) {
-            inMsgstr = true;
-            inMsgid = false;
-            msgstr = line.replace(/^msgstr\s*"(.*)"/, '$1');
-        } else if (inMsgid && line.startsWith('"')) {
-            msgid += line.replace(/"(.*)"/, '$1');
-        } else if (inMsgstr && line.startsWith('"')) {
-            msgstr += line.replace(/"(.*)"/, '$1');
-        } else if (!line) {
-            // Empty line indicates end of a translation block
-            if (msgid && msgstr) {
-                translations[msgid] = msgstr;
-                msgid = '';
-                msgstr = '';
+        for (let line of lines) {
+            line = line.trim();
+            if (line.startsWith('msgid')) {
+                inMsgid = true;
+                inMsgstr = false;
+                msgid = line.replace(/^msgid\s*"(.*)"/, '$1');
+            } else if (line.startsWith('msgstr')) {
+                inMsgstr = true;
+                inMsgid = false;
+                msgstr = line.replace(/^msgstr\s*"(.*)"/, '$1');
+            } else if (inMsgid && line.startsWith('"')) {
+                msgid += line.replace(/"(.*)"/, '$1');
+            } else if (inMsgstr && line.startsWith('"')) {
+                msgstr += line.replace(/"(.*)"/, '$1');
+            } else if (!line) {
+                // Empty line indicates end of a translation block
+                if (msgid && msgstr) {
+                    translations[msgid] = msgstr;
+                    msgid = '';
+                    msgstr = '';
+                }
+                inMsgid = false;
+                inMsgstr = false;
             }
-            inMsgid = false;
-            inMsgstr = false;
         }
-    }
-    // Ensure the last translation is added if the file doesn't end with an empty line
-    if (msgid && msgstr) {
-        translations[msgid] = msgstr;
-    }
-    return translations;
-}
-// Function to parse .po file content
-function parsePO(content) {
-    const translations = {};
-    const lines = content.split('\n');
-    let msgid = '';
-    let msgstr = '';
-    let inMsgid = false;
-    let inMsgstr = false;
-
-    for (let line of lines) {
-        line = line.trim();
-        if (line.startsWith('msgid')) {
-            inMsgid = true;
-            inMsgstr = false;
-            msgid = line.replace(/^msgid\s*"(.*)"/, '$1');
-        } else if (line.startsWith('msgstr')) {
-            inMsgstr = true;
-            inMsgid = false;
-            msgstr = line.replace(/^msgstr\s*"(.*)"/, '$1');
-        } else if (inMsgid && line.startsWith('"')) {
-            msgid += line.replace(/"(.*)"/, '$1');
-        } else if (inMsgstr && line.startsWith('"')) {
-            msgstr += line.replace(/"(.*)"/, '$1');
-        } else if (!line) {
-            // Empty line indicates end of a translation block
-            if (msgid && msgstr) {
-                translations[msgid] = msgstr;
-                msgid = '';
-                msgstr = '';
-            }
-            inMsgid = false;
-            inMsgstr = false;
+        // Ensure the last translation is added if the file doesn't end with an empty line
+        if (msgid && msgstr) {
+            translations[msgid] = msgstr;
         }
-    }
-    // Ensure the last translation is added if the file doesn't end with an empty line
-    if (msgid && msgstr) {
-        translations[msgid] = msgstr;
-    }
-    return translations;
-}
-
-    // Function to update the page content based on the fetched translations
-    function updatePageContent(translations) {
-        const elementsToUpdate = document.querySelectorAll('[data-i18n], [data-i18n-placeholder]');
-        elementsToUpdate.forEach((element) => {
-            const key = element.getAttribute('data-i18n');
-            if (key) {
-                console.log(`Key: ${key}, Value: ${translations[key]}`);
-                element.textContent = translations[key];
-            }
-            const placeholderKey = element.getAttribute('data-i18n-placeholder');
-            if (placeholderKey && translations[placeholderKey]) {
-                element.setAttribute('placeholder', translations[placeholderKey]);
-            } else {
-                console.warn(`Translation missing for key: ${key}`);
-            }
-        });
+        return translations;
     }
 
     // On page load, check localStorage for language setting
-    document.addEventListener("DOMContentLoaded", function() {
-        const savedLang = localStorage.getItem('lang');
-        if (savedLang && savedLang !== "{{ lang|e }}") {
-            const langSelect = document.querySelector('select.form-select');
-            if (langSelect) {
-                langSelect.value = savedLang;
-            }
-            fetchTranslations(savedLang).then(translations => {
-                updatePageContent(translations);
-            });
+    const savedLang = localStorage.getItem('lang');
+    if (savedLang && savedLang !== "{{ lang|e }}") {
+        const langSelect = document.querySelector('select.form-select');
+        if (langSelect) {
+            langSelect.value = savedLang;
         }
-    });
+        fetchTranslations(savedLang).then(translations => {
+            updatePageContent(translations);
+        });
+    }
 
     $(document).ready(function() {
         $('#contact-form').on('submit', function(event) {
@@ -237,4 +224,3 @@ function parsePO(content) {
         });
     });
 });
-

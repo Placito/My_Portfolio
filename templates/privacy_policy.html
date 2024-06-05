@@ -1,46 +1,45 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}">
+<html lang="{{ current_locale }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="privacy-1">{{ _('Privacy Policy') }}</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <!-- Include Bootstrap CSS -->
+    <title>{{ _('Privacy Policy') }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
     <div class="terms-box">
         <div class="container pt-5">
-        <h1 data-i18n="privacy-1">{{ _('Privacy Policy') }}</h1>
+        <h1>{{ _('Privacy Policy') }}</h1>
         <br />
-        <h2 data-i18n="privacy-2">{{ _('Introduction') }}</h2>
-        <p data-i18n="privacy-3">{{ _('Your privacy is important to us. This privacy policy explains what information we collect, how we use it, and your rights in relation to it.') }}</p>
+        <h2 >{{ _('Introduction') }}</h2>
+        <p>{{ _('Your privacy is important to us. This privacy policy explains what information we collect, how we use it, and your rights in relation to it.') }}</p>
         
-        <h2 data-i18n="privacy-4">{{ _('Information We Collect') }}</h2>
-        <p data-i18n="privacy-5">{{ _('We collect information to provide better services to our users. This includes:') }}</p>
+        <h2>{{ _('Information We Collect') }}</h2>
+        <p>{{ _('We collect information to provide better services to our users. This includes:') }}</p>
         <ul>
-            <li data-i18n="IP"><strong>{{ _('IP Addresses:') }}</strong data-i18n="privacy-6"> {{ _('We track IP addresses to improve the security and performance of our service.') }}</li>
+            <li><strong>{{ _('IP Addresses:') }}</strong> {{ _('We track IP addresses to improve the security and performance of our service.') }}</li>
         </ul>
         
-        <h2 data-i18n="privacy-7">{{ _('How We Use Information') }}</h2>
-        <p data-i18n="collect">{{ _('The information we collect is used for:') }}</p>
+        <h2>{{ _('How We Use Information') }}</h2>
+        <p>{{ _('The information we collect is used for:') }}</p>
         <ul>
-            <li data-i18n="privacy-8"><strong data-i18n="security-policy">{{ _('Security') }}</strong> {{ _('Monitoring and preventing security threats.') }}</li>
-            <li data-i18n="privacy-9"><strong data-i18n="analytics-policy">{{ _('Analytics') }}</strong> {{ _('Understanding usage patterns to improve our service.') }}</li>
+            <li><strong>{{ _('Security') }}</strong> {{ _('Monitoring and preventing security threats.') }}</li>
+            <li><strong>{{ _('Analytics') }}</strong> {{ _('Understanding usage patterns to improve our service.') }}</li>
         </ul>
         
-        <h2 data-i18n="privacy-10">{{ _('Data Protection') }}</h2>
-        <p data-i18n="privacy-11">{{ _('We implement appropriate technical and organizational measures to protect the information we collect.') }}</p>
+        <h2>{{ _('Data Protection') }}</h2>
+        <p>{{ _('We implement appropriate technical and organizational measures to protect the information we collect.') }}</p>
         
-        <h2 data-i18n="privacy-12">{{ _('Changes to This Policy') }}</h2>
-        <p data-i18n="privacy-13">{{ _('We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.') }}</p>
+        <h2>{{ _('Changes to This Policy') }}</h2>
+        <p>{{ _('We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.') }}</p>
         
-        <h2 data-i18n="terms-contact1">{{ _('Contact Us') }}</h2>
-        <p data-i18n="terms-contact2">{{ _('If you have any questions about these terms, please contact us at ') }}<strong>mariana.placito@gmail.com</strong>.</p>
+        <h2>{{ _('Contact Us') }}</h2>
+        <p>{{ _('If you have any questions about these terms, please contact us at ') }}<strong>mariana.placito@gmail.com</strong>.</p>
         <br />
         <br />
         <!-- Button to go back to the home page -->
-        <a href="{{ url_for('home') }}" class="btn btn-primary" data-i18n="terms-contact3">{{ _('Back to Home') }}</a>
+        <a href="{{ url_for('home') }}" class="btn btn-primary">{{ _('Back to Home') }}</a>
     </div>
 </div>
 

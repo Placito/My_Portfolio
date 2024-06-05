@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-04 18:43+0100\n"
+"POT-Creation-Date: 2024-06-05 11:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,22 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
-
-#: app.py:87
-msgid "All fields are required!"
-msgstr ""
-
-#: app.py:104
-msgid "Message sent successfully!"
-msgstr ""
-
-#: app.py:107
-msgid "An error occurred while sending the message. Please try again later."
-msgstr ""
-
-#: app.py:109
-msgid "Invalid request method."
-msgstr ""
 
 #: templates/index.html:35
 msgid "Home"
@@ -67,6 +51,15 @@ msgstr ""
 
 #: templates/index.html:57
 msgid "Portuguese"
+msgstr ""
+
+#: templates/index.html:66 templates/privacy_policy.html:6
+#: templates/privacy_policy.html:13
+msgid "Privacy Policy"
+msgstr ""
+
+#: templates/index.html:67 templates/terms.html:6 templates/terms.html:14
+msgid "Terms of Service"
 msgstr ""
 
 #: templates/index.html:76 templates/index.html:92
@@ -292,10 +285,6 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
-#: templates/privacy_policy.html:6 templates/privacy_policy.html:13
-msgid "Privacy Policy"
-msgstr ""
-
 #: templates/privacy_policy.html:15 templates/terms.html:16
 msgid "Introduction"
 msgstr ""
@@ -380,10 +369,6 @@ msgstr ""
 
 #: templates/privacy_policy.html:42 templates/terms.html:40
 msgid "Back to Home"
-msgstr ""
-
-#: templates/terms.html:6 templates/terms.html:14
-msgid "Terms of Service"
 msgstr ""
 
 #: templates/terms.html:17
