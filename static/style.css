@@ -283,7 +283,10 @@ footer {
 }
 .terms {
     display: flex;
-    justify-content:space-evenly;
+    align-items: center;
+    margin: auto;
+    gap:5px;
+    width: fit-content;
    } 
 .terms-box {
     background-color: #021124;
