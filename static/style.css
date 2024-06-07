@@ -86,7 +86,7 @@ html, body {
     margin-left: 330px;
 }
 .home {
-    background-image: url(./img/banner.jpg);
+    background-image: url(./img/banner.avif);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -281,6 +281,9 @@ footer {
     background-color: #021124;
     transition: 0.3s;
 }
+.copy {
+    font-size: 16px;
+}
 .terms {
     display: flex;
     align-items: center;
@@ -288,6 +291,11 @@ footer {
     gap:5px;
     width: fit-content;
    } 
+.terms a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+} 
 .terms-box {
     background-color: #021124;
     color: #fff;

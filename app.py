@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, request, session, jsonify, send_file
 from flask_mail import Mail, Message
 from flask_babel import Babel, _, lazy_gettext as _l, gettext
+from flask_compress import Compress
 from dotenv import load_dotenv
 import os
 import logging
@@ -41,6 +42,7 @@ mail_settings = {
 app.config.update(mail_settings)
 mail = Mail(app)
 babel = Babel(app)
+Compress(app)
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'pt']
 
