@@ -317,6 +317,14 @@ footer {
         padding: 20px 15px;
     }
 }
+@media (max-width: 1102px) {
+    footer {
+        width: 325px;
+    }
+    header {
+        width: 325px;
+    }
+}
 @media (max-width: 1580px) {
     .card-square {
         height: 50vh;

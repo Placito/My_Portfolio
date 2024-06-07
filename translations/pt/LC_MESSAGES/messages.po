@@ -24,7 +24,7 @@ msgstr "Todos os campos são obrigatórios!"
 
 #: app.py:125
 msgid "Message sent successfully!"
-msgstr "Menbsagem enviada com sucesso!"
+msgstr "Mensagem enviada com sucesso!"
 
 #: app.py:130
 msgid "An error occurred while sending the message. Please try again later."
@@ -92,7 +92,7 @@ msgid ""
 "how things work behind the scenes, which led me to combine these two "
 "areas."
 msgstr ""
-"Proativa desenvolvedora de Full Stack. Comecei a minha jornada com uma "
+"Desenvolvedora proactiva de Full Stack. Comecei a minha jornada com uma "
 "licenciatura em Biologia Humana, que mais tarde me levou a descobrir "
 "novas habilidades com um curso de Design, que despertou em mim uma nova "
 "paixão pela área de programação. Eu tenho uma aptidão natural para o "
