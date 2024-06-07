@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     if (menuMobile && body) {
         menuMobile.addEventListener('click', () => {
-            console.log('Menu toggle clicked'); // Log menu toggle click
+            console.log('Menu toggle clicked');
             if (menuMobile.classList.contains('bi-list')) {
                 menuMobile.classList.replace('bi-list', 'bi-x');
             } else {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         navItems.forEach(item => {
             item.addEventListener('click', () => {
-                console.log('Nav item clicked'); // Log nav item click
+                console.log('Nav item clicked');
                 if (body.classList.contains('menu-nav-active')) {
                     body.classList.remove('menu-nav-active');
                     menuMobile.classList.replace('bi-x', 'bi-list');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const animeItems = document.querySelectorAll("[data-anime]");
 
         const animeScroll = () => {
-            console.log('Scroll event fired'); // Log scroll event
+            console.log('Scroll event fired');
             const windowTop = window.scrollY + window.innerHeight * 0.85;
             animeItems.forEach((element) => {
                 if (windowTop > element.offsetTop) {
@@ -53,47 +53,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.error('Menu or body element not found');
     }
 
-    // Function to update the page content based on the fetched translations
-    async function updatePageContent(translations) {
-        const elementsToUpdate = document.querySelectorAll('[data-i18n], [data-i18n-placeholder]');
-        elementsToUpdate.forEach((element) => {
-            const key = element.getAttribute('data-i18n');
-            if (key && translations[key]) {
-                console.log(`Key: ${key}, Value: ${translations[key]}`);
-                element.textContent = translations[key];
-            }
-            const placeholderKey = element.getAttribute('data-i18n-placeholder');
-            if (placeholderKey && translations[placeholderKey]) {
-                element.setAttribute('placeholder', translations[placeholderKey]);
-            } else {
-                console.warn(`Translation missing for key: ${key}`);
-            }
-        });
-
-        // Update the text translations from app.py
-        const textTranslations = await fetchTextTranslations(savedLang);
-        for (const [key, value] of Object.entries(textTranslations)) {
-            const element = document.querySelector(`[data-text-i18n="${key}"]`);
-            if (element) {
-                element.textContent = value;
-            }
-        }
-    }
-
-    // Function to fetch text translations from app.py
-    async function fetchTextTranslations(lang) {
-        try {
-            const response = await fetch(`/translations/${lang}/text`);
-            if (!response.ok) {
-                throw new Error('Failed to load text translations');
-            }
-            return await response.json();
-        } catch (error) {
-            console.error('Error fetching text translations:', error);
-            return {};
-        }
-    }
-
     // Function to set language
     window.setLanguage = async function(event) {
         const lang = event.target.value;
@@ -108,7 +67,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 if (response.ok) {
                     localStorage.setItem('lang', lang);
                     const translations = await fetchTranslations(lang);
-                    updatePageContent(translations);
                     // Optionally, reload the page to ensure full translation application
                     location.reload();
                 } else {
@@ -174,6 +132,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
             translations[msgid] = msgstr;
         }
         return translations;
+    }
+
+    // Function to update page content with translations
+    function updatePageContent(translations) {
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.getAttribute('data-translate');
+            if (translations[key]) {
+                element.textContent = translations[key];
+            }
+        });
     }
 
     // On page load, check localStorage for language setting
