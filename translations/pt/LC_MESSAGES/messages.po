@@ -100,7 +100,6 @@ msgstr ""
 "bastidores, o que me levou a combinar estas duas áreas."
 
 #: templates/index.html:93
-#, fuzzy
 msgid ""
 "Is an entry-level position in the field of software development, "
 "responsible for working on both the front-end and back-end portions of "
@@ -254,7 +253,6 @@ msgid "Graphic designer"
 msgstr "Designer gráfica"
 
 #: templates/index.html:224
-#, fuzzy
 msgid ""
 "Assisting in the management of the company's website development, like, "
 "taking photographs and designing them, updating its content in the "
@@ -281,7 +279,6 @@ msgstr ""
 "e-commerce onde os utilizadores podem ​​navegar, comentar e comprar."
 
 #: templates/index.html:270
-#, fuzzy
 msgid "Is an application to assist in task management, for internal roles."
 msgstr "É uma aplicação para assitir na gestão de tarefas internas."
 
@@ -383,7 +380,7 @@ msgstr "Como usamos a informação que recolhemos"
 
 #: templates/privacy_policy.html:25
 msgid "The information we collect is used for:"
-msgstr "a informação que recolhemos é usada para:"
+msgstr "A informação que recolhemos é usada para:"
 
 #: templates/privacy_policy.html:27
 msgid "Security"
@@ -406,7 +403,6 @@ msgid "Data Protection"
 msgstr "Proteção de dados"
 
 #: templates/privacy_policy.html:32
-#, fuzzy
 msgid ""
 "We implement appropriate technical and organizational measures to protect"
 " the information we collect."
@@ -442,7 +438,6 @@ msgid "Back to Home"
 msgstr "Voltar ao Início"
 
 #: templates/terms.html:17
-#, fuzzy
 msgid ""
 "These terms of service govern your use of our application. By using our "
 "application, you agree to these terms."
@@ -455,7 +450,6 @@ msgid "Use of Data"
 msgstr "Uso dos dados"
 
 #: templates/terms.html:20
-#, fuzzy
 msgid ""
 "By using our application, you agree that we can track your IP address and"
 " use it for:"
@@ -488,7 +482,6 @@ msgid "Users are responsible for:"
 msgstr "Utilizadores são responsáveis por:"
 
 #: templates/terms.html:29
-#, fuzzy
 msgid ""
 "Ensuring that their use of the service complies with all applicable laws "
 "and regulations."
