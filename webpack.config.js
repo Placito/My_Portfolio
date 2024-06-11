@@ -4,7 +4,7 @@ module.exports = {
   mode: 'production', // Set the mode to production
   entry: {
     main: './static/script.js',
-    // Remove customBootstrap entry if not needed
+    customBootstrap: './static/custom-bootstrap.js'
   },
   output: {
     filename: '[name].bundle.js',
