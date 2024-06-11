@@ -240,7 +240,7 @@
                                     <div class="col">
                                         <div class="card">
                                             <div class="card-square">
-                                                <img src="../static/img/bike.avif" class="card-img-top" alt="Bicycle_Shop">
+                                                <img data-src="../static/img/bike.avif" class="card-img-top lazyload" alt="Bicycle_Shop" defer>
                                             </div>
                                             <div class="card-body">
                                                 <h3 class="card-title">Bicycle_Shop</h3>
@@ -260,7 +260,7 @@
                                     <div class="col">
                                         <div class="card">
                                             <div class="card-square">
-                                                <img src="../static/img/gest.avif" class="card-img-top" alt="GEST_tasks">
+                                                <img data-src="../static/img/gest.avif" class="card-img-top lazyload" alt="GEST_tasks">
                                             </div>
                                             <div class="card-body">
                                                 <h3 class="card-title">GEST_tasks</h3>
@@ -279,7 +279,7 @@
                                     <div class="col">
                                         <div class="card">
                                             <div class="card-square">
-                                                <img src="../static/img/vida.avif" class="card-img-top" alt="Vida Sustentável">
+                                                <img data-src="../static/img/vida.avif" class="card-img-top lazyload" alt="Vida Sustentável" defer>
                                             </div>
                                             <div class="card-body">
                                                 <h3 class="card-title">{{ _('My design portfolio') }}</h3>
@@ -358,6 +358,7 @@
         </main>
         <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ url_for('static', filename='script.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
         <!-- Defer non-critical JavaScript -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
         <script>
