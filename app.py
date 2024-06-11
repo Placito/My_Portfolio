@@ -117,9 +117,10 @@ def send():
                 sender=app.config.get("MAIL_USERNAME"),
                 recipients=['mariana.placito@gmail.com'],
                 body=f'''
-                    {"Portfolio Contact from"} {formContact.name}
+                    Portfolio Contact from {formContact.name}
+                    With the email: {formContact.email}
 
-                    {"Message"}:
+                    Message:
                     {formContact.message}
                 '''
             )
