@@ -1,8 +1,10 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'production', // Set the mode to production
   entry: {
-    main: './static/script.js'
+    main: './static/script.js',
+    // Remove customBootstrap entry if not needed
   },
   output: {
     filename: '[name].bundle.js',
@@ -13,6 +15,11 @@ module.exports = {
     splitChunks: {
       chunks: 'all',
     },
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'static')
+    }
   },
   module: {
     rules: [
