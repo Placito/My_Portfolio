@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, session, jsonify, send_file
+from flask import Flask, json, render_template, redirect, request, session, jsonify, send_file
 from flask_mail import Mail, Message
 from flask_babel import Babel, _, lazy_gettext as _l, gettext
 from flask_compress import Compress
@@ -20,6 +20,7 @@ FILE_DIRECTORY = os.path.join('static', 'img')
 # File to log downloads
 LOG_FILE = os.path.join('static', 'downloads', 'logfile.txt')
 
+# Set up logging
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
@@ -39,10 +40,13 @@ mail_settings = {
     "MAIL_PASSWORD": os.getenv("MAIL_PASSWORD")
 }
 
+# Configure Flask app with mail settings
 app.config.update(mail_settings)
 mail = Mail(app)
 babel = Babel(app)
 Compress(app)
+
+# Set default and supported locales
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'pt']
 
@@ -53,50 +57,57 @@ class Contact:
         self.email = email
         self.message = message
 
+# Function to get the locale
 def get_locale():
     # Check if the language query parameter is set and valid
     if 'lang' in request.args:
         lang = request.args.get('lang')
-        if lang in ['en', 'pt']:
+        if lang in app.config['BABEL_SUPPORTED_LOCALES']:
             session['lang'] = lang
             return session['lang']
     # If not set via query, check if we have it stored in the session
     elif 'lang' in session:
         return session.get('lang')
     # Otherwise, use the browser's preferred language
-    return request.accept_languages.best_match(['en', 'pt'])
+    return request.accept_languages.best_match(app.config['BABEL_SUPPORTED_LOCALES'])
 
+# Initialize Babel with the locale selector
 babel = Babel(app, locale_selector=get_locale)
 
+# Route to set the language
 @app.route('/setlang')
 def setlang():
     lang = request.args.get('lang', 'en')
     session['lang'] = lang
     return redirect(request.referrer)
 
+# Context processor to inject Babel
 @app.context_processor
 def inject_babel():
     return dict(_=gettext)
 
+# Context processor to inject locale
 @app.context_processor
 def inject_locale():
-    # This makes the function available directly, allowing you to call it in the template
     return {'get_locale': get_locale}
 
-# Define routes
+# Define the home route
 @app.route('/')
 def home():
-    print("Home route accessed")  # Debug output
+    logger.debug("Home route accessed")
     return render_template('index.html', current_locale=get_locale())
 
+# Define the privacy policy route
 @app.route('/privacy_policy.html')
 def privacy_policy():
     return render_template('privacy_policy.html', current_locale=get_locale())
 
+# Define the terms route
 @app.route('/terms.html')
 def terms():
     return render_template('terms.html', current_locale=get_locale())
 
+# Route to handle form submissions
 @app.route('/send', methods=['POST'])
 def send():
     if request.method == 'POST':
@@ -128,26 +139,30 @@ def send():
             return jsonify({'status': 'success', 'message': _l('Message sent successfully!')})
 
         except Exception as e:
+            logger.error(f"Error while sending message: {e}")
             return jsonify({'status': 'error', 'message': _l('An error occurred while sending the message. Please try again later.')})
     
     return jsonify({'status': 'error', 'message': _l('Invalid request method.')})
 
+# Route to set the language
 @app.route('/set_language/<language>', methods=['POST'])
 def set_language(language):
     if language in app.config['BABEL_SUPPORTED_LOCALES']:
         session['lang'] = language
     return jsonify({'status': 'success', 'lang': language})
 
+# Route to get translations
 @app.route('/translations/<lang>/LC_MESSAGES/messages.po', methods=['GET'])
 def get_translation(lang):
     file_path = os.path.join('translations', lang, 'LC_MESSAGES', 'messages.po')
-    print(f"Looking for file at: {file_path}")  # Debug output
+    logger.debug(f"Looking for file at: {file_path}")
     if os.path.exists(file_path):
         return send_file(file_path)
     else:
-        print(f"File not found at: {file_path}")  # Debug output
+        logger.error(f"File not found at: {file_path}")
         return jsonify({'error': 'File not found'}), 404
 
+# Function to log downloads
 def log_download(file_name, user_ip):
     log_entry = f"{datetime.now()} - {user_ip} downloaded {file_name}\n"
     logger.debug(f"Logging download: {log_entry}")
@@ -159,6 +174,7 @@ def log_download(file_name, user_ip):
     except Exception as e:
         logger.error(f"Error writing log entry: {e}")
 
+# Route to send the CV file
 @app.route('/cv_file')
 def cv_file():
     try:
@@ -172,12 +188,13 @@ def cv_file():
         logger.error(f"Error in /cv_file route: {e}")
         return jsonify({'error': 'File not found'}), 404
 
+# Route to download a file
 @app.route('/download/<filename>', methods=['GET'])
 def download_file(filename):
     try:
         logger.debug(f"Download request received for file: {filename}")
         file_path = os.path.join(FILE_DIRECTORY, filename)
-        if (os.path.exists(file_path)):
+        if os.path.exists(file_path):
             user_ip = request.remote_addr
             log_download(filename, user_ip)
             logger.debug(f"File {filename} exists and is being sent to the user.")
@@ -188,6 +205,18 @@ def download_file(filename):
     except Exception as e:
         logger.error(f"Error in /download/<filename> route: {e}")
         return jsonify({'error': 'An error occurred'}), 500
+
+# Route for handling push notifications
+# Simulate a database with a list
+subscriptions = []
+
+@app.route('/save-subscription', methods=['POST'])
+def save_subscription():
+    subscription = request.json
+    subscriptions.append(subscription)
+    with open('subscriptions.json', 'w') as f:
+        json.dump(subscriptions, f)
+    return jsonify({'status': 'success'}), 201
 
 if __name__ == '__main__':
     app.run()

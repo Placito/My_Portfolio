@@ -1,5 +1,6 @@
 // Import the 'web-push' library
 var push = require('web-push');
+var fs = require('fs');
 
 // Define the VAPID keys
 let vapidKeys = {
@@ -14,22 +15,16 @@ push.setVapidDetails(
     vapidKeys.privateKey
 );
 
-// Pull the subscription object from the database
-// This object should be obtained from a previous subscription request by the client
-let sub = {
-    // Example subscription object structure
-    endpoint: 'https://fcm.googleapis.com/fcm/send/example-endpoint',
-    keys: {
-        auth: 'example-auth-key',
-        p256dh: 'example-p256dh-key'
-    }
-};
+// Read subscription objects from the JSON file
+let subscriptions = JSON.parse(fs.readFileSync('subscriptions.json'));
 
-// Send a push notification to the subscription
-push.sendNotification(sub, "test message")
-    .then(response => {
-        console.log('Push notification sent successfully:', response);
-    })
-    .catch(error => {
-        console.error('Error sending push notification:', error);
-    });
+// Send a push notification to each subscription
+subscriptions.forEach(sub => {
+    push.sendNotification(sub, "test message")
+        .then(response => {
+            console.log('Push notification sent successfully:', response);
+        })
+        .catch(error => {
+            console.error('Error sending push notification:', error);
+        });
+});

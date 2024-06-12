@@ -7,11 +7,13 @@ self.addEventListener('install', function(event) {
         caches.open('my-cache').then(function(cache) {
             return cache.addAll([
                 // List of assets to cache
-                '/index.html',
-                '/styles.css',
-                '/script.js',
+                '/static/index.html',
+                '/static/styles.min.css',
+                '/static/script.js',
                 // Add other assets here
-            ]);
+            ]).catch(function(error) {
+                console.error('Failed to cache:', error);
+            });
         })
     );
 });
@@ -54,7 +56,7 @@ self.addEventListener('fetch', function(event) {
             });
         }).catch(function() {
             // Handle errors
-            return caches.match('/offline.html');
+            return caches.match('/static/offline.html');
         })
     );
 });
@@ -66,8 +68,8 @@ self.addEventListener('push', function(event) {
     const title = 'Push Notification';
     const options = {
         body: event.data ? event.data.text() : 'Default body',
-        icon: '/icon.png',
-        badge: '/badge.png'
+        icon: '/static/icon.png',
+        badge: '/static/badge.png'
     };
     event.waitUntil(
         self.registration.showNotification(title, options)
