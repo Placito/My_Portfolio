@@ -23,9 +23,21 @@ export async function setLanguage(event) {
 }
 
 async function fetchTranslations(lang) {
+    if (lang === 'en') {
+        // Fetch the current locale from the server if the language is 'en'
+        const localeResponse = await fetch('/get_locale');
+        const data = await localeResponse.json();
+        console.warn(`Using default locale: ${data.locale}`);
+        return {};
+    }
+
     try {
         const response = await fetch(`/translations/${lang}/LC_MESSAGES/messages.po`);
         if (!response.ok) {
+            if (response.status === 404) {
+                console.warn(`Translations file not found for language: ${lang}`);
+                return {}; // Return an empty object if file is not found
+            }
             throw new Error('Failed to load translations');
         }
         const poContent = await response.text();

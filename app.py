@@ -1,4 +1,4 @@
-from flask import Flask, json, render_template, redirect, request, session, jsonify, send_file
+from flask import Flask, render_template, redirect, request, session, jsonify, send_file
 from flask_mail import Mail, Message
 from flask_babel import Babel, _, lazy_gettext as _l, gettext
 from flask_compress import Compress
@@ -90,6 +90,11 @@ def inject_babel():
 @app.context_processor
 def inject_locale():
     return {'get_locale': get_locale}
+
+# Route to get the current locale
+@app.route('/get_locale', methods=['GET'])
+def get_current_locale():
+    return jsonify({'locale': get_locale()})
 
 # Define the home route
 @app.route('/')
@@ -207,16 +212,17 @@ def download_file(filename):
         return jsonify({'error': 'An error occurred'}), 500
 
 # Route for handling push notifications
-# Simulate a database with a list
-subscriptions = []
-
-@app.route('/save-subscription', methods=['POST'])
-def save_subscription():
-    subscription = request.json
-    subscriptions.append(subscription)
-    with open('subscriptions.json', 'w') as f:
-        json.dump(subscriptions, f)
-    return jsonify({'status': 'success'}), 201
+@app.route('/push_notification', methods=['POST'])
+def push_notification():
+    try:
+        subscription = request.json
+        # Save the subscription object to your database here
+        # For simplicity, this is just logging the subscription
+        logger.debug(f"Received subscription: {subscription}")
+        return jsonify({'status': 'success'}), 201
+    except Exception as e:
+        logger.error(f"Error in /push_notification route: {e}")
+        return jsonify({'status': 'error', 'message': 'An error occurred'}), 500
 
 if __name__ == '__main__':
     app.run()
