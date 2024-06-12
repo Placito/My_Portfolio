@@ -18,7 +18,7 @@
     <i class="bi bi-list menu-mobile"></i>
     <aside id="header" class="header">
         <section class="profile">
-            <img src="../static/img/perfil-300.avif" alt="picture of Mariana" width="300" height="auto" loading="lazy">
+            <img src="../static/img/perfil.avif" alt="picture of Mariana" width="300" height="auto" loading="lazy">
             <h1>Mariana Plácito</h1>
             <div class="social-links mt-4 text-center">
                 <a href="https://github.com/Placito" aria-label="Read more about Mariana in GitHub Profile"  target="_blank">
@@ -89,7 +89,7 @@
                 </div>
                 <div class="row mt-4">
                     <div class="col-md-4">
-                        <img class="img-fluid shadow" data-anime="left" src="../static/img/perfil-300.avif" alt="foto da Mariana" width="300" height="auto" loading="lazy">
+                        <img class="img-fluid shadow" data-anime="left" src="../static/img/perfil.avif" alt="foto da Mariana" width="300" height="auto" loading="lazy">
                     </div>
                     <div class="col-md-8" data-anime="right">
                         <h3>{{ _('Full Stack Developer') }}</h3>
@@ -242,7 +242,7 @@
                                 <div class="col">
                                     <div class="card">
                                         <div class="card-square">
-                                            <img data-src="../static/img/bike-300.avif" class="card-img-top lazyload" alt="Bicycle_Shop" width="300" height="auto">
+                                            <img data-src="../static/img/bike.avif" class="card-img-top lazyload" alt="Bicycle_Shop" width="300" height="auto">
                                         </div>
                                         <div class="card-body">
                                             <h3 class="card-title">Bicycle_Shop</h3>
@@ -262,7 +262,7 @@
                                 <div class="col">
                                     <div class="card">
                                         <div class="card-square">
-                                            <img data-src="../static/img/gest-300.avif" class="card-img-top lazyload" alt="GEST_tasks" width="300" height="auto">
+                                            <img data-src="../static/img/gest.avif" class="card-img-top lazyload" alt="GEST_tasks" width="300" height="auto">
                                         </div>
                                         <div class="card-body">
                                             <h3 class="card-title">GEST_tasks</h3>
@@ -281,7 +281,7 @@
                                 <div class="col">
                                     <div class="card">
                                         <div class="card-square">
-                                            <img data-src="../static/img/vida-300.avif" class="card-img-top lazyload" alt="Vida Sustentável" width="300" height="auto">
+                                            <img data-src="../static/img/vida.avif" class="card-img-top lazyload" alt="Vida Sustentável" width="300" height="auto">
                                         </div>
                                         <div class="card-body">
                                             <h3 class="card-title">{{ _('My design portfolio') }}</h3>
@@ -356,6 +356,7 @@
                     </div>
                 </div>
             </div>
+            <button onclick="subscribe()">Subscribe</button>
         </section>
     </main>
     <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -364,13 +365,30 @@
     <!-- Defer non-critical JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script>
+        // Check if service workers are supported by the browser
         if ('serviceWorker' in navigator) {
+            // Register the service worker located at '../static/sw.js'
             navigator.serviceWorker.register('../static/sw.js').then(function(registration) {
                 console.log('Service Worker registered with scope:', registration.scope);
             }).catch(function(error) {
                 console.log('Service Worker registration failed:', error);
             });
         }
-    </script>
+    
+        // Function to subscribe the user to push notifications
+        async function subscribe() {
+            // Wait until the service worker is ready
+            let sw = await navigator.serviceWorker.ready;
+    
+            // Subscribe to push notifications
+            let push = await sw.pushManager.subscribe({
+                userVisibleOnly: true, // Ensure that the user sees notifications
+                applicationServerKey: 'BGfCBSTIIey3gnPXdtI5Z0Qz1qy_eShWxmUdy2jQnot83_xm84gl5CV-b1Q0k8CrsNPlc1RBj2lVHt0_vxAS-mM' // VAPID public key
+            });
+    
+            // Log the subscription object as a JSON string
+            console.log(JSON.stringify(push));
+        }
+    </script>    
 </body>
 </html>
