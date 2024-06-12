@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, session, jsonify, send_file
+from flask import Flask, json, render_template, redirect, request, session, jsonify, send_file
 from flask_mail import Mail, Message
 from flask_babel import Babel, _, lazy_gettext as _l, gettext
 from flask_compress import Compress
@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 import os
 import logging
 from datetime import datetime
+from pywebpush import webpush, WebPushException
 
 # Load environment variables from .env file
 load_dotenv()
@@ -13,6 +14,11 @@ load_dotenv()
 # Initialize the Flask application
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY")
+
+# VAPID keys
+VAPID_PUBLIC_KEY = os.getenv("VAPID_PUBLIC_KEY")
+VAPID_PRIVATE_KEY = os.getenv("VAPID_PRIVATE_KEY")
+VAPID_CLAIMS = {"sub": "mailto:mariana.placito@gmail.com"}
 
 # Directory where files are stored
 FILE_DIRECTORY = os.path.join('static', 'img')
@@ -211,18 +217,20 @@ def download_file(filename):
         logger.error(f"Error in /download/<filename> route: {e}")
         return jsonify({'error': 'An error occurred'}), 500
 
-# Route for handling push notifications
-@app.route('/push_notification', methods=['POST'])
-def push_notification():
+@app.route('/subscribe', methods=['POST'])
+def subscribe():
+    subscription_info = request.get_json()
     try:
-        subscription = request.json
-        # Save the subscription object to your database here
-        # For simplicity, this is just logging the subscription
-        logger.debug(f"Received subscription: {subscription}")
-        return jsonify({'status': 'success'}), 201
-    except Exception as e:
-        logger.error(f"Error in /push_notification route: {e}")
-        return jsonify({'status': 'error', 'message': 'An error occurred'}), 500
+        webpush(
+            subscription_info,
+            json.dumps({"title": "Push Notification"}),
+            vapid_private_key=VAPID_PRIVATE_KEY,
+            vapid_claims=VAPID_CLAIMS
+        )
+        return jsonify({"success": True}), 201
+    except WebPushException as ex:
+        print("I'm sorry, Dave, but I can't do that: {}", repr(ex))
+        return jsonify({"success": False}), 500
 
 if __name__ == '__main__':
     app.run()
