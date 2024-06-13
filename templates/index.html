@@ -54,7 +54,7 @@
                 </li>
             </ul>
             <br/>
-            <select class="form-select" aria-label="form-select-sm" onchange="setLanguage(event)">
+            <select class="form-select" name="language" aria-label="form-select-sm" onchange="setLanguage(event)">
                 <option value="" selected>{{ _('Select one language') }}</option>
                 <option value="en">{{ _('English') }}</option>
                 <option value="pt">{{ _('Portuguese') }}</option>
@@ -338,15 +338,15 @@
                             <form id="contact-form" class="row g-3 mt-2" action="/send" method="POST">
                                 <div class="col-md-6">
                                 <label id="label-name" for="name" class="form-label">{{ _('Name:') }}</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="{{ _('Write your name') }}...">
+                                <input type="text" class="form-control" id="name" autocomplete="given-name" name="name" placeholder="{{ _('Write your name') }}...">
                                 </div>
                                 <div class="col-md-6">
                                 <label id="label-email" for="email" class="form-label">{{ _('Email:') }}</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="{{ _('Write your email') }}...">
+                                <input type="email" class="form-control" id="email" autocomplete="given-email" name="email" placeholder="{{ _('Write your email') }}...">
                                 </div>
                                 <div class="col-12">
                                     <label id="label-message" for="message" class="form-label">{{ _('Message:') }}</label>
-                                    <textarea class="form-control" id="message" name="message" rows="10" placeholder="{{ _('Write your message') }}..."></textarea>
+                                    <textarea class="form-control" id="message" name="message" autocomplete="given-message" required minlength="4" maxlength="10" size="10" placeholder="{{ _('Write your message') }}..."></textarea>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center mt-4">
                                 <button id="btn-send" type="submit" class="btn btn-outline-primary" >{{ _('Send') }}</button>
@@ -356,7 +356,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-outline-primary" type="submit" onclick="subscribe()">Subscribe</button>
+            <button id="subscribe" class="btn btn-outline-primary" type="button">Subscribe</button>
         </section>
     </main>
     <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -366,36 +366,16 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/static/sw.js').then(function (registration) {
-                console.log('Service worker registered with scope:', registration.scope);
-            }).catch(function (error) {
-                console.log('Service Worker registration failed:', error);
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/static/sw.js')
+                .then(registration => {
+                    console.log('Service Worker registered successfully:', registration);
+                })
+                .catch(error => {
+                    console.log('Service Worker registration failed:', error);
+                });
             });
-        } else {
-            console.log('Service workers are not supported by this browser.');
         }
-
-        async function subscribe() {
-            try {
-                let sw = await navigator.serviceWorker.ready;
-                let push = await sw.pushManager.subscribe({
-                    userVisibleOnly: true,
-                    applicationServerKey: 'BGfCBSTIley3gnPXdtIZ5Z0Qlzy_eShWxmUdy2jQnot83_xm84gL5CV-b10QK8CrsNPc1RBj21VHt0_vxAS-mM'
-                });
-                console.log(JSON.stringify(push));
-
-                // Send subscription to server
-                await fetch('/subscribe', {
-                    method: 'POST',
-                    body: JSON.stringify(push),
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
-            } catch (error) {
-                console.error('Subscription failed:', error);
-            }
-        }
-    </script>   
+        </script>
 </body>
 </html>

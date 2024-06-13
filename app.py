@@ -2,6 +2,7 @@ from flask import Flask, json, render_template, redirect, request, session, json
 from flask_mail import Mail, Message
 from flask_babel import Babel, _, lazy_gettext as _l, gettext
 from flask_compress import Compress
+from flask_cors import CORS, cross_origin
 from dotenv import load_dotenv
 import os
 import logging
@@ -14,6 +15,7 @@ load_dotenv()
 # Initialize the Flask application
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY")
+CORS(app)  # Enable CORS
 
 # VAPID keys
 VAPID_PUBLIC_KEY = os.getenv("VAPID_PUBLIC_KEY")
@@ -82,6 +84,7 @@ babel = Babel(app, locale_selector=get_locale)
 
 # Route to set the language
 @app.route('/setlang')
+@cross_origin()
 def setlang():
     lang = request.args.get('lang', 'en')
     session['lang'] = lang
@@ -99,27 +102,32 @@ def inject_locale():
 
 # Route to get the current locale
 @app.route('/get_locale', methods=['GET'])
+@cross_origin()
 def get_current_locale():
     return jsonify({'locale': get_locale()})
 
 # Define the home route
 @app.route('/')
+@cross_origin()
 def home():
     logger.debug("Home route accessed")
     return render_template('index.html', current_locale=get_locale())
 
 # Define the privacy policy route
 @app.route('/privacy_policy.html')
+@cross_origin()
 def privacy_policy():
     return render_template('privacy_policy.html', current_locale=get_locale())
 
 # Define the terms route
 @app.route('/terms.html')
+@cross_origin()
 def terms():
     return render_template('terms.html', current_locale=get_locale())
 
 # Route to handle form submissions
 @app.route('/send', methods=['POST'])
+@cross_origin()
 def send():
     if request.method == 'POST':
         try:
@@ -157,6 +165,7 @@ def send():
 
 # Route to set the language
 @app.route('/set_language/<language>', methods=['POST'])
+@cross_origin()
 def set_language(language):
     if language in app.config['BABEL_SUPPORTED_LOCALES']:
         session['lang'] = language
@@ -164,6 +173,7 @@ def set_language(language):
 
 # Route to get translations
 @app.route('/translations/<lang>/LC_MESSAGES/messages.po', methods=['GET'])
+@cross_origin()
 def get_translation(lang):
     file_path = os.path.join('translations', lang, 'LC_MESSAGES', 'messages.po')
     logger.debug(f"Looking for file at: {file_path}")
@@ -187,6 +197,7 @@ def log_download(file_name, user_ip):
 
 # Route to send the CV file
 @app.route('/cv_file')
+@cross_origin()
 def cv_file():
     try:
         file_name = 'resume.pdf'
@@ -201,6 +212,7 @@ def cv_file():
 
 # Route to download a file
 @app.route('/download/<filename>', methods=['GET'])
+@cross_origin()
 def download_file(filename):
     try:
         logger.debug(f"Download request received for file: {filename}")
@@ -218,6 +230,7 @@ def download_file(filename):
         return jsonify({'error': 'An error occurred'}), 500
 
 @app.route('/subscribe', methods=['POST'])
+@cross_origin()
 def subscribe():
     subscription_info = request.get_json()
     try:
