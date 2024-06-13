@@ -20,32 +20,31 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         document.querySelector('select.form-select').addEventListener('change', setLanguage);
     }
 
-    // Dynamic import and initialize form handler if contact form element is present
-    if (document.querySelector('#contact-form')) {
-        const { initFormHandler } = await import('./formHandler.js');
-        initFormHandler();
-    }
-
     // Dynamic import and initialize the subscribe button
     if (document.querySelector('#subscribe')) {
         const subscribe = async () => {
             console.log('subscribe function called');
             try {
                 console.log('Waiting for service worker to be ready...');
-                let sw = navigator.serviceWorker.ready;
-                console.log('Service Worker ready:', sw);
+                let swRegistration = await navigator.serviceWorker.ready;
+                console.log('Service Worker ready:', swRegistration);
 
-                let push = sw.pushManager.subscribe({
+                if (!swRegistration.pushManager) {
+                    console.error('Push Manager is not available.');
+                    return;
+                }
+
+                let pushSubscription = await swRegistration.pushManager.subscribe({
                     userVisibleOnly: true,
-                    applicationServerKey: 'BGfCBSTIIey3gnPXdtIZS2OQlzy_eShWxmUdy2jQnot83_xm84gL5CV-b10Qk8CrsNPLc1RBj21VHt0_vxAS-mM'
+                    applicationServerKey: 'BfGC8STIEy3gnPXdtIZS2QLzy_eShWxmUdy2jQnot83_xm84gLSCV-b10QK8crsNPLC1RBj21VHt0_vxAsM'
                 });
 
-                console.log('Push Subscription Object:', push);
+                console.log('Push Subscription Object:', pushSubscription);
 
                 // Send subscription to the server
                 await fetch('/subscribe', {
                     method: 'POST',
-                    body: JSON.stringify(push),
+                    body: JSON.stringify(pushSubscription),
                     headers: {
                         'Content-Type': 'application/json'
                     }
@@ -62,7 +61,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             } catch (error) {
                 console.error('Subscription failed:', error);
             }
-        }
+        };
 
         document.querySelector('#subscribe').addEventListener('click', subscribe);
     }
