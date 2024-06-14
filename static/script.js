@@ -12,9 +12,13 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     }
 
     if (document.querySelector('select.form-select')) {
-        const { setLanguage, loadSavedLanguage } = await import('./languageHandler.js');
-        loadSavedLanguage();
-        document.querySelector('select.form-select').addEventListener('change', setLanguage);
+        try {
+            const { setLanguage, loadSavedLanguage } = await import('./languageHandler.js');
+            loadSavedLanguage();
+            document.querySelector('select.form-select').addEventListener('change', setLanguage);
+        } catch (error) {
+            console.error('Error loading language handler:', error);
+        }
     }
 
     if (document.querySelector('#contact-form')) {
