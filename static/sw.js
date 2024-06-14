@@ -3,7 +3,7 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open('my-cache').then(function(cache) {
             return cache.addAll([
-                cache.add('/templates/index.html').catch(e => console.error('Failed to cache /templates/index.html:', e)),
+                cache.add('../templates/index.html').catch(e => console.error('Failed to cache /templates/index.html:', e)),
                 cache.add('/static/style.min.css').catch(e => console.error('Failed to cache /static/style.min.css:', e)),
                 cache.add('/static/script.js').catch(e => console.error('Failed to cache /static/script.js:', e)),
                 cache.add('/static/sw.js').catch(e => console.error('Failed to cache /static/sw.js:', e))

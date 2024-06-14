@@ -27,7 +27,6 @@ async function fetchTranslations(lang) {
         // Fetch the current locale from the server if the language is 'en'
         const localeResponse = await fetch('/get_locale');
         const data = await localeResponse.json();
-        console.warn(`Using default locale: ${data.locale}`);
         return {};
     }
 
