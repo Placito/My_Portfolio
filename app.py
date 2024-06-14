@@ -1,4 +1,4 @@
-from flask import Flask, json, render_template, redirect, request, session, jsonify, send_file
+from flask import Flask, json, render_template, redirect, request, send_from_directory, session, jsonify, send_file
 from flask_mail import Mail, Message
 from flask_babel import Babel, _, lazy_gettext as _l, gettext
 from flask_compress import Compress
@@ -13,7 +13,7 @@ from pywebpush import webpush, WebPushException
 load_dotenv()
 
 # Initialize the Flask application
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 app.secret_key = os.getenv("SECRET_KEY")
 CORS(app)  # Enable CORS
 
@@ -99,6 +99,11 @@ def inject_babel():
 @app.context_processor
 def inject_locale():
     return {'get_locale': get_locale}
+
+@app.route('/static/')
+@cross_origin()
+def serve_static(path):
+    return send_from_directory('static', path)
 
 # Route to get the current locale
 @app.route('/get_locale', methods=['GET'])
@@ -246,7 +251,7 @@ def subscribe():
         return jsonify({"success": False}), 500
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host='127.0.0.1', port=5000)
 
 # Import CLI commands
 import cli  # Ensure this line is at the end of your app.py
