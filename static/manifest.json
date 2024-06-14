@@ -1,18 +1,36 @@
 {
-    "name": "My_Portfolio",
-    "short_name": "Portfolio",
-    "description": "Portfolio of Mariana Plácito, Full Stack Developer",
-    "start_url": "/index.html",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#000000",
-    "icons": [
-      {
-        "src": "/static/img/maskable-icon.png",
-        "sizes": "512x512",
-        "type": "image/png",
-        "purpose": "maskable any"
-      }
-    ]
-  }
-  
+  "name": "My_Portfolio",
+  "short_name": "Portfolio",
+  "description": "Portfolio of Mariana Plácito, Full Stack Developer",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/static/img/maskable-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/static/img/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/static/img/screenshots/screenshot-desktop.avif",
+      "sizes": "1280x720",
+      "type": "image/avif",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/static/img/screenshots/screenshot-mobile.avif",
+      "sizes": "720x1280",
+      "type": "image/avif",
+      "form_factor": "narrow"
+    }
+  ]
+}
