@@ -232,18 +232,30 @@ def download_file(filename):
 @app.route('/subscribe', methods=['POST'])
 @cross_origin()
 def subscribe():
+    # Print the request data for debugging
+    print("Received subscription request:", request.get_json())
+    
     subscription_info = request.get_json()
+    
     try:
+        # Additional debug information
+        print("Subscription info:", subscription_info)
+        
         webpush(
-            subscription_info,
-            json.dumps({"title": "Push Notification"}),
+            subscription_info=subscription_info,
             vapid_private_key=VAPID_PRIVATE_KEY,
             vapid_claims=VAPID_CLAIMS
         )
+        print("Web push successful")
+        
         return jsonify({"success": True}), 201
     except WebPushException as ex:
-        print("I'm sorry, Dave, but I can't do that: {}", repr(ex))
+        # Print the exception details
+        print("WebPushException occurred:", repr(ex))
+        
+        print("I'm sorry, Dave, but I can't do that:", repr(ex))
         return jsonify({"success": False}), 500
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
