@@ -4,10 +4,10 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open('my-cache').then(function(cache) {
             return cache.addAll([
-                '../templates/index.html',
-                './static/style.min.css',
-                './static/script.js',
-                './static/sw.js'
+                '/templates/index.html',
+                '/static/style.min.css',
+                '/static/script.js',
+                '/static/sw.js'
             ]).catch(function(error) {
                 console.error('Failed to add resource to cache:', error);
             });
