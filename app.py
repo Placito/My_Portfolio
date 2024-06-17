@@ -2,7 +2,7 @@ from flask import Flask, json, render_template, redirect, request, send_from_dir
 from flask_mail import Mail, Message
 from flask_babel import Babel, _, lazy_gettext as _l, gettext
 from flask_compress import Compress
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 from dotenv import load_dotenv
 import os
 import logging
@@ -17,7 +17,7 @@ app = Flask(__name__, static_folder='static')
 app.secret_key = os.getenv("SECRET_KEY")
 
 # Configure CORS to allow requests from specific origins
-CORS(app, resources={r"/*": {"origins": ["https://github.dev"]}})
+CORS(app, resources={r"/*": {"origins": ["https://potential-guide-xg4v57gg69x2v9w7-5000.app.github.dev"]}})
 
 # VAPID keys
 VAPID_PUBLIC_KEY = os.getenv("VAPID_PUBLIC_KEY")
@@ -95,32 +95,38 @@ def inject_locale():
     return {'get_locale': get_locale}
 
 @app.route('/static/<path:path>')
+@cross_origin()
 def serve_static(path):
     return send_from_directory('static', path)
 
 # Route to get the current locale
 @app.route('/get_locale', methods=['GET'])
+@cross_origin()
 def get_current_locale():
     return jsonify({'locale': get_locale()})
 
 # Define the home route
 @app.route('/')
+@cross_origin()
 def home():
     logger.debug("Home route accessed")
     return render_template('index.html', current_locale=get_locale())
 
 # Define the privacy policy route
 @app.route('/privacy_policy.html')
+@cross_origin()
 def privacy_policy():
     return render_template('privacy_policy.html', current_locale=get_locale())
 
 # Define the terms route
 @app.route('/terms.html')
+@cross_origin()
 def terms():
     return render_template('terms.html', current_locale=get_locale())
 
 # Route to handle form submissions
 @app.route('/send', methods=['POST'])
+@cross_origin()
 def send():
     if request.method == 'POST':
         try:
@@ -158,6 +164,7 @@ def send():
 
 # Route to set the language
 @app.route('/set_language/<language>', methods=['POST'])
+@cross_origin()
 def set_language(language):
     if language in app.config['BABEL_SUPPORTED_LOCALES']:
         session['lang'] = language
@@ -165,6 +172,7 @@ def set_language(language):
 
 # Route to get translations
 @app.route('/translations/<lang>/LC_MESSAGES/messages.po', methods=['GET'])
+@cross_origin()
 def get_translation(lang):
     file_path = os.path.join('translations', lang, 'LC_MESSAGES', 'messages.po')
     logger.debug(f"Looking for file at: {file_path}")
@@ -188,6 +196,7 @@ def log_download(file_name, user_ip):
 
 # Route to send the CV file
 @app.route('/cv_file')
+@cross_origin()
 def cv_file():
     try:
         file_name = 'resume.pdf'
@@ -202,6 +211,7 @@ def cv_file():
 
 # Route to download a file
 @app.route('/download/<filename>', methods=['GET'])
+@cross_origin()
 def download_file(filename):
     try:
         logger.debug(f"Download request received for file: {filename}")
@@ -219,6 +229,7 @@ def download_file(filename):
         return jsonify({'error': 'An error occurred'}), 500
 
 @app.route('/subscribe', methods=['POST'])
+@cross_origin()
 def subscribe():
     subscription_info = request.get_json()
     try:
