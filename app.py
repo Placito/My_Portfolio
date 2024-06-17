@@ -1,4 +1,4 @@
-from flask import Flask, json, render_template, redirect, request, send_from_directory, session, jsonify, send_file
+from flask import Flask, json, render_template, redirect, request, send_from_directory, session, jsonify, send_file, g
 from flask_mail import Mail, Message
 from flask_babel import Babel, _, lazy_gettext as _l, gettext
 from flask_compress import Compress
@@ -94,6 +94,12 @@ def inject_babel():
 @app.context_processor
 def inject_locale():
     return {'get_locale': get_locale}
+
+@app.before_request
+def before_request():
+    if request.path == '/robots.txt':
+        return send_from_directory(app.static_folder, 'robots.txt')
+    g.current_url = request.url.replace('http://', 'https://', 1)
 
 @app.route('/static/<path:path>')
 @cross_origin()
@@ -245,8 +251,12 @@ def subscribe():
         print("I'm sorry, Dave, but I can't do that: {}", repr(ex))
         return jsonify({"success": False}), 500
 
+@app.route('/sitemap.xml')
+def sitemap_xml():
+        return send_from_directory(app.static_folder, 'sitemap.xml')
+
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=5000)
 
 # Import CLI commands
 import cli  # Ensure this line is at the end of your app.py
