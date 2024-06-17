@@ -16,8 +16,9 @@ load_dotenv()
 app = Flask(__name__, static_folder='static')
 app.secret_key = os.getenv("SECRET_KEY")
 
-# Configure CORS to allow requests from specific origins
-CORS(app, resources={r"/*": {"origins": ["https://potential-guide-xg4v57gg69x2v9w7-5000.app.github.dev"]}})
+# Initialize CORS
+#CORS(app, origins="*")
+CORS(app, origins=[os.getenv("CORS_ORIGINS")])
 
 # VAPID keys
 VAPID_PUBLIC_KEY = os.getenv("VAPID_PUBLIC_KEY")
