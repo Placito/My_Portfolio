@@ -346,7 +346,7 @@
                                 </div>
                                 <div class="col-12">
                                     <label id="label-message" for="message" class="form-label">{{ _('Message:') }}</label>
-                                    <textarea class="form-control" id="message" name="message" autocomplete="given-message" required minlength="4" maxlength="10" size="10" placeholder="{{ _('Write your message') }}..."></textarea>
+                                    <textarea class="form-control" id="message" name="message" autocomplete="given-message" required minlength="4" maxlength="10" size="10" rows="10" placeholder="{{ _('Write your message') }}..."></textarea>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center mt-4">
                                 <button id="btn-send" type="submit" class="btn btn-outline-primary" >{{ _('Send') }}</button>
@@ -356,7 +356,7 @@
                     </div>
                 </div>
             </div>
-            <button id="subscribe" class="btn btn-outline-primary" type="button">Subscribe</button>
+            <button id="subscribe" class="btn btn-outline-primary" type="button">{{ _('Subscribe') }}</button>
         </section>
     </main>
     <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
