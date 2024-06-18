@@ -242,13 +242,13 @@ def subscribe():
     try:
         webpush(
             subscription_info,
-            json.dumps({"title": "Push Notification"}),
+            json.dumps({"title": "Push Notification", "body": "You have a new message!"}),
             vapid_private_key=VAPID_PRIVATE_KEY,
             vapid_claims=VAPID_CLAIMS
         )
         return jsonify({"success": True}), 201
     except WebPushException as ex:
-        print("I'm sorry, Dave, but I can't do that: {}", repr(ex))
+        print("I'm sorry, but I can't do that: {}", repr(ex))
         return jsonify({"success": False}), 500
 
 @app.route('/sitemap.xml')

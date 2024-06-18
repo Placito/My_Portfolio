@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', async (event) => {
     console.log('DOM fully loaded and parsed');
 
+    if (document.querySelector('#contact-form')) {
+        const { initFormHandler } = await import('./formHandler.js');
+        initFormHandler();
+    }
+
     if (document.querySelector('.menu-mobile')) {
         const { initMenuHandler } = await import('./menuHandler.js');
         initMenuHandler();
@@ -20,16 +25,14 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             console.error('Error loading language handler:', error);
         }
     }
-
-    if (document.querySelector('#contact-form')) {
-        const { initFormHandler } = await import('./formHandler.js');
-        initFormHandler();
-    }
-
     if ('serviceWorker' in navigator) {
         try {
-            const registration = await navigator.serviceWorker.register('/static/sw.js');
-            console.log('Service Worker registered:', registration);
+            const registration = await navigator.serviceWorker.register('/static/sw.js', { scope: '/static/' });
+            console.log('Service Worker registered with scope:', registration.scope);
+
+            // Check if the service worker is ready
+            const swRegistration = await navigator.serviceWorker.ready;
+            console.log('Service Worker ready:', swRegistration);
 
             if (document.querySelector('#subscribe')) {
                 const subscribe = async () => {
@@ -45,7 +48,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
 
                         let pushSubscription = await swRegistration.pushManager.subscribe({
                             userVisibleOnly: true,
-                            applicationServerKey: 'BfGC8STIEy3gnPXdtIZS2QLzy_eShWxmUdy2jQnot83_xm84gLSCV-b10QK8crsNPLC1RBj21VHt0_vxAsM'
+                            applicationServerKey: 'BFgC8STIEy3gnPXdtIZSQlzy_eShWxmUdy2jQnot83_xm84gLSC'
                         });
 
                         console.log('Push Subscription Object:', pushSubscription);
@@ -56,22 +59,13 @@ document.addEventListener('DOMContentLoaded', async (event) => {
                             headers: {
                                 'Content-Type': 'application/json'
                             }
-                        }).then(response => {
-                            if (response.ok) {
-                                console.log('Subscription sent to server');
-                            } else {
-                                console.error('Subscription failed:', response.statusText);
-                            }
-                        }).catch(error => {
-                            console.error('Subscription failed:', error);
                         });
-
                     } catch (error) {
-                        console.error('Subscription failed:', error);
+                        console.error('Push subscription failed:', error);
                     }
                 };
 
-                document.querySelector('#subscribe').addEventListener('click', subscribe);
+                subscribe();
             }
         } catch (error) {
             console.error('Service Worker registration failed:', error);
