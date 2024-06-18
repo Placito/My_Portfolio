@@ -336,3 +336,15 @@ footer {
     opacity: 1;
     transform: translate3d(0, 0, 0);
 }
+.message {
+    visibility: hidden;
+    background-color: #fff;
+    color: #021124;
+    border-radius: 6px;
+    padding-left: 6px;
+    position: relative;
+    bottom: 3rem;
+}
+.subscribe:hover .message {
+    visibility: visible;
+}
