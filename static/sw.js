@@ -26,8 +26,21 @@ self.addEventListener('fetch', function(event) {
     console.log('Service Worker: Fetching', event.request.url);
     event.respondWith(
         caches.match(event.request).then(function(response) {
-            return response || fetch(event.request).catch(function(error) {
-                console.error('Fetch failed for request:', error);
+     
+            return response || fetch(event.request).then(function(networkResponse) {
+                return networkResponse;
+            }).catch(function(error) {
+                console.error('Network fetch failed for:', event.request.url, error);
+                return new Response('Network fetch failed', {
+                    status: 408,
+                    statusText: 'Request Timeout'
+                });
+            });
+        }).catch(function(error) {
+            console.error('Cache match failed for:', event.request.url, error);
+            return new Response('Cache match failed', {
+                status: 408,
+                statusText: 'Request Timeout'
             });
         })
     );

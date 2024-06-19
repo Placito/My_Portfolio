@@ -238,14 +238,24 @@ def download_file(filename):
 @app.route('/subscribe', methods=['POST'])
 @cross_origin()
 def subscribe():
+    # Print the request data for debugging
+    print("Received subscription request:", request.get_json())
+    
     subscription_info = request.get_json()
+    
     try:
+        # Additional debug information
+        print("Subscription info:", subscription_info)
+        
         webpush(
             subscription_info,
             json.dumps({"title": "Push Notification", "body": "You have a new message!"}),
+            subscription_info=subscription_info,
             vapid_private_key=VAPID_PRIVATE_KEY,
             vapid_claims=VAPID_CLAIMS
         )
+        print("Web push successful")
+        
         return jsonify({"success": True}), 201
     except WebPushException as ex:
         print("I'm sorry, but I can't do that: {}", repr(ex))
@@ -261,7 +271,6 @@ if __name__ == "__main__":
     key_file = os.path.join(base_path, '127.0.0.1+1-key.pem')
     context = (cert_file, key_file)
     app.run(ssl_context=context, port=5000, debug=True)
-
 
 # Import CLI commands
 import cli  # Ensure this line is at the end of your app.py
