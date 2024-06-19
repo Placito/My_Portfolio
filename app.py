@@ -17,7 +17,7 @@ app = Flask(__name__, static_folder='static')
 app.secret_key = os.getenv("SECRET_KEY")
 
 # Initialize CORS
-#CORS(app, origins="*")
+# CORS(app, origins="*")
 CORS(app, origins=[os.getenv("CORS_ORIGINS")])
 
 # VAPID keys
