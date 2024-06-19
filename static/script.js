@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
                         console.error('Push subscription failed:', error);
                     }
                 };
+
                 subscribe();
             }
         } catch (error) {
