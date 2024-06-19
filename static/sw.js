@@ -1,20 +1,32 @@
-// install Caches the specified resources during the installation phase.
 self.addEventListener('install', function(event) {
+    console.log('Service Worker: Installing...');
     event.waitUntil(
         caches.open('my-cache').then(function(cache) {
-            return cache.addAll(['/']);
+            console.log('Service Worker: Caching assets...');
+            return cache.addAll([
+                '/',
+                '/templates/index.html',
+                '/templates/prvacy_policy.html',
+                '/templates/terms.html',
+                '/static/css/style.css',
+                '/static/js/script.js',
+                '/static/img/banner.avif',
+                '/static/img/icon-144x144.png', 
+                '/static/manifest.json',
+            ]);
         }).catch(function(error) {
             console.error('Failed to open cache:', error);
         })
     );
 });
-// Claims control over all clients as soon as the service worker becomes active.
+
 self.addEventListener('activate', event => {
-    console.log('Service worker activating.');
+    console.log('Service Worker: Activated');
     event.waitUntil(clients.claim());
 });
-// Responds to network requests by first trying to serve them from the cache and falling back to the network if not found in the cache.
+
 self.addEventListener('fetch', function(event) {
+    console.log('Service Worker: Fetching', event.request.url);
     event.respondWith(
         caches.match(event.request).then(function(response) {
             return response || fetch(event.request).catch(function(error) {
@@ -23,11 +35,12 @@ self.addEventListener('fetch', function(event) {
         })
     );
 });
-// Listens for push events and displays notifications with the specified title, body, and icon.
+
 self.addEventListener('push', function(event) {
     const data = event.data.json();
+    console.log('Service Worker: Push received', data);
     self.registration.showNotification(data.title, {
         body: data.body,
-        icon: '/img/maskable-icon.png'
+        icon: '/static/img/maskable-icon.png' // Ensure this path is correct
     });
 });

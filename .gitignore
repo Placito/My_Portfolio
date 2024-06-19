@@ -118,3 +118,5 @@ migrations/
 logs
 # Local files
 app/protected_files/
+# certificate files 
+*.pem

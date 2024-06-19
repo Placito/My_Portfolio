@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000">
-    <meta name="robots" content="index, follow">
     <meta name="description" content="Author: M.P. Author, my portfolio is a landing page with 6 sections">
     <title>{{ _('Terms of Service') }}</title>
+    <title id="title">Mariana Plácito</title>
+    <link rel="canonical" href="{{ g.current_url }}"/>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"></noscript>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.min.css') }}">
-    <!-- Include Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="icon" type="image/ico" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}" crossorigin="use-credentials">
 </head>
 <body>
     <div class="terms-box">
@@ -44,7 +48,10 @@
 
     <!-- Include Bootstrap JS -->
     <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-        </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+    <!-- Defer non-critical JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 </body>
 </body>
 </html>
