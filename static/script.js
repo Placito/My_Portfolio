@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
                     }
                 };
 
-                subscribe();
+                document.querySelector('#subscribe').addEventListener('click', subscribe); // Added event listener for button click
             }
         } catch (error) {
             console.error('Service Worker registration failed:', error);
