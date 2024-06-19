@@ -25,9 +25,11 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             console.error('Error loading language handler:', error);
         }
     }
+});
+document.addEventListener('DOMContentLoaded', async (event) => {
     if ('serviceWorker' in navigator) {
         try {
-            const registration = await navigator.serviceWorker.register('/static/sw.js', { scope: '/static/' });
+            const registration = await navigator.serviceWorker.register('/static/sw.js');
             console.log('Service Worker registered with scope:', registration.scope);
 
             // Check if the service worker is ready
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
 
             if (document.querySelector('#subscribe')) {
                 const subscribe = async () => {
-                    console.log('subscribe function called');
+                    console.log('Subscribe function called');
                     try {
                         let swRegistration = await navigator.serviceWorker.ready;
                         console.log('Service Worker ready:', swRegistration);
@@ -48,7 +50,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
 
                         let pushSubscription = await swRegistration.pushManager.subscribe({
                             userVisibleOnly: true,
-                            applicationServerKey: 'BFgC8STIEy3gnPXdtIZSQlzy_eShWxmUdy2jQnot83_xm84gLSC'
+                            applicationServerKey: 'BfgCBSIEtY3gnPXdtLZSQLzy_eShXmxUdy2jU'
                         });
 
                         console.log('Push Subscription Object:', pushSubscription);
@@ -64,7 +66,6 @@ document.addEventListener('DOMContentLoaded', async (event) => {
                         console.error('Push subscription failed:', error);
                     }
                 };
-
                 subscribe();
             }
         } catch (error) {
@@ -72,3 +73,4 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         }
     }
 });
+

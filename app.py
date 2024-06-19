@@ -255,8 +255,12 @@ def subscribe():
 def sitemap_xml():
         return send_from_directory(app.static_folder, 'sitemap.xml')
 
-if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    cert_file = os.path.join(base_path, '127.0.0.1+1.pem')
+    key_file = os.path.join(base_path, '127.0.0.1+1-key.pem')
+    context = (cert_file, key_file)
+    app.run(ssl_context=context, port=5000)
 
 # Import CLI commands
 import cli  # Ensure this line is at the end of your app.py
