@@ -88,8 +88,8 @@ msgid "Privacy Policy"
 msgstr "Politíca de privacidade"
 
 #: templates/index.html:75 templates/terms.html:9 templates/terms.html:17
-msgid "Terms"
-msgstr "Termos"
+msgid "Terms of Service"
+msgstr "Termos do serviço"
 
 #: templates/index.html:84 templates/index.html:100
 msgid "Full Stack Developer"
