@@ -5,6 +5,9 @@ self.addEventListener('install', function(event) {
             console.log('Service Worker: Caching assets...');
             return cache.addAll([
                 '/',
+                '/templates/index.html',
+                '/templates/prvacy_policy.html',
+                '/templates/terms.html',
                 '/static/css/style.css',
                 '/static/js/script.js',
                 '/static/img/banner.avif',

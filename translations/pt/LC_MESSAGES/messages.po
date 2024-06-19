@@ -71,7 +71,11 @@ msgstr "Politíca de privacidade"
 
 #: templates/index.html:75 templates/terms.html:9 templates/terms.html:17
 msgid "Terms of Service"
+<<<<<<< HEAD
 msgstr ""
+=======
+msgstr "Termos do serviço"
+>>>>>>> f617a146859325c79f3b1ddbd1721b576d437f79
 
 #: templates/index.html:84 templates/index.html:100
 msgid "Full Stack Developer"
