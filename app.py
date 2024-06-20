@@ -175,7 +175,7 @@ def send():
         except Exception as e:
             logger.error(f"Error while sending message: {e}")
             return jsonify({'status': 'error', 'message': _l('An error occurred while sending the message. Please try again later.')})
-    
+
     return jsonify({'status': 'error', 'message': _l('Invalid request method.')})
 
 # Route to set the language
@@ -202,7 +202,6 @@ def get_translation(lang):
 def log_download(file_name, user_ip):
     log_entry = f"{datetime.now()} - {user_ip} downloaded {file_name}\n"
     logger.debug(f"Logging download: {log_entry}")
-    
     try:
         with open(LOG_FILE, 'a') as log_file:
             log_file.write(log_entry)
@@ -267,7 +266,8 @@ def sitemap_xml():
         return send_from_directory(app.static_folder, 'sitemap.xml')
 
 if __name__ == "__main__":
-        app.run(port=5000, debug=True)
+    app.run()
 
 # Import CLI commands
 import cli  # Ensure this line is at the end of your app.py
+

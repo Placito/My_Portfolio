@@ -11,6 +11,6 @@ def minify_css(input_path, output_path):
         file.write(minified_css)
 
 if __name__ == "__main__":
-    input_css_path = os.path.join('static', 'style.css')
-    output_css_path = os.path.join('static', 'style.min.css')
+    input_css_path = os.path.join('static', 'css/style.css')
+    output_css_path = os.path.join('static', 'css/style.min.css')
     minify_css(input_css_path, output_css_path)
