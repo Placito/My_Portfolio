@@ -5,6 +5,7 @@ from flask_compress import Compress
 from flask_cors import CORS, cross_origin
 from dotenv import load_dotenv
 import os
+import redis
 import logging
 from datetime import datetime
 from pywebpush import webpush, WebPushException
@@ -15,6 +16,9 @@ load_dotenv()
 # Initialize the Flask application
 app = Flask(__name__, static_folder='static')
 app.secret_key = os.getenv("SECRET_KEY")
+
+redis_url = os.getenv('REDIS_URL', 'redis://localhost:6379')
+r = redis.from_url(redis_url)
 
 # Initialize CORS
 # CORS(app, origins="*")

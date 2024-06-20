@@ -34,7 +34,9 @@ pycparser==2.22
 python-dotenv==1.0.1
 pytz==2024.1
 pywebpush==2.0.0
+redis==5.0.6
 requests==2.32.3
+rq==1.16.2
 six==1.16.0
 urllib3==2.2.1
 Werkzeug==3.0.3
