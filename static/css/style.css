@@ -85,7 +85,7 @@ html, body {
     margin-left: 330px;
 }
 .home {
-    background-image: url(./img/banner.avif);
+    background-image: url(../img/banner.avif);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
