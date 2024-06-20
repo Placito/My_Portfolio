@@ -166,7 +166,7 @@ def send():
         except Exception as e:
             logger.error(f"Error while sending message: {e}")
             return jsonify({'status': 'error', 'message': _l('An error occurred while sending the message. Please try again later.')})
-    
+
     return jsonify({'status': 'error', 'message': _l('Invalid request method.')})
 
 # Route to set the language
@@ -193,7 +193,6 @@ def get_translation(lang):
 def log_download(file_name, user_ip):
     log_entry = f"{datetime.now()} - {user_ip} downloaded {file_name}\n"
     logger.debug(f"Logging download: {log_entry}")
-    
     try:
         with open(LOG_FILE, 'a') as log_file:
             log_file.write(log_entry)
@@ -240,13 +239,13 @@ def download_file(filename):
 def subscribe():
     # Print the request data for debugging
     print("Received subscription request:", request.get_json())
-    
+
     subscription_info = request.get_json()
-    
+
     try:
         # Additional debug information
         print("Subscription info:", subscription_info)
-        
+
         webpush(
             subscription_info,
             json.dumps({"title": "Push Notification", "body": "You have a new message!"}),
@@ -255,7 +254,7 @@ def subscribe():
             vapid_claims=VAPID_CLAIMS
         )
         print("Web push successful")
-        
+
         return jsonify({"success": True}), 201
     except WebPushException as ex:
         print("I'm sorry, but I can't do that: {}", repr(ex))
@@ -266,16 +265,8 @@ def sitemap_xml():
         return send_from_directory(app.static_folder, 'sitemap.xml')
 
 if __name__ == "__main__":
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    use_https = os.getenv("USE_HTTPS", "False").lower() in ("true", "1")
-    
-    if use_https:
-        cert_file = os.path.join(base_path, '127.0.0.1+1.pem')
-        key_file = os.path.join(base_path, '127.0.0.1+1-key.pem')
-        context = (cert_file, key_file)
-        app.run(ssl_context=context, port=5000, debug=True)
-    else:
         app.run(port=5000, debug=True)
 
 # Import CLI commands
 import cli  # Ensure this line is at the end of your app.py
+
