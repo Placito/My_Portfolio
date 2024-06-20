@@ -256,15 +256,6 @@ def sitemap_xml():
         return send_from_directory(app.static_folder, 'sitemap.xml')
 
 if __name__ == "__main__":
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    use_https = os.getenv("USE_HTTPS", "False").lower() in ("true", "1")
-    
-    if use_https:
-        cert_file = os.path.join(base_path, '127.0.0.1+1.pem')
-        key_file = os.path.join(base_path, '127.0.0.1+1-key.pem')
-        context = (cert_file, key_file)
-        app.run(ssl_context=context, port=5000, debug=True)
-    else:
         app.run(port=5000, debug=True)
 
 # Import CLI commands
