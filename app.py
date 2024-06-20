@@ -7,7 +7,9 @@ from dotenv import load_dotenv
 import os
 import logging
 from datetime import datetime
-from pywebpush import webpush, WebPushException
+from redis import Redis
+from rq import Queue
+from tasks import example
 
 # Load environment variables from .env file
 load_dotenv()
@@ -15,6 +17,13 @@ load_dotenv()
 # Initialize the Flask application
 app = Flask(__name__, static_folder='static')
 app.secret_key = os.getenv("SECRET_KEY")
+
+# Connect to Redis
+redis_url = os.getenv('REDIS_URL', 'redis://localhost:6379')
+redis_conn = Redis.from_url(redis_url)
+
+# Set up RQ queue
+q = Queue(connection=redis_conn)
 
 # Initialize CORS
 # CORS(app, origins="*")
@@ -235,21 +244,23 @@ def download_file(filename):
         logger.error(f"Error in /download/<filename> route: {e}")
         return jsonify({'error': 'An error occurred'}), 500
 
-@app.route('/subscribe', methods=['POST'])
-@cross_origin()
-def subscribe():
-    subscription_info = request.get_json()
-    try:
-        webpush(
-            subscription_info,
-            json.dumps({"title": "Push Notification", "body": "You have a new message!"}),
-            vapid_private_key=VAPID_PRIVATE_KEY,
-            vapid_claims=VAPID_CLAIMS
-        )
-        return jsonify({"success": True}), 201
-    except WebPushException as ex:
-        print("I'm sorry, but I can't do that: {}", repr(ex))
-        return jsonify({"success": False}), 500
+@app.route('/start-task', methods=['POST'])
+def start_task():
+    seconds = request.json.get('seconds', 10)
+    job = q.enqueue(example, seconds)
+    return jsonify({'job_id': job.get_id(), 'status': job.get_status()}), 202
+
+@app.route('/task-status/<job_id>', methods=['GET'])
+def task_status(job_id):
+    job = q.fetch_job(job_id)
+    if job is None:
+        return jsonify({'error': 'Job not found'}), 404
+    response = {
+        'id': job.get_id(),
+        'status': job.get_status(),
+        'progress': job.meta.get('progress', 0)
+    }
+    return jsonify(response)
 
 @app.route('/sitemap.xml')
 def sitemap_xml():
