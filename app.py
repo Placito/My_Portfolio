@@ -166,7 +166,7 @@ def send():
         except Exception as e:
             logger.error(f"Error while sending message: {e}")
             return jsonify({'status': 'error', 'message': _l('An error occurred while sending the message. Please try again later.')})
-    
+
     return jsonify({'status': 'error', 'message': _l('Invalid request method.')})
 
 # Route to set the language
@@ -193,7 +193,6 @@ def get_translation(lang):
 def log_download(file_name, user_ip):
     log_entry = f"{datetime.now()} - {user_ip} downloaded {file_name}\n"
     logger.debug(f"Logging download: {log_entry}")
-    
     try:
         with open(LOG_FILE, 'a') as log_file:
             log_file.write(log_entry)
@@ -238,14 +237,24 @@ def download_file(filename):
 @app.route('/subscribe', methods=['POST'])
 @cross_origin()
 def subscribe():
+    # Print the request data for debugging
+    print("Received subscription request:", request.get_json())
+
     subscription_info = request.get_json()
+
     try:
+        # Additional debug information
+        print("Subscription info:", subscription_info)
+
         webpush(
             subscription_info,
             json.dumps({"title": "Push Notification", "body": "You have a new message!"}),
+            subscription_info=subscription_info,
             vapid_private_key=VAPID_PRIVATE_KEY,
             vapid_claims=VAPID_CLAIMS
         )
+        print("Web push successful")
+
         return jsonify({"success": True}), 201
     except WebPushException as ex:
         print("I'm sorry, but I can't do that: {}", repr(ex))
@@ -260,3 +269,4 @@ if __name__ == "__main__":
 
 # Import CLI commands
 import cli  # Ensure this line is at the end of your app.py
+
