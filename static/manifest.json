@@ -1,5 +1,6 @@
 {
-  "name": "My_Portfolio",
+  "__comment": "desktop_size = wide; mobile_size = narrow",
+  "name": "My Portfolio",
   "short_name": "Portfolio",
   "description": "Portfolio of Mariana Plácito, Full Stack Developer",
   "start_url": "/index.html",
@@ -8,10 +9,11 @@
   "theme_color": "#000000",
   "icons": [
     {
+      "__comment": "Maskable icon in PNG format",
       "src": "/static/img/maskable-icon.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "maskable"
     },
     {
       "src": "/static/img/icon-144x144.png",
@@ -21,13 +23,15 @@
   ],
   "screenshots": [
     {
-      "src": "/static/img/screenshots/screenshot-desktop.avif",
+      "__comment": "Desktop size screenshot",
+      "src": "/static/img/screenshots/screenshot-wide.avif",
       "sizes": "1280x720",
       "type": "image/avif",
       "form_factor": "wide"
     },
     {
-      "src": "/static/img/screenshots/screenshot-mobile.avif",
+      "__comment": "Mobile size screenshot",
+      "src": "/static/img/screenshots/screenshot-narrow.avif",
       "sizes": "720x1280",
       "type": "image/avif",
       "form_factor": "narrow"

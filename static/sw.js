@@ -9,7 +9,7 @@ self.addEventListener('install', function(event) {
                 '/templates/index.html',
                 '/templates/privacy_policy.html',
                 '/templates/terms.html',
-                '/static/css/style.css',
+                '/static/css/style.min.css',
                 '/static/js/script.js',
                 '/static/img/banner.avif',
                 '/static/img/icon-144x144.png', 

@@ -27,49 +27,15 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     }
 
     if ('serviceWorker' in navigator) {
-        try {
-            const registration = await navigator.serviceWorker.register('/static/js/sw.js');
-            console.log('Service Worker registered with scope:', registration.scope);
-
-            // Check if the service worker is ready
-            const swRegistration = await navigator.serviceWorker.ready;
-            console.log('Service Worker ready:', swRegistration);
-
-            if (document.querySelector('#subscribe')) {
-                const subscribe = async () => {
-                    console.log('Subscribe function called');
-                    try {
-                        let swRegistration = await navigator.serviceWorker.ready;
-                        console.log('Service Worker ready:', swRegistration);
-
-                        if (!swRegistration.pushManager) {
-                            console.error('Push Manager is not available.');
-                            return;
-                        }
-
-                        let pushSubscription = await swRegistration.pushManager.subscribe({
-                            userVisibleOnly: true,
-                            applicationServerKey: 'BfgCBSIEtY3gnPXdtLZSQLzy_eShXmxUdy2jU' // Your public VAPID key
-                        });
-
-                        console.log('Push Subscription Object:', pushSubscription);
-
-                        await fetch('/subscribe', {
-                            method: 'POST',
-                            body: JSON.stringify(pushSubscription),
-                            headers: {
-                                'Content-Type': 'application/json'
-                            }
-                        });
-                    } catch (error) {
-                        console.error('Push subscription failed:', error);
-                    }
-                };
-
-                document.querySelector('#subscribe').addEventListener('click', subscribe);
-            }
-        } catch (error) {
-            console.error('Service Worker registration failed:', error);
-        }
-    }
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/static/sw.js')
+            .then(registration => {
+              console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(error => {
+              console.error('Service Worker registration failed:', error);
+            });
+        });
+      }
+      
 });
