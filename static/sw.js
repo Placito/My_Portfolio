@@ -1,9 +1,8 @@
 // Install event: cache essential assets
 self.addEventListener('install', function(event) {
-self.addEventListener('install', (event) => {
     console.log('Service Worker: Installing...');
     event.waitUntil(
-        caches.open('my-cache').then((cache) => {
+        caches.open('my-cache').then(function(cache) {
             console.log('Service Worker: Caching assets...');
             return cache.addAll([
                 '/',
@@ -16,35 +15,36 @@ self.addEventListener('install', (event) => {
                 '/static/img/icon-144x144.png',
                 '/static/manifest.json',
             ]);
-        }).catch((error) => {
+        }).catch(function(error) {
             console.error('Failed to open cache:', error);
         })
     );
 });
 
 // Activate event: clean up old caches and take control of clients
-self.addEventListener('activate', event => {
-self.addEventListener('activate', (event) => {
+self.addEventListener('activate', function(event) {
     console.log('Service Worker: Activated');
     event.waitUntil(
-        caches.keys().then(cacheNames => {
+        caches.keys().then(function(cacheNames) {
             return Promise.all(
-                cacheNames.map(cache => {
+                cacheNames.map(function(cache) {
                     if (cache !== 'my-cache') {
                         console.log('Service Worker: Clearing old cache', cache);
                         return caches.delete(cache);
                     }
                 })
             );
-        }).then(() => clients.claim())
+        }).then(function() {
+            return clients.claim();
+        })
     );
 });
 
+// Fetch event: serve cached content when offline
 self.addEventListener('fetch', function(event) {
     console.log('Service Worker: Fetching', event.request.url);
     event.respondWith(
         caches.match(event.request).then(function(response) {
-     
             return response || fetch(event.request).then(function(networkResponse) {
                 return networkResponse;
             }).catch(function(error) {
