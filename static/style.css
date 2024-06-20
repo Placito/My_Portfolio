@@ -304,9 +304,6 @@ footer {
     }
 }
 @media (max-width: 1102px) {
-    footer {
-        width: 325px;
-    }
     header {
         width: 325px;
     }
@@ -319,6 +316,14 @@ footer {
 @media (max-width: 1180px) {
     .card-square {
         height: 40vh;
+    }
+}
+@media (max-width: 600px) {
+    .carousel-control-prev {
+        margin-left: -1.5rem;
+    }
+    .carousel-control-next {
+        margin-right: -1.5rem;
     }
 }
 @media (max-width: 395px) {

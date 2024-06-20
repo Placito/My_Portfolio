@@ -25,11 +25,10 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             console.error('Error loading language handler:', error);
         }
     }
-});
-document.addEventListener('DOMContentLoaded', async (event) => {
+
     if ('serviceWorker' in navigator) {
         try {
-            const registration = await navigator.serviceWorker.register('/static/sw.js');
+            const registration = await navigator.serviceWorker.register('/static/js/sw.js');
             console.log('Service Worker registered with scope:', registration.scope);
 
             // Check if the service worker is ready
@@ -50,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
 
                         let pushSubscription = await swRegistration.pushManager.subscribe({
                             userVisibleOnly: true,
-                            applicationServerKey: 'BfgCBSIEtY3gnPXdtLZSQLzy_eShXmxUdy2jU'
+                            applicationServerKey: 'BfgCBSIEtY3gnPXdtLZSQLzy_eShXmxUdy2jU' // Your public VAPID key
                         });
 
                         console.log('Push Subscription Object:', pushSubscription);
@@ -67,11 +66,10 @@ document.addEventListener('DOMContentLoaded', async (event) => {
                     }
                 };
 
-                subscribe();
+                document.querySelector('#subscribe').addEventListener('click', subscribe);
             }
         } catch (error) {
             console.error('Service Worker registration failed:', error);
         }
     }
 });
-
