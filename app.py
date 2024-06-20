@@ -256,7 +256,7 @@ def sitemap_xml():
         return send_from_directory(app.static_folder, 'sitemap.xml')
 
 if __name__ == "__main__":
-        app.run(port=5000, debug=True)
+    app.run()
 
 # Import CLI commands
 import cli  # Ensure this line is at the end of your app.py
