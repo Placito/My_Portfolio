@@ -12,7 +12,7 @@ self.addEventListener('install', function(event) {
                 '/static/css/style.min.css',
                 '/static/js/script.js',
                 '/static/img/banner.avif',
-                '/static/img/icon-144x144.png',
+                '/static/img/icon-144x144.png', 
                 '/static/manifest.json',
             ]);
         }).catch(function(error) {
@@ -22,29 +22,28 @@ self.addEventListener('install', function(event) {
 });
 
 // Activate event: clean up old caches and take control of clients
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', event => {
     console.log('Service Worker: Activated');
     event.waitUntil(
-        caches.keys().then(function(cacheNames) {
+        caches.keys().then(cacheNames => {
             return Promise.all(
-                cacheNames.map(function(cache) {
+                cacheNames.map(cache => {
                     if (cache !== 'my-cache') {
                         console.log('Service Worker: Clearing old cache', cache);
                         return caches.delete(cache);
                     }
                 })
             );
-        }).then(function() {
-            return clients.claim();
-        })
+        }).then(() => clients.claim())
     );
 });
 
-// Fetch event: serve cached content when offline
+// Fetch event: serve cached content if available, otherwise fetch from network
 self.addEventListener('fetch', function(event) {
     console.log('Service Worker: Fetching', event.request.url);
     event.respondWith(
         caches.match(event.request).then(function(response) {
+     
             return response || fetch(event.request).then(function(networkResponse) {
                 return networkResponse;
             }).catch(function(error) {
