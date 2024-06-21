@@ -27,15 +27,46 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     }
 
     if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/static/sw.js')
-            .then(registration => {
-              console.log('Service Worker registered with scope:', registration.scope);
-            })
-            .catch(error => {
-              console.error('Service Worker registration failed:', error);
+        try {
+            const registration = await navigator.serviceWorker.register('/static/sw.js');
+            console.log('Service Worker registered with scope:', registration.scope);
+
+            const swRegistration = await navigator.serviceWorker.ready;
+            console.log('Service Worker ready:', swRegistration);
+
+            if (!swRegistration.pushManager) {
+                console.error('Push Manager is not available.');
+                return;
+            }
+
+            document.querySelector('#start-task').addEventListener('click', async () => {
+                try {
+                    console.log('button clicked')
+                    const response = await fetch('/start-task', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ seconds: 10 })
+                    });
+                    const data = await response.json();
+                    console.log('Task started:', data);
+
+                    const interval = setInterval(async () => {
+                        const statusResponse = await fetch(`/task-status/${data.job_id}`);
+                        const statusData = await statusResponse.json();
+                        console.log('Task status:', statusData);
+
+                        if (statusData.status === 'finished' || statusData.status === 'failed') {
+                            clearInterval(interval);
+                        }
+                    }, 1000);
+                } catch (error) {
+                    console.error('Failed to start task:', error);
+                }
             });
-        });
-      }
-      
+        } catch (error) {
+            console.error('Service Worker registration failed:', error);
+        }
+    }
 });

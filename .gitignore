@@ -118,5 +118,7 @@ migrations/
 logs
 # Local files
 app/protected_files/
-# certificate files 
-*.pem
+# Ignore Redis dump files
+dump.rdb
+
+
