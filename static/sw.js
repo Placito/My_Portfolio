@@ -40,10 +40,9 @@ self.addEventListener('activate', event => {
 
 // Fetch event: serve cached content if available, otherwise fetch from network
 self.addEventListener('fetch', function(event) {
-    console.log('Service Worker: Fetching', event.request.url);
     event.respondWith(
         caches.match(event.request).then(function(response) {
-     
+            console.log('Service Worker: Fetching', event.request.url);
             return response || fetch(event.request).then(function(networkResponse) {
                 return networkResponse;
             }).catch(function(error) {
