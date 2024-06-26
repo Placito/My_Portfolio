@@ -34,11 +34,6 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             const swRegistration = await navigator.serviceWorker.ready;
             console.log('Service Worker ready:', swRegistration);
 
-            if (!swRegistration.pushManager) {
-                console.error('Push Manager is not available.');
-                return;
-            }
-
             document.querySelector('#start-task').addEventListener('click', async () => {
                 try {
                     console.log('button clicked')
