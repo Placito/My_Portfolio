@@ -13,3 +13,8 @@ These instructions will get you a copy of the project up and running on your loc
 * install the requeriments ```pip install -r requirements.txt```
 * start ```flask run```
 
+## run the RQ workers
+
+* python worker.py
+
+
