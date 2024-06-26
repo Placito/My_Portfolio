@@ -34,7 +34,7 @@ pycparser==2.22
 python-dotenv==1.0.1
 pytz==2024.1
 pywebpush==2.0.0
-redis==5.0.6
+redis==5.0.7
 requests==2.32.3
 rq==1.16.2
 six==1.16.0

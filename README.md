@@ -16,5 +16,7 @@ These instructions will get you a copy of the project up and running on your loc
 ## run the RQ workers
 
 * python worker.py
+or 
+* rq worker -u redis://localhost:6379 portfolio-tasks
 
 
