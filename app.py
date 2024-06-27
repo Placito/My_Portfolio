@@ -266,6 +266,15 @@ def subscribe():
     except WebPushException as ex:
         print("I'm sorry, but I can't do that: {}", repr(ex))
         return jsonify({"success": False}), 500
+    
+#routes for manifest.json and sw.js
+@app.route('/manifest.json')
+def manifest():
+    return send_from_directory('static', 'manifest.json')
+
+@app.route('/sw.js')
+def service_worker():
+    return send_from_directory('static/js', 'sw.js')
 
 @app.route('/sitemap.xml')
 def sitemap_xml():

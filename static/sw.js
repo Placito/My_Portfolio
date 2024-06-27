@@ -12,8 +12,8 @@ self.addEventListener('install', function(event) {
                 '/static/css/style.min.css',
                 '/static/js/script.js',
                 '/static/img/banner.avif',
-                '/static/img/icon-144x144.png', 
-                '/static/manifest.json',
+                '/static/img/icon-144x144.png',
+                '/static/manifest.json'
             ]);
         }).catch(function(error) {
             console.error('Failed to open cache:', error);

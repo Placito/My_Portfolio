@@ -3,7 +3,7 @@
   "name": "My Portfolio",
   "short_name": "Portfolio",
   "description": "Portfolio of Mariana Plácito, Full Stack Developer",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",

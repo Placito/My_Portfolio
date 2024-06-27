@@ -1,21 +1,25 @@
 document.addEventListener('DOMContentLoaded', async (event) => {
     console.log('DOM fully loaded and parsed');
 
+    // Initialize form handler if contact form exists
     if (document.querySelector('#contact-form')) {
         const { initFormHandler } = await import('./formHandler.js');
         initFormHandler();
     }
 
+    // Initialize menu handler if menu-mobile exists
     if (document.querySelector('.menu-mobile')) {
         const { initMenuHandler } = await import('./menuHandler.js');
         initMenuHandler();
     }
 
+    // Initialize scroll animations if data-anime elements exist
     if (document.querySelector("[data-anime]")) {
         const { initScrollAnimation } = await import('./scrollAnimation.js');
         initScrollAnimation();
     }
 
+    // Initialize language handler if language selection exists
     if (document.querySelector('select.form-select')) {
         try {
             const { setLanguage, loadSavedLanguage } = await import('./languageHandler.js');
@@ -26,6 +30,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         }
     }
 
+    // Register service worker
     if ('serviceWorker' in navigator) {
         try {
             const registration = await navigator.serviceWorker.register('/static/sw.js');
@@ -36,7 +41,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
 
             document.querySelector('#start-task').addEventListener('click', async () => {
                 try {
-                    console.log('button clicked')
+                    console.log('button clicked');
                     const response = await fetch('/start-task', {
                         method: 'POST',
                         headers: {
