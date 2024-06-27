@@ -1,4 +1,4 @@
-from flask import Flask, json, render_template, redirect, request, send_from_directory, session, jsonify, send_file, g
+from flask import Flask, json, render_template, redirect, request, send_from_directory, session, jsonify, send_file, g, after_this_request
 from flask_mail import Mail, Message
 from flask_babel import Babel, _, lazy_gettext as _l, gettext
 from flask_compress import Compress
@@ -107,6 +107,14 @@ def before_request():
     if request.path == '/robots.txt':
         return send_from_directory(app.static_folder, 'robots.txt')
     g.current_url = request.url.replace('http://', 'https://', 1)
+
+@app.before_request
+def add_service_worker_allowed_header():
+    if request.path == '/sw.js':
+        @after_this_request
+        def add_header(response):
+            response.headers['Service-Worker-Allowed'] = '/static/'
+            return response
 
 @app.route('/static/<path:path>')
 @cross_origin()
@@ -285,4 +293,3 @@ if __name__ == "__main__":
 
 # Import CLI commands
 import cli  # Ensure this line is at the end of your app.py
-

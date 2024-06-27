@@ -56,13 +56,10 @@ self.addEventListener('fetch', function(event) {
                     cache.put(event.request, networkResponse.clone());
                     return networkResponse;
                 });
-            }).catch(function(error) {
-                console.error('Network fetch failed for:', event.request.url, error);
-                return caches.match('/offline.html'); // Serve a fallback offline page if network fails
             });
         }).catch(function(error) {
-            console.error('Cache match failed for:', event.request.url, error);
-            return caches.match('/offline.html'); // Serve a fallback offline page if cache match fails
+            console.error('Fetch failed; returning offline page instead.', error);
+            return caches.match('/offline.html');
         })
     );
 });
