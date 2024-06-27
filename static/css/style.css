@@ -290,6 +290,13 @@ footer {
 .btn-back {
     margin-top: 15px;
 }
+.location {
+    height: 40rem;
+}
+.alert-div {
+    margin-bottom: 0px;
+    padding-top: 0;
+}
 @media (min-width: 770px) {
     .terms-box {
         height: 100%;
@@ -329,6 +336,9 @@ footer {
 @media (max-width: 395px) {
     .card-square {
         height: 30vh;
+    }
+    .alert {
+        font-size: 10px;
     }
 }
 .lazyload {
