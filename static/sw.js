@@ -1,4 +1,3 @@
-// Install event: cache essential assets
 self.addEventListener('install', function(event) {
     console.log('Service Worker: Installing...');
     event.waitUntil(
@@ -13,13 +12,15 @@ self.addEventListener('install', function(event) {
                 '/static/js/script.js',
                 '/static/img/banner.avif',
                 '/static/img/icon-144x144.png',
-                '/static/manifest.json'
+                '/static/manifest.json',
+                '/offline.html' // Add offline page to cache
             ]);
         }).catch(function(error) {
             console.error('Failed to open cache:', error);
         })
     );
 });
+
 
 // Activate event: clean up old caches and take control of clients
 self.addEventListener('activate', function(event) {
@@ -57,17 +58,11 @@ self.addEventListener('fetch', function(event) {
                 });
             }).catch(function(error) {
                 console.error('Network fetch failed for:', event.request.url, error);
-                return new Response('Network fetch failed', {
-                    status: 408,
-                    statusText: 'Request Timeout'
-                });
+                return caches.match('/offline.html'); // Serve a fallback offline page if network fails
             });
         }).catch(function(error) {
             console.error('Cache match failed for:', event.request.url, error);
-            return new Response('Cache match failed', {
-                status: 408,
-                statusText: 'Request Timeout'
-            });
+            return caches.match('/offline.html'); // Serve a fallback offline page if cache match fails
         })
     );
 });

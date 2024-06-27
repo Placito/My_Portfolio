@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             const swRegistration = await navigator.serviceWorker.ready;
             console.log('Service Worker ready:', swRegistration);
 
-            document.querySelector('#start-task').addEventListener('click', async () => {
+            document.querySelector('#subscribe').addEventListener('click', async () => {
                 try {
                     console.log('button clicked');
-                    const response = await fetch('/start-task', {
+                    const response = await fetch('/subscribe', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
                     console.log('Task started:', data);
 
                     const interval = setInterval(async () => {
-                        const statusResponse = await fetch(`/task-status/${data.job_id}`);
+                        const statusResponse = await fetch(`/suscribe/${data.job_id}`);
                         const statusData = await statusResponse.json();
                         console.log('Task status:', statusData);
 
