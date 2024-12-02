@@ -15,8 +15,7 @@ load_dotenv()
 
 # Initialize the Flask application
 app = Flask(__name__, static_folder='static')
-app.secret_key = os.getenv("SECRET_KEY")
-
+app.secret_key = os.getenv("SECRET_KEY", "fallbacksecretkey")
 
 listen = ['portfolio-tasks']
 
@@ -24,8 +23,8 @@ redis_url = os.getenv('REDIS_URL', 'redis://localhost:6379')
 r = redis.from_url(redis_url, socket_timeout=20, socket_connect_timeout=20)
 
 # Initialize CORS
-# CORS(app, origins="*")
-CORS(app, origins=[os.getenv("CORS_ORIGINS")])
+CORS(app, origins="*")
+# CORS(app, origins=[os.getenv("CORS_ORIGINS")])
 
 # VAPID keys
 VAPID_PUBLIC_KEY = os.getenv("VAPID_PUBLIC_KEY")
