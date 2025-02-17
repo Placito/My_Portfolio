@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 #!/Users/mariana/Documents/Launch-it/My_Portfolio/venv/bin/python
-=======
-#!/workspaces/My_Portfolio/venv/bin/python
->>>>>>> bd1f8977b19bc8b0dc83108ab81e375e6b2bef8f
 # -*- coding: utf-8 -*-
 import re
 import sys
