@@ -34,8 +34,11 @@ VAPID_CLAIMS = {"sub": "mailto:mariana.placito@gmail.com"}
 # Directory where files are stored
 FILE_DIRECTORY = os.path.join('static', 'img')
 
-# File to log downloads
-LOG_FILE = os.path.join('static', 'downloads', 'logfile.txt')
+if os.getenv("VERCEL"):
+    LOG_FILE = os.path.join("/tmp", "downloads", "logfile.txt")
+else:
+    LOG_FILE = os.path.join("static", "downloads", "logfile.txt")  # Local development
+
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
