@@ -2,6 +2,12 @@
 
 This portfolio application is built with Flask and includes a contact form that users can use to send messages. These messages are sent via email using Flask-Mail, which is configured to use Gmail's SMTP server.
 
+
+## Link
+
+The project was deploy7 whit vercel: https://my-portfolio-phi-cyan-60.vercel.app/
+
+
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
