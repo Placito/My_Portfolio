@@ -8,6 +8,11 @@ This portfolio application is built with Flask and includes a contact form that 
 The project was deploy7 whit vercel: https://my-portfolio-phi-cyan-60.vercel.app/
 
 
+## iHow do I minify CSS after making changes?
+```bash
+minify your CSS
+```
+
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
