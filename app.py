@@ -2,6 +2,7 @@ from flask import Flask, json, render_template, redirect, request, send_from_dir
 from flask_mail import Mail, Message
 from flask_babel import Babel, _, lazy_gettext as _l, gettext
 from flask_compress import Compress
+from flask_assets import Environment, Bundle
 from flask_cors import CORS, cross_origin
 from dotenv import load_dotenv
 import os
@@ -69,6 +70,15 @@ Compress(app)
 # Set default and supported locales
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'pt']
+
+# Define CSS minification
+css = Bundle(
+    'css/style.css',
+    filters='cssmin',  # Minify CSS
+    output='css/style.min.css'
+)
+assets = Environment(app)
+assets.register('css_all', css)
 
 # Define the Contact class
 class Contact:
