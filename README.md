@@ -10,7 +10,7 @@ The project was deploy7 whit vercel: https://my-portfolio-phi-cyan-60.vercel.app
 
 ## iHow do I minify CSS after making changes?
 ```bash
-minify your CSS
+python -c "from app import assets; print(assets['css_all'].build())"
 ```
 
 ## Getting Started

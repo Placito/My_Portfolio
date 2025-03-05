@@ -73,10 +73,11 @@ app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'pt']
 
 # Define CSS minification
 css = Bundle(
-    'css/style.css',
+    'css/style.css',  # Just use the relative path from static folder
     filters='cssmin',  # Minify CSS
     output='css/style.min.css'
 )
+
 assets = Environment(app)
 assets.register('css_all', css)
 
