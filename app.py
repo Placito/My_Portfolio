@@ -139,12 +139,12 @@ def serve_static(path):
 def get_current_locale():
     return jsonify({'locale': get_locale()})
 
-# Define the home route
-@app.route('/')
-@cross_origin()
+@app.route('/')  # This is the route definition for the home page. 
+@cross_origin()  # This decorator allows cross-origin requests (CORS).
 def home():
-    logger.debug("Home route accessed")
-    return render_template('index.html', current_locale=get_locale())
+    logger.debug("Home route accessed")  # Logs when the home route is accessed.
+    return render_template('index.html', current_locale=get_locale())  # Renders the 'index.html' template and passes the current locale.
+
 
 # Define the privacy policy route
 @app.route('/privacy_policy.html')
@@ -301,7 +301,7 @@ def sitemap_xml():
         return send_from_directory(app.static_folder, 'sitemap.xml')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=5000, debug=True)
 
 # Import CLI commands
 import cli  # Ensure this line is at the end of your app.py
