@@ -79,6 +79,7 @@ css = Bundle(
 )
 
 assets = Environment(app)
+assets.init_app(app)
 assets.register('css_all', css)
 
 # Define the Contact class
