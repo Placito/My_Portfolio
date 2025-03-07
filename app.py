@@ -145,7 +145,7 @@ def get_current_locale():
 @cross_origin()  # This decorator allows cross-origin requests (CORS).
 def home():
     logger.debug("Home route accessed")  # Logs when the home route is accessed.
-    return render_template('index.html', current_locale=get_locale())  # Renders the 'index.html' template and passes the current locale.
+    return render_template('index.html', current_locale=get_locale(), current_year=datetime.now().year)   # Renders the 'index.html' template and passes the current locale.
 
 
 # Define the privacy policy route
