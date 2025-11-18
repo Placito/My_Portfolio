@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-11-18 11:53+0000\n"
+"POT-Creation-Date: 2025-11-18 12:12+0000\n"
 "PO-Revision-Date: 2025-11-14 16:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -30,15 +30,15 @@ msgstr "Sobre"
 msgid "Skills"
 msgstr "Competências"
 
-#: templates/index.html:57 templates/index.html:212 templates/offline.html:57
+#: templates/index.html:57 templates/index.html:220 templates/offline.html:57
 msgid "Curriculum"
 msgstr "Currículo"
 
-#: templates/index.html:60 templates/index.html:262 templates/offline.html:60
+#: templates/index.html:60 templates/index.html:270 templates/offline.html:60
 msgid "Portfolio"
 msgstr "Portfólio"
 
-#: templates/index.html:63 templates/index.html:381 templates/offline.html:63
+#: templates/index.html:63 templates/index.html:389 templates/offline.html:63
 msgid "Contact"
 msgstr "Contacto"
 
@@ -162,23 +162,23 @@ msgstr ""
 "acordo com a percentagem de conhecimento que acredito ter em cada uma "
 "delas."
 
-#: templates/index.html:202
+#: templates/index.html:210
 msgid "Communication"
 msgstr "Comunicação"
 
-#: templates/index.html:215
+#: templates/index.html:223
 msgid "Education"
 msgstr "Educação"
 
-#: templates/index.html:217
+#: templates/index.html:225
 msgid "Full-Stack Software Developer"
 msgstr "Full-Stack Software Developer"
 
-#: templates/index.html:219
+#: templates/index.html:227
 msgid "Online, Spain"
 msgstr "Online, Espanha"
 
-#: templates/index.html:220
+#: templates/index.html:228
 msgid ""
 "Hands-on program to become a Full-Stack Software Developer, focusing on "
 "mastering both frontend and backend technologies."
@@ -186,11 +186,11 @@ msgstr ""
 "Programa prático para se tornar um programador de software Full-Stack, "
 "com foco emdominar as tecnologias front-end e back-end."
 
-#: templates/index.html:223
+#: templates/index.html:231
 msgid "Development of multimedia products"
 msgstr "Desenvolvimento de produtos multimédia"
 
-#: templates/index.html:226
+#: templates/index.html:234
 msgid ""
 "Specialized in multimedia product development, gaining practical skills "
 "in the latest digital design and media production technologies."
@@ -199,15 +199,15 @@ msgstr ""
 "competências práticas nas mais recentes tecnologias de design digital e "
 "produção de media."
 
-#: templates/index.html:229
+#: templates/index.html:237
 msgid "Degree in Human Biology"
 msgstr "Licenciatuta em Biologia Humana"
 
-#: templates/index.html:231
+#: templates/index.html:239
 msgid "Évora University"
 msgstr "Universidade de Évora"
 
-#: templates/index.html:232
+#: templates/index.html:240
 msgid ""
 "Completed a comprehensive study in Human Biology, acquiring a strong "
 "foundation in biological sciences and their application to human health "
@@ -216,15 +216,15 @@ msgstr ""
 "Conclui um estudo abrangente em Biologia Humana, adquirindo fundamentos "
 "nas ciências biológicas bem como a sua aplicação à saúde humana e doença."
 
-#: templates/index.html:236
+#: templates/index.html:244
 msgid "Professional"
-msgstr "\"Profissional"
+msgstr "Profissional"
 
-#: templates/index.html:238
+#: templates/index.html:246
 msgid "Developer Rookie"
 msgstr ""
 
-#: templates/index.html:241
+#: templates/index.html:249
 msgid ""
 "In OutSystems, a Developer Rookie is a beginner-level developer learning "
 "the basics of the platform, including data modeling, UI development, "
@@ -234,15 +234,15 @@ msgstr ""
 "consiste em aprender o básico da plataforma, incluindo modelação de "
 "dados, desenvolvimento de UI,lógica de negócio e integrações."
 
-#: templates/index.html:244
+#: templates/index.html:252
 msgid "Full-Stack Developer"
 msgstr "Full-Stack Developer"
 
-#: templates/index.html:245
+#: templates/index.html:253
 msgid "02/2024 - 07/2024"
 msgstr "02/2024 - 07/2024"
 
-#: templates/index.html:247
+#: templates/index.html:255
 msgid ""
 "Develop user-friendly web interfaces using HTML, CSS, and JavaScript. "
 "Participate in code reviews and provide constructive feedback. "
@@ -254,11 +254,11 @@ msgstr ""
 "Solucionar, depurar e resolver problemas tanto no front-end como no back-"
 "end."
 
-#: templates/index.html:250
+#: templates/index.html:258
 msgid "Graphic designer"
 msgstr "Designer gráfica"
 
-#: templates/index.html:253
+#: templates/index.html:261
 msgid ""
 "Assisting in the management of the company's website development, like, "
 "taking photographs and designing them, updating its content in the "
@@ -268,7 +268,7 @@ msgstr ""
 "desenhá-las, actualizando o seu conteúdo no painel de administração do "
 "site e relatórios de problemas que iriam aparecer."
 
-#: templates/index.html:274
+#: templates/index.html:282
 msgid ""
 "Develop during a programming bootcamp, an e-commerce platform where users"
 " can browse, review, purchase."
@@ -276,7 +276,7 @@ msgstr ""
 "Desenvolvido durante um bootcamp de programação, uma plataforma de "
 "e-commerce onde os utilizadores podem ​​navegar, rever, comprar."
 
-#: templates/index.html:294
+#: templates/index.html:302
 msgid ""
 "It is a desktop application developed with Python, PyQt (a set of Python "
 "bindings for the Qt application framework used for building graphical "
@@ -289,15 +289,15 @@ msgstr ""
 "vulgarmente utilizado para interações com bases de dados) para gerir "
 "eficientemente as finanças pessoais."
 
-#: templates/index.html:313
+#: templates/index.html:321
 msgid "Is an application to assist in task management, for internal roles."
 msgstr "É uma aplicação para auxiliar na gestão de tarefas, para funções internas."
 
-#: templates/index.html:331
+#: templates/index.html:339
 msgid "My design portfolio"
 msgstr "O meu portfólio de design"
 
-#: templates/index.html:332
+#: templates/index.html:340
 msgid ""
 "Work developed in my CET, using techniques like, Adobe Illustrator, Adobe"
 " Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. "
@@ -308,44 +308,44 @@ msgstr ""
 "Fotografia e 3ds Max. O idioma que selecionei para apresentar o meu "
 "trabalho foi o português."
 
-#: templates/index.html:344
+#: templates/index.html:352
 msgid "Previous"
 msgstr "Anterior"
 
-#: templates/index.html:348
+#: templates/index.html:356
 msgid "Next"
 msgstr "Seguinte"
 
-#: templates/index.html:366
+#: templates/index.html:374
 msgid "Location:"
 msgstr "Localização:"
 
-#: templates/index.html:370 templates/index.html:391
+#: templates/index.html:378 templates/index.html:399
 msgid "Email:"
 msgstr "Email:"
 
-#: templates/index.html:387
+#: templates/index.html:395
 msgid "Name:"
 msgstr "Nome"
 
-#: templates/index.html:388
+#: templates/index.html:396
 msgid "Write your name"
 msgstr "Escreva o seu nome"
 
-#: templates/index.html:392
+#: templates/index.html:400
 msgid "Write your email"
 msgstr "Escreva o seu email"
 
-#: templates/index.html:395
+#: templates/index.html:403
 msgid "Message:"
 msgstr "Mensagem:"
 
-#: templates/index.html:396
+#: templates/index.html:404
 #, fuzzy
 msgid "Write your message"
 msgstr "Escreva a sua mensagem..."
 
-#: templates/index.html:399
+#: templates/index.html:407
 msgid "Send"
 msgstr "Enviar"
 
