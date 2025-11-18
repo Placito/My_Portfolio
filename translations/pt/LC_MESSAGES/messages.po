@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-11-14 16:26+0000\n"
+"POT-Creation-Date: 2025-11-18 11:53+0000\n"
 "PO-Revision-Date: 2025-11-14 16:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -64,7 +64,7 @@ msgstr "Política de Priv."
 msgid "Terms of Service"
 msgstr "Termos"
 
-#: templates/index.html:91
+#: templates/index.html:91 templates/index.html:107
 msgid "Software Developer"
 msgstr "Software Developer"
 
@@ -87,20 +87,17 @@ msgstr ""
 "meu desejo de integrar ambosáreas, permitindo-me criar soluções "
 "abrangentes e inovadoras."
 
-#: templates/index.html:107 templates/index.html:238
-msgid "Developer Rookie"
-msgstr ""
-
 #: templates/index.html:108
-#, fuzzy
 msgid ""
-"A Developer Rookie is a beginner-level developer learning the basics of "
-"the platform, including data modeling, UI development, business logic, "
-"and integrations."
+"Is a professional who designs, builds, tests, and maintains computer "
+"applications or systems. They write code, solve technical problems, and "
+"work with teams to create software that meets user needs and runs "
+"reliably."
 msgstr ""
-"Na OutSystems, um Developer Rookie é um developer de nível principiante, "
-"consiste em aprender o básico da plataforma, incluindo modelação de "
-"dados, desenvolvimento de UI,lógica de negócio e integrações."
+"É um profissional que projeta, desenvolve, testa e mantém aplicações ou "
+"sistemas de computador. Ele escreve código, resolve problemas técnicos e "
+"trabalha com equipes para criar software que atenda às necessidades dos "
+"utilizadores e que funcione de forma confiável."
 
 #: templates/index.html:112
 msgid "Date of birth:"
@@ -222,6 +219,10 @@ msgstr ""
 #: templates/index.html:236
 msgid "Professional"
 msgstr "\"Profissional"
+
+#: templates/index.html:238
+msgid "Developer Rookie"
+msgstr ""
 
 #: templates/index.html:241
 msgid ""
@@ -556,14 +557,14 @@ msgstr ""
 msgid "Options"
 msgstr ""
 
-#: venv/lib/python3.10/site-packages/click/core.py:1424
+#: venv/lib/python3.10/site-packages/click/core.py:1422
 #, python-brace-format
 msgid "Got unexpected extra argument ({args})"
 msgid_plural "Got unexpected extra arguments ({args})"
 msgstr[0] ""
 msgstr[1] ""
 
-#: venv/lib/python3.10/site-packages/click/core.py:1437
+#: venv/lib/python3.10/site-packages/click/core.py:1438
 #, python-brace-format
 msgid "DeprecationWarning: The command {name!r} is deprecated."
 msgstr ""
@@ -585,7 +586,7 @@ msgstr ""
 msgid "Value must be an iterable."
 msgstr ""
 
-#: venv/lib/python3.10/site-packages/click/core.py:2336
+#: venv/lib/python3.10/site-packages/click/core.py:2334
 #, python-brace-format
 msgid "Takes {nargs} values but 1 was given."
 msgid_plural "Takes {nargs} values but {len} were given."
@@ -671,7 +672,7 @@ msgstr ""
 msgid "No such option: {name}"
 msgstr ""
 
-#: venv/lib/python3.10/site-packages/click/exceptions.py:234
+#: venv/lib/python3.10/site-packages/click/exceptions.py:232
 #, python-brace-format
 msgid "Did you mean {possibility}?"
 msgid_plural "(Possible options: {possibilities})"
@@ -697,14 +698,14 @@ msgstr ""
 msgid "Option {name!r} does not take a value."
 msgstr ""
 
-#: venv/lib/python3.10/site-packages/click/parser.py:475
+#: venv/lib/python3.10/site-packages/click/parser.py:476
 #, python-brace-format
 msgid "Option {name!r} requires an argument."
 msgid_plural "Option {name!r} requires {nargs} arguments."
 msgstr[0] ""
 msgstr[1] ""
 
-#: venv/lib/python3.10/site-packages/click/shell_completion.py:325
+#: venv/lib/python3.10/site-packages/click/shell_completion.py:326
 msgid "Shell completion is not supported for Bash versions older than 4.4."
 msgstr ""
 
@@ -744,14 +745,14 @@ msgid ""
 "\t{choices}"
 msgstr ""
 
-#: venv/lib/python3.10/site-packages/click/types.py:301
+#: venv/lib/python3.10/site-packages/click/types.py:299
 #, python-brace-format
 msgid "{value!r} is not {choice}."
 msgid_plural "{value!r} is not one of {choices}."
 msgstr[0] ""
 msgstr[1] ""
 
-#: venv/lib/python3.10/site-packages/click/types.py:395
+#: venv/lib/python3.10/site-packages/click/types.py:393
 #, python-brace-format
 msgid "{value!r} does not match the format {format}."
 msgid_plural "{value!r} does not match the formats {formats}."
@@ -820,7 +821,7 @@ msgstr ""
 msgid "{name} {filename!r} is not executable."
 msgstr ""
 
-#: venv/lib/python3.10/site-packages/click/types.py:991
+#: venv/lib/python3.10/site-packages/click/types.py:992
 #, python-brace-format
 msgid "{len_type} values are required, but {len_value} was given."
 msgid_plural "{len_type} values are required, but {len_value} were given."
@@ -843,4 +844,18 @@ msgstr[1] ""
 #~ " que atenda às necessidades dos "
 #~ "utilizadores e que funcione de forma "
 #~ "confiável."
+
+#~ msgid ""
+#~ "A Developer Rookie is a beginner-"
+#~ "level developer learning the basics of"
+#~ " the platform, including data modeling, "
+#~ "UI development, business logic, and "
+#~ "integrations."
+#~ msgstr ""
+#~ "Na OutSystems, um Developer Rookie é "
+#~ "um developer de nível principiante, "
+#~ "consiste em aprender o básico da "
+#~ "plataforma, incluindo modelação de dados, "
+#~ "desenvolvimento de UI,lógica de negócio "
+#~ "e integrações."
 
