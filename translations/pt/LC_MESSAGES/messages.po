@@ -164,7 +164,7 @@ msgstr ""
 
 #: templates/index.html:186
 msgid "Graphic Design"
-msgstr "Designer gráfica"
+msgstr "Designer Gráfica"
 
 #: templates/index.html:210
 msgid "Artificial Intelligence (AI)"
