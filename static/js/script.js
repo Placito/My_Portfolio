@@ -19,6 +19,18 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         initScrollAnimation();
     }
 
+    const navLinks = document.querySelectorAll('.nav-menu .nav-link');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        // remove active from all
+        navLinks.forEach(l => l.classList.remove('active'));
+
+        // add active to clicked one
+        this.classList.add('active');
+    });
+});
+
     // Initialize language handler if language selection exists
     if (document.querySelector('select.form-select')) {
         try {
