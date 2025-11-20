@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-11-18 12:22+0000\n"
+"POT-Creation-Date: 2025-11-20 18:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,15 +29,15 @@ msgstr ""
 msgid "Skills"
 msgstr ""
 
-#: templates/index.html:57 templates/index.html:220 templates/offline.html:57
+#: templates/index.html:57 templates/index.html:224 templates/offline.html:57
 msgid "Curriculum"
 msgstr ""
 
-#: templates/index.html:60 templates/index.html:270 templates/offline.html:60
+#: templates/index.html:60 templates/index.html:274 templates/offline.html:60
 msgid "Portfolio"
 msgstr ""
 
-#: templates/index.html:63 templates/index.html:389 templates/offline.html:63
+#: templates/index.html:63 templates/index.html:393 templates/offline.html:63
 msgid "Contact"
 msgstr ""
 
@@ -150,76 +150,80 @@ msgid "Graphic Design"
 msgstr ""
 
 #: templates/index.html:210
+msgid "Artificial Intelligence (AI)"
+msgstr ""
+
+#: templates/index.html:214
 msgid "Communication"
 msgstr ""
 
-#: templates/index.html:223
+#: templates/index.html:227
 msgid "Education"
 msgstr ""
 
-#: templates/index.html:225
+#: templates/index.html:229
 msgid "Full-Stack Software Developer"
 msgstr ""
 
-#: templates/index.html:227
+#: templates/index.html:231
 msgid "Online, Spain"
 msgstr ""
 
-#: templates/index.html:228
+#: templates/index.html:232
 msgid ""
 "Hands-on program to become a Full-Stack Software Developer, focusing on "
 "mastering both frontend and backend technologies."
 msgstr ""
 
-#: templates/index.html:231
+#: templates/index.html:235
 msgid "Development of multimedia products"
 msgstr ""
 
-#: templates/index.html:234
+#: templates/index.html:238
 msgid ""
 "Specialized in multimedia product development, gaining practical skills "
 "in the latest digital design and media production technologies."
 msgstr ""
 
-#: templates/index.html:237
+#: templates/index.html:241
 msgid "Degree in Human Biology"
 msgstr ""
 
-#: templates/index.html:239
+#: templates/index.html:243
 msgid "Évora University"
 msgstr ""
 
-#: templates/index.html:240
+#: templates/index.html:244
 msgid ""
 "Completed a comprehensive study in Human Biology, acquiring a strong "
 "foundation in biological sciences and their application to human health "
 "and disease."
 msgstr ""
 
-#: templates/index.html:244
+#: templates/index.html:248
 msgid "Professional"
 msgstr ""
 
-#: templates/index.html:246
+#: templates/index.html:250
 msgid "Developer Rookie"
 msgstr ""
 
-#: templates/index.html:249
+#: templates/index.html:253
 msgid ""
 "In OutSystems, a Developer Rookie is a beginner-level developer learning "
 "the basics of the platform, including data modeling, UI development, "
 "business logic, and integrations."
 msgstr ""
 
-#: templates/index.html:252
+#: templates/index.html:256
 msgid "Full-Stack Developer"
 msgstr ""
 
-#: templates/index.html:253
+#: templates/index.html:257
 msgid "02/2024 - 07/2024"
 msgstr ""
 
-#: templates/index.html:255
+#: templates/index.html:259
 msgid ""
 "Develop user-friendly web interfaces using HTML, CSS, and JavaScript. "
 "Participate in code reviews and provide constructive feedback. "
@@ -227,24 +231,24 @@ msgid ""
 "components."
 msgstr ""
 
-#: templates/index.html:258
+#: templates/index.html:262
 msgid "Graphic designer"
 msgstr ""
 
-#: templates/index.html:261
+#: templates/index.html:265
 msgid ""
 "Assisting in the management of the company's website development, like, "
 "taking photographs and designing them, updating its content in the "
 "website's admin dashboard, and reporting problems that would appear."
 msgstr ""
 
-#: templates/index.html:282
+#: templates/index.html:286
 msgid ""
 "Develop during a programming bootcamp, an e-commerce platform where users"
 " can browse, review, purchase."
 msgstr ""
 
-#: templates/index.html:302
+#: templates/index.html:306
 msgid ""
 "It is a desktop application developed with Python, PyQt (a set of Python "
 "bindings for the Qt application framework used for building graphical "
@@ -252,58 +256,58 @@ msgid ""
 "used for database interactions) to efficiently manage personal finances."
 msgstr ""
 
-#: templates/index.html:321
+#: templates/index.html:325
 msgid "Is an application to assist in task management, for internal roles."
 msgstr ""
 
-#: templates/index.html:339
+#: templates/index.html:343
 msgid "My design portfolio"
 msgstr ""
 
-#: templates/index.html:340
+#: templates/index.html:344
 msgid ""
 "Work developed in my CET, using techniques like, Adobe Illustrator, Adobe"
 " Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. "
 "The language I selected to present my work was Portuguese."
 msgstr ""
 
-#: templates/index.html:352
+#: templates/index.html:356
 msgid "Previous"
 msgstr ""
 
-#: templates/index.html:356
+#: templates/index.html:360
 msgid "Next"
 msgstr ""
 
-#: templates/index.html:374
+#: templates/index.html:378
 msgid "Location:"
 msgstr ""
 
-#: templates/index.html:378 templates/index.html:399
+#: templates/index.html:382 templates/index.html:403
 msgid "Email:"
 msgstr ""
 
-#: templates/index.html:395
+#: templates/index.html:399
 msgid "Name:"
 msgstr ""
 
-#: templates/index.html:396
+#: templates/index.html:400
 msgid "Write your name"
 msgstr ""
 
-#: templates/index.html:400
+#: templates/index.html:404
 msgid "Write your email"
 msgstr ""
 
-#: templates/index.html:403
+#: templates/index.html:407
 msgid "Message:"
 msgstr ""
 
-#: templates/index.html:404
+#: templates/index.html:408
 msgid "Write your message"
 msgstr ""
 
-#: templates/index.html:407
+#: templates/index.html:411
 msgid "Send"
 msgstr ""
 
