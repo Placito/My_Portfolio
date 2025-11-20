@@ -13,23 +13,56 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         initMenuHandler();
     }
 
-    // Initialize scroll animations if data-anime elements exist
-    if (document.querySelector("[data-anime]")) {
-        const { initScrollAnimation } = await import('./scrollAnimation.js');
-        initScrollAnimation();
-    }
+ // Initialize scroll animations if data-anime elements exist
+if (document.querySelector("[data-anime]")) {
+    const { initScrollAnimation } = await import('./scrollAnimation.js');
+    initScrollAnimation();
+}
 
-    const navLinks = document.querySelectorAll('.nav-menu .nav-link');
+// ---- CLICK ACTIVATION ----
+const navLinks = document.querySelectorAll('.nav-menu .nav-link');
 
 navLinks.forEach(link => {
     link.addEventListener('click', function () {
-        // remove active from all
         navLinks.forEach(l => l.classList.remove('active'));
-
-        // add active to clicked one
         this.classList.add('active');
     });
 });
+
+// ---- SCROLL ACTIVATION ----
+
+// Map: sectionId → navLink
+const sections = document.querySelectorAll("section[id]");
+const sectionMap = {};
+
+sections.forEach(section => {
+    const id = section.getAttribute("id");
+    const link = document.querySelector(`.nav-menu .nav-link[href="#${id}"]`);
+    if (link) sectionMap[id] = link;
+});
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const id = entry.target.id;
+
+            // Remove all active
+            navLinks.forEach(l => l.classList.remove('active'));
+
+            // Add active to the correct link
+            if (sectionMap[id]) {
+                sectionMap[id].classList.add('active');
+            }
+        }
+    });
+}, {
+    root: null,
+    threshold: 0.6 // 60% of section visible
+});
+
+// Observe each section
+sections.forEach(section => observer.observe(section));
+
 
     // Initialize language handler if language selection exists
     if (document.querySelector('select.form-select')) {
