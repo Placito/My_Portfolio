@@ -8,7 +8,7 @@ This portfolio application is built with Flask and includes a contact form that 
 The project was deploy7 whit vercel: https://my-portfolio-phi-cyan-60.vercel.app/
 
 
-## iHow do I minify CSS after making changes?
+## How do I minify CSS after making changes?
 ```bash
 python -c "from app import assets; print(assets['css_all'].build())"
 ```
@@ -19,6 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 * activate virtual environment ```source venv/bin/activate```
 * install the requeriments ```pip install -r requirements.txt```
 * start ```flask run```
+
 
 
 
