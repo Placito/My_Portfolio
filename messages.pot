@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-03-17 19:15+0000\n"
+"POT-Creation-Date: 2026-03-17 19:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,11 +33,11 @@ msgstr ""
 msgid "Curriculum"
 msgstr ""
 
-#: templates/index.html:60 templates/index.html:278 templates/offline.html:60
+#: templates/index.html:60 templates/index.html:285 templates/offline.html:60
 msgid "Portfolio"
 msgstr ""
 
-#: templates/index.html:63 templates/index.html:397 templates/offline.html:63
+#: templates/index.html:63 templates/index.html:404 templates/offline.html:63
 msgid "Contact"
 msgstr ""
 
@@ -63,8 +63,8 @@ msgstr ""
 msgid "Terms of Service"
 msgstr ""
 
-#: templates/index.html:91
-msgid "Software Developer"
+#: templates/index.html:91 templates/index.html:107
+msgid "Technical Consultant | Software Developer"
 msgstr ""
 
 #: templates/index.html:99
@@ -78,11 +78,7 @@ msgid ""
 "areas, enabling me to create comprehensive and innovative solutions."
 msgstr ""
 
-#: templates/index.html:107
-msgid "Technical Consultant"
-msgstr ""
-
-#: templates/index.html:108
+#: templates/index.html:108 templates/index.html:257
 msgid ""
 "Is a professional who Gathered client requirements and delivered scalable"
 " data and analytics solutions. Supported data integration, reporting "
@@ -209,30 +205,34 @@ msgid ""
 "and disease."
 msgstr ""
 
-#: templates/index.html:252
+#: templates/index.html:252 templates/index.html:259
 msgid "Professional"
 msgstr ""
 
 #: templates/index.html:254
+msgid "Technical Consultant"
+msgstr ""
+
+#: templates/index.html:261
 msgid "Developer Rookie"
 msgstr ""
 
-#: templates/index.html:257
+#: templates/index.html:264
 msgid ""
 "In OutSystems, a Developer Rookie is a beginner-level developer learning "
 "the basics of the platform, including data modeling, UI development, "
 "business logic, and integrations."
 msgstr ""
 
-#: templates/index.html:260
+#: templates/index.html:267
 msgid "Full-Stack Developer"
 msgstr ""
 
-#: templates/index.html:261
+#: templates/index.html:268
 msgid "02/2024 - 07/2024"
 msgstr ""
 
-#: templates/index.html:263
+#: templates/index.html:270
 msgid ""
 "Develop user-friendly web interfaces using HTML, CSS, and JavaScript. "
 "Participate in code reviews and provide constructive feedback. "
@@ -240,24 +240,24 @@ msgid ""
 "components."
 msgstr ""
 
-#: templates/index.html:266
+#: templates/index.html:273
 msgid "Graphic designer"
 msgstr ""
 
-#: templates/index.html:269
+#: templates/index.html:276
 msgid ""
 "Assisting in the management of the company's website development, like, "
 "taking photographs and designing them, updating its content in the "
 "website's admin dashboard, and reporting problems that would appear."
 msgstr ""
 
-#: templates/index.html:290
+#: templates/index.html:297
 msgid ""
 "Develop during a programming bootcamp, an e-commerce platform where users"
 " can browse, review, purchase."
 msgstr ""
 
-#: templates/index.html:310
+#: templates/index.html:317
 msgid ""
 "It is a desktop application developed with Python, PyQt (a set of Python "
 "bindings for the Qt application framework used for building graphical "
@@ -265,58 +265,58 @@ msgid ""
 "used for database interactions) to efficiently manage personal finances."
 msgstr ""
 
-#: templates/index.html:329
+#: templates/index.html:336
 msgid "Is an application to assist in task management, for internal roles."
 msgstr ""
 
-#: templates/index.html:347
+#: templates/index.html:354
 msgid "My design portfolio"
 msgstr ""
 
-#: templates/index.html:348
+#: templates/index.html:355
 msgid ""
 "Work developed in my CET, using techniques like, Adobe Illustrator, Adobe"
 " Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. "
 "The language I selected to present my work was Portuguese."
 msgstr ""
 
-#: templates/index.html:360
+#: templates/index.html:367
 msgid "Previous"
 msgstr ""
 
-#: templates/index.html:364
+#: templates/index.html:371
 msgid "Next"
 msgstr ""
 
-#: templates/index.html:382
+#: templates/index.html:389
 msgid "Location:"
 msgstr ""
 
-#: templates/index.html:386 templates/index.html:407
+#: templates/index.html:393 templates/index.html:414
 msgid "Email:"
 msgstr ""
 
-#: templates/index.html:403
+#: templates/index.html:410
 msgid "Name:"
 msgstr ""
 
-#: templates/index.html:404
+#: templates/index.html:411
 msgid "Write your name"
 msgstr ""
 
-#: templates/index.html:408
+#: templates/index.html:415
 msgid "Write your email"
 msgstr ""
 
-#: templates/index.html:411
+#: templates/index.html:418
 msgid "Message:"
 msgstr ""
 
-#: templates/index.html:412
+#: templates/index.html:419
 msgid "Write your message"
 msgstr ""
 
-#: templates/index.html:415
+#: templates/index.html:422
 msgid "Send"
 msgstr ""
 
