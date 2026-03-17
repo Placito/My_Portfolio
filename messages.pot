@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-03-17 19:07+0000\n"
+"POT-Creation-Date: 2026-03-17 19:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,7 +63,7 @@ msgstr ""
 msgid "Terms of Service"
 msgstr ""
 
-#: templates/index.html:91 templates/index.html:107
+#: templates/index.html:91
 msgid "Software Developer"
 msgstr ""
 
@@ -78,12 +78,17 @@ msgid ""
 "areas, enabling me to create comprehensive and innovative solutions."
 msgstr ""
 
+#: templates/index.html:107
+msgid "Technical Consultant"
+msgstr ""
+
 #: templates/index.html:108
 msgid ""
-"Is a professional who designs, builds, tests, and maintains computer "
-"applications or systems. They write code, solve technical problems, and "
-"work with teams to create software that meets user needs and runs "
-"reliably."
+"Is a professional who Gathered client requirements and delivered scalable"
+" data and analytics solutions. Supported data integration, reporting "
+"systems, and analytics platforms. Collaborated with engineering teams to "
+"implement data pipelines and dashboards. Provided technical "
+"troubleshooting, documentation, and client support."
 msgstr ""
 
 #: templates/index.html:112
@@ -123,7 +128,7 @@ msgid "Work:"
 msgstr ""
 
 #: templates/index.html:121
-msgid " Technical consultant"
+msgid " Datatekin"
 msgstr ""
 
 #: templates/index.html:122

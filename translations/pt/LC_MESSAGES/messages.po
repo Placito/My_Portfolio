@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-03-17 19:07+0000\n"
+"POT-Creation-Date: 2026-03-17 19:15+0000\n"
 "PO-Revision-Date: 2025-11-14 16:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -64,7 +64,7 @@ msgstr "Política de Priv."
 msgid "Terms of Service"
 msgstr "Termos"
 
-#: templates/index.html:91 templates/index.html:107
+#: templates/index.html:91
 msgid "Software Developer"
 msgstr "Software Developer"
 
@@ -87,17 +87,24 @@ msgstr ""
 "meu desejo de integrar ambosáreas, permitindo-me criar soluções "
 "abrangentes e inovadoras."
 
+#: templates/index.html:107
+#, fuzzy
+msgid "Technical Consultant"
+msgstr "Consultora Técnica"
+
 #: templates/index.html:108
 msgid ""
-"Is a professional who designs, builds, tests, and maintains computer "
-"applications or systems. They write code, solve technical problems, and "
-"work with teams to create software that meets user needs and runs "
-"reliably."
-msgstr ""
-"É um profissional que projeta, desenvolve, testa e mantém aplicações ou "
-"sistemas de computador. Ele escreve código, resolve problemas técnicos e "
-"trabalha com equipes para criar software que atenda às necessidades dos "
-"utilizadores e que funcione de forma confiável."
+"Is a professional who Gathered client requirements and delivered scalable"
+" data and analytics solutions. Supported data integration, reporting "
+"systems, and analytics platforms. Collaborated with engineering teams to "
+"implement data pipelines and dashboards. Provided technical "
+"troubleshooting, documentation, and client support."
+msgstr 
+"Reune os requisitos do cliente e entregua soluções escaláveis ​​de "
+"dados e análises. Dá suporte à integração de dados, sistemas de relatórios"
+" e plataformas de análise.Colabora com equipes de engenharia para "
+"implementar pipelines de dados e dashboards. Fornece suporte técnico "
+"para resolução de problemas, documentação e atendimento ao cliente."
 
 #: templates/index.html:112
 msgid "Date of birth:"
@@ -136,8 +143,9 @@ msgid "Work:"
 msgstr "Trabalho:"
 
 #: templates/index.html:121
-msgid " Technical consultant"
-msgstr "Consultora Técnica"
+#, fuzzy
+msgid " Datatekin"
+msgstr "Datatekin"
 
 #: templates/index.html:122
 msgid "Experience:"
