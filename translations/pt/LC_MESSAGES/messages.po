@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-27 19:51+0000\n"
+"POT-Creation-Date: 2026-03-17 19:07+0000\n"
 "PO-Revision-Date: 2025-11-14 16:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -136,8 +136,8 @@ msgid "Work:"
 msgstr "Trabalho:"
 
 #: templates/index.html:121
-msgid " Search and continuous improvement"
-msgstr " Procura e continuo crescimento"
+msgid " Technical consultant"
+msgstr "Consultora Técnica"
 
 #: templates/index.html:122
 msgid "Experience:"
@@ -873,4 +873,7 @@ msgstr[1] ""
 
 #~ msgid "Graphic Design"
 #~ msgstr "Design Gráfico"
+
+#~ msgid " Search and continuous improvement"
+#~ msgstr " Procura e continuo crescimento"
 
