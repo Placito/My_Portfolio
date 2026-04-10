@@ -95,6 +95,11 @@ msgid ""
 "implement data pipelines and dashboards. Provided technical "
 "troubleshooting, documentation, and client support."
 msgstr ""
+"É um profissional que recolhe os requisitos do cliente e entrega soluções "
+"escaláveis ​​de dados e análises. Dá suporte à integração de dados, relatórios "
+"e plataformas de análise. Colabora com equipes de engenharia para implementar"
+" pipelines de dados e dashboards. Fornece suporte técnico, soluções de problemas"
+", documentação e suporte ao cliente."
 
 #: templates/index.html:112
 msgid "Date of birth:"
