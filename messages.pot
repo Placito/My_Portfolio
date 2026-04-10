@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-03-17 19:35+0000\n"
+"POT-Creation-Date: 2026-04-10 16:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,11 +33,11 @@ msgstr ""
 msgid "Curriculum"
 msgstr ""
 
-#: templates/index.html:60 templates/index.html:285 templates/offline.html:60
+#: templates/index.html:60 templates/index.html:284 templates/offline.html:60
 msgid "Portfolio"
 msgstr ""
 
-#: templates/index.html:63 templates/index.html:404 templates/offline.html:63
+#: templates/index.html:63 templates/index.html:403 templates/offline.html:63
 msgid "Contact"
 msgstr ""
 
@@ -205,7 +205,7 @@ msgid ""
 "and disease."
 msgstr ""
 
-#: templates/index.html:252 templates/index.html:259
+#: templates/index.html:252
 msgid "Professional"
 msgstr ""
 
@@ -213,26 +213,26 @@ msgstr ""
 msgid "Technical Consultant"
 msgstr ""
 
-#: templates/index.html:261
+#: templates/index.html:260
 msgid "Developer Rookie"
 msgstr ""
 
-#: templates/index.html:264
+#: templates/index.html:263
 msgid ""
 "In OutSystems, a Developer Rookie is a beginner-level developer learning "
 "the basics of the platform, including data modeling, UI development, "
 "business logic, and integrations."
 msgstr ""
 
-#: templates/index.html:267
+#: templates/index.html:266
 msgid "Full-Stack Developer"
 msgstr ""
 
-#: templates/index.html:268
+#: templates/index.html:267
 msgid "02/2024 - 07/2024"
 msgstr ""
 
-#: templates/index.html:270
+#: templates/index.html:269
 msgid ""
 "Develop user-friendly web interfaces using HTML, CSS, and JavaScript. "
 "Participate in code reviews and provide constructive feedback. "
@@ -240,24 +240,24 @@ msgid ""
 "components."
 msgstr ""
 
-#: templates/index.html:273
+#: templates/index.html:272
 msgid "Graphic designer"
 msgstr ""
 
-#: templates/index.html:276
+#: templates/index.html:275
 msgid ""
 "Assisting in the management of the company's website development, like, "
 "taking photographs and designing them, updating its content in the "
 "website's admin dashboard, and reporting problems that would appear."
 msgstr ""
 
-#: templates/index.html:297
+#: templates/index.html:296
 msgid ""
 "Develop during a programming bootcamp, an e-commerce platform where users"
 " can browse, review, purchase."
 msgstr ""
 
-#: templates/index.html:317
+#: templates/index.html:316
 msgid ""
 "It is a desktop application developed with Python, PyQt (a set of Python "
 "bindings for the Qt application framework used for building graphical "
@@ -265,58 +265,58 @@ msgid ""
 "used for database interactions) to efficiently manage personal finances."
 msgstr ""
 
-#: templates/index.html:336
+#: templates/index.html:335
 msgid "Is an application to assist in task management, for internal roles."
 msgstr ""
 
-#: templates/index.html:354
+#: templates/index.html:353
 msgid "My design portfolio"
 msgstr ""
 
-#: templates/index.html:355
+#: templates/index.html:354
 msgid ""
 "Work developed in my CET, using techniques like, Adobe Illustrator, Adobe"
 " Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. "
 "The language I selected to present my work was Portuguese."
 msgstr ""
 
-#: templates/index.html:367
+#: templates/index.html:366
 msgid "Previous"
 msgstr ""
 
-#: templates/index.html:371
+#: templates/index.html:370
 msgid "Next"
 msgstr ""
 
-#: templates/index.html:389
+#: templates/index.html:388
 msgid "Location:"
 msgstr ""
 
-#: templates/index.html:393 templates/index.html:414
+#: templates/index.html:392 templates/index.html:413
 msgid "Email:"
 msgstr ""
 
-#: templates/index.html:410
+#: templates/index.html:409
 msgid "Name:"
 msgstr ""
 
-#: templates/index.html:411
+#: templates/index.html:410
 msgid "Write your name"
 msgstr ""
 
-#: templates/index.html:415
+#: templates/index.html:414
 msgid "Write your email"
 msgstr ""
 
-#: templates/index.html:418
+#: templates/index.html:417
 msgid "Message:"
 msgstr ""
 
-#: templates/index.html:419
+#: templates/index.html:418
 msgid "Write your message"
 msgstr ""
 
-#: templates/index.html:422
+#: templates/index.html:421
 msgid "Send"
 msgstr ""
 
