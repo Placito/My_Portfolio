@@ -65,7 +65,6 @@ msgid "Terms of Service"
 msgstr "Termos"
 
 #: templates/index.html:91 templates/index.html:107
-#, fuzzy
 msgid "Technical Consultant | Software Developer"
 msgstr "Consultora Técnica | Software Developer"
 
@@ -134,7 +133,6 @@ msgid "Work:"
 msgstr "Trabalho:"
 
 #: templates/index.html:121
-#, fuzzy
 msgid " Datatekin"
 msgstr "Datatekin"
 
@@ -232,7 +230,6 @@ msgid "Professional"
 msgstr "Profissional"
 
 #: templates/index.html:254
-#, fuzzy
 msgid "Technical Consultant"
 msgstr "Consultora Técnica | Software Developer"
 
@@ -357,7 +354,6 @@ msgid "Message:"
 msgstr "Mensagem:"
 
 #: templates/index.html:418
-#, fuzzy
 msgid "Write your message"
 msgstr "Escreva a sua mensagem..."
 
