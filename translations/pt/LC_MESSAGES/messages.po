@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-10 16:00+0100\n"
+"POT-Creation-Date: 2026-04-22 21:02+0100\n"
 "PO-Revision-Date: 2025-11-14 16:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -34,11 +34,11 @@ msgstr "Competências"
 msgid "Curriculum"
 msgstr "Currículo"
 
-#: templates/index.html:60 templates/index.html:284 templates/offline.html:60
+#: templates/index.html:60 templates/index.html:290 templates/offline.html:60
 msgid "Portfolio"
 msgstr "Portfólio"
 
-#: templates/index.html:63 templates/index.html:403 templates/offline.html:63
+#: templates/index.html:63 templates/index.html:409 templates/offline.html:63
 msgid "Contact"
 msgstr "Contacto"
 
@@ -87,7 +87,7 @@ msgstr ""
 "meu desejo de integrar ambosáreas, permitindo-me criar soluções "
 "abrangentes e inovadoras."
 
-#: templates/index.html:108 templates/index.html:257
+#: templates/index.html:108 templates/index.html:263
 msgid ""
 "Is a professional who Gathered client requirements and delivered scalable"
 " data and analytics solutions. Supported data integration, reporting "
@@ -95,11 +95,11 @@ msgid ""
 "implement data pipelines and dashboards. Provided technical "
 "troubleshooting, documentation, and client support."
 msgstr ""
-"É um profissional que recolhe os requisitos do cliente e entrega soluções "
-"escaláveis ​​de dados e análises. Dá suporte à integração de dados, relatórios "
-"e plataformas de análise. Colabora com equipes de engenharia para implementar"
-" pipelines de dados e dashboards. Fornece suporte técnico, soluções de problemas"
-", documentação e suporte ao cliente."
+"É um profissional que recolhe os requisitos do cliente e entrega soluções"
+" escaláveis ​​de dados e análises. Dá suporte à integração de dados, "
+"relatórios e plataformas de análise. Colabora com equipes de engenharia "
+"para implementar pipelines de dados e dashboards. Fornece suporte "
+"técnico, soluções de problemas, documentação e suporte ao cliente."
 
 #: templates/index.html:112
 msgid "Date of birth:"
@@ -185,26 +185,52 @@ msgid "Education"
 msgstr "Educação"
 
 #: templates/index.html:233
+msgid "Front End Web Developer"
+msgstr "Front End Web Developer"
+
+#: templates/index.html:235
+#, fuzzy
+msgid "UDACITY, Portugal"
+msgstr "UDACITY, Portugal"
+
+#: templates/index.html:236 templates/index.html:242
+msgid ""
+"A Front-End Web Developer is responsible for creating the " 
+"visual and interactive aspects of a website or web "
+"application that users directly engage with. They use "
+"technologies such as HTML, CSS, and JavaScript to build "
+"responsive, user-friendly interfaces. Their work focuses"
+" on ensuring that websites are visually appealing, "
+"functional, and optimized across different devices and "
+"browsers. Front-end developers often collaborate with "
+"designers, back-end developers, and other stakeholders "
+"to deliver seamless user experiences."
+msgstr ""
+"Um Desenvolvedor Web Front-End é responsável por criar "
+"os aspectos visuais e interativos de um site ou aplicação"
+" web com os quais os utilizadores interagem diretamente. "
+"Utiliza tecnologias como HTML, CSS e JavaScript para "
+"construir interfaces responsivas e fáceis de usar. O seu "
+"trabalho foca-se em garantir que os sites sejam visualmente"
+" atraentes, funcionais e otimizados para diferentes "
+"dispositivos e navegadores. Os desenvolvedores front-end "
+"colaboram frequentemente com designers, desenvolvedores "
+"back-end e outras partes interessadas para oferecer "
+"experiências de utilizador eficientes e fluidas."
+
+#: templates/index.html:239
 msgid "Full-Stack Software Developer"
 msgstr "Full-Stack Software Developer"
 
-#: templates/index.html:235
+#: templates/index.html:241
 msgid "Online, Spain"
 msgstr "Online, Espanha"
 
-#: templates/index.html:236
-msgid ""
-"Hands-on program to become a Full-Stack Software Developer, focusing on "
-"mastering both frontend and backend technologies."
-msgstr ""
-"Programa prático para se tornar um programador de software Full-Stack, "
-"com foco emdominar as tecnologias front-end e back-end."
-
-#: templates/index.html:239
+#: templates/index.html:245
 msgid "Development of multimedia products"
 msgstr "Desenvolvimento de produtos multimédia"
 
-#: templates/index.html:242
+#: templates/index.html:248
 msgid ""
 "Specialized in multimedia product development, gaining practical skills "
 "in the latest digital design and media production technologies."
@@ -213,15 +239,15 @@ msgstr ""
 "competências práticas nas mais recentes tecnologias de design digital e "
 "produção de media."
 
-#: templates/index.html:245
+#: templates/index.html:251
 msgid "Degree in Human Biology"
 msgstr "Licenciatuta em Biologia Humana"
 
-#: templates/index.html:247
+#: templates/index.html:253
 msgid "Évora University"
 msgstr "Universidade de Évora"
 
-#: templates/index.html:248
+#: templates/index.html:254
 msgid ""
 "Completed a comprehensive study in Human Biology, acquiring a strong "
 "foundation in biological sciences and their application to human health "
@@ -230,19 +256,19 @@ msgstr ""
 "Conclui um estudo abrangente em Biologia Humana, adquirindo fundamentos "
 "nas ciências biológicas bem como a sua aplicação à saúde humana e doença."
 
-#: templates/index.html:252
+#: templates/index.html:258
 msgid "Professional"
 msgstr "Profissional"
 
-#: templates/index.html:254
+#: templates/index.html:260
 msgid "Technical Consultant"
 msgstr "Consultora Técnica | Software Developer"
 
-#: templates/index.html:260
+#: templates/index.html:266
 msgid "Developer Rookie"
 msgstr "Developer Rookie"
 
-#: templates/index.html:263
+#: templates/index.html:269
 msgid ""
 "In OutSystems, a Developer Rookie is a beginner-level developer learning "
 "the basics of the platform, including data modeling, UI development, "
@@ -252,15 +278,15 @@ msgstr ""
 "consiste em aprender o básico da plataforma, incluindo modelação de "
 "dados, desenvolvimento de UI,lógica de negócio e integrações."
 
-#: templates/index.html:266
+#: templates/index.html:272
 msgid "Full-Stack Developer"
 msgstr "Full-Stack Developer"
 
-#: templates/index.html:267
+#: templates/index.html:273
 msgid "02/2024 - 07/2024"
 msgstr "02/2024 - 07/2024"
 
-#: templates/index.html:269
+#: templates/index.html:275
 msgid ""
 "Develop user-friendly web interfaces using HTML, CSS, and JavaScript. "
 "Participate in code reviews and provide constructive feedback. "
@@ -272,11 +298,11 @@ msgstr ""
 "Solucionar, depurar e resolver problemas tanto no front-end como no back-"
 "end."
 
-#: templates/index.html:272
+#: templates/index.html:278
 msgid "Graphic designer"
 msgstr "Designer gráfica"
 
-#: templates/index.html:275
+#: templates/index.html:281
 msgid ""
 "Assisting in the management of the company's website development, like, "
 "taking photographs and designing them, updating its content in the "
@@ -286,7 +312,7 @@ msgstr ""
 "desenhá-las, actualizando o seu conteúdo no painel de administração do "
 "site e relatórios de problemas que iriam aparecer."
 
-#: templates/index.html:296
+#: templates/index.html:302
 msgid ""
 "Develop during a programming bootcamp, an e-commerce platform where users"
 " can browse, review, purchase."
@@ -294,7 +320,7 @@ msgstr ""
 "Desenvolvido durante um bootcamp de programação, uma plataforma de "
 "e-commerce onde os utilizadores podem ​​navegar, rever, comprar."
 
-#: templates/index.html:316
+#: templates/index.html:322
 msgid ""
 "It is a desktop application developed with Python, PyQt (a set of Python "
 "bindings for the Qt application framework used for building graphical "
@@ -307,15 +333,15 @@ msgstr ""
 "vulgarmente utilizado para interações com bases de dados) para gerir "
 "eficientemente as finanças pessoais."
 
-#: templates/index.html:335
+#: templates/index.html:341
 msgid "Is an application to assist in task management, for internal roles."
 msgstr "É uma aplicação para auxiliar na gestão de tarefas, para funções internas."
 
-#: templates/index.html:353
+#: templates/index.html:359
 msgid "My design portfolio"
 msgstr "O meu portfólio de design"
 
-#: templates/index.html:354
+#: templates/index.html:360
 msgid ""
 "Work developed in my CET, using techniques like, Adobe Illustrator, Adobe"
 " Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. "
@@ -326,43 +352,43 @@ msgstr ""
 "Fotografia e 3ds Max. O idioma que selecionei para apresentar o meu "
 "trabalho foi o português."
 
-#: templates/index.html:366
+#: templates/index.html:372
 msgid "Previous"
 msgstr "Anterior"
 
-#: templates/index.html:370
+#: templates/index.html:376
 msgid "Next"
 msgstr "Seguinte"
 
-#: templates/index.html:388
+#: templates/index.html:394
 msgid "Location:"
 msgstr "Localização:"
 
-#: templates/index.html:392 templates/index.html:413
+#: templates/index.html:398 templates/index.html:419
 msgid "Email:"
 msgstr "Email:"
 
-#: templates/index.html:409
+#: templates/index.html:415
 msgid "Name:"
 msgstr "Nome:"
 
-#: templates/index.html:410
+#: templates/index.html:416
 msgid "Write your name"
 msgstr "Escreva o seu nome"
 
-#: templates/index.html:414
+#: templates/index.html:420
 msgid "Write your email"
 msgstr "Escreva o seu email"
 
-#: templates/index.html:417
+#: templates/index.html:423
 msgid "Message:"
 msgstr "Mensagem:"
 
-#: templates/index.html:418
+#: templates/index.html:424
 msgid "Write your message"
 msgstr "Escreva a sua mensagem..."
 
-#: templates/index.html:421
+#: templates/index.html:427
 msgid "Send"
 msgstr "Enviar"
 
