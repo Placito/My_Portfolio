@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-22 21:11+0100\n"
+"POT-Creation-Date: 2026-04-22 21:15+0100\n"
 "PO-Revision-Date: 2025-11-14 16:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -193,10 +193,16 @@ msgstr "Front End Web Developer"
 msgid "UDACITY, Portugal"
 msgstr "UDACITY, Portugal"
 
-#: templates/index.html:236 templates/index.html:242
+#: templates/index.html:236
 msgid ""
-"Hands-on program to become a Full-Stack Software Developer, focusing on "
-"mastering both frontend and backend technologies."
+"A Front-End Web Developer is responsible for creating the visual and "
+"interactive aspects of a website or web application that users directly "
+"engage with. They use technologies such as HTML, CSS, and JavaScript to "
+"build responsive, user-friendly interfaces. Their work focuses on "
+"ensuring that websites are visually appealing, functional, and optimized "
+"across different devices and browsers. Front-end developers often "
+"collaborate with designers, back-end developers, and other stakeholders "
+"to deliver seamless user experiences."
 msgstr ""
 
 #: templates/index.html:239
@@ -206,6 +212,12 @@ msgstr "Full-Stack Software Developer"
 #: templates/index.html:241
 msgid "Online, Spain"
 msgstr "Online, Espanha"
+
+#: templates/index.html:242
+msgid ""
+"Hands-on program to become a Full-Stack Software Developer, focusing on "
+"mastering both frontend and backend technologies."
+msgstr ""
 
 #: templates/index.html:245
 msgid "Development of multimedia products"
