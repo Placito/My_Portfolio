@@ -5,7 +5,7 @@ This portfolio application is built with Flask and includes a contact form that 
 
 ## Link
 
-The project was deploy7 whit vercel: https://my-portfolio-phi-cyan-60.vercel.app/
+The project was deploy whit vercel: https://my-portfolio-phi-cyan-60.vercel.app/
 
 
 ## How do I minify CSS after making changes?
