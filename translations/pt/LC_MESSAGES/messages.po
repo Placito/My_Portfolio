@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-11-18 20:34+0000\n"
+"POT-Creation-Date: 2026-11-18 20:52+0000\n"
 "PO-Revision-Date: 2025-11-14 16:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -67,7 +67,7 @@ msgstr "Termos"
 # Um Desenvolvedor Web Front-End é responsável por criar os aspectos visuais "
 #: templates/index.html:91 templates/index.html:108
 #, fuzzy
-msgid "Full-Stack Software Developer"
+msgid "Software Developer"
 msgstr "Full-Stack Software Developer"
 
 #: templates/index.html:99
@@ -116,11 +116,15 @@ msgstr "Integração de APIs e trabalho com aplicações baseadas em bases de da
 
 #: templates/index.html:118
 msgid "Troubleshooting, debugging and improving existing software."
-msgstr "Resolução de problemas técnicos, identificação e correção de erros e melhoria de software existente."
+msgstr ""
+"Resolução de problemas técnicos, identificação e correção de erros e "
+"melhoria de software existente."
 
 #: templates/index.html:119
 msgid "Collaborating with development teams and participating in code reviews."
-msgstr "Colaboração com equipas de desenvolvimento e participação em revisões de código."
+msgstr ""
+"Colaboração com equipas de desenvolvimento e participação em revisões de "
+"código."
 
 #: templates/index.html:122
 msgid ""
@@ -128,11 +132,10 @@ msgid ""
 "featuring user registration, different access levels and Stripe payment "
 "integration, developed using React, JavaScript, Flask and Python."
 msgstr ""
-"
-"Um dos meus projetos foi o desenvolvimento de uma aplicação de gestão "
-"de uma loja de bicicletas, baseada numa base de dados, que incluía registo"
-" de utilizadores, diferentes níveis de acesso e integração de pagamentos através"
-" do Stripe, utilizando React, JavaScript, Flask e Python."
+"Um dos meus projetos foi o desenvolvimento de uma aplicação de gestão de "
+"uma loja de bicicletas, baseada numa base de dados, que incluía registo "
+"de utilizadores, diferentes níveis de acesso e integração de pagamentos "
+"através do Stripe, utilizando React, JavaScript, Flask e Python."
 
 #: templates/index.html:124
 msgid ""
@@ -141,19 +144,20 @@ msgid ""
 "experiences have strengthened my analytical thinking, attention to detail"
 " and ability to approach problems from different perspectives."
 msgstr ""
-"O meu percurso profissional inclui também experiência em design gráfico e "
-"multimédia, bem como formação académica em Biologia Humana. Estas experiências"
-" contribuíram para desenvolver o meu pensamento analítico, a atenção ao detalhe"
-" e a capacidade de abordar problemas a partir de diferentes perspetivas."
+"O meu percurso profissional inclui também experiência em design gráfico e"
+" multimédia, bem como formação académica em Biologia Humana. Estas "
+"experiências contribuíram para desenvolver o meu pensamento analítico, a "
+"atenção ao detalhe e a capacidade de abordar problemas a partir de "
+"diferentes perspetivas."
 
 #: templates/index.html:126
 msgid ""
 "I am always interested in learning new technologies, improving my "
 "development skills and contributing to meaningful software projects."
 msgstr ""
-"Tenho sempre interesse em aprender novas tecnologias, aperfeiçoar as"
-" minhas competências de desenvolvimento e contribuir para projetos de"
-" software com impacto e valor."
+"Tenho sempre interesse em aprender novas tecnologias, aperfeiçoar as "
+"minhas competências de desenvolvimento e contribuir para projetos de "
+"software com impacto e valor."
 
 #: templates/index.html:131
 msgid "Date of birth:"
@@ -200,8 +204,8 @@ msgid "Experience:"
 msgstr "Experência:"
 
 #: templates/index.html:141
-msgid " Junior"
-msgstr " Junior"
+msgid " Mid-Level"
+msgstr "Junior avançado"
 
 #: templates/index.html:146
 msgid "Download my CV"
@@ -270,6 +274,7 @@ msgstr ""
 
 # Um Desenvolvedor Web Front-End é responsável por criar os aspectos visuais "
 #: templates/index.html:258
+#, fuzzy
 msgid "Full-Stack Software Developer"
 msgstr "Full-Stack Software Developer"
 
@@ -1047,4 +1052,10 @@ msgstr[1] ""
 
 #~ msgid "Technical Consultant | Software Developer"
 #~ msgstr "Consultora Técnica | Software Developer"
+
+#~ msgid " Junior"
+#~ msgstr " Mid-Level"
+
+#~ msgid " JMid-Level"
+#~ msgstr ""
 
