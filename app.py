@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 import os
 import redis
 import logging
-from datetime import datetime
+from datetime import datetime, date
 from pywebpush import webpush, WebPushException
 
 # Load environment variables from .env file
@@ -89,6 +89,16 @@ class Contact:
         self.email = email
         self.message = message
 
+# function to get age from birthdate
+def calculate_age(birth_date):
+    today = date.today()
+    age = today.year - birth_date.year
+
+    if (today.month, today.day) < (birth_date.month, birth_date.day):
+        age -= 1
+
+    return age
+
 # Function to get the locale
 def get_locale():
     # Check if the language query parameter is set and valid
@@ -144,8 +154,10 @@ def get_current_locale():
 @app.route('/')  # This is the route definition for the home page. 
 @cross_origin()  # This decorator allows cross-origin requests (CORS).
 def home():
+    birth_date = date(1989, 12, 24)
+    age = calculate_age(birth_date)
     logger.debug("Home route accessed")  # Logs when the home route is accessed.
-    return render_template('index.html', current_locale=get_locale(), current_year=datetime.now().year)   # Renders the 'index.html' template and passes the current locale.
+    return render_template('index.html', current_locale=get_locale(), age=age, current_year=datetime.now().year)   # Renders the 'index.html' template and passes the current locale.
 
 
 # Define the privacy policy route
