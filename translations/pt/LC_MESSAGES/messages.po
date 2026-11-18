@@ -97,6 +97,11 @@ msgid ""
 "connecting frontend components with backend services, managing database "
 "interactions and troubleshooting technical issues."
 msgstr ""
+"A minha experiência técnica inclui JavaScript, React.js, HTML5, CSS3, "
+"Bootstrap, Python, Flask, SQL e integração de APIs. Tenho experiência no "
+"desenvolvimento e manutenção de aplicações web, na criação de interfaces de"
+" utilizador, na ligação de componentes frontend a serviços backend, na gestão"
+" de interações com bases de dados e na resolução de problemas técnicos."
 
 #: templates/index.html:112
 msgid "Throughout my professional experience, I have contributed to:"
