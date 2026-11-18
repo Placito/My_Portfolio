@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-09-15 14:27+0100\n"
+"POT-Creation-Date: 2026-11-18 20:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,19 +25,19 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: templates/index.html:54 templates/index.html:136 templates/offline.html:54
+#: templates/index.html:54 templates/index.html:155 templates/offline.html:54
 msgid "Skills"
 msgstr ""
 
-#: templates/index.html:57 templates/index.html:228 templates/offline.html:57
+#: templates/index.html:57 templates/index.html:247 templates/offline.html:57
 msgid "Curriculum"
 msgstr ""
 
-#: templates/index.html:60 templates/index.html:290 templates/offline.html:60
+#: templates/index.html:60 templates/index.html:309 templates/offline.html:60
 msgid "Portfolio"
 msgstr ""
 
-#: templates/index.html:63 templates/index.html:409 templates/offline.html:63
+#: templates/index.html:63 templates/index.html:428 templates/offline.html:63
 msgid "Contact"
 msgstr ""
 
@@ -63,8 +63,8 @@ msgstr ""
 msgid "Terms of Service"
 msgstr ""
 
-#: templates/index.html:91 templates/index.html:107
-msgid "Technical Consultant | Software Developer"
+#: templates/index.html:91 templates/index.html:108
+msgid "Software Developer"
 msgstr ""
 
 #: templates/index.html:99
@@ -78,103 +78,148 @@ msgid ""
 "areas, enabling me to create comprehensive and innovative solutions."
 msgstr ""
 
-#: templates/index.html:108 templates/index.html:263
+#: templates/index.html:110
 msgid ""
-"Is a professional who Gathered client requirements and delivered scalable"
-" data and analytics solutions. Supported data integration, reporting "
-"systems, and analytics platforms. Collaborated with engineering teams to "
-"implement data pipelines and dashboards. Provided technical "
-"troubleshooting, documentation, and client support."
+"My technical background includes JavaScript, React.js, HTML5, CSS3, "
+"Bootstrap, Python, Flask, SQL and API integrations. I have worked on "
+"developing and maintaining web applications, building user interfaces, "
+"connecting frontend components with backend services, managing database "
+"interactions and troubleshooting technical issues."
 msgstr ""
 
 #: templates/index.html:112
+msgid "Throughout my professional experience, I have contributed to:"
+msgstr ""
+
+#: templates/index.html:115
+msgid "Developing and maintaining frontend and backend application features."
+msgstr ""
+
+#: templates/index.html:116
+msgid "Building responsive and user-friendly web interfaces."
+msgstr ""
+
+#: templates/index.html:117
+msgid "Integrating APIs and working with database-driven applications."
+msgstr ""
+
+#: templates/index.html:118
+msgid "Troubleshooting, debugging and improving existing software."
+msgstr ""
+
+#: templates/index.html:119
+msgid "Collaborating with development teams and participating in code reviews."
+msgstr ""
+
+#: templates/index.html:122
+msgid ""
+"One of my projects was a database-driven Bicycle Shop application "
+"featuring user registration, different access levels and Stripe payment "
+"integration, developed using React, JavaScript, Flask and Python."
+msgstr ""
+
+#: templates/index.html:124
+msgid ""
+"My professional journey also includes experience in graphic design and "
+"multimedia, as well as an academic background in Human Biology. These "
+"experiences have strengthened my analytical thinking, attention to detail"
+" and ability to approach problems from different perspectives."
+msgstr ""
+
+#: templates/index.html:126
+msgid ""
+"I am always interested in learning new technologies, improving my "
+"development skills and contributing to meaningful software projects."
+msgstr ""
+
+#: templates/index.html:131
 msgid "Date of birth:"
 msgstr ""
 
-#: templates/index.html:112
+#: templates/index.html:131
 msgid " December 24, 1989"
 msgstr ""
 
-#: templates/index.html:113
+#: templates/index.html:132
 msgid "Age:"
 msgstr ""
 
-#: templates/index.html:114
+#: templates/index.html:133
 msgid "City:"
 msgstr ""
 
-#: templates/index.html:115
+#: templates/index.html:134
 msgid "Country:"
 msgstr ""
 
-#: templates/index.html:115
+#: templates/index.html:134
 msgid " Portugal"
 msgstr ""
 
-#: templates/index.html:120
+#: templates/index.html:139
 msgid "Hobby:"
 msgstr ""
 
-#: templates/index.html:120
+#: templates/index.html:139
 msgid " Hiking"
 msgstr ""
 
-#: templates/index.html:121
+#: templates/index.html:140
 msgid "Work:"
 msgstr ""
 
-#: templates/index.html:121
+#: templates/index.html:140
 msgid " On perssonal projects"
 msgstr ""
 
-#: templates/index.html:122
+#: templates/index.html:141
 msgid "Experience:"
 msgstr ""
 
-#: templates/index.html:122
+#: templates/index.html:141
 msgid " Junior"
 msgstr ""
 
-#: templates/index.html:127
+#: templates/index.html:146
 msgid "Download my CV"
 msgstr ""
 
-#: templates/index.html:137
+#: templates/index.html:156
 msgid ""
 "Throughout my time as a professional I have acquired some technical and "
 "soft skills, most of them are here, according to the percentage of "
 "knowledge I believe I have in each of them."
 msgstr ""
 
-#: templates/index.html:186
+#: templates/index.html:205
 msgid "Graphic Design"
 msgstr ""
 
-#: templates/index.html:210
+#: templates/index.html:229
 msgid "Artificial Intelligence (AI)"
 msgstr ""
 
-#: templates/index.html:214
+#: templates/index.html:233
 msgid "Communication"
 msgstr ""
 
-#: templates/index.html:218
+#: templates/index.html:237
 msgid "Time management"
 msgstr ""
 
-#: templates/index.html:231
+#: templates/index.html:250
 msgid "Education"
 msgstr ""
 
-#: templates/index.html:233
+#: templates/index.html:252
 msgid "Front End Web Developer"
 msgstr ""
 
-#: templates/index.html:235
+#: templates/index.html:254
 msgid "UDACITY, Portugal"
 msgstr ""
 
-#: templates/index.html:236
+#: templates/index.html:255
 msgid ""
 "A Front-End Web Developer is responsible for creating the visual and "
 "interactive aspects of a website or web application that users directly "
@@ -186,73 +231,82 @@ msgid ""
 "to deliver seamless user experiences."
 msgstr ""
 
-#: templates/index.html:239
+#: templates/index.html:258
 msgid "Full-Stack Software Developer"
 msgstr ""
 
-#: templates/index.html:241
+#: templates/index.html:260
 msgid "Online, Spain"
 msgstr ""
 
-#: templates/index.html:242
+#: templates/index.html:261
 msgid ""
 "Hands-on program to become a Full-Stack Software Developer, focusing on "
 "mastering both frontend and backend technologies."
 msgstr ""
 
-#: templates/index.html:245
+#: templates/index.html:264
 msgid "Development of multimedia products"
 msgstr ""
 
-#: templates/index.html:248
+#: templates/index.html:267
 msgid ""
 "Specialized in multimedia product development, gaining practical skills "
 "in the latest digital design and media production technologies."
 msgstr ""
 
-#: templates/index.html:251
+#: templates/index.html:270
 msgid "Degree in Human Biology"
 msgstr ""
 
-#: templates/index.html:253
+#: templates/index.html:272
 msgid "Évora University"
 msgstr ""
 
-#: templates/index.html:254
+#: templates/index.html:273
 msgid ""
 "Completed a comprehensive study in Human Biology, acquiring a strong "
 "foundation in biological sciences and their application to human health "
 "and disease."
 msgstr ""
 
-#: templates/index.html:258
+#: templates/index.html:277
 msgid "Professional"
 msgstr ""
 
-#: templates/index.html:260
+#: templates/index.html:279
 msgid "Technical Consultant"
 msgstr ""
 
-#: templates/index.html:266
+#: templates/index.html:282
+msgid ""
+"Is a professional who Gathered client requirements and delivered scalable"
+" data and analytics solutions. Supported data integration, reporting "
+"systems, and analytics platforms. Collaborated with engineering teams to "
+"implement data pipelines and dashboards. Provided technical "
+"troubleshooting, documentation, and client support."
+msgstr ""
+
+#: templates/index.html:285
 msgid "Developer Rookie"
 msgstr ""
 
-#: templates/index.html:269
+#: templates/index.html:288
 msgid ""
 "In OutSystems, a Developer Rookie is a beginner-level developer learning "
 "the basics of the platform, including data modeling, UI development, "
 "business logic, and integrations."
 msgstr ""
 
-#: templates/index.html:272
+#: templates/index.html:291
 msgid "Full-Stack Developer"
 msgstr ""
 
-#: templates/index.html:273
+#: templates/index.html:292
 msgid "02/2024 - 07/2024"
 msgstr ""
 
-#: templates/index.html:275
+#: templates/index.html:294
 msgid ""
 "Develop user-friendly web interfaces using HTML, CSS, and JavaScript. "
 "Participate in code reviews and provide constructive feedback. "
@@ -260,24 +314,24 @@ msgid ""
 "components."
 msgstr ""
 
-#: templates/index.html:278
+#: templates/index.html:297
 msgid "Graphic designer"
 msgstr ""
 
-#: templates/index.html:281
+#: templates/index.html:300
 msgid ""
 "Assisting in the management of the company's website development, like, "
 "taking photographs and designing them, updating its content in the "
 "website's admin dashboard, and reporting problems that would appear."
 msgstr ""
 
-#: templates/index.html:302
+#: templates/index.html:321
 msgid ""
 "Develop during a programming bootcamp, an e-commerce platform where users"
 " can browse, review, purchase."
 msgstr ""
 
-#: templates/index.html:322
+#: templates/index.html:341
 msgid ""
 "It is a desktop application developed with Python, PyQt (a set of Python "
 "bindings for the Qt application framework used for building graphical "
@@ -285,58 +339,58 @@ msgid ""
 "used for database interactions) to efficiently manage personal finances."
 msgstr ""
 
-#: templates/index.html:341
+#: templates/index.html:360
 msgid "Is an application to assist in task management, for internal roles."
 msgstr ""
 
-#: templates/index.html:359
+#: templates/index.html:378
 msgid "My design portfolio"
 msgstr ""
 
-#: templates/index.html:360
+#: templates/index.html:379
 msgid ""
 "Work developed in my CET, using techniques like, Adobe Illustrator, Adobe"
 " Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. "
 "The language I selected to present my work was Portuguese."
 msgstr ""
 
-#: templates/index.html:372
+#: templates/index.html:391
 msgid "Previous"
 msgstr ""
 
-#: templates/index.html:376
+#: templates/index.html:395
 msgid "Next"
 msgstr ""
 
-#: templates/index.html:394
+#: templates/index.html:413
 msgid "Location:"
 msgstr ""
 
-#: templates/index.html:398 templates/index.html:419
+#: templates/index.html:417 templates/index.html:438
 msgid "Email:"
 msgstr ""
 
-#: templates/index.html:415
+#: templates/index.html:434
 msgid "Name:"
 msgstr ""
 
-#: templates/index.html:416
+#: templates/index.html:435
 msgid "Write your name"
 msgstr ""
 
-#: templates/index.html:420
+#: templates/index.html:439
 msgid "Write your email"
 msgstr ""
 
-#: templates/index.html:423
+#: templates/index.html:442
 msgid "Message:"
 msgstr ""
 
-#: templates/index.html:424
+#: templates/index.html:443
 msgid "Write your message"
 msgstr ""
 
-#: templates/index.html:427
+#: templates/index.html:446
 msgid "Send"
 msgstr ""
 

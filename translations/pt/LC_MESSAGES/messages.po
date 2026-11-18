@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-09-15 14:27+0100\n"
+"POT-Creation-Date: 2026-11-18 20:34+0000\n"
 "PO-Revision-Date: 2025-11-14 16:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -26,19 +26,19 @@ msgstr "Início"
 msgid "About"
 msgstr "Sobre"
 
-#: templates/index.html:54 templates/index.html:136 templates/offline.html:54
+#: templates/index.html:54 templates/index.html:155 templates/offline.html:54
 msgid "Skills"
 msgstr "Competências"
 
-#: templates/index.html:57 templates/index.html:228 templates/offline.html:57
+#: templates/index.html:57 templates/index.html:247 templates/offline.html:57
 msgid "Curriculum"
 msgstr "Currículo"
 
-#: templates/index.html:60 templates/index.html:290 templates/offline.html:60
+#: templates/index.html:60 templates/index.html:309 templates/offline.html:60
 msgid "Portfolio"
 msgstr "Portfólio"
 
-#: templates/index.html:63 templates/index.html:409 templates/offline.html:63
+#: templates/index.html:63 templates/index.html:428 templates/offline.html:63
 msgid "Contact"
 msgstr "Contacto"
 
@@ -64,9 +64,11 @@ msgstr "Política de Priv."
 msgid "Terms of Service"
 msgstr "Termos"
 
-#: templates/index.html:91 templates/index.html:107
-msgid "Technical Consultant | Software Developer"
-msgstr "Consultora Técnica | Software Developer"
+# Um Desenvolvedor Web Front-End é responsável por criar os aspectos visuais "
+#: templates/index.html:91 templates/index.html:108
+#, fuzzy
+msgid "Full-Stack Software Developer"
+msgstr "Full-Stack Software Developer"
 
 #: templates/index.html:99
 msgid ""
@@ -87,73 +89,125 @@ msgstr ""
 "meu desejo de integrar ambosáreas, permitindo-me criar soluções "
 "abrangentes e inovadoras."
 
-#: templates/index.html:108 templates/index.html:263
+#: templates/index.html:110
 msgid ""
-"Is a professional who Gathered client requirements and delivered scalable"
-" data and analytics solutions. Supported data integration, reporting "
-"systems, and analytics platforms. Collaborated with engineering teams to "
-"implement data pipelines and dashboards. Provided technical "
-"troubleshooting, documentation, and client support."
+"My technical background includes JavaScript, React.js, HTML5, CSS3, "
+"Bootstrap, Python, Flask, SQL and API integrations. I have worked on "
+"developing and maintaining web applications, building user interfaces, "
+"connecting frontend components with backend services, managing database "
+"interactions and troubleshooting technical issues."
 msgstr ""
-"É um profissional que recolhe os requisitos do cliente e entrega soluções"
-" escaláveis ​​de dados e análises. Dá suporte à integração de dados, "
-"relatórios e plataformas de análise. Colabora com equipes de engenharia "
-"para implementar pipelines de dados e dashboards. Fornece suporte "
-"técnico, soluções de problemas, documentação e suporte ao cliente."
 
 #: templates/index.html:112
+msgid "Throughout my professional experience, I have contributed to:"
+msgstr "Através da minha experiência profissional, eu contribui para:"
+
+#: templates/index.html:115
+msgid "Developing and maintaining frontend and backend application features."
+msgstr "Desenvolver e manter aplicações e suas funções, tanto frontend e backend."
+
+#: templates/index.html:116
+msgid "Building responsive and user-friendly web interfaces."
+msgstr "Constui interfaces responsivos e amigos do utilizador."
+
+#: templates/index.html:117
+msgid "Integrating APIs and working with database-driven applications."
+msgstr "Integração de APIs e trabalho com aplicações baseadas em bases de dados."
+
+#: templates/index.html:118
+msgid "Troubleshooting, debugging and improving existing software."
+msgstr "Resolução de problemas técnicos, identificação e correção de erros e melhoria de software existente."
+
+#: templates/index.html:119
+msgid "Collaborating with development teams and participating in code reviews."
+msgstr "Colaboração com equipas de desenvolvimento e participação em revisões de código."
+
+#: templates/index.html:122
+msgid ""
+"One of my projects was a database-driven Bicycle Shop application "
+"featuring user registration, different access levels and Stripe payment "
+"integration, developed using React, JavaScript, Flask and Python."
+msgstr ""
+"
+"Um dos meus projetos foi o desenvolvimento de uma aplicação de gestão "
+"de uma loja de bicicletas, baseada numa base de dados, que incluía registo"
+" de utilizadores, diferentes níveis de acesso e integração de pagamentos através"
+" do Stripe, utilizando React, JavaScript, Flask e Python."
+
+#: templates/index.html:124
+msgid ""
+"My professional journey also includes experience in graphic design and "
+"multimedia, as well as an academic background in Human Biology. These "
+"experiences have strengthened my analytical thinking, attention to detail"
+" and ability to approach problems from different perspectives."
+msgstr ""
+"O meu percurso profissional inclui também experiência em design gráfico e "
+"multimédia, bem como formação académica em Biologia Humana. Estas experiências"
+" contribuíram para desenvolver o meu pensamento analítico, a atenção ao detalhe"
+" e a capacidade de abordar problemas a partir de diferentes perspetivas."
+
+#: templates/index.html:126
+msgid ""
+"I am always interested in learning new technologies, improving my "
+"development skills and contributing to meaningful software projects."
+msgstr ""
+"Tenho sempre interesse em aprender novas tecnologias, aperfeiçoar as"
+" minhas competências de desenvolvimento e contribuir para projetos de"
+" software com impacto e valor."
+
+#: templates/index.html:131
 msgid "Date of birth:"
 msgstr "Data de nascimento:"
 
-#: templates/index.html:112
+#: templates/index.html:131
 msgid " December 24, 1989"
 msgstr " 24 de Dezembro de 1989"
 
-#: templates/index.html:113
+#: templates/index.html:132
 msgid "Age:"
 msgstr "Idade:"
 
-#: templates/index.html:114
+#: templates/index.html:133
 msgid "City:"
 msgstr "Cidade:"
 
-#: templates/index.html:115
+#: templates/index.html:134
 msgid "Country:"
 msgstr "País:"
 
-#: templates/index.html:115
+#: templates/index.html:134
 msgid " Portugal"
 msgstr " Portugal"
 
-#: templates/index.html:120
+#: templates/index.html:139
 msgid "Hobby:"
 msgstr "Passatempo:"
 
-#: templates/index.html:120
+#: templates/index.html:139
 msgid " Hiking"
 msgstr " Caminhada"
 
-#: templates/index.html:121
+#: templates/index.html:140
 msgid "Work:"
 msgstr "Trabalho:"
 
-#: templates/index.html:121
+#: templates/index.html:140
 msgid " On perssonal projects"
 msgstr "Em projectos pessoais"
 
-#: templates/index.html:122
+#: templates/index.html:141
 msgid "Experience:"
 msgstr "Experência:"
 
-#: templates/index.html:122
+#: templates/index.html:141
 msgid " Junior"
 msgstr " Junior"
 
-#: templates/index.html:127
+#: templates/index.html:146
 msgid "Download my CV"
 msgstr "Download do meu CV"
 
-#: templates/index.html:137
+#: templates/index.html:156
 msgid ""
 "Throughout my time as a professional I have acquired some technical and "
 "soft skills, most of them are here, according to the percentage of "
@@ -164,36 +218,36 @@ msgstr ""
 "acordo com a percentagem de conhecimento que acredito ter em cada uma "
 "delas."
 
-#: templates/index.html:186
+#: templates/index.html:205
 msgid "Graphic Design"
 msgstr "Designer Gráfica"
 
-#: templates/index.html:210
+#: templates/index.html:229
 msgid "Artificial Intelligence (AI)"
 msgstr "Inteligência artificial (IA)"
 
-#: templates/index.html:214
+#: templates/index.html:233
 msgid "Communication"
 msgstr "Comunicação"
 
-#: templates/index.html:218
+#: templates/index.html:237
 msgid "Time management"
 msgstr "Gestão de Tempo"
 
-#: templates/index.html:231
+#: templates/index.html:250
 msgid "Education"
 msgstr "Educação"
 
-#: templates/index.html:233
+#: templates/index.html:252
 msgid "Front End Web Developer"
 msgstr "Front End Web Developer"
 
-#: templates/index.html:235
+#: templates/index.html:254
 #, fuzzy
 msgid "UDACITY, Portugal"
 msgstr "UDACITY, Portugal"
 
-#: templates/index.html:236
+#: templates/index.html:255
 msgid ""
 "A Front-End Web Developer is responsible for creating the visual and "
 "interactive aspects of a website or web application that users directly "
@@ -215,15 +269,15 @@ msgstr ""
 "experiências de utilizador eficientes e fluidas.\"§—"
 
 # Um Desenvolvedor Web Front-End é responsável por criar os aspectos visuais "
-#: templates/index.html:239
+#: templates/index.html:258
 msgid "Full-Stack Software Developer"
 msgstr "Full-Stack Software Developer"
 
-#: templates/index.html:241
+#: templates/index.html:260
 msgid "Online, Spain"
 msgstr "Online, Espanha"
 
-#: templates/index.html:242
+#: templates/index.html:261
 msgid ""
 "Hands-on program to become a Full-Stack Software Developer, focusing on "
 "mastering both frontend and backend technologies."
@@ -231,11 +285,11 @@ msgstr ""
 "Programa prático para se tornar um Desenvolvedor de Software Full-Stack, "
 "com foco em dominar tecnologias de frontend e backend."
 
-#: templates/index.html:245
+#: templates/index.html:264
 msgid "Development of multimedia products"
 msgstr "Desenvolvimento de produtos multimédia"
 
-#: templates/index.html:248
+#: templates/index.html:267
 msgid ""
 "Specialized in multimedia product development, gaining practical skills "
 "in the latest digital design and media production technologies."
@@ -244,15 +298,15 @@ msgstr ""
 "competências práticas nas mais recentes tecnologias de design digital e "
 "produção de media."
 
-#: templates/index.html:251
+#: templates/index.html:270
 msgid "Degree in Human Biology"
 msgstr "Licenciatuta em Biologia Humana"
 
-#: templates/index.html:253
+#: templates/index.html:272
 msgid "Évora University"
 msgstr "Universidade de Évora"
 
-#: templates/index.html:254
+#: templates/index.html:273
 msgid ""
 "Completed a comprehensive study in Human Biology, acquiring a strong "
 "foundation in biological sciences and their application to human health "
@@ -261,19 +315,33 @@ msgstr ""
 "Conclui um estudo abrangente em Biologia Humana, adquirindo fundamentos "
 "nas ciências biológicas bem como a sua aplicação à saúde humana e doença."
 
-#: templates/index.html:258
+#: templates/index.html:277
 msgid "Professional"
 msgstr "Profissional"
 
-#: templates/index.html:260
+#: templates/index.html:279
 msgid "Technical Consultant"
 msgstr "Consultora Técnica | Software Developer"
 
-#: templates/index.html:266
+#: templates/index.html:282
+msgid ""
+"Is a professional who Gathered client requirements and delivered scalable"
+" data and analytics solutions. Supported data integration, reporting "
+"systems, and analytics platforms. Collaborated with engineering teams to "
+"implement data pipelines and dashboards. Provided technical "
+"troubleshooting, documentation, and client support."
+msgstr ""
+"É um profissional que recolhe os requisitos do cliente e entrega soluções"
+" escaláveis ​​de dados e análises. Dá suporte à integração de dados, "
+"relatórios e plataformas de análise. Colabora com equipes de engenharia "
+"para implementar pipelines de dados e dashboards. Fornece suporte "
+"técnico, soluções de problemas, documentação e suporte ao cliente."
+
+#: templates/index.html:285
 msgid "Developer Rookie"
 msgstr "Developer Rookie"
 
-#: templates/index.html:269
+#: templates/index.html:288
 msgid ""
 "In OutSystems, a Developer Rookie is a beginner-level developer learning "
 "the basics of the platform, including data modeling, UI development, "
@@ -283,15 +351,15 @@ msgstr ""
 "consiste em aprender o básico da plataforma, incluindo modelação de "
 "dados, desenvolvimento de UI,lógica de negócio e integrações."
 
-#: templates/index.html:272
+#: templates/index.html:291
 msgid "Full-Stack Developer"
 msgstr "Full-Stack Developer"
 
-#: templates/index.html:273
+#: templates/index.html:292
 msgid "02/2024 - 07/2024"
 msgstr "02/2024 - 07/2024"
 
-#: templates/index.html:275
+#: templates/index.html:294
 msgid ""
 "Develop user-friendly web interfaces using HTML, CSS, and JavaScript. "
 "Participate in code reviews and provide constructive feedback. "
@@ -303,11 +371,11 @@ msgstr ""
 "Solucionar, depurar e resolver problemas tanto no front-end como no back-"
 "end."
 
-#: templates/index.html:278
+#: templates/index.html:297
 msgid "Graphic designer"
 msgstr "Designer gráfica"
 
-#: templates/index.html:281
+#: templates/index.html:300
 msgid ""
 "Assisting in the management of the company's website development, like, "
 "taking photographs and designing them, updating its content in the "
@@ -317,7 +385,7 @@ msgstr ""
 "desenhá-las, actualizando o seu conteúdo no painel de administração do "
 "site e relatórios de problemas que iriam aparecer."
 
-#: templates/index.html:302
+#: templates/index.html:321
 msgid ""
 "Develop during a programming bootcamp, an e-commerce platform where users"
 " can browse, review, purchase."
@@ -325,7 +393,7 @@ msgstr ""
 "Desenvolvido durante um bootcamp de programação, uma plataforma de "
 "e-commerce onde os utilizadores podem ​​navegar, rever, comprar."
 
-#: templates/index.html:322
+#: templates/index.html:341
 msgid ""
 "It is a desktop application developed with Python, PyQt (a set of Python "
 "bindings for the Qt application framework used for building graphical "
@@ -338,15 +406,15 @@ msgstr ""
 "vulgarmente utilizado para interações com bases de dados) para gerir "
 "eficientemente as finanças pessoais."
 
-#: templates/index.html:341
+#: templates/index.html:360
 msgid "Is an application to assist in task management, for internal roles."
 msgstr "É uma aplicação para auxiliar na gestão de tarefas, para funções internas."
 
-#: templates/index.html:359
+#: templates/index.html:378
 msgid "My design portfolio"
 msgstr "O meu portfólio de design"
 
-#: templates/index.html:360
+#: templates/index.html:379
 msgid ""
 "Work developed in my CET, using techniques like, Adobe Illustrator, Adobe"
 " Photoshop, Adobe After Effects, Adobe Premier, Photography and 3ds Max. "
@@ -357,43 +425,43 @@ msgstr ""
 "Fotografia e 3ds Max. O idioma que selecionei para apresentar o meu "
 "trabalho foi o português."
 
-#: templates/index.html:372
+#: templates/index.html:391
 msgid "Previous"
 msgstr "Anterior"
 
-#: templates/index.html:376
+#: templates/index.html:395
 msgid "Next"
 msgstr "Seguinte"
 
-#: templates/index.html:394
+#: templates/index.html:413
 msgid "Location:"
 msgstr "Localização:"
 
-#: templates/index.html:398 templates/index.html:419
+#: templates/index.html:417 templates/index.html:438
 msgid "Email:"
 msgstr "Email:"
 
-#: templates/index.html:415
+#: templates/index.html:434
 msgid "Name:"
 msgstr "Nome:"
 
-#: templates/index.html:416
+#: templates/index.html:435
 msgid "Write your name"
 msgstr "Escreva o seu nome"
 
-#: templates/index.html:420
+#: templates/index.html:439
 msgid "Write your email"
 msgstr "Escreva o seu email"
 
-#: templates/index.html:423
+#: templates/index.html:442
 msgid "Message:"
 msgstr "Mensagem:"
 
-#: templates/index.html:424
+#: templates/index.html:443
 msgid "Write your message"
 msgstr "Escreva a sua mensagem..."
 
-#: templates/index.html:427
+#: templates/index.html:446
 msgid "Send"
 msgstr "Enviar"
 
@@ -976,4 +1044,7 @@ msgstr[1] ""
 
 #~ msgid " Datatekin"
 #~ msgstr "Datatekin"
+
+#~ msgid "Technical Consultant | Software Developer"
+#~ msgstr "Consultora Técnica | Software Developer"
 
